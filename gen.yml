@@ -1,0 +1,5 @@
+---
+projectName: paypal
+language: cs
+sourcePath: Source
+testPath: Test
