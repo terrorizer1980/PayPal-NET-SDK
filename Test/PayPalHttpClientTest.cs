@@ -67,6 +67,9 @@ namespace Test
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
+
+            string authHeaderValue = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("clientid:clientsecret"));
+            Assert.Equal($"Basic {authHeaderValue}", accessTokenRequestLog.Headers["Authorization"]);
             Assert.Equal("grant_type=client_credentials", accessTokenRequestLog.Body);
         }
 
