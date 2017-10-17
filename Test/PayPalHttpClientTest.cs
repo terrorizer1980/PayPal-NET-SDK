@@ -1,5 +1,5 @@
 ﻿using BraintreeHttp;
-using Paypal.Core;
+using PayPal.Core;
 using System;
 using System.ComponentModel;
 using System.Net.Http;
@@ -89,7 +89,7 @@ namespace Test
 
             server.Given(accessTokenRequest())
                 .RespondWith(accessTokenReponse());
-            
+
             var request = new HttpRequest("/", HttpMethod.Get);
             server.Given(builderForRequest(request))
                 .RespondWith(defaultResponse());
@@ -123,6 +123,31 @@ namespace Test
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
             Assert.Equal("grant_type=client_credentials&refresh_token=refresh-token", accessTokenRequestLog.Body);
+        }
+        
+        [Fact]
+        public async void Execute_UsesCorrectUserAgentHeader()
+        {
+            var client = getClient();
+
+            var request = new HttpRequest("/some", HttpMethod.Get);
+
+            server.Given(accessTokenRequest())
+                .RespondWith(accessTokenReponse());
+
+            server.Given(builderForRequest(request))
+                  .RespondWith(defaultResponse());
+
+            await getClient().Execute(request);
+
+            var requestLog = getLogForRequest(request);
+            var userAgentHeader = requestLog.Headers["User-Agent"];
+            Assert.Matches($"^PayPalSDK/PayPal-NET-SDK {PayPal.Core.Version.VERSION} (.*)$", requestLog.Headers["User-Agent"]);
+            Assert.Contains("lang=DOTNET", userAgentHeader);
+            Assert.Contains(";v=", userAgentHeader);
+            Assert.Contains(";clr=", userAgentHeader);
+            Assert.Contains(";bit=", userAgentHeader);
+            Assert.Contains(";os=", userAgentHeader);
         }
 
         private void setAccessToken(PayPalHttpClient client, AccessToken token)

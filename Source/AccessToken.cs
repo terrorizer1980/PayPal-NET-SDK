@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Paypal.Core
+namespace PayPal.Core
 {
     [DataContract]
     public class AccessToken

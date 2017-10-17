@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using BraintreeHttp;
 
-namespace Paypal.Core
+namespace PayPal.Core
 {
     public class PayPalHttpClient : HttpClient
     {
@@ -25,7 +25,7 @@ namespace Paypal.Core
 
         protected override string GetUserAgent()
         {
-            return "paypal HttpClient";
+            return UserAgent.GetUserAgentHeader();
         }
 
         class AuthorizationInjector : IInjector

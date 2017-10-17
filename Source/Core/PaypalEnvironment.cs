@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using BraintreeHttp;
 
-namespace Paypal.Core
+namespace PayPal.Core
 {
     public class PayPalEnvironment : BraintreeHttp.Environment 
     {

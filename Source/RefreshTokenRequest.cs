@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using BraintreeHttp;
 
-namespace Paypal.Core
+namespace PayPal.Core
 {
     public class RefreshTokenRequest: HttpRequest
     {
