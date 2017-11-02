@@ -11,9 +11,9 @@ namespace PayPal.Core
         public AccessTokenRequest(PayPalEnvironment environment, string refreshToken = null) : base("/v1/oauth2/token", HttpMethod.Post, typeof(AccessToken))
         {
             this.Headers.Authorization = new AuthenticationHeaderValue("Basic", environment.AuthorizationString());
-            var body = new Dictionary<string, string>() 
+            var body = new Dictionary<string, string>()
             {
-                {"grant_type", "client_credentials"}    
+                {"grant_type", "client_credentials"}
             };
 
             if (refreshToken != null)

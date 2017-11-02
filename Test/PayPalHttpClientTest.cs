@@ -124,7 +124,7 @@ namespace Test
             Assert.NotNull(accessTokenRequestLog);
             Assert.Equal("grant_type=client_credentials&refresh_token=refresh-token", accessTokenRequestLog.Body);
         }
-        
+
         [Fact]
         public async void Execute_UsesCorrectUserAgentHeader()
         {

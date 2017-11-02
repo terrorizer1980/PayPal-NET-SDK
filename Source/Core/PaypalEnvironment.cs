@@ -4,27 +4,27 @@ using BraintreeHttp;
 
 namespace PayPal.Core
 {
-    public class PayPalEnvironment : BraintreeHttp.Environment 
+    public class PayPalEnvironment : BraintreeHttp.Environment
     {
         private string baseUrl;
-        private string ClientId;
-        private string ClientSecret;
+        private string clientId;
+        private string clientSecret;
 
-        public PayPalEnvironment(string clientId, string clientSecret, string baseUrl) 
+        public PayPalEnvironment(string clientId, string clientSecret, string baseUrl)
         {
-            this.ClientId = clientId;
-            this.ClientSecret = clientSecret;
+            this.clientId = clientId;
+            this.clientSecret = clientSecret;
 			this.baseUrl = baseUrl;
-        } 
+        }
 
-        public string BaseUrl() 
+        public string BaseUrl()
         {
             return this.baseUrl;
         }
 
         public string AuthorizationString()
         {
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes($"{ClientId}:{ClientSecret}"));
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}"));
         }
 	}
 

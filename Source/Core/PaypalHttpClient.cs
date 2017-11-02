@@ -35,7 +35,7 @@ namespace PayPal.Core
 			private AccessToken accessToken;
 			private string refreshToken;
 
-			public AuthorizationInjector(HttpClient client, PayPalEnvironment environment, string refreshToken) 
+			public AuthorizationInjector(HttpClient client, PayPalEnvironment environment, string refreshToken)
             {
                 this.environment = environment;
                 this.client = client;
