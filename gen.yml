@@ -1,5 +1,5 @@
 ---
-projectName: paypal
-language: cs
+projectName: PayPal
+language: dotnet 
 sourcePath: Source
 testPath: Test
