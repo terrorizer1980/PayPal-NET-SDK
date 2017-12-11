@@ -1,0 +1,34 @@
+// This class was generated on Mon, 11 Dec 2017 16:45:23 CST by version 0.1 of Braintree SDK Generator
+// InvoiceCreateRequest.cs
+// @version 0.1
+// @type request
+// @data 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
+// DO NOT EDIT
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Collections.Generic;
+using BraintreeHttp;
+
+namespace PayPal.Invoices
+{
+    /**
+     * Creates a draft invoice. You can optionally create an invoice [template](/docs/api/invoicing/#templates). Then, when you create an invoice from a template, the invoice is populated with the predefined data that the source template contains. To move the invoice from a draft to payable state, you must [send the invoice](/docs/api/invoicing/#invoices_send). In the JSON request body, include invoice details including merchant information. The `invoice` object must include an `items` array.<blockquote><strong>Note:</strong> The merchant specified in an invoice must have a PayPal account in good standing.</blockquote>
+     */
+    public class InvoiceCreateRequest : HttpRequest
+    {
+        public InvoiceCreateRequest() : base("/v1/invoicing/invoices?", HttpMethod.Post, typeof(Invoice))
+        {
+            
+            this.ContentType =  "application/json";
+        }
+        
+
+        public InvoiceCreateRequest RequestBody(Invoice Body) 
+        {
+            this.Body = Body;
+            return this;
+        }
+    }
+}

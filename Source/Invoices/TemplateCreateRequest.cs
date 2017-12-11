@@ -1,0 +1,34 @@
+// This class was generated on Mon, 11 Dec 2017 16:45:27 CST by version 0.1 of Braintree SDK Generator
+// TemplateCreateRequest.cs
+// @version 0.1
+// @type request
+// @data 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
+// DO NOT EDIT
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Collections.Generic;
+using BraintreeHttp;
+
+namespace PayPal.Invoices
+{
+    /**
+     * Creates a template.
+     */
+    public class TemplateCreateRequest : HttpRequest
+    {
+        public TemplateCreateRequest() : base("/v1/invoicing/templates?", HttpMethod.Post, typeof(Template))
+        {
+            
+            this.ContentType =  "application/json";
+        }
+        
+
+        public TemplateCreateRequest RequestBody(Template Body) 
+        {
+            this.Body = Body;
+            return this;
+        }
+    }
+}

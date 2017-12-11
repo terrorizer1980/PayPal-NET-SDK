@@ -1,0 +1,31 @@
+// This class was generated on Mon, 11 Dec 2017 16:45:24 CST by version 0.1 of Braintree SDK Generator
+// InvoiceGetRequest.cs
+// @version 0.1
+// @type request
+// @data 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
+// DO NOT EDIT
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Collections.Generic;
+using BraintreeHttp;
+
+namespace PayPal.Invoices
+{
+    /**
+     * Shows details for an invoice, by ID.
+     */
+    public class InvoiceGetRequest : HttpRequest
+    {
+        public InvoiceGetRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}?", HttpMethod.Get, typeof(Invoice))
+        {
+            try {
+                this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
+            } catch (IOException ignored) {}
+            
+            this.ContentType =  "application/json";
+        }
+        
+    }
+}
