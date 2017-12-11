@@ -22,7 +22,7 @@ namespace PayPal.Invoices
         * An array of invoices as search result.
         */
         [DataMember(Name="invoices")]
-        public List<Invoice> Invoices { get; set; }
+        public List<Invoice> InvoiceList { get; set; }
 
         /**
         * The HATEOAS links for `next` and `previous` navigation in the result set.

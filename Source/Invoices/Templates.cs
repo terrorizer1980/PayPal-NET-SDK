@@ -46,7 +46,7 @@ namespace PayPal.Invoices
         * An array of templates.
         */
         [DataMember(Name="templates")]
-        public List<Template> Templates { get; set; }
+        public List<Template> TemplateList { get; set; }
     }
 }
 

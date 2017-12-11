@@ -23,7 +23,7 @@ namespace PayPal.Invoices
         * 3 letter currency code as defined by ISO 4217.
         */
         [DataMember(Name="currency")]
-        public string Currency { get; set; }
+        public string CurrencyCode { get; set; }
 
         /**
         * REQUIRED
