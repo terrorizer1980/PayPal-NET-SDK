@@ -21,7 +21,7 @@ namespace PayPal.PaymentExperience
         /**
         * A JSON pointer to the location in the target document from which to move the value. Required for the `move` operation.
         */
-        [DataMember(Name="from")]
+        [DataMember(Name="from", EmitDefaultValue = false)]
         public string From { get; set; }
 
         /**
