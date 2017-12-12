@@ -12,22 +12,28 @@ namespace PayPal.PaymentExperience.Test
 
     public class WebProfileUpdateTest : TestHarness
     {
-        private WebProfile buildRequestBody()
-        {
-            var jsonContent = new StringContent("{\"flow_config\":{\"bank_txn_pending_url\":\"BMqyc0PPsIAFd\",\"landing_page_type\":\"pY4tt4WbTUCHtw3P 2\",\"return_uri_http_method\":\"RA0IR4p87z\",\"user_action\":\"IqFyEbbLS5KZ6YvfCia\"},\"id\":\"EQC6fh6iC98bv\",\"input_fields\":{\"address_override\":4,\"allow_note\":true,\"no_shipping\":9},\"name\":\"vF5EBQf1EO5ARvHW1\",\"presentation\":{\"brand_name\":\"qAMDbwr8N0Qe8C94eH\",\"locale_code\":\"GUDVP6OLz5iqP\",\"logo_image\":\"5Apq0Rpdw2Ba\"},\"temporary\":false}", Encoding.UTF8, "application/json");
-            return (WebProfile) new JsonSerializer().DeserializeResponse(jsonContent, typeof(WebProfile));
-        }
 
         [Fact]
         public async void TestWebProfileUpdateRequest()
         {
-            WebProfileUpdateRequest request = new WebProfileUpdateRequest("utp7S6QOCIM");
-            request.RequestBody(buildRequestBody());
+            // Create
+            HttpResponse createResponse = await WebProfileCreateTest.createWebProfile();
+            var expected = createResponse.Result<WebProfile>();
+            expected.FlowConfig.BankTxnPendingUrl = "https://updated.com";
+
+            // Update
+            WebProfileUpdateRequest request = new WebProfileUpdateRequest(expected.Id);
+            request.RequestBody(expected);
 
             HttpResponse response = await client().Execute(request);
             Assert.Equal((int) response.StatusCode, 204);
-
-            // Add your own checks here
+            
+            // Get
+            HttpResponse getResponse = await WebProfileGetTest.getWebProfile(expected.Id);
+            Assert.Equal((int) getResponse.StatusCode, 200);
+            var updated = getResponse.Result<WebProfile>();
+            Assert.NotNull(updated);
+            Assert.Equal(updated.FlowConfig.BankTxnPendingUrl, expected.FlowConfig.BankTxnPendingUrl);
         }
     }
 }

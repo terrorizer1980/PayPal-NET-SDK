@@ -16,13 +16,12 @@ namespace PayPal.PaymentExperience.Test
         [Fact]
         public async void TestWebProfileGetListRequest()
         {
+            HttpResponse createResponse = await WebProfileCreateTest.createWebProfile();
             WebProfileGetListRequest request = new WebProfileGetListRequest();
 
             HttpResponse response = await client().Execute(request);
             Assert.Equal((int) response.StatusCode, 200);
             Assert.NotNull(response.Result<List<WebProfile>>());
-
-            // Add your own checks here
         }
     }
 }

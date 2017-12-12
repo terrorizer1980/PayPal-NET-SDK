@@ -16,12 +16,12 @@ namespace PayPal.PaymentExperience.Test
         [Fact]
         public async void TestWebProfileDeleteRequest()
         {
-            WebProfileDeleteRequest request = new WebProfileDeleteRequest("swFC29zgh7SzwOfgy");
+            HttpResponse createResponse = await WebProfileCreateTest.createWebProfile();
+            var expected = createResponse.Result<WebProfile>();
+            WebProfileDeleteRequest request = new WebProfileDeleteRequest(expected.Id);
 
             HttpResponse response = await client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
-
-            // Add your own checks here
+            Assert.Equal((int) response.StatusCode, 204);
         }
     }
 }
