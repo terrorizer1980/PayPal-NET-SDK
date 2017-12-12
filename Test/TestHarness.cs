@@ -6,19 +6,10 @@ namespace PayPal.Test
 {
     public class TestHarness
     {
-        private class TestEnvironment: SandboxEnvironment
+        protected static HttpClient client()
         {
-            public TestEnvironment(): base("clientid", "clientsecret") {}
-
-            public string BaseUrl()
-            {
-                return System.Environment.GetEnvironmentVariable("BASE_URL");
-            }
-        }
-
-        protected HttpClient client()
-        {
-            return new PayPalHttpClient(new TestEnvironment());
+            var environment = new SandboxEnvironment("AdV4d6nLHabWLyemrw4BKdO9LjcnioNIOgoz7vD611ObbDUL0kJQfzrdhXEBwnH8QmV-7XZjvjRWn0kg", "EPKoPC_haZMTq5uM9WXuzoxUVdgzVqHyD5avCyVC1NCIUJeVaNNUZMnzduYIqrdw-carG9LBAizFGMyK");
+            return new PayPalHttpClient(environment);
         }
     }
 }
