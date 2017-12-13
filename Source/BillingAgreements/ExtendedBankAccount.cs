@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:58 CST by version 0.1 of Braintree SDK Generator
 // ExtendedBankAccount.cs
 // @version 0.1
 // @type object
@@ -9,165 +9,167 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A bank account that can be used to fund a payment. Supports Single Euro Payments Area (SEPA) bank accounts.
-    */
+    /// <summary>
+    /// A bank account that can be used to fund a payment. Supports Single Euro Payments Area (SEPA) bank accounts.
+    /// </summary>
     [DataContract]
     public class ExtendedBankAccount {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ExtendedBankAccount() {}
 
-        /**
-        * A customer-designated account name.
-        */
-        [DataMember(Name="account_name")]
+        /// <summary>
+        /// A customer-designated account name.
+        /// </summary>
+        [DataMember(Name="account_name", EmitDefaultValue = false)]
         public string AccountName { get; set; }
 
-        /**
-        * REQUIRED
-        * The account number in international bank account number (IBAN) format or basic bank account number (BBAN) format. The maximum length for the IBAN format is 34 characters. The maximum length for the BBAN format is 17 characters.
-        */
-        [DataMember(Name="account_number")]
+        /// <summary>
+        /// REQUIRED
+        /// The account number in international bank account number (IBAN) format or basic bank account number (BBAN) format. The maximum length for the IBAN format is 34 characters. The maximum length for the BBAN format is 17 characters.
+        /// </summary>
+        [DataMember(Name="account_number", EmitDefaultValue = false)]
         public string AccountNumber { get; set; }
 
-        /**
-        * REQUIRED
-        * The type of bank account number. A valid value is basic bank account number (BBAN) or international bank account number (IBAN). For more information, see [International Bank Account Number](http://en.wikipedia.org/wiki/International_Bank_Account_Number).
-        */
-        [DataMember(Name="account_number_type")]
+        /// <summary>
+        /// REQUIRED
+        /// The type of bank account number. A valid value is basic bank account number (BBAN) or international bank account number (IBAN). For more information, see [International Bank Account Number](http://en.wikipedia.org/wiki/International_Bank_Account_Number).
+        /// </summary>
+        [DataMember(Name="account_number_type", EmitDefaultValue = false)]
         public string AccountNumberType { get; set; }
 
-        /**
-        * The bank account type.
-        */
-        [DataMember(Name="account_type")]
+        /// <summary>
+        /// The bank account type.
+        /// </summary>
+        [DataMember(Name="account_type", EmitDefaultValue = false)]
         public string AccountType { get; set; }
 
-        /**
-        * The date and time when the authorization was captured, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Use this parameter if you must capture the user authorization due to any privacy requirements.
-        */
-        [DataMember(Name="auth_capture_timestamp")]
+        /// <summary>
+        /// The date and time when the authorization was captured, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Use this parameter if you must capture the user authorization due to any privacy requirements.
+        /// </summary>
+        [DataMember(Name="auth_capture_timestamp", EmitDefaultValue = false)]
         public string AuthCaptureTimestamp { get; set; }
 
-        /**
-        * The authorization type, which indicates how the check was obtained from the customer if a check is the source of information.
-        */
-        [DataMember(Name="auth_type")]
+        /// <summary>
+        /// The authorization type, which indicates how the check was obtained from the customer if a check is the source of information.
+        /// </summary>
+        [DataMember(Name="auth_type", EmitDefaultValue = false)]
         public string AuthType { get; set; }
 
-        /**
-        * The bank name.
-        */
-        [DataMember(Name="bank_name")]
+        /// <summary>
+        /// The bank name.
+        /// </summary>
+        [DataMember(Name="bank_name", EmitDefaultValue = false)]
         public string BankName { get; set; }
 
-        /**
-        * A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public SimplePostalAddress BillingAddress { get; set; }
 
-        /**
-        * The account holder's birth date.
-        */
-        [DataMember(Name="birth_date")]
+        /// <summary>
+        /// The account holder's birth date.
+        /// </summary>
+        [DataMember(Name="birth_date", EmitDefaultValue = false)]
         public string BirthDate { get; set; }
 
-        /**
-        * The check type when the information was obtained from the facilitator or merchant.
-        */
-        [DataMember(Name="check_type")]
+        /// <summary>
+        /// The check type when the information was obtained from the facilitator or merchant.
+        /// </summary>
+        [DataMember(Name="check_type", EmitDefaultValue = false)]
         public string CheckType { get; set; }
 
-        /**
-        * The confirmation status of a bank account.
-        */
-        [DataMember(Name="confirmation_status")]
+        /// <summary>
+        /// The confirmation status of a bank account.
+        /// </summary>
+        [DataMember(Name="confirmation_status", EmitDefaultValue = false)]
         public string ConfirmationStatus { get; set; }
 
-        /**
-        * The two-letter country code of the bank.
-        */
-        [DataMember(Name="country_code")]
+        /// <summary>
+        /// The two-letter country code of the bank.
+        /// </summary>
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
-        /**
-        * The date and time when the bank account was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the bank account was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The facilitator-generated ID for the customer who owns this bank account. Required when you create or use a vaulted funding instrument.
-        */
-        [DataMember(Name="external_customer_id")]
+        /// <summary>
+        /// The facilitator-generated ID for the customer who owns this bank account. Required when you create or use a vaulted funding instrument.
+        /// </summary>
+        [DataMember(Name="external_customer_id", EmitDefaultValue = false)]
         public string ExternalCustomerId { get; set; }
 
-        /**
-        * The account holder's first name.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The account holder's first name.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The ID of the bank account that is being saved for later use.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the bank account that is being saved for later use.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The account holder's last name.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The account holder's last name.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the direct debit mandate to validate. Currently supported for only Single Euro Payments Area (SEPA) bank accounts in the European Union (EU).
-        */
-        [DataMember(Name="mandate_reference_number")]
+        /// <summary>
+        /// The ID of the direct debit mandate to validate. Currently supported for only Single Euro Payments Area (SEPA) bank accounts in the European Union (EU).
+        /// </summary>
+        [DataMember(Name="mandate_reference_number", EmitDefaultValue = false)]
         public string MandateReferenceNumber { get; set; }
 
-        /**
-        * The facilitator-generated ID for the merchant for whom the bank account was vaulted. Can be used to restrict usage of the bank account to the merchant.
-        */
-        [DataMember(Name="merchant_id")]
+        /// <summary>
+        /// The facilitator-generated ID for the merchant for whom the bank account was vaulted. Can be used to restrict usage of the bank account to the merchant.
+        /// </summary>
+        [DataMember(Name="merchant_id", EmitDefaultValue = false)]
         public string MerchantId { get; set; }
 
-        /**
-        * Deprecated. Instead, use the `external_customer_id` parameter.
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// Deprecated. Instead, use the `external_customer_id` parameter.
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
 
-        /**
-        * The routing transit number, or bank code, of the bank. Typically, you specify this value for domestic use only. International bank account numbers (IBAN) include the bank code. For more information, see [Bank code](http://en.wikipedia.org/wiki/Bank_code).
-        */
-        [DataMember(Name="routing_number")]
+        /// <summary>
+        /// The routing transit number, or bank code, of the bank. Typically, you specify this value for domestic use only. International bank account numbers (IBAN) include the bank code. For more information, see [Bank code](http://en.wikipedia.org/wiki/Bank_code).
+        /// </summary>
+        [DataMember(Name="routing_number", EmitDefaultValue = false)]
         public string RoutingNumber { get; set; }
 
-        /**
-        * The state of this funding instrument.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of this funding instrument.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The date and time when the bank account was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the bank account was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
 
-        /**
-        * The date and time after which the bank account can no longer be used to fund a payment, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="valid_until")]
+        /// <summary>
+        /// The date and time after which the bank account can no longer be used to fund a payment, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="valid_until", EmitDefaultValue = false)]
         public string ValidUntil { get; set; }
     }
 }

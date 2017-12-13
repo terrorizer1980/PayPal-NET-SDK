@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:31 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:00 CST by version 0.1 of Braintree SDK Generator
 // Terms.cs
 // @version 0.1
 // @type object
@@ -9,54 +9,56 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The plan terms.
-    */
+    /// <summary>
+    /// The plan terms.
+    /// </summary>
     [DataContract]
     public class Terms {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Terms() {}
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="amount_range")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="amount_range", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue AmountRange { get; set; }
 
-        /**
-        * REQUIRED
-        * Indicates whether the customer can edit the amount in this term.
-        */
-        [DataMember(Name="buyer_editable")]
+        /// <summary>
+        /// REQUIRED
+        /// Indicates whether the customer can edit the amount in this term.
+        /// </summary>
+        [DataMember(Name="buyer_editable", EmitDefaultValue = false)]
         public string BuyerEditable { get; set; }
 
-        /**
-        * The ID of the terms.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the terms.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="max_billing_amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="max_billing_amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue MaxBillingAmount { get; set; }
 
-        /**
-        * REQUIRED
-        * The number of times that money can be pulled during this term.
-        */
-        [DataMember(Name="occurrences")]
+        /// <summary>
+        /// REQUIRED
+        /// The number of times that money can be pulled during this term.
+        /// </summary>
+        [DataMember(Name="occurrences", EmitDefaultValue = false)]
         public string Occurrences { get; set; }
 
-        /**
-        * REQUIRED
-        * The term type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The term type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

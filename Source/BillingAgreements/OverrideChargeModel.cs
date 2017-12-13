@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:57 CST by version 0.1 of Braintree SDK Generator
 // OverrideChargeModel.cs
 // @version 0.1
 // @type object
@@ -9,27 +9,29 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A charge model that overrides default charge information during agreement creation.
-    */
+    /// <summary>
+    /// A charge model that overrides default charge information during agreement creation.
+    /// </summary>
     [DataContract]
     public class OverrideChargeModel {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public OverrideChargeModel() {}
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue Amount { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the charge model.
-        */
-        [DataMember(Name="charge_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the charge model.
+        /// </summary>
+        [DataMember(Name="charge_id", EmitDefaultValue = false)]
         public string ChargeId { get; set; }
     }
 }

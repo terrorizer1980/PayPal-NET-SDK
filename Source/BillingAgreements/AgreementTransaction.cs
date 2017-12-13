@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:31 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:00 CST by version 0.1 of Braintree SDK Generator
 // AgreementTransaction.cs
 // @version 0.1
 // @type object
@@ -9,76 +9,78 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * An agreement transaction. Returned for a transaction search.
-    */
+    /// <summary>
+    /// An agreement transaction. Returned for a transaction search.
+    /// </summary>
     [DataContract]
     public class AgreementTransaction {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public AgreementTransaction() {}
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue Amount { get; set; }
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="fee_amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="fee_amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue FeeAmount { get; set; }
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="net_amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="net_amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue NetAmount { get; set; }
 
-        /**
-        * The email ID of the customer.
-        */
-        [DataMember(Name="payer_email")]
+        /// <summary>
+        /// The email ID of the customer.
+        /// </summary>
+        [DataMember(Name="payer_email", EmitDefaultValue = false)]
         public string PayerEmail { get; set; }
 
-        /**
-        * The business name of the customer.
-        */
-        [DataMember(Name="payer_name")]
+        /// <summary>
+        /// The business name of the customer.
+        /// </summary>
+        [DataMember(Name="payer_name", EmitDefaultValue = false)]
         public string PayerName { get; set; }
 
-        /**
-        * The current status of the transaction. Value is:<ul><li>`Completed`. The transaction is complete and the money has been transfered to the payee.</li><li>`Partially_Refunded`. A part of the transaction amount has been refunded to the payer.</li><li>`Pending`. The transaction is pending settlement.</li><li>`Refunded`. The transaction amount has been refunded to the payer.</li><li>`Denied`. The transaction has been denied.</li></ul>
-        */
-        [DataMember(Name="status")]
+        /// <summary>
+        /// The current status of the transaction. Value is:<ul><li>`Completed`. The transaction is complete and the money has been transfered to the payee.</li><li>`Partially_Refunded`. A part of the transaction amount has been refunded to the payer.</li><li>`Pending`. The transaction is pending settlement.</li><li>`Refunded`. The transaction amount has been refunded to the payer.</li><li>`Denied`. The transaction has been denied.</li></ul>
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
 
-        /**
-        * The date and time when the transaction occurred, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="time_stamp")]
+        /// <summary>
+        /// The date and time when the transaction occurred, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="time_stamp", EmitDefaultValue = false)]
         public string TimeStamp { get; set; }
 
-        /**
-        * The time zone of the `update_time` field.
-        */
-        [DataMember(Name="time_zone")]
+        /// <summary>
+        /// The time zone of the `update_time` field.
+        /// </summary>
+        [DataMember(Name="time_zone", EmitDefaultValue = false)]
         public string TimeZone { get; set; }
 
-        /**
-        * The ID of the transaction.
-        */
-        [DataMember(Name="transaction_id")]
+        /// <summary>
+        /// The ID of the transaction.
+        /// </summary>
+        [DataMember(Name="transaction_id", EmitDefaultValue = false)]
         public string TransactionId { get; set; }
 
-        /**
-        * The type of transaction. Typically, `Recurring Payment`.
-        */
-        [DataMember(Name="transaction_type")]
+        /// <summary>
+        /// The type of transaction. Typically, `Recurring Payment`.
+        /// </summary>
+        [DataMember(Name="transaction_type", EmitDefaultValue = false)]
         public string TransactionType { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:01 CST by version 0.1 of Braintree SDK Generator
 // AgreementGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Shows details for a billing agreement, by ID.
-     */
+    /// <summary>
+    /// Shows details for a billing agreement, by ID.
+    /// </summary>
     public class AgreementGetRequest : HttpRequest
     {
         public AgreementGetRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}?", HttpMethod.Get, typeof(Agreement))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

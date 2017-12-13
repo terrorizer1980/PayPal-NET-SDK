@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:58 CST by version 0.1 of Braintree SDK Generator
 // Payer.cs
 // @version 0.1
 // @type object
@@ -9,38 +9,40 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The customer who funds the payment.
-    */
+    /// <summary>
+    /// The customer who funds the payment.
+    /// </summary>
     [DataContract]
     public class Payer {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Payer() {}
 
-        /**
-        * An array of funding instruments.
-        */
-        [DataMember(Name="funding_instruments")]
+        /// <summary>
+        /// An array of funding instruments.
+        /// </summary>
+        [DataMember(Name="funding_instruments", EmitDefaultValue = false)]
         public List<FundingInstrument> FundingInstruments { get; set; }
 
-        /**
-        * The ID of the customer-selected funding option for the payment. Value is `funding_instruments` or `funding_option_id`.
-        */
-        [DataMember(Name="funding_option_id")]
+        /// <summary>
+        /// The ID of the customer-selected funding option for the payment. Value is `funding_instruments` or `funding_option_id`.
+        /// </summary>
+        [DataMember(Name="funding_option_id", EmitDefaultValue = false)]
         public string FundingOptionId { get; set; }
 
-        /**
-        * Information about the customer.
-        */
-        [DataMember(Name="payer_info")]
+        /// <summary>
+        /// Information about the customer.
+        /// </summary>
+        [DataMember(Name="payer_info", EmitDefaultValue = false)]
         public PayerInformation PayerInfo { get; set; }
 
-        /**
-        * REQUIRED
-        * The payment method.
-        */
-        [DataMember(Name="payment_method")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment method.
+        /// </summary>
+        [DataMember(Name="payment_method", EmitDefaultValue = false)]
         public string PaymentMethod { get; set; }
     }
 }

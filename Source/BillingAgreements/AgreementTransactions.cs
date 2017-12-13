@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:31 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:00 CST by version 0.1 of Braintree SDK Generator
 // AgreementTransactions.cs
 // @version 0.1
 // @type object
@@ -9,19 +9,21 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * An array of agreement transactions.
-    */
+    /// <summary>
+    /// An array of agreement transactions.
+    /// </summary>
     [DataContract]
     public class AgreementTransactions {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public AgreementTransactions() {}
 
-        /**
-        * An array of agreement transaction objects.
-        */
-        [DataMember(Name="agreement_transaction_list")]
+        /// <summary>
+        /// An array of agreement transaction objects.
+        /// </summary>
+        [DataMember(Name="agreement_transaction_list", EmitDefaultValue = false)]
         public List<AgreementTransaction> AgreementTransactionList { get; set; }
     }
 }

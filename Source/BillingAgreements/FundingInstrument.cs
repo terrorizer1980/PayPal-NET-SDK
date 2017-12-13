@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:58 CST by version 0.1 of Braintree SDK Generator
 // FundingInstrument.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * Information about a customer's funding instrument.
-    */
+    /// <summary>
+    /// Information about a customer's funding instrument.
+    /// </summary>
     [DataContract]
     public class FundingInstrument {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public FundingInstrument() {}
 
-        /**
-        * A bank account that can be used to fund a payment. Supports Single Euro Payments Area (SEPA) bank accounts.
-        */
-        [DataMember(Name="bank_account")]
+        /// <summary>
+        /// A bank account that can be used to fund a payment. Supports Single Euro Payments Area (SEPA) bank accounts.
+        /// </summary>
+        [DataMember(Name="bank_account", EmitDefaultValue = false)]
         public ExtendedBankAccount BankAccount { get; set; }
 
-        /**
-        * A token for a bank card. Can be used to fund a payment.
-        */
-        [DataMember(Name="bank_account_token")]
+        /// <summary>
+        /// A token for a bank card. Can be used to fund a payment.
+        /// </summary>
+        [DataMember(Name="bank_account_token", EmitDefaultValue = false)]
         public BankToken BankAccountToken { get; set; }
 
-        /**
-        * A payment card that can be used to fund a payment.
-        */
-        [DataMember(Name="payment_card")]
+        /// <summary>
+        /// A payment card that can be used to fund a payment.
+        /// </summary>
+        [DataMember(Name="payment_card", EmitDefaultValue = false)]
         public PaymentCard PaymentCard { get; set; }
 
-        /**
-        * A token for a payment card that can be used to fund a payment.
-        */
-        [DataMember(Name="payment_card_token")]
+        /// <summary>
+        /// A token for a payment card that can be used to fund a payment.
+        /// </summary>
+        [DataMember(Name="payment_card_token", EmitDefaultValue = false)]
         public PaymentCardToken PaymentCardToken { get; set; }
     }
 }

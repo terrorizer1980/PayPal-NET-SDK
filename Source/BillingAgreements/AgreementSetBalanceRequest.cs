@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:02 CST by version 0.1 of Braintree SDK Generator
 // AgreementSetBalanceRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Sets the balance for an agreement, by ID. In the JSON request body, specify the balance currency type and value.
-     */
+    /// <summary>
+    /// Sets the balance for an agreement, by ID. In the JSON request body, specify the balance currency type and value.
+    /// </summary>
     public class AgreementSetBalanceRequest : HttpRequest
     {
         public AgreementSetBalanceRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}/set-balance?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

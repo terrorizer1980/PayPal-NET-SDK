@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:56 CST by version 0.1 of Braintree SDK Generator
 // Agreement.cs
 // @version 0.1
 // @type object
@@ -9,90 +9,92 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A billing agreement.
-    */
+    /// <summary>
+    /// A billing agreement.
+    /// </summary>
     [DataContract]
     public class Agreement {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Agreement() {}
 
-        /**
-        * The agreement details.
-        */
-        [DataMember(Name="agreement_details")]
+        /// <summary>
+        /// The agreement details.
+        /// </summary>
+        [DataMember(Name="agreement_details", EmitDefaultValue = false)]
         public AgreementDetails AgreementDetails { get; set; }
 
-        /**
-        * REQUIRED
-        * The agreement description.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// REQUIRED
+        /// The agreement description.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The PayPal-generated agreement ID.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The PayPal-generated agreement ID.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * REQUIRED
-        * The agreement name.
-        */
-        [DataMember(Name="name")]
+        /// <summary>
+        /// REQUIRED
+        /// The agreement name.
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * An array of charge models to override the charge models in the plan. A charge model defines shipping fee and tax information. If you omit this parameter, the agreement uses the default shipping fee and tax information from the plan.
-        */
-        [DataMember(Name="override_charge_models")]
+        /// <summary>
+        /// An array of charge models to override the charge models in the plan. A charge model defines shipping fee and tax information. If you omit this parameter, the agreement uses the default shipping fee and tax information from the plan.
+        /// </summary>
+        [DataMember(Name="override_charge_models", EmitDefaultValue = false)]
         public List<OverrideChargeModel> OverrideChargeModels { get; set; }
 
-        /**
-        * The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
-        */
-        [DataMember(Name="override_merchant_preferences")]
+        /// <summary>
+        /// The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
+        /// </summary>
+        [DataMember(Name="override_merchant_preferences", EmitDefaultValue = false)]
         public MerchantPreferences OverrideMerchantPreferences { get; set; }
 
-        /**
-        * REQUIRED
-        * The customer who funds the payment.
-        */
-        [DataMember(Name="payer")]
+        /// <summary>
+        /// REQUIRED
+        /// The customer who funds the payment.
+        /// </summary>
+        [DataMember(Name="payer", EmitDefaultValue = false)]
         public Payer Payer { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan to use to create an agreement.
-        */
-        [DataMember(Name="plan")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan to use to create an agreement.
+        /// </summary>
+        [DataMember(Name="plan", EmitDefaultValue = false)]
         public Plan Plan { get; set; }
 
-        /**
-        * A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
-        */
-        [DataMember(Name="shipping_address")]
+        /// <summary>
+        /// A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
+        /// </summary>
+        [DataMember(Name="shipping_address", EmitDefaultValue = false)]
         public SimplePostalAddress ShippingAddress { get; set; }
 
-        /**
-        * REQUIRED
-        * The date and time when this agreement begins, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The start date must be more recent than the current date. The agreement can take up to 24 hours to activate.<br/><br/>The start date and time in the create agreement request might not match the start date and time that the API returns in the execute agreement response. When you execute an agreement, the API internally converts the start date and time to the start of the day in the time zone of the merchant account. For example, the API converts a `2017-01-02T14:36:21Z` start date and time for an account in the Berlin time zone (UTC + 1) to `2017-01-02T00:00:00`. When the API returns this date and time in the execute agreement response, it shows the converted date and time in the UTC time zone. So, the internal `2017-01-02T00:00:00` start date and time becomes `2017-01-01T23:00:00` externally.
-        */
-        [DataMember(Name="start_date")]
+        /// <summary>
+        /// REQUIRED
+        /// The date and time when this agreement begins, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The start date must be more recent than the current date. The agreement can take up to 24 hours to activate.<br/><br/>The start date and time in the create agreement request might not match the start date and time that the API returns in the execute agreement response. When you execute an agreement, the API internally converts the start date and time to the start of the day in the time zone of the merchant account. For example, the API converts a `2017-01-02T14:36:21Z` start date and time for an account in the Berlin time zone (UTC + 1) to `2017-01-02T00:00:00`. When the API returns this date and time in the execute agreement response, it shows the converted date and time in the UTC time zone. So, the internal `2017-01-02T00:00:00` start date and time becomes `2017-01-01T23:00:00` externally.
+        /// </summary>
+        [DataMember(Name="start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
-        /**
-        * The state of the agreement. Value is:<ul><li>`Pending`. The agreement is awaiting initial payment completion.</li><li>`Active`. The agreement is active and payments will be scheduled.</li><li>`Suspended`. The agreement is suspended and payments will not be scheduled until the agreement is reactivated.</li><li>`Canceled`. The agreement is canceled and payments will not be scheduled.</li><li>`Expired`. The agreement is expired and no more payments remain to be scheduled.</li></ul>
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of the agreement. Value is:<ul><li>`Pending`. The agreement is awaiting initial payment completion.</li><li>`Active`. The agreement is active and payments will be scheduled.</li><li>`Suspended`. The agreement is suspended and payments will not be scheduled until the agreement is reactivated.</li><li>`Canceled`. The agreement is canceled and payments will not be scheduled.</li><li>`Expired`. The agreement is expired and no more payments remain to be scheduled.</li></ul>
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
     }
 }

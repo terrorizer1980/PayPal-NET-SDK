@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:57 CST by version 0.1 of Braintree SDK Generator
 // LinkDescriptionObject.cs
 // @version 0.1
 // @type object
@@ -9,33 +9,35 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-    */
+    /// <summary>
+    /// The request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+    /// </summary>
     [DataContract]
     public class LinkDescriptionObject {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public LinkDescriptionObject() {}
 
-        /**
-        * REQUIRED
-        * The complete target URL. To make the related call, combine the method with this link, in [URI template format](https://tools.ietf.org/html/rfc6570). Include the `$`, `(`, and `)` characters for pre-processing. The `href` is the key HATEOAS component that links a completed call with a subsequent call.
-        */
-        [DataMember(Name="href")]
+        /// <summary>
+        /// REQUIRED
+        /// The complete target URL. To make the related call, combine the method with this link, in [URI template format](https://tools.ietf.org/html/rfc6570). Include the `$`, `(`, and `)` characters for pre-processing. The `href` is the key HATEOAS component that links a completed call with a subsequent call.
+        /// </summary>
+        [DataMember(Name="href", EmitDefaultValue = false)]
         public string Href { get; set; }
 
-        /**
-        * The HTTP method required to make the related call.
-        */
-        [DataMember(Name="method")]
+        /// <summary>
+        /// The HTTP method required to make the related call.
+        /// </summary>
+        [DataMember(Name="method", EmitDefaultValue = false)]
         public string Method { get; set; }
 
-        /**
-        * REQUIRED
-        * The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).
-        */
-        [DataMember(Name="rel")]
+        /// <summary>
+        /// REQUIRED
+        /// The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).
+        /// </summary>
+        [DataMember(Name="rel", EmitDefaultValue = false)]
         public string Rel { get; set; }
     }
 }

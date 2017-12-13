@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:01 CST by version 0.1 of Braintree SDK Generator
 // AgreementReActivateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Re-activates a suspended billing agreement, by ID. In the JSON request body, include an `agreement_state_descriptor` object with with a note that describes the reason for the re-activation and the agreement amount and currency.
-     */
+    /// <summary>
+    /// Re-activates a suspended billing agreement, by ID. In the JSON request body, include an `agreement_state_descriptor` object with with a note that describes the reason for the re-activation and the agreement amount and currency.
+    /// </summary>
     public class AgreementReActivateRequest : HttpRequest
     {
         public AgreementReActivateRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}/re-activate?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

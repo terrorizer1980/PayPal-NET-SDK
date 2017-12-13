@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:59 CST by version 0.1 of Braintree SDK Generator
 // Plan.cs
 // @version 0.1
 // @type object
@@ -9,82 +9,84 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The plan to use to create an agreement.
-    */
+    /// <summary>
+    /// The plan to use to create an agreement.
+    /// </summary>
     [DataContract]
     public class Plan {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Plan() {}
 
-        /**
-        * The date and time when the plan was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the plan was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan description.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan description.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The ID of the plan.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the plan.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
-        */
-        [DataMember(Name="merchant_preferences")]
+        /// <summary>
+        /// The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
+        /// </summary>
+        [DataMember(Name="merchant_preferences", EmitDefaultValue = false)]
         public MerchantPreferences MerchantPreferences { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan name.
-        */
-        [DataMember(Name="name")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan name.
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * An array of payment definitions for this plan.
-        */
-        [DataMember(Name="payment_definitions")]
+        /// <summary>
+        /// An array of payment definitions for this plan.
+        /// </summary>
+        [DataMember(Name="payment_definitions", EmitDefaultValue = false)]
         public List<PaymentDefinition> PaymentDefinitions { get; set; }
 
-        /**
-        * The status of the plan.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The status of the plan.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * An array of terms for this plan.
-        */
-        [DataMember(Name="terms")]
+        /// <summary>
+        /// An array of terms for this plan.
+        /// </summary>
+        [DataMember(Name="terms", EmitDefaultValue = false)]
         public List<Terms> Terms { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
-        /**
-        * The date and time when this plan was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when this plan was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

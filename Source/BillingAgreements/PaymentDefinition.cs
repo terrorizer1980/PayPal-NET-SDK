@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:59 CST by version 0.1 of Braintree SDK Generator
 // PaymentDefinition.cs
 // @version 0.1
 // @type object
@@ -9,67 +9,69 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A definition for a regular or trial payment.
-    */
+    /// <summary>
+    /// A definition for a regular or trial payment.
+    /// </summary>
     [DataContract]
     public class PaymentDefinition {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentDefinition() {}
 
-        /**
-        * REQUIRED
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue Amount { get; set; }
 
-        /**
-        * An array of shipping fee and tax information for this definition.
-        */
-        [DataMember(Name="charge_models")]
+        /// <summary>
+        /// An array of shipping fee and tax information for this definition.
+        /// </summary>
+        [DataMember(Name="charge_models", EmitDefaultValue = false)]
         public List<ChargeModels> ChargeModels { get; set; }
 
-        /**
-        * REQUIRED
-        * The number of payment cycles in this definition. For infinite plans with a regular payment definition, set `cycles` to `0`.
-        */
-        [DataMember(Name="cycles")]
+        /// <summary>
+        /// REQUIRED
+        /// The number of payment cycles in this definition. For infinite plans with a regular payment definition, set `cycles` to `0`.
+        /// </summary>
+        [DataMember(Name="cycles", EmitDefaultValue = false)]
         public string Cycles { get; set; }
 
-        /**
-        * REQUIRED
-        * The frequency of the payment in this definition.
-        */
-        [DataMember(Name="frequency")]
+        /// <summary>
+        /// REQUIRED
+        /// The frequency of the payment in this definition.
+        /// </summary>
+        [DataMember(Name="frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
-        /**
-        * REQUIRED
-        * The interval at which the customer is charged. Value cannot be greater than 12 months.
-        */
-        [DataMember(Name="frequency_interval")]
+        /// <summary>
+        /// REQUIRED
+        /// The interval at which the customer is charged. Value cannot be greater than 12 months.
+        /// </summary>
+        [DataMember(Name="frequency_interval", EmitDefaultValue = false)]
         public string FrequencyInterval { get; set; }
 
-        /**
-        * The ID of the payment definition. A payment definition defines a regular or trial payment.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the payment definition. A payment definition defines a regular or trial payment.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * REQUIRED
-        * The payment definition name.
-        */
-        [DataMember(Name="name")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment definition name.
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * REQUIRED
-        * The payment definition type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment definition type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

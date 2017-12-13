@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:01 CST by version 0.1 of Braintree SDK Generator
 // AgreementCancelRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Cancels a billing agreement, by ID. In the JSON request body, include an `agreement_state_descriptor` object with an optional note that describes the reason for the cancellation and the agreement amount and currency.
-     */
+    /// <summary>
+    /// Cancels a billing agreement, by ID. In the JSON request body, include an `agreement_state_descriptor` object with an optional note that describes the reason for the cancellation and the agreement amount and currency.
+    /// </summary>
     public class AgreementCancelRequest : HttpRequest
     {
         public AgreementCancelRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}/cancel?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

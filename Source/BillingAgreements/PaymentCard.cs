@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:58 CST by version 0.1 of Braintree SDK Generator
 // PaymentCard.cs
 // @version 0.1
 // @type object
@@ -9,107 +9,109 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A payment card that can be used to fund a payment.
-    */
+    /// <summary>
+    /// A payment card that can be used to fund a payment.
+    /// </summary>
     [DataContract]
     public class PaymentCard {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentCard() {}
 
-        /**
-        * A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public SimplePostalAddress BillingAddress { get; set; }
 
-        /**
-        * The card validation code. Supported only when making a payment but not when saving a payment card for future use.
-        */
-        [DataMember(Name="cvv2")]
+        /// <summary>
+        /// The card validation code. Supported only when making a payment but not when saving a payment card for future use.
+        /// </summary>
+        [DataMember(Name="cvv2", EmitDefaultValue = false)]
         public int Cvv2 { get; set; }
 
-        /**
-        * REQUIRED
-        * The two-digit card expiry month.
-        */
-        [DataMember(Name="expire_month")]
+        /// <summary>
+        /// REQUIRED
+        /// The two-digit card expiry month.
+        /// </summary>
+        [DataMember(Name="expire_month", EmitDefaultValue = false)]
         public int ExpireMonth { get; set; }
 
-        /**
-        * REQUIRED
-        * The four-digit card expiry year.
-        */
-        [DataMember(Name="expire_year")]
+        /// <summary>
+        /// REQUIRED
+        /// The four-digit card expiry year.
+        /// </summary>
+        [DataMember(Name="expire_year", EmitDefaultValue = false)]
         public int ExpireYear { get; set; }
 
-        /**
-        * The facilitator-provided ID of the card holder. Required when storing a funding instrument or using a stored funding instrument in the PayPal vault.
-        */
-        [DataMember(Name="external_customer_id")]
+        /// <summary>
+        /// The facilitator-provided ID of the card holder. Required when storing a funding instrument or using a stored funding instrument in the PayPal vault.
+        /// </summary>
+        [DataMember(Name="external_customer_id", EmitDefaultValue = false)]
         public string ExternalCustomerId { get; set; }
 
-        /**
-        * The card holder's first name.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The card holder's first name.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The ID of the vaulted payment card.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the vaulted payment card.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The card holder's last name.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The card holder's last name.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * REQUIRED
-        * The card number.
-        */
-        [DataMember(Name="number")]
+        /// <summary>
+        /// REQUIRED
+        /// The card number.
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
-        /**
-        * The two-digit card start month.
-        */
-        [DataMember(Name="start_month")]
+        /// <summary>
+        /// The two-digit card start month.
+        /// </summary>
+        [DataMember(Name="start_month", EmitDefaultValue = false)]
         public int StartMonth { get; set; }
 
-        /**
-        * The four-digit card start year.
-        */
-        [DataMember(Name="start_year")]
+        /// <summary>
+        /// The four-digit card start year.
+        /// </summary>
+        [DataMember(Name="start_year", EmitDefaultValue = false)]
         public int StartYear { get; set; }
 
-        /**
-        * The status of the funding instrument.
-        */
-        [DataMember(Name="status")]
+        /// <summary>
+        /// The status of the funding instrument.
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
 
-        /**
-        * REQUIRED
-        * The card type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The card type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
-        /**
-        * The date and time when the card becomes unusable from the vault, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The `valid_until` parameter is not the same as the expiration month and year. The expiration month and year might be later than the `valid_until` date. For example, the card expires in November 2019 but the `valid_until` date is October 17th, 2019.
-        */
-        [DataMember(Name="valid_until")]
+        /// <summary>
+        /// The date and time when the card becomes unusable from the vault, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The `valid_until` parameter is not the same as the expiration month and year. The expiration month and year might be later than the `valid_until` date. For example, the card expires in November 2019 but the `valid_until` date is October 17th, 2019.
+        /// </summary>
+        [DataMember(Name="valid_until", EmitDefaultValue = false)]
         public string ValidUntil { get; set; }
     }
 }

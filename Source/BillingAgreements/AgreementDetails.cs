@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:57 CST by version 0.1 of Braintree SDK Generator
 // AgreementDetails.cs
 // @version 0.1
 // @type object
@@ -9,61 +9,63 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The agreement details.
-    */
+    /// <summary>
+    /// The agreement details.
+    /// </summary>
     [DataContract]
     public class AgreementDetails {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public AgreementDetails() {}
 
-        /**
-        * The number of payment cycles completed for this agreement.
-        */
-        [DataMember(Name="cycles_completed")]
+        /// <summary>
+        /// The number of payment cycles completed for this agreement.
+        /// </summary>
+        [DataMember(Name="cycles_completed", EmitDefaultValue = false)]
         public string CyclesCompleted { get; set; }
 
-        /**
-        * The number of payment cycles remaining for this agreement.
-        */
-        [DataMember(Name="cycles_remaining")]
+        /// <summary>
+        /// The number of payment cycles remaining for this agreement.
+        /// </summary>
+        [DataMember(Name="cycles_remaining", EmitDefaultValue = false)]
         public string CyclesRemaining { get; set; }
 
-        /**
-        * The total number of failed payments for this agreement.
-        */
-        [DataMember(Name="failed_payment_count")]
+        /// <summary>
+        /// The total number of failed payments for this agreement.
+        /// </summary>
+        [DataMember(Name="failed_payment_count", EmitDefaultValue = false)]
         public string FailedPaymentCount { get; set; }
 
-        /**
-        * The final payment date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-09-23T08:00:00Z`.
-        */
-        [DataMember(Name="final_payment_date")]
+        /// <summary>
+        /// The final payment date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-09-23T08:00:00Z`.
+        /// </summary>
+        [DataMember(Name="final_payment_date", EmitDefaultValue = false)]
         public string FinalPaymentDate { get; set; }
 
-        /**
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="last_payment_amount")]
+        /// <summary>
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="last_payment_amount", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue LastPaymentAmount { get; set; }
 
-        /**
-        * The last payment date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2016-12-23T08:00:00Z`.
-        */
-        [DataMember(Name="last_payment_date")]
+        /// <summary>
+        /// The last payment date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2016-12-23T08:00:00Z`.
+        /// </summary>
+        [DataMember(Name="last_payment_date", EmitDefaultValue = false)]
         public string LastPaymentDate { get; set; }
 
-        /**
-        * The next billing date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-01-23T08:00:00Z`.
-        */
-        [DataMember(Name="next_billing_date")]
+        /// <summary>
+        /// The next billing date and time for this agreement, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-01-23T08:00:00Z`.
+        /// </summary>
+        [DataMember(Name="next_billing_date", EmitDefaultValue = false)]
         public string NextBillingDate { get; set; }
 
-        /**
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="outstanding_balance")]
+        /// <summary>
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="outstanding_balance", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue OutstandingBalance { get; set; }
     }
 }

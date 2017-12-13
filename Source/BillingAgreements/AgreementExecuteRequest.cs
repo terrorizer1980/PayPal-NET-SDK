@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:01 CST by version 0.1 of Braintree SDK Generator
 // AgreementExecuteRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Executes a billing agreement, by ID, after customer approval.
-     */
+    /// <summary>
+    /// Executes a billing agreement, by ID, after customer approval.
+    /// </summary>
     public class AgreementExecuteRequest : HttpRequest
     {
         public AgreementExecuteRequest(string PaymentToken) : base("/v1/payments/billing-agreements/{payment_token}/agreement-execute?", HttpMethod.Post, typeof(Agreement))
         {
             try {
                 this.Path = this.Path.Replace("{payment_token}", Uri.EscapeDataString(Convert.ToString(PaymentToken) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

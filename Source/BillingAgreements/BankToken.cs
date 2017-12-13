@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:58 CST by version 0.1 of Braintree SDK Generator
 // BankToken.cs
 // @version 0.1
 // @type object
@@ -9,33 +9,35 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A token for a bank card. Can be used to fund a payment.
-    */
+    /// <summary>
+    /// A token for a bank card. Can be used to fund a payment.
+    /// </summary>
     [DataContract]
     public class BankToken {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public BankToken() {}
 
-        /**
-        * REQUIRED
-        * The ID of the vaulted bank card.
-        */
-        [DataMember(Name="bank_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the vaulted bank card.
+        /// </summary>
+        [DataMember(Name="bank_id", EmitDefaultValue = false)]
         public string BankId { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the customer who owns the bank card.
-        */
-        [DataMember(Name="external_customer_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the customer who owns the bank card.
+        /// </summary>
+        [DataMember(Name="external_customer_id", EmitDefaultValue = false)]
         public string ExternalCustomerId { get; set; }
 
-        /**
-        * The ID of the direct debit mandate to validate. Supported only for Single Euro Payments Area (SEPA) bank accounts in the European Union (EU).
-        */
-        [DataMember(Name="mandate_reference_number")]
+        /// <summary>
+        /// The ID of the direct debit mandate to validate. Supported only for Single Euro Payments Area (SEPA) bank accounts in the European Union (EU).
+        /// </summary>
+        [DataMember(Name="mandate_reference_number", EmitDefaultValue = false)]
         public string MandateReferenceNumber { get; set; }
     }
 }

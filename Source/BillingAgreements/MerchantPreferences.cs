@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:57 CST by version 0.1 of Braintree SDK Generator
 // MerchantPreferences.cs
 // @version 0.1
 // @type object
@@ -9,69 +9,71 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
-    */
+    /// <summary>
+    /// The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
+    /// </summary>
     [DataContract]
     public class MerchantPreferences {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public MerchantPreferences() {}
 
-        /**
-        * The payment types that are accepted for this agreement. Read-only and reserved for future use.
-        */
-        [DataMember(Name="accepted_payment_type")]
+        /// <summary>
+        /// The payment types that are accepted for this agreement. Read-only and reserved for future use.
+        /// </summary>
+        [DataMember(Name="accepted_payment_type", EmitDefaultValue = false)]
         public string AcceptedPaymentType { get; set; }
 
-        /**
-        * Indicates whether PayPal automatically bills the outstanding balance in the next billing cycle. The outstanding balance is the total amount of any previously failed scheduled payments. Value is:<ul><li><code>NO</code>. PayPal does not automatically bill the customer the outstanding balance. Default is <code>NO</code>.</li><li><code>YES</code>. PayPal automatically bills the customer the outstanding balance.</li><ul>
-        */
-        [DataMember(Name="auto_bill_amount")]
+        /// <summary>
+        /// Indicates whether PayPal automatically bills the outstanding balance in the next billing cycle. The outstanding balance is the total amount of any previously failed scheduled payments. Value is:<ul><li><code>NO</code>. PayPal does not automatically bill the customer the outstanding balance. Default is <code>NO</code>.</li><li><code>YES</code>. PayPal automatically bills the customer the outstanding balance.</li><ul>
+        /// </summary>
+        [DataMember(Name="auto_bill_amount", EmitDefaultValue = false)]
         public string AutoBillAmount { get; set; }
 
-        /**
-        * REQUIRED
-        * The URL to which the customer is redirected if they cancel the agreement.
-        */
-        [DataMember(Name="cancel_url")]
+        /// <summary>
+        /// REQUIRED
+        /// The URL to which the customer is redirected if they cancel the agreement.
+        /// </summary>
+        [DataMember(Name="cancel_url", EmitDefaultValue = false)]
         public string CancelUrl { get; set; }
 
-        /**
-        * The character set for this agreement. Read-only and reserved for future use.
-        */
-        [DataMember(Name="char_set")]
+        /// <summary>
+        /// The character set for this agreement. Read-only and reserved for future use.
+        /// </summary>
+        [DataMember(Name="char_set", EmitDefaultValue = false)]
         public string CharSet { get; set; }
 
-        /**
-        * The ID of the merchant preferences.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the merchant preferences.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The action if the customer's initial payment fails. Value is:<ul><li><code>CONTINUE</code>. The agreement remains active and the failed payment amount is added to the outstanding balance. If auto-billing is enabled, PayPal automatically bills the outstanding balance in the next billing cycle. Default is `CONTINUE`.</li><li><code>CANCEL</code> PayPal creates the agreement but sets its state to pending until the initial payment clears. If the initial payment clears, the pending agreement becomes active. If the initial payment fails, the pending agreement is canceled.</li></ul>
-        */
-        [DataMember(Name="initial_fail_amount_action")]
+        /// <summary>
+        /// The action if the customer's initial payment fails. Value is:<ul><li><code>CONTINUE</code>. The agreement remains active and the failed payment amount is added to the outstanding balance. If auto-billing is enabled, PayPal automatically bills the outstanding balance in the next billing cycle. Default is `CONTINUE`.</li><li><code>CANCEL</code> PayPal creates the agreement but sets its state to pending until the initial payment clears. If the initial payment clears, the pending agreement becomes active. If the initial payment fails, the pending agreement is canceled.</li></ul>
+        /// </summary>
+        [DataMember(Name="initial_fail_amount_action", EmitDefaultValue = false)]
         public string InitialFailAmountAction { get; set; }
 
-        /**
-        * The maximum number of allowed failed payment attempts. Default is `0`, which allows infinite failed payment attempts.
-        */
-        [DataMember(Name="max_fail_attempts")]
+        /// <summary>
+        /// The maximum number of allowed failed payment attempts. Default is `0`, which allows infinite failed payment attempts.
+        /// </summary>
+        [DataMember(Name="max_fail_attempts", EmitDefaultValue = false)]
         public string MaxFailAttempts { get; set; }
 
-        /**
-        * REQUIRED
-        * The URL to which the customer is redirected if they accept the agreement.
-        */
-        [DataMember(Name="return_url")]
+        /// <summary>
+        /// REQUIRED
+        /// The URL to which the customer is redirected if they accept the agreement.
+        /// </summary>
+        [DataMember(Name="return_url", EmitDefaultValue = false)]
         public string ReturnUrl { get; set; }
 
-        /**
-        * A type for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="setup_fee")]
+        /// <summary>
+        /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="setup_fee", EmitDefaultValue = false)]
         public MoneyTypeWithCurrencyCodeQualifiedValue SetupFee { get; set; }
     }
 }

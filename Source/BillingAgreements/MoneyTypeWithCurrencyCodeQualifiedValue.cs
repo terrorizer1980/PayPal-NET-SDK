@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:57 CST by version 0.1 of Braintree SDK Generator
 // MoneyTypeWithCurrencyCodeQualifiedValue.cs
 // @version 0.1
 // @type object
@@ -9,27 +9,29 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A type for all financial value-related fields. For example, balance, payment due, and so on.
-    */
+    /// <summary>
+    /// A type for all financial value-related fields. For example, balance, payment due, and so on.
+    /// </summary>
     [DataContract]
     public class MoneyTypeWithCurrencyCodeQualifiedValue {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public MoneyTypeWithCurrencyCodeQualifiedValue() {}
 
-        /**
-        * REQUIRED
-        * The [three-character ISO-4217 currency code](https://developer.paypal.com/docs/integration/direct/rest/currency-codes/).
-        */
-        [DataMember(Name="currency")]
+        /// <summary>
+        /// REQUIRED
+        /// The [three-character ISO-4217 currency code](https://developer.paypal.com/docs/integration/direct/rest/currency-codes/).
+        /// </summary>
+        [DataMember(Name="currency", EmitDefaultValue = false)]
         public string Currency { get; set; }
 
-        /**
-        * REQUIRED
-        * The currency value. Might be an integer for currencies like `JPY` that are not typically fractional or a three-place decimal fraction for currencies like `TND` that are subdivided into thousandths. For the required number of decimal places for a currency code, see [ISO 4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
-        */
-        [DataMember(Name="value")]
+        /// <summary>
+        /// REQUIRED
+        /// The currency value. Might be an integer for currencies like `JPY` that are not typically fractional or a three-place decimal fraction for currencies like `TND` that are subdivided into thousandths. For the required number of decimal places for a currency code, see [ISO 4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+        /// </summary>
+        [DataMember(Name="value", EmitDefaultValue = false)]
         public string Value { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:59 CST by version 0.1 of Braintree SDK Generator
 // PaymentCardToken.cs
 // @version 0.1
 // @type object
@@ -9,52 +9,54 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A token for a payment card that can be used to fund a payment.
-    */
+    /// <summary>
+    /// A token for a payment card that can be used to fund a payment.
+    /// </summary>
     [DataContract]
     public class PaymentCardToken {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentCardToken() {}
 
-        /**
-        * The expiry month from the vaulted card. Value is from `1` to `12`.
-        */
-        [DataMember(Name="expire_month")]
+        /// <summary>
+        /// The expiry month from the vaulted card. Value is from `1` to `12`.
+        /// </summary>
+        [DataMember(Name="expire_month", EmitDefaultValue = false)]
         public int ExpireMonth { get; set; }
 
-        /**
-        * The four-digit expiry year from the vaulted card, in `YYYY` format.
-        */
-        [DataMember(Name="expire_year")]
+        /// <summary>
+        /// The four-digit expiry year from the vaulted card, in `YYYY` format.
+        /// </summary>
+        [DataMember(Name="expire_year", EmitDefaultValue = false)]
         public int ExpireYear { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the customer who owns this payment card.
-        */
-        [DataMember(Name="external_customer_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the customer who owns this payment card.
+        /// </summary>
+        [DataMember(Name="external_customer_id", EmitDefaultValue = false)]
         public string ExternalCustomerId { get; set; }
 
-        /**
-        * The last four digits of the card number from the vaulted card.
-        */
-        [DataMember(Name="last4")]
+        /// <summary>
+        /// The last four digits of the card number from the vaulted card.
+        /// </summary>
+        [DataMember(Name="last4", EmitDefaultValue = false)]
         public string Last4 { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the vaulted payment card.
-        */
-        [DataMember(Name="payment_card_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the vaulted payment card.
+        /// </summary>
+        [DataMember(Name="payment_card_id", EmitDefaultValue = false)]
         public string PaymentCardId { get; set; }
 
-        /**
-        * REQUIRED
-        * The card type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The card type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

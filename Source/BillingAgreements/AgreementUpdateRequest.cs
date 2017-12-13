@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:33 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:02 CST by version 0.1 of Braintree SDK Generator
 // AgreementUpdateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Updates details of a billing agreement, by ID. Details include the description, shipping address, start date, and so on.
-     */
+    /// <summary>
+    /// Updates details of a billing agreement, by ID. Details include the description, shipping address, start date, and so on.
+    /// </summary>
     public class AgreementUpdateRequest : HttpRequest
     {
         public AgreementUpdateRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}?", new HttpMethod("PATCH"), typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

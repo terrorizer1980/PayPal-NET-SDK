@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:59 CST by version 0.1 of Braintree SDK Generator
 // PayerInformation.cs
 // @version 0.1
 // @type object
@@ -9,43 +9,45 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * Information about the customer.
-    */
+    /// <summary>
+    /// Information about the customer.
+    /// </summary>
     [DataContract]
     public class PayerInformation {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PayerInformation() {}
 
-        /**
-        * A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public SimplePostalAddress BillingAddress { get; set; }
 
-        /**
-        * The customer's email address.
-        */
-        [DataMember(Name="email")]
+        /// <summary>
+        /// The customer's email address.
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The customer's first name.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The customer's first name.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The customer's last name.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The customer's last name.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * The PayPal-assigned ID for the customer.
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// The PayPal-assigned ID for the customer.
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
     }
 }

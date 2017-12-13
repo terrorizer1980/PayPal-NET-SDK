@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:33 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:02 CST by version 0.1 of Braintree SDK Generator
 // AgreementTransactionsRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-     * Lists transactions for an agreement, by ID. To filter the transactions that appear in the response, specify the optional start and end date query parameters.
-     */
+    /// <summary>
+    /// Lists transactions for an agreement, by ID. To filter the transactions that appear in the response, specify the optional start and end date query parameters.
+    /// </summary>
     public class AgreementTransactionsRequest : HttpRequest
     {
         public AgreementTransactionsRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}/transactions?", HttpMethod.Get, typeof(AgreementTransactions))
         {
             try {
                 this.Path = this.Path.Replace("{agreement_id}", Uri.EscapeDataString(Convert.ToString(AgreementId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }
@@ -32,7 +32,7 @@ namespace PayPal.BillingAgreements
             var strParams = Convert.ToString(EndDate);
             try {
                 this.Path = $"{this.Path}end_date={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -42,7 +42,7 @@ namespace PayPal.BillingAgreements
             var strParams = Convert.ToString(StartDate);
             try {
                 this.Path = $"{this.Path}start_date={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

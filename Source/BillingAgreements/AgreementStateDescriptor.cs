@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:19:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:56 CST by version 0.1 of Braintree SDK Generator
 // AgreementStateDescriptor.cs
 // @version 0.1
 // @type object
@@ -9,19 +9,21 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingAgreements
 {
-    /**
-    * A description of the current state of the agreement.
-    */
+    /// <summary>
+    /// A description of the current state of the agreement.
+    /// </summary>
     [DataContract]
     public class AgreementStateDescriptor {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public AgreementStateDescriptor() {}
 
-        /**
-        * The reason for the agreement state change.
-        */
-        [DataMember(Name="note")]
+        /// <summary>
+        /// The reason for the agreement state change.
+        /// </summary>
+        [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
     }
 }
