@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // InputFields.cs
 // @version 0.1
 // @type object
@@ -9,30 +9,32 @@ using System.Collections.Generic;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-    * The input field customization parameters.
-    */
+    /// <summary>
+    /// The input field customization parameters.
+    /// </summary>
     [DataContract]
     public class InputFields {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public InputFields() {}
 
-        /**
-        * Indicates whether to display the shipping address that is passed to this call rather than the one on file for this buyer on the PayPal experience pages. Value is:<ul><li><code>0</code>. Displays the shipping address on file.</li><li><code>1</code>. Displays the shipping address specified in this call. the customer cannot edit this shipping address.</li></ul>
-        */
+        /// <summary>
+        /// Indicates whether to display the shipping address that is passed to this call rather than the one on file for this buyer on the PayPal experience pages. Value is:<ul><li><code>0</code>. Displays the shipping address on file.</li><li><code>1</code>. Displays the shipping address specified in this call. the customer cannot edit this shipping address.</li></ul>
+        /// </summary>
         [DataMember(Name="address_override", EmitDefaultValue = false)]
         public int AddressOverride { get; set; }
 
-        /**
-        * Indicates whether the customer can enter a note to the merchant on the PayPal page during checkout.
-        */
+        /// <summary>
+        /// Indicates whether the customer can enter a note to the merchant on the PayPal page during checkout.
+        /// </summary>
         [DataMember(Name="allow_note", EmitDefaultValue = false)]
         public bool AllowNote { get; set; }
 
-        /**
-        * Indicates whether PayPal displays shipping address fields on the experience pages. Value is:<ul><li><code>0</code>. Displays the shipping address on the PayPal pages.</li><li><code>1</code>. Redacts shipping address fields from the PayPal pages. For digital goods, this field is required and must be <code>1</code>.</li><li><code>2</code>. Gets the shipping address from the customer's account profile.</li></ul>
-        */
+        /// <summary>
+        /// Indicates whether PayPal displays shipping address fields on the experience pages. Value is:<ul><li><code>0</code>. Displays the shipping address on the PayPal pages.</li><li><code>1</code>. Redacts shipping address fields from the PayPal pages. For digital goods, this field is required and must be <code>1</code>.</li><li><code>2</code>. Gets the shipping address from the customer's account profile.</li></ul>
+        /// </summary>
         [DataMember(Name="no_shipping", EmitDefaultValue = false)]
         public int NoShipping { get; set; }
     }

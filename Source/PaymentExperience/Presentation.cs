@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // Presentation.cs
 // @version 0.1
 // @type object
@@ -9,30 +9,32 @@ using System.Collections.Generic;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-    * The style and presentation parameters.
-    */
+    /// <summary>
+    /// The style and presentation parameters.
+    /// </summary>
     [DataContract]
     public class Presentation {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Presentation() {}
 
-        /**
-        * A label that overrides the business name in the PayPal account on the PayPal pages. Character length and limitations: 127 single-byte alphanumeric characters.
-        */
+        /// <summary>
+        /// A label that overrides the business name in the PayPal account on the PayPal pages. Character length and limitations: 127 single-byte alphanumeric characters.
+        /// </summary>
         [DataMember(Name="brand_name", EmitDefaultValue = false)]
         public string BrandName { get; set; }
 
-        /**
-        * The locale of pages that the PayPal payment experience displays. A valid value is `AU`, `AT`, `BE`, `BR`, `CA`, `CH`, `CN`, `DE`, `ES`, `GB`, `FR`, `IT`, `NL`, `PL`, `PT`, `RU`, or `US`. A 5-character code is also valid for languages in these countries: `da_DK`, `he_IL`, `id_ID`, `ja_JP`, `no_NO`, `pt_BR`, `ru_RU`, `sv_SE`, `th_TH`, `zh_CN`, `zh_HK`, or `zh_TW`.
-        */
+        /// <summary>
+        /// The locale of pages that the PayPal payment experience displays. A valid value is `AU`, `AT`, `BE`, `BR`, `CA`, `CH`, `CN`, `DE`, `ES`, `GB`, `FR`, `IT`, `NL`, `PL`, `PT`, `RU`, or `US`. A 5-character code is also valid for languages in these countries: `da_DK`, `he_IL`, `id_ID`, `ja_JP`, `no_NO`, `pt_BR`, `ru_RU`, `sv_SE`, `th_TH`, `zh_CN`, `zh_HK`, or `zh_TW`.
+        /// </summary>
         [DataMember(Name="locale_code", EmitDefaultValue = false)]
         public string LocaleCode { get; set; }
 
-        /**
-        * A URL to the logo image. A valid media type is `.gif`, `.jpg`, or `.png`. The image's maximum width is 190 pixels and maximum height is 60 pixels. PayPal crops images that are larger. PayPal places your logo image at the top of the cart review area. PayPal recommends that you store the image on a secure (HTTPS) server. Otherwise, web browsers display a message that checkout pages contain non-secure items. Character length and limitations: 127 single-byte alphanumeric characters.
-        */
+        /// <summary>
+        /// A URL to the logo image. A valid media type is `.gif`, `.jpg`, or `.png`. The image's maximum width is 190 pixels and maximum height is 60 pixels. PayPal crops images that are larger. PayPal places your logo image at the top of the cart review area. PayPal recommends that you store the image on a secure (HTTPS) server. Otherwise, web browsers display a message that checkout pages contain non-secure items. Character length and limitations: 127 single-byte alphanumeric characters.
+        /// </summary>
         [DataMember(Name="logo_image", EmitDefaultValue = false)]
         public string LogoImage { get; set; }
     }

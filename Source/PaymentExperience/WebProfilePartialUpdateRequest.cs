@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // WebProfilePartialUpdateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-     * Partially-updates a web experience profile, by ID. In the JSON request body, specify a patch object, the path of the profile location to update, and a new value.
-     */
+    /// <summary>
+    /// Partially-updates a web experience profile, by ID. In the JSON request body, specify a patch object, the path of the profile location to update, and a new value.
+    /// </summary>
     public class WebProfilePartialUpdateRequest : HttpRequest
     {
         public WebProfilePartialUpdateRequest(string ProfileId) : base("/v1/payment-experience/web-profiles/{profile_id}?", new HttpMethod("PATCH"), typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{profile_id}", Uri.EscapeDataString(Convert.ToString(ProfileId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

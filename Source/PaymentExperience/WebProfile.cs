@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // WebProfile.cs
 // @version 0.1
 // @type object
@@ -9,49 +9,51 @@ using System.Collections.Generic;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-    * A payment web experience profile.
-    */
+    /// <summary>
+    /// A payment web experience profile.
+    /// </summary>
     [DataContract]
     public class WebProfile {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public WebProfile() {}
 
-        /**
-        * The flow configuration parameters.
-        */
+        /// <summary>
+        /// The flow configuration parameters.
+        /// </summary>
         [DataMember(Name="flow_config", EmitDefaultValue = false)]
         public FlowConfig FlowConfig { get; set; }
 
-        /**
-        * The ID of the web experience profile.
-        */
+        /// <summary>
+        /// The ID of the web experience profile.
+        /// </summary>
         [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The input field customization parameters.
-        */
+        /// <summary>
+        /// The input field customization parameters.
+        /// </summary>
         [DataMember(Name="input_fields", EmitDefaultValue = false)]
         public InputFields InputFields { get; set; }
 
-        /**
-        * REQUIRED
-        * The web experience profile name. Must be unique for a set of profiles for a merchant.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The web experience profile name. Must be unique for a set of profiles for a merchant.
+        /// </summary>
         [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * The style and presentation parameters.
-        */
+        /// <summary>
+        /// The style and presentation parameters.
+        /// </summary>
         [DataMember(Name="presentation", EmitDefaultValue = false)]
         public Presentation Presentation { get; set; }
 
-        /**
-        * Indicates whether the profile persists for three hours or permanently. To persist the profile permanently, set to `false`. To persist the profile for three hours, set to `true`.
-        */
+        /// <summary>
+        /// Indicates whether the profile persists for three hours or permanently. To persist the profile permanently, set to `false`. To persist the profile for three hours, set to `true`.
+        /// </summary>
         [DataMember(Name="temporary", EmitDefaultValue = false)]
         public bool Temporary { get; set; }
     }

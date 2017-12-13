@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // WebProfileCreateRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-     * Creates a web experience profile. In the JSON request body, specify the profile name and details.
-     */
+    /// <summary>
+    /// Creates a web experience profile. In the JSON request body, specify the profile name and details.
+    /// </summary>
     public class WebProfileCreateRequest : HttpRequest
     {
         public WebProfileCreateRequest() : base("/v1/payment-experience/web-profiles/?", HttpMethod.Post, typeof(WebProfile))

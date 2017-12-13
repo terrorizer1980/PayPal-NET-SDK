@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:23 CST by version 0.1 of Braintree SDK Generator
 // WebProfileGetListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.PaymentExperience
 {
-    /**
-     * Lists all web experience profiles for a merchant or subject.
-     */
+    /// <summary>
+    /// Lists all web experience profiles for a merchant or subject.
+    /// </summary>
     public class WebProfileGetListRequest : HttpRequest
     {
         public WebProfileGetListRequest() : base("/v1/payment-experience/web-profiles/?", HttpMethod.Get, typeof(List<WebProfile>))
