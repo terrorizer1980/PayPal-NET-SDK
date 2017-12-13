@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:26 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:44 CST by version 0.1 of Braintree SDK Generator
 // PaymentOptions.cs
 // @version 0.1
 // @type object
@@ -9,19 +9,21 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payment options requested for this transaction.
-    */
+    /// <summary>
+    /// The payment options requested for this transaction.
+    /// </summary>
     [DataContract]
     public class PaymentOptions {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentOptions() {}
 
-        /**
-        * The payment method requested for this transaction. This field does not apply to the credit card payment method.
-        */
-        [DataMember(Name="allowed_payment_method")]
+        /// <summary>
+        /// The payment method requested for this transaction. This field does not apply to the credit card payment method.
+        /// </summary>
+        [DataMember(Name="allowed_payment_method", EmitDefaultValue = false)]
         public string AllowedPaymentMethod { get; set; }
     }
 }

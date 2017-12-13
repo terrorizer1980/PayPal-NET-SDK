@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:39 CST by version 0.1 of Braintree SDK Generator
 // CreditCardToken.cs
 // @version 0.1
 // @type object
@@ -9,50 +9,52 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A tokenized credit card that can be used to fund a payment.
-    */
+    /// <summary>
+    /// A tokenized credit card that can be used to fund a payment.
+    /// </summary>
     [DataContract]
     public class CreditCardToken {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CreditCardToken() {}
 
-        /**
-        * REQUIRED
-        * The ID of credit card that is stored in the PayPal vault.
-        */
-        [DataMember(Name="credit_card_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of credit card that is stored in the PayPal vault.
+        /// </summary>
+        [DataMember(Name="credit_card_id", EmitDefaultValue = false)]
         public string CreditCardId { get; set; }
 
-        /**
-        * The expiration month with no leading zero. Value is from `1` to `12`.
-        */
-        [DataMember(Name="expire_month")]
+        /// <summary>
+        /// The expiration month with no leading zero. Value is from `1` to `12`.
+        /// </summary>
+        [DataMember(Name="expire_month", EmitDefaultValue = false)]
         public int ExpireMonth { get; set; }
 
-        /**
-        * The four-digit expiration year.
-        */
-        [DataMember(Name="expire_year")]
+        /// <summary>
+        /// The four-digit expiration year.
+        /// </summary>
+        [DataMember(Name="expire_year", EmitDefaultValue = false)]
         public int ExpireYear { get; set; }
 
-        /**
-        * The last four digits of the stored credit card number.
-        */
-        [DataMember(Name="last4")]
+        /// <summary>
+        /// The last four digits of the stored credit card number.
+        /// </summary>
+        [DataMember(Name="last4", EmitDefaultValue = false)]
         public string Last4 { get; set; }
 
-        /**
-        * A unique ID that you can assign and track when you store a credit card in the vault or use a vaulted credit card. This ID can help to avoid unintentional use or misuse of credit cards. This ID can be any value you would like to associate with the saved card, such as a UUID, user name, or email address. **Required when you use a vaulted credit card if a `payer_id` was originally provided when you vaulted the credit card.**
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// A unique ID that you can assign and track when you store a credit card in the vault or use a vaulted credit card. This ID can help to avoid unintentional use or misuse of credit cards. This ID can be any value you would like to associate with the saved card, such as a UUID, user name, or email address. **Required when you use a vaulted credit card if a `payer_id` was originally provided when you vaulted the credit card.**
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
 
-        /**
-        * The credit card type. Value is `visa`, `mastercard`, `discover`, or `amex`. Values are in lowercase; do not use these values for display.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// The credit card type. Value is `visa`, `mastercard`, `discover`, or `amex`. Values are in lowercase; do not use these values for display.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

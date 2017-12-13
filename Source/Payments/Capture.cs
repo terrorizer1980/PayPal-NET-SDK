@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:27 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:47 CST by version 0.1 of Braintree SDK Generator
 // Capture.cs
 // @version 0.1
 // @type object
@@ -9,79 +9,81 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A capture transaction.
-    */
+    /// <summary>
+    /// A capture transaction.
+    /// </summary>
     [DataContract]
     public class Capture {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Capture() {}
 
-        /**
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The date and time when the capture occurred, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the capture occurred, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The ID of the capture transaction.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the capture transaction.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The invoice number to track this payment.
-        */
-        [DataMember(Name="invoice_number")]
+        /// <summary>
+        /// The invoice number to track this payment.
+        /// </summary>
+        [DataMember(Name="invoice_number", EmitDefaultValue = false)]
         public string InvoiceNumber { get; set; }
 
-        /**
-        * Indicates whether to release all remaining funds that the authorization holds in the funding instrument (FI). Default is `false`.
-        */
-        [DataMember(Name="is_final_capture")]
+        /// <summary>
+        /// Indicates whether to release all remaining funds that the authorization holds in the funding instrument (FI). Default is `false`.
+        /// </summary>
+        [DataMember(Name="is_final_capture", EmitDefaultValue = false)]
         public bool IsFinalCapture { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * The reason code that describes why the transaction state is pending or reversed.
-        */
-        [DataMember(Name="reason_code")]
+        /// <summary>
+        /// The reason code that describes why the transaction state is pending or reversed.
+        /// </summary>
+        [DataMember(Name="reason_code", EmitDefaultValue = false)]
         public string ReasonCode { get; set; }
 
-        /**
-        * The capture state. Value is:<ul><li><code>pending</code>. The capture is pending.</li><li><code>completed</code>. The capture has successfully completed.</li><li><code>refunded</code>. The capture was fully refunded.</li><li><code>partially_refunded</code>. The capture was partially refunded.</li></ul>
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The capture state. Value is:<ul><li><code>pending</code>. The capture is pending.</li><li><code>completed</code>. The capture has successfully completed.</li><li><code>refunded</code>. The capture was fully refunded.</li><li><code>partially_refunded</code>. The capture was partially refunded.</li></ul>
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="transaction_fee")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="transaction_fee", EmitDefaultValue = false)]
         public Currency TransactionFee { get; set; }
 
-        /**
-        * The date and time when the resource was last updated, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the resource was last updated, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

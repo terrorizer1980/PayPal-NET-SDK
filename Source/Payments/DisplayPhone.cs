@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:25 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:44 CST by version 0.1 of Braintree SDK Generator
 // DisplayPhone.cs
 // @version 0.1
 // @type object
@@ -9,25 +9,27 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payee's phone number.
-    */
+    /// <summary>
+    /// The payee's phone number.
+    /// </summary>
     [DataContract]
     public class DisplayPhone {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public DisplayPhone() {}
 
-        /**
-        * The [two-character IS0-3166-1 country code](https://developer.paypal.com/docs/integration/direct/rest/country-codes/) of the payee's country.
-        */
-        [DataMember(Name="country_code")]
+        /// <summary>
+        /// The [two-character IS0-3166-1 country code](https://developer.paypal.com/docs/integration/direct/rest/country-codes/) of the payee's country.
+        /// </summary>
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
-        /**
-        * The in-country phone number, in [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164-201011-I).
-        */
-        [DataMember(Name="number")]
+        /// <summary>
+        /// The in-country phone number, in [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164-201011-I).
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
     }
 }

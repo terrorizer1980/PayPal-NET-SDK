@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:16 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:45 CST by version 0.1 of Braintree SDK Generator
 // Authorization.cs
 // @version 0.1
 // @type object
@@ -9,116 +9,118 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * An authorization.
-    */
+    /// <summary>
+    /// An authorization.
+    /// </summary>
     [DataContract]
     public class Authorization {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Authorization() {}
 
-        /**
-        * REQUIRED
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The date and time when the authorization was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the authorization was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
-        */
-        [DataMember(Name="fmf_details")]
+        /// <summary>
+        /// The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
+        /// </summary>
+        [DataMember(Name="fmf_details", EmitDefaultValue = false)]
         public FmfDetails FmfDetails { get; set; }
 
-        /**
-        * The ID of the authorization.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the authorization.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * The payment mode of the authorization.
-        */
-        [DataMember(Name="payment_mode")]
+        /// <summary>
+        /// The payment mode of the authorization.
+        /// </summary>
+        [DataMember(Name="payment_mode", EmitDefaultValue = false)]
         public string PaymentMode { get; set; }
 
-        /**
-        * [DEPRECATED] The reason code for the pending transaction state. Obsolete. Use `reason_code` instead.
-        */
-        [DataMember(Name="pending_reason")]
+        /// <summary>
+        /// [DEPRECATED] The reason code for the pending transaction state. Obsolete. Use `reason_code` instead.
+        /// </summary>
+        [DataMember(Name="pending_reason", EmitDefaultValue = false)]
         public string PendingReason { get; set; }
 
-        /**
-        * A collection of payment response-related fields returned from a payment request.
-        */
-        [DataMember(Name="processor_response")]
+        /// <summary>
+        /// A collection of payment response-related fields returned from a payment request.
+        /// </summary>
+        [DataMember(Name="processor_response", EmitDefaultValue = false)]
         public ProcessorResponse ProcessorResponse { get; set; }
 
-        /**
-        * The level of seller protection present for the transaction. Supported for the PayPal payment method only. Value is:<ul><li><code>ELIGIBLE</code>. Merchant is protected by PayPal's Seller Protection Policy for Unauthorized Payments and Item Not Received.</li><li><code>PARTIALLY_ELIGIBLE</code>. Merchant is protected by PayPal's Seller Protection Policy for Item Not Received or Unauthorized Payments. For details, see `protection_eligibility_type`.</li><li><code>INELIGIBLE</code>. Merchant is not protected under the Seller Protection Policy.</li></ul>
-        */
-        [DataMember(Name="protection_eligibility")]
+        /// <summary>
+        /// The level of seller protection present for the transaction. Supported for the PayPal payment method only. Value is:<ul><li><code>ELIGIBLE</code>. Merchant is protected by PayPal's Seller Protection Policy for Unauthorized Payments and Item Not Received.</li><li><code>PARTIALLY_ELIGIBLE</code>. Merchant is protected by PayPal's Seller Protection Policy for Item Not Received or Unauthorized Payments. For details, see `protection_eligibility_type`.</li><li><code>INELIGIBLE</code>. Merchant is not protected under the Seller Protection Policy.</li></ul>
+        /// </summary>
+        [DataMember(Name="protection_eligibility", EmitDefaultValue = false)]
         public string ProtectionEligibility { get; set; }
 
-        /**
-        * The type of seller protection present for the transaction. Returned only when the `protection_eligibility` property is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported for the PayPal payment method only.<br/><br/>Returns one or both of the allowed values.<br/><br/>Value is:<ul><li><code>ITEM_NOT_RECEIVED_ELIGIBLE</code>. Sellers are protected against claims for items not received.</li><li><code>UNAUTHORIZED_PAYMENT_ELIGIBLE</code>. Sellers are protected against claims for unauthorized payments.</li></ul>
-        */
-        [DataMember(Name="protection_eligibility_type")]
+        /// <summary>
+        /// The type of seller protection present for the transaction. Returned only when the `protection_eligibility` property is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported for the PayPal payment method only.<br/><br/>Returns one or both of the allowed values.<br/><br/>Value is:<ul><li><code>ITEM_NOT_RECEIVED_ELIGIBLE</code>. Sellers are protected against claims for items not received.</li><li><code>UNAUTHORIZED_PAYMENT_ELIGIBLE</code>. Sellers are protected against claims for unauthorized payments.</li></ul>
+        /// </summary>
+        [DataMember(Name="protection_eligibility_type", EmitDefaultValue = false)]
         public string ProtectionEligibilityType { get; set; }
 
-        /**
-        * The reason code for the pending transaction state.
-        */
-        [DataMember(Name="reason_code")]
+        /// <summary>
+        /// The reason code for the pending transaction state.
+        /// </summary>
+        [DataMember(Name="reason_code", EmitDefaultValue = false)]
         public string ReasonCode { get; set; }
 
-        /**
-        * The receipt ID, which identifies the payment. Value is 16-digit numeric payment ID number that is returned for guest users.
-        */
-        [DataMember(Name="receipt_id")]
+        /// <summary>
+        /// The receipt ID, which identifies the payment. Value is 16-digit numeric payment ID number that is returned for guest users.
+        /// </summary>
+        [DataMember(Name="receipt_id", EmitDefaultValue = false)]
         public string ReceiptId { get; set; }
 
-        /**
-        * The ID of the purchase or transaction unit that corresponds to this authorization transaction.
-        */
-        [DataMember(Name="reference_id")]
+        /// <summary>
+        /// The ID of the purchase or transaction unit that corresponds to this authorization transaction.
+        /// </summary>
+        [DataMember(Name="reference_id", EmitDefaultValue = false)]
         public string ReferenceId { get; set; }
 
-        /**
-        * The authorization state.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The authorization state.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The date and time when the authorization was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the authorization was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
 
-        /**
-        * The date and time when the authorization expires, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="valid_until")]
+        /// <summary>
+        /// The date and time when the authorization expires, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="valid_until", EmitDefaultValue = false)]
         public string ValidUntil { get; set; }
     }
 }

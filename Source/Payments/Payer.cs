@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:38 CST by version 0.1 of Braintree SDK Generator
 // Payer.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A payer who funds a payment.
-    */
+    /// <summary>
+    /// A payer who funds a payment.
+    /// </summary>
     [DataContract]
     public class Payer {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Payer() {}
 
-        /**
-        * An array of a single funding instrument for the current payment. Valid only and required for the credit card payment method. The array must include either a `credit_card` or `credit_card_token` object. If the array contains more than one instrument, the payment is declined.
-        */
-        [DataMember(Name="funding_instruments")]
+        /// <summary>
+        /// An array of a single funding instrument for the current payment. Valid only and required for the credit card payment method. The array must include either a `credit_card` or `credit_card_token` object. If the array contains more than one instrument, the payment is declined.
+        /// </summary>
+        [DataMember(Name="funding_instruments", EmitDefaultValue = false)]
         public List<FundingInstrument> FundingInstruments { get; set; }
 
-        /**
-        * The payer information.
-        */
-        [DataMember(Name="payer_info")]
+        /// <summary>
+        /// The payer information.
+        /// </summary>
+        [DataMember(Name="payer_info", EmitDefaultValue = false)]
         public PayerInformation PayerInfo { get; set; }
 
-        /**
-        * The payment method. Value is PayPal Wallet payment, bank direct debit, or direct credit card.
-        */
-        [DataMember(Name="payment_method")]
+        /// <summary>
+        /// The payment method. Value is PayPal Wallet payment, bank direct debit, or direct credit card.
+        /// </summary>
+        [DataMember(Name="payment_method", EmitDefaultValue = false)]
         public string PaymentMethod { get; set; }
 
-        /**
-        * The status of payer's PayPal account.
-        */
-        [DataMember(Name="status")]
+        /// <summary>
+        /// The status of payer's PayPal account.
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
     }
 }

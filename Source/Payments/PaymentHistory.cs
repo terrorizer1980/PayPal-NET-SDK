@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:49 CST by version 0.1 of Braintree SDK Generator
 // PaymentHistory.cs
 // @version 0.1
 // @type object
@@ -9,31 +9,33 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * An array of payments that the seller made.
-    */
+    /// <summary>
+    /// An array of payments that the seller made.
+    /// </summary>
     [DataContract]
     public class PaymentHistory {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentHistory() {}
 
-        /**
-        * The number of items returned in each range of results. Note that the last results range might have fewer items than the requested number of items. The maximum value is `20`.
-        */
-        [DataMember(Name="count")]
+        /// <summary>
+        /// The number of items returned in each range of results. Note that the last results range might have fewer items than the requested number of items. The maximum value is `20`.
+        /// </summary>
+        [DataMember(Name="count", EmitDefaultValue = false)]
         public int Count { get; set; }
 
-        /**
-        * The ID of the next element. Use to get the next range of results.
-        */
-        [DataMember(Name="next_id")]
+        /// <summary>
+        /// The ID of the next element. Use to get the next range of results.
+        /// </summary>
+        [DataMember(Name="next_id", EmitDefaultValue = false)]
         public string NextId { get; set; }
 
-        /**
-        * An array of payments.
-        */
-        [DataMember(Name="payments")]
+        /// <summary>
+        /// An array of payments.
+        /// </summary>
+        [DataMember(Name="payments", EmitDefaultValue = false)]
         public List<Payment> Payments { get; set; }
     }
 }

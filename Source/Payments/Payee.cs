@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:25 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:43 CST by version 0.1 of Braintree SDK Generator
 // Payee.cs
 // @version 0.1
 // @type object
@@ -9,31 +9,33 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payee who receives the funds and fulfills the order.
-    */
+    /// <summary>
+    /// The payee who receives the funds and fulfills the order.
+    /// </summary>
     [DataContract]
     public class Payee {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Payee() {}
 
-        /**
-        * The email address associated with the payee's PayPal account. If the provided email address is not associated with any PayPal account, the payee can only receive PayPal Wallet payments. Direct credit card payments are denied due to card compliance requirements.
-        */
-        [DataMember(Name="email")]
+        /// <summary>
+        /// The email address associated with the payee's PayPal account. If the provided email address is not associated with any PayPal account, the payee can only receive PayPal Wallet payments. Direct credit card payments are denied due to card compliance requirements.
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The encrypted PayPal account ID for the payee.
-        */
-        [DataMember(Name="merchant_id")]
+        /// <summary>
+        /// The encrypted PayPal account ID for the payee.
+        /// </summary>
+        [DataMember(Name="merchant_id", EmitDefaultValue = false)]
         public string MerchantId { get; set; }
 
-        /**
-        * The display-only metadata for the payee.
-        */
-        [DataMember(Name="payee_display_metadata")]
+        /// <summary>
+        /// The display-only metadata for the payee.
+        /// </summary>
+        [DataMember(Name="payee_display_metadata", EmitDefaultValue = false)]
         public PayeeDisplayMetadata PayeeDisplayMetadata { get; set; }
     }
 }

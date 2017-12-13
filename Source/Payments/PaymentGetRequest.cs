@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:34 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:57 CST by version 0.1 of Braintree SDK Generator
 // PaymentGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Shows details for a payment, by ID, that has yet to complete. For example, shows details for a payment that was created, approved, or failed.
-     */
+    /// <summary>
+    /// Shows details for a payment, by ID, that has yet to complete. For example, shows details for a payment that was created, approved, or failed.
+    /// </summary>
     public class PaymentGetRequest : HttpRequest
     {
         public PaymentGetRequest(string PaymentId) : base("/v1/payments/payment/{payment_id}?", HttpMethod.Get, typeof(Payment))
         {
             try {
                 this.Path = this.Path.Replace("{payment_id}", Uri.EscapeDataString(Convert.ToString(PaymentId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

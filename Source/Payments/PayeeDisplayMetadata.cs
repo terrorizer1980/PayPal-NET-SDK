@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:25 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:43 CST by version 0.1 of Braintree SDK Generator
 // PayeeDisplayMetadata.cs
 // @version 0.1
 // @type object
@@ -9,31 +9,33 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The display-only metadata for the payee.
-    */
+    /// <summary>
+    /// The display-only metadata for the payee.
+    /// </summary>
     [DataContract]
     public class PayeeDisplayMetadata {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PayeeDisplayMetadata() {}
 
-        /**
-        * The payer's business name.
-        */
-        [DataMember(Name="brand_name")]
+        /// <summary>
+        /// The payer's business name.
+        /// </summary>
+        [DataMember(Name="brand_name", EmitDefaultValue = false)]
         public string BrandName { get; set; }
 
-        /**
-        * The payee's phone number.
-        */
-        [DataMember(Name="display_phone")]
+        /// <summary>
+        /// The payee's phone number.
+        /// </summary>
+        [DataMember(Name="display_phone", EmitDefaultValue = false)]
         public DisplayPhone DisplayPhone { get; set; }
 
-        /**
-        * The email address for the payer. Maximum length is 127 characters.
-        */
-        [DataMember(Name="email")]
+        /// <summary>
+        /// The email address for the payer. Maximum length is 127 characters.
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
     }
 }

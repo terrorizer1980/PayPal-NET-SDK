@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:53 CST by version 0.1 of Braintree SDK Generator
 // AuthorizationVoidRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Voids, or cancels, an authorization, by ID. You cannot void a fully captured authorization.
-     */
+    /// <summary>
+    /// Voids, or cancels, an authorization, by ID. You cannot void a fully captured authorization.
+    /// </summary>
     public class AuthorizationVoidRequest : HttpRequest
     {
         public AuthorizationVoidRequest(string AuthorizationId) : base("/v1/payments/authorization/{authorization_id}/void?", HttpMethod.Post, typeof(Authorization))
         {
             try {
                 this.Path = this.Path.Replace("{authorization_id}", Uri.EscapeDataString(Convert.ToString(AuthorizationId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

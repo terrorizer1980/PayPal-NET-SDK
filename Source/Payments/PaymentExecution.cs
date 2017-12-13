@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:50 CST by version 0.1 of Braintree SDK Generator
 // PaymentExecution.cs
 // @version 0.1
 // @type object
@@ -9,25 +9,27 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * Executes a PayPal account-based payment with the `payer_id` obtained from the web approval URL.
-    */
+    /// <summary>
+    /// Executes a PayPal account-based payment with the `payer_id` obtained from the web approval URL.
+    /// </summary>
     [DataContract]
     public class PaymentExecution {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentExecution() {}
 
-        /**
-        * The ID of the payer that PayPal passes in the `return_url`.
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// The ID of the payer that PayPal passes in the `return_url`.
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
 
-        /**
-        * An array of transaction details. Includes the amount and item details. For update and execute payment calls, the `transactions` object accepts only the `amount` object.
-        */
-        [DataMember(Name="transactions")]
+        /// <summary>
+        /// An array of transaction details. Includes the amount and item details. For update and execute payment calls, the `transactions` object accepts only the `amount` object.
+        /// </summary>
+        [DataMember(Name="transactions", EmitDefaultValue = false)]
         public List<CartBase> Transactions { get; set; }
     }
 }

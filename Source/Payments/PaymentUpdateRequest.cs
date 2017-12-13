@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:35 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:58 CST by version 0.1 of Braintree SDK Generator
 // PaymentUpdateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Partially updates a payment, by ID. You can update the amount, shipping address, invoice ID, and custom data. You cannot update a payment after the payment executes.
-     */
+    /// <summary>
+    /// Partially updates a payment, by ID. You can update the amount, shipping address, invoice ID, and custom data. You cannot update a payment after the payment executes.
+    /// </summary>
     public class PaymentUpdateRequest : HttpRequest
     {
         public PaymentUpdateRequest(string PaymentId) : base("/v1/payments/payment/{payment_id}?", new HttpMethod("PATCH"), typeof(Payment))
         {
             try {
                 this.Path = this.Path.Replace("{payment_id}", Uri.EscapeDataString(Convert.ToString(PaymentId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

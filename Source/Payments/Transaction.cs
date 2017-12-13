@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:41 CST by version 0.1 of Braintree SDK Generator
 // Transaction.cs
 // @version 0.1
 // @type object
@@ -9,98 +9,100 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment.
-    */
+    /// <summary>
+    /// An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment.
+    /// </summary>
     [DataContract]
     public class Transaction {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Transaction() {}
 
-        /**
-        * REQUIRED
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * A free-form field for the client's use.
-        */
-        [DataMember(Name="custom")]
+        /// <summary>
+        /// A free-form field for the client's use.
+        /// </summary>
+        [DataMember(Name="custom", EmitDefaultValue = false)]
         public string Custom { get; set; }
 
-        /**
-        * The description of the purchase.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// The description of the purchase.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The invoice number to track this payment.
-        */
-        [DataMember(Name="invoice_number")]
+        /// <summary>
+        /// The invoice number to track this payment.
+        /// </summary>
+        [DataMember(Name="invoice_number", EmitDefaultValue = false)]
         public string InvoiceNumber { get; set; }
 
-        /**
-        * An array of items that are being purchased.
-        */
-        [DataMember(Name="item_list")]
+        /// <summary>
+        /// An array of items that are being purchased.
+        /// </summary>
+        [DataMember(Name="item_list", EmitDefaultValue = false)]
         public ItemList ItemList { get; set; }
 
-        /**
-        * Optional. A note to the recipient of the funds in this transaction.
-        */
-        [DataMember(Name="note_to_payee")]
+        /// <summary>
+        /// Optional. A note to the recipient of the funds in this transaction.
+        /// </summary>
+        [DataMember(Name="note_to_payee", EmitDefaultValue = false)]
         public string NoteToPayee { get; set; }
 
-        /**
-        * The URL to send payment notifications.
-        */
-        [DataMember(Name="notify_url")]
+        /// <summary>
+        /// The URL to send payment notifications.
+        /// </summary>
+        [DataMember(Name="notify_url", EmitDefaultValue = false)]
         public string NotifyUrl { get; set; }
 
-        /**
-        * The URL on the merchant site related to this payment.
-        */
-        [DataMember(Name="order_url")]
+        /// <summary>
+        /// The URL on the merchant site related to this payment.
+        /// </summary>
+        [DataMember(Name="order_url", EmitDefaultValue = false)]
         public string OrderUrl { get; set; }
 
-        /**
-        * The payee who receives the funds and fulfills the order.
-        */
-        [DataMember(Name="payee")]
+        /// <summary>
+        /// The payee who receives the funds and fulfills the order.
+        /// </summary>
+        [DataMember(Name="payee", EmitDefaultValue = false)]
         public Payee Payee { get; set; }
 
-        /**
-        * The payment options requested for this transaction.
-        */
-        [DataMember(Name="payment_options")]
+        /// <summary>
+        /// The payment options requested for this transaction.
+        /// </summary>
+        [DataMember(Name="payment_options", EmitDefaultValue = false)]
         public PaymentOptions PaymentOptions { get; set; }
 
-        /**
-        * The purchase order number or ID. Identifies this payment.
-        */
-        [DataMember(Name="purchase_order")]
+        /// <summary>
+        /// The purchase order number or ID. Identifies this payment.
+        /// </summary>
+        [DataMember(Name="purchase_order", EmitDefaultValue = false)]
         public string PurchaseOrder { get; set; }
 
-        /**
-        * Optional. The merchant-provided ID for the purchase unit.
-        */
-        [DataMember(Name="reference_id")]
+        /// <summary>
+        /// Optional. The merchant-provided ID for the purchase unit.
+        /// </summary>
+        [DataMember(Name="reference_id", EmitDefaultValue = false)]
         public string ReferenceId { get; set; }
 
-        /**
-        * An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment.
-        */
-        [DataMember(Name="related_resources")]
+        /// <summary>
+        /// An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment.
+        /// </summary>
+        [DataMember(Name="related_resources", EmitDefaultValue = false)]
         public List<RelatedResources> RelatedResources { get; set; }
 
-        /**
-        * The soft descriptor that is used when charging this funding source. Maximum length is 22 characters. If you include a value that is greater than 22 characters, the API truncates the string.
-        */
-        [DataMember(Name="soft_descriptor")]
+        /// <summary>
+        /// The soft descriptor that is used when charging this funding source. Maximum length is 22 characters. If you include a value that is greater than 22 characters, the API truncates the string.
+        /// </summary>
+        [DataMember(Name="soft_descriptor", EmitDefaultValue = false)]
         public string SoftDescriptor { get; set; }
     }
 }

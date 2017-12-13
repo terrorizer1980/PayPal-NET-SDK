@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:42 CST by version 0.1 of Braintree SDK Generator
 // ItemList.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * An array of items that are being purchased.
-    */
+    /// <summary>
+    /// An array of items that are being purchased.
+    /// </summary>
     [DataContract]
     public class ItemList {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ItemList() {}
 
-        /**
-        * An array of items that are being purchased.
-        */
-        [DataMember(Name="items")]
+        /// <summary>
+        /// An array of items that are being purchased.
+        /// </summary>
+        [DataMember(Name="items", EmitDefaultValue = false)]
         public List<Item> Items { get; set; }
 
-        /**
-        * The extended address, which is used as the shipping address in a payment.
-        */
-        [DataMember(Name="shipping_address")]
+        /// <summary>
+        /// The extended address, which is used as the shipping address in a payment.
+        /// </summary>
+        [DataMember(Name="shipping_address", EmitDefaultValue = false)]
         public ShippingAddress ShippingAddress { get; set; }
 
-        /**
-        * The shipping method used for this payment, such as USPS Parcel.
-        */
-        [DataMember(Name="shipping_method")]
+        /// <summary>
+        /// The shipping method used for this payment, such as USPS Parcel.
+        /// </summary>
+        [DataMember(Name="shipping_method", EmitDefaultValue = false)]
         public string ShippingMethod { get; set; }
 
-        /**
-        * The shipping phone number, in its canonical international format as defined by the [E.164](https://en.wikipedia.org/wiki/E.164) numbering plan. Enables merchants to share payer’s contact number with PayPal for the current payment. The final contact number for the payer who is associated with the transaction might be the same as or different from the `shipping_phone_number` based on the payer’s action on PayPal.
-        */
-        [DataMember(Name="shipping_phone_number")]
+        /// <summary>
+        /// The shipping phone number, in its canonical international format as defined by the [E.164](https://en.wikipedia.org/wiki/E.164) numbering plan. Enables merchants to share payer’s contact number with PayPal for the current payment. The final contact number for the payer who is associated with the transaction might be the same as or different from the `shipping_phone_number` based on the payer’s action on PayPal.
+        /// </summary>
+        [DataMember(Name="shipping_phone_number", EmitDefaultValue = false)]
         public string ShippingPhoneNumber { get; set; }
     }
 }

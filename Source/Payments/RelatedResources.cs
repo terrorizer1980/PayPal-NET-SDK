@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:26 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:45 CST by version 0.1 of Braintree SDK Generator
 // RelatedResources.cs
 // @version 0.1
 // @type object
@@ -9,43 +9,45 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payment-related financial transactions, which include sales, authorizations, captures, and refunds. To show resource details, use the resource ID. For example, to [show details for a related authorization](/docs/api/payments/#authorization_get), use the ID returned in the `authorization` object. You can also use the [HATEOAS links](/docs/api/hateoas-links/) for a resource to complete operations for that resource. For example, a `sale` object provides a `refund` link that enables you to refund the sale.
-    */
+    /// <summary>
+    /// The payment-related financial transactions, which include sales, authorizations, captures, and refunds. To show resource details, use the resource ID. For example, to [show details for a related authorization](/docs/api/payments/#authorization_get), use the ID returned in the `authorization` object. You can also use the [HATEOAS links](/docs/api/hateoas-links/) for a resource to complete operations for that resource. For example, a `sale` object provides a `refund` link that enables you to refund the sale.
+    /// </summary>
     [DataContract]
     public class RelatedResources {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public RelatedResources() {}
 
-        /**
-        * An authorization.
-        */
-        [DataMember(Name="authorization")]
+        /// <summary>
+        /// An authorization.
+        /// </summary>
+        [DataMember(Name="authorization", EmitDefaultValue = false)]
         public Authorization Authorization { get; set; }
 
-        /**
-        * A capture transaction.
-        */
-        [DataMember(Name="capture")]
+        /// <summary>
+        /// A capture transaction.
+        /// </summary>
+        [DataMember(Name="capture", EmitDefaultValue = false)]
         public Capture Capture { get; set; }
 
-        /**
-        * An order transaction.
-        */
-        [DataMember(Name="order")]
+        /// <summary>
+        /// An order transaction.
+        /// </summary>
+        [DataMember(Name="order", EmitDefaultValue = false)]
         public Order Order { get; set; }
 
-        /**
-        * A refund transaction.
-        */
-        [DataMember(Name="refund")]
+        /// <summary>
+        /// A refund transaction.
+        /// </summary>
+        [DataMember(Name="refund", EmitDefaultValue = false)]
         public Refund Refund { get; set; }
 
-        /**
-        * The sale transaction details.
-        */
-        [DataMember(Name="sale")]
+        /// <summary>
+        /// The sale transaction details.
+        /// </summary>
+        [DataMember(Name="sale", EmitDefaultValue = false)]
         public Sale Sale { get; set; }
     }
 }

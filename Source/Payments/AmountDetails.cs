@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:42 CST by version 0.1 of Braintree SDK Generator
 // AmountDetails.cs
 // @version 0.1
 // @type object
@@ -9,55 +9,57 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The additional details about the payment amount.
-    */
+    /// <summary>
+    /// The additional details about the payment amount.
+    /// </summary>
     [DataContract]
     public class AmountDetails {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public AmountDetails() {}
 
-        /**
-        * The gift wrap fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
-        */
-        [DataMember(Name="gift_wrap")]
+        /// <summary>
+        /// The gift wrap fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
+        /// </summary>
+        [DataMember(Name="gift_wrap", EmitDefaultValue = false)]
         public string GiftWrap { get; set; }
 
-        /**
-        * The handling fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported for the PayPal payment method only.
-        */
-        [DataMember(Name="handling_fee")]
+        /// <summary>
+        /// The handling fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported for the PayPal payment method only.
+        /// </summary>
+        [DataMember(Name="handling_fee", EmitDefaultValue = false)]
         public string HandlingFee { get; set; }
 
-        /**
-        * The insurance fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported only for the PayPal payment method.
-        */
-        [DataMember(Name="insurance")]
+        /// <summary>
+        /// The insurance fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported only for the PayPal payment method.
+        /// </summary>
+        [DataMember(Name="insurance", EmitDefaultValue = false)]
         public string Insurance { get; set; }
 
-        /**
-        * The shipping fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
-        */
-        [DataMember(Name="shipping")]
+        /// <summary>
+        /// The shipping fee. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
+        /// </summary>
+        [DataMember(Name="shipping", EmitDefaultValue = false)]
         public string Shipping { get; set; }
 
-        /**
-        * The shipping fee discount. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported for the PayPal payment method only.
-        */
-        [DataMember(Name="shipping_discount")]
+        /// <summary>
+        /// The shipping fee discount. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>Supported for the PayPal payment method only.
+        /// </summary>
+        [DataMember(Name="shipping_discount", EmitDefaultValue = false)]
         public string ShippingDiscount { get; set; }
 
-        /**
-        * The subtotal amount for the items. If the request includes line items, this property is **required**. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
-        */
-        [DataMember(Name="subtotal")]
+        /// <summary>
+        /// The subtotal amount for the items. If the request includes line items, this property is **required**. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
+        /// </summary>
+        [DataMember(Name="subtotal", EmitDefaultValue = false)]
         public string Subtotal { get; set; }
 
-        /**
-        * The tax. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
-        */
-        [DataMember(Name="tax")]
+        /// <summary>
+        /// The tax. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
+        /// </summary>
+        [DataMember(Name="tax", EmitDefaultValue = false)]
         public string Tax { get; set; }
     }
 }

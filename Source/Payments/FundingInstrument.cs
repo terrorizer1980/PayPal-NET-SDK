@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:38 CST by version 0.1 of Braintree SDK Generator
 // FundingInstrument.cs
 // @version 0.1
 // @type object
@@ -9,25 +9,27 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A payer's funding instrument. An instance of this schema is valid if and only if it is valid against exactly one of these supported properties.
-    */
+    /// <summary>
+    /// A payer's funding instrument. An instance of this schema is valid if and only if it is valid against exactly one of these supported properties.
+    /// </summary>
     [DataContract]
     public class FundingInstrument {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public FundingInstrument() {}
 
-        /**
-        * [DEPRECATED] A credit card. Can be used to fund a payment. Use a payment card instead.
-        */
-        [DataMember(Name="credit_card")]
+        /// <summary>
+        /// [DEPRECATED] A credit card. Can be used to fund a payment. Use a payment card instead.
+        /// </summary>
+        [DataMember(Name="credit_card", EmitDefaultValue = false)]
         public CreditCard CreditCard { get; set; }
 
-        /**
-        * A tokenized credit card that can be used to fund a payment.
-        */
-        [DataMember(Name="credit_card_token")]
+        /// <summary>
+        /// A tokenized credit card that can be used to fund a payment.
+        /// </summary>
+        [DataMember(Name="credit_card_token", EmitDefaultValue = false)]
         public CreditCardToken CreditCardToken { get; set; }
     }
 }

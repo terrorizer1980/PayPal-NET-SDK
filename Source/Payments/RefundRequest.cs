@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:50 CST by version 0.1 of Braintree SDK Generator
 // RefundRequest.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A refund request.
-    */
+    /// <summary>
+    /// A refund request.
+    /// </summary>
     [DataContract]
     public class RefundRequest {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public RefundRequest() {}
 
-        /**
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The refund description. Value is a string of single-byte alphanumeric characters.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// The refund description. Value is a string of single-byte alphanumeric characters.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The invoice number that is used to track this payment. Value is a string of single-byte alphanumeric characters.
-        */
-        [DataMember(Name="invoice_number")]
+        /// <summary>
+        /// The invoice number that is used to track this payment. Value is a string of single-byte alphanumeric characters.
+        /// </summary>
+        [DataMember(Name="invoice_number", EmitDefaultValue = false)]
         public string InvoiceNumber { get; set; }
 
-        /**
-        * The refund reason description.
-        */
-        [DataMember(Name="reason")]
+        /// <summary>
+        /// The refund reason description.
+        /// </summary>
+        [DataMember(Name="reason", EmitDefaultValue = false)]
         public string Reason { get; set; }
     }
 }

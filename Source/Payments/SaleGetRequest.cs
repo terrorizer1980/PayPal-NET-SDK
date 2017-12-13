@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:36 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:59 CST by version 0.1 of Braintree SDK Generator
 // SaleGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Shows details for a sale, by ID. Returns only sales that were created through the REST API.
-     */
+    /// <summary>
+    /// Shows details for a sale, by ID. Returns only sales that were created through the REST API.
+    /// </summary>
     public class SaleGetRequest : HttpRequest
     {
         public SaleGetRequest(string SaleId) : base("/v1/payments/sale/{sale_id}?", HttpMethod.Get, typeof(Sale))
         {
             try {
                 this.Path = this.Path.Replace("{sale_id}", Uri.EscapeDataString(Convert.ToString(SaleId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

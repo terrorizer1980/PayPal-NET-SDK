@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:33 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:55 CST by version 0.1 of Braintree SDK Generator
 // OrderVoidRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Voids, or cancels, an order, by ID. You cannot void an order if the payment has already been partially or fully captured.
-     */
+    /// <summary>
+    /// Voids, or cancels, an order, by ID. You cannot void an order if the payment has already been partially or fully captured.
+    /// </summary>
     public class OrderVoidRequest : HttpRequest
     {
         public OrderVoidRequest(string OrderId) : base("/v1/payments/orders/{order_id}/do-void?", HttpMethod.Post, typeof(Order))
         {
             try {
                 this.Path = this.Path.Replace("{order_id}", Uri.EscapeDataString(Convert.ToString(OrderId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

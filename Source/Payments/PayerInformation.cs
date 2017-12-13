@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:40 CST by version 0.1 of Braintree SDK Generator
 // PayerInformation.cs
 // @version 0.1
 // @type object
@@ -9,103 +9,105 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payer information.
-    */
+    /// <summary>
+    /// The payer information.
+    /// </summary>
     [DataContract]
     public class PayerInformation {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PayerInformation() {}
 
-        /**
-        * The billing address in a payment. Can be extended for shipping address.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// The billing address in a payment. Can be extended for shipping address.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public Address BillingAddress { get; set; }
 
-        /**
-        * The birth date of the payer, in [Internet date format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `1990-04-12`.
-        */
-        [DataMember(Name="birth_date")]
+        /// <summary>
+        /// The birth date of the payer, in [Internet date format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `1990-04-12`.
+        /// </summary>
+        [DataMember(Name="birth_date", EmitDefaultValue = false)]
         public string BirthDate { get; set; }
 
-        /**
-        * The payer's [two-character IS0-3166-1 country code](/docs/integration/direct/rest/country-codes/).
-        */
-        [DataMember(Name="country_code")]
+        /// <summary>
+        /// The payer's [two-character IS0-3166-1 country code](/docs/integration/direct/rest/country-codes/).
+        /// </summary>
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
-        /**
-        * The payer's email address. Maximum length is 127 characters.
-        */
-        [DataMember(Name="email")]
+        /// <summary>
+        /// The payer's email address. Maximum length is 127 characters.
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The payer's first name.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The payer's first name.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The payer's last name.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The payer's last name.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * The payer's middle name.
-        */
-        [DataMember(Name="middle_name")]
+        /// <summary>
+        /// The payer's middle name.
+        /// </summary>
+        [DataMember(Name="middle_name", EmitDefaultValue = false)]
         public string MiddleName { get; set; }
 
-        /**
-        * The PayPal-assigned encrypted payer ID.
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// The PayPal-assigned encrypted payer ID.
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
 
-        /**
-        * The payer's phone number. Maximum length is 20 characters.
-        */
-        [DataMember(Name="phone")]
+        /// <summary>
+        /// The payer's phone number. Maximum length is 20 characters.
+        /// </summary>
+        [DataMember(Name="phone", EmitDefaultValue = false)]
         public string Phone { get; set; }
 
-        /**
-        * The phone type.
-        */
-        [DataMember(Name="phone_type")]
+        /// <summary>
+        /// The phone type.
+        /// </summary>
+        [DataMember(Name="phone_type", EmitDefaultValue = false)]
         public string PhoneType { get; set; }
 
-        /**
-        * The payer's salutation.
-        */
-        [DataMember(Name="salutation")]
+        /// <summary>
+        /// The payer's salutation.
+        /// </summary>
+        [DataMember(Name="salutation", EmitDefaultValue = false)]
         public string Salutation { get; set; }
 
-        /**
-        * The extended address, which is used as the shipping address in a payment.
-        */
-        [DataMember(Name="shipping_address")]
+        /// <summary>
+        /// The extended address, which is used as the shipping address in a payment.
+        /// </summary>
+        [DataMember(Name="shipping_address", EmitDefaultValue = false)]
         public ShippingAddress ShippingAddress { get; set; }
 
-        /**
-        * The payer's suffix.
-        */
-        [DataMember(Name="suffix")]
+        /// <summary>
+        /// The payer's suffix.
+        /// </summary>
+        [DataMember(Name="suffix", EmitDefaultValue = false)]
         public string Suffix { get; set; }
 
-        /**
-        * The payer’s tax ID. Supported for the PayPal payment method only.
-        */
-        [DataMember(Name="tax_id")]
+        /// <summary>
+        /// The payer’s tax ID. Supported for the PayPal payment method only.
+        /// </summary>
+        [DataMember(Name="tax_id", EmitDefaultValue = false)]
         public string TaxId { get; set; }
 
-        /**
-        * The payer’s tax ID type. Supported for the PayPal payment method only.
-        */
-        [DataMember(Name="tax_id_type")]
+        /// <summary>
+        /// The payer’s tax ID type. Supported for the PayPal payment method only.
+        /// </summary>
+        [DataMember(Name="tax_id_type", EmitDefaultValue = false)]
         public string TaxIdType { get; set; }
     }
 }

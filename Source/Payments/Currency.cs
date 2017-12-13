@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:47 CST by version 0.1 of Braintree SDK Generator
 // Currency.cs
 // @version 0.1
 // @type object
@@ -9,27 +9,29 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-    */
+    /// <summary>
+    /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+    /// </summary>
     [DataContract]
     public class Currency {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Currency() {}
 
-        /**
-        * REQUIRED
-        * The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/). PayPal does not support all currencies.
-        */
-        [DataMember(Name="currency")]
+        /// <summary>
+        /// REQUIRED
+        /// The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/). PayPal does not support all currencies.
+        /// </summary>
+        [DataMember(Name="currency", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
 
-        /**
-        * REQUIRED
-        * The amount, up to *N* digits after the decimal separator, as defined in [ISO-4217](/docs/integration/direct/rest/currency-codes/) for the appropriate currency code.
-        */
-        [DataMember(Name="value")]
+        /// <summary>
+        /// REQUIRED
+        /// The amount, up to *N* digits after the decimal separator, as defined in [ISO-4217](/docs/integration/direct/rest/currency-codes/) for the appropriate currency code.
+        /// </summary>
+        [DataMember(Name="value", EmitDefaultValue = false)]
         public string Value { get; set; }
     }
 }

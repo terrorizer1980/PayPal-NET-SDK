@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:32 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:54 CST by version 0.1 of Braintree SDK Generator
 // OrderCaptureRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Captures a payment for an order, by ID. To use this call, the original payment call must specify an `order` intent. In the JSON request body, include the payment amount and indicate whether this capture is the final capture for the authorization.
-     */
+    /// <summary>
+    /// Captures a payment for an order, by ID. To use this call, the original payment call must specify an `order` intent. In the JSON request body, include the payment amount and indicate whether this capture is the final capture for the authorization.
+    /// </summary>
     public class OrderCaptureRequest : HttpRequest
     {
         public OrderCaptureRequest(string OrderId) : base("/v1/payments/orders/{order_id}/capture?", HttpMethod.Post, typeof(Capture))
         {
             try {
                 this.Path = this.Path.Replace("{order_id}", Uri.EscapeDataString(Convert.ToString(OrderId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

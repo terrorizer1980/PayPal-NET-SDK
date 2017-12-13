@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:35 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:57 CST by version 0.1 of Braintree SDK Generator
 // PaymentListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Lists payments that were created by the [create payment](#payment_create) call and that are in any state. The list shows the payments that are made to the merchant who makes the call. To filter the payments that appear in the response, you can specify one or more optional query and pagination parameters. See [Filtering and pagination](/docs/api/overview/#query-parameters).
-     */
+    /// <summary>
+    /// Lists payments that were created by the [create payment](#payment_create) call and that are in any state. The list shows the payments that are made to the merchant who makes the call. To filter the payments that appear in the response, you can specify one or more optional query and pagination parameters. See [Filtering and pagination](/docs/api/overview/#query-parameters).
+    /// </summary>
     public class PaymentListRequest : HttpRequest
     {
         public PaymentListRequest() : base("/v1/payments/payment?", HttpMethod.Get, typeof(PaymentHistory))
@@ -29,7 +29,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(Count);
             try {
                 this.Path = $"{this.Path}count={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -39,7 +39,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(EndTime);
             try {
                 this.Path = $"{this.Path}end_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -49,7 +49,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(PayeeId);
             try {
                 this.Path = $"{this.Path}payee_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -59,7 +59,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(SortBy);
             try {
                 this.Path = $"{this.Path}sort_by={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -69,7 +69,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(SortOrder);
             try {
                 this.Path = $"{this.Path}sort_order={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -79,7 +79,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(StartId);
             try {
                 this.Path = $"{this.Path}start_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -89,7 +89,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(StartIndex);
             try {
                 this.Path = $"{this.Path}start_index={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -99,7 +99,7 @@ namespace PayPal.Payments
             var strParams = Convert.ToString(StartTime);
             try {
                 this.Path = $"{this.Path}start_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

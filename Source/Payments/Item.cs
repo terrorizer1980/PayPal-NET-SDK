@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:42 CST by version 0.1 of Braintree SDK Generator
 // Item.cs
 // @version 0.1
 // @type object
@@ -9,65 +9,67 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The item details.
-    */
+    /// <summary>
+    /// The item details.
+    /// </summary>
     [DataContract]
     public class Item {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Item() {}
 
-        /**
-        * REQUIRED
-        * The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/).
-        */
-        [DataMember(Name="currency")]
+        /// <summary>
+        /// REQUIRED
+        /// The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/).
+        /// </summary>
+        [DataMember(Name="currency", EmitDefaultValue = false)]
         public string Currency { get; set; }
 
-        /**
-        * The item description. Supported only for the PayPal payment method.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// The item description. Supported only for the PayPal payment method.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * REQUIRED
-        * The item name. Maximum length is 127 characters.
-        */
-        [DataMember(Name="name")]
+        /// <summary>
+        /// REQUIRED
+        /// The item name. Maximum length is 127 characters.
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * REQUIRED
-        * The item cost. Maximum length is 10 characters.
-        */
-        [DataMember(Name="price")]
+        /// <summary>
+        /// REQUIRED
+        /// The item cost. Maximum length is 10 characters.
+        /// </summary>
+        [DataMember(Name="price", EmitDefaultValue = false)]
         public string Price { get; set; }
 
-        /**
-        * REQUIRED
-        * The item quantity. Maximum length is 10 characters.
-        */
-        [DataMember(Name="quantity")]
+        /// <summary>
+        /// REQUIRED
+        /// The item quantity. Maximum length is 10 characters.
+        /// </summary>
+        [DataMember(Name="quantity", EmitDefaultValue = false)]
         public string Quantity { get; set; }
 
-        /**
-        * The stock keeping unit (SKU) for the item.
-        */
-        [DataMember(Name="sku")]
+        /// <summary>
+        /// The stock keeping unit (SKU) for the item.
+        /// </summary>
+        [DataMember(Name="sku", EmitDefaultValue = false)]
         public string Sku { get; set; }
 
-        /**
-        * The item tax. Supported only for the PayPal payment method.
-        */
-        [DataMember(Name="tax")]
+        /// <summary>
+        /// The item tax. Supported only for the PayPal payment method.
+        /// </summary>
+        [DataMember(Name="tax", EmitDefaultValue = false)]
         public string Tax { get; set; }
 
-        /**
-        * The URL to item information. Available to the payer in the transaction history.
-        */
-        [DataMember(Name="url")]
+        /// <summary>
+        /// The URL to item information. Available to the payer in the transaction history.
+        /// </summary>
+        [DataMember(Name="url", EmitDefaultValue = false)]
         public string Url { get; set; }
     }
 }

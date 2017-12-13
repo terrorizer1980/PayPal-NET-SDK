@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:27 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:48 CST by version 0.1 of Braintree SDK Generator
 // Sale.cs
 // @version 0.1
 // @type object
@@ -9,150 +9,152 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The sale transaction details.
-    */
+    /// <summary>
+    /// The sale transaction details.
+    /// </summary>
     [DataContract]
     public class Sale {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Sale() {}
 
-        /**
-        * REQUIRED
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The ID of the billing agreement. Used as reference to execute this transaction.
-        */
-        [DataMember(Name="billing_agreement_id")]
+        /// <summary>
+        /// The ID of the billing agreement. Used as reference to execute this transaction.
+        /// </summary>
+        [DataMember(Name="billing_agreement_id", EmitDefaultValue = false)]
         public string BillingAgreementId { get; set; }
 
-        /**
-        * The date and time when the eCheck transaction is expected to clear, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Returned for eCheck payments. Supported only when the `payment_method` is `paypal`.
-        */
-        [DataMember(Name="clearing_time")]
+        /// <summary>
+        /// The date and time when the eCheck transaction is expected to clear, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Returned for eCheck payments. Supported only when the `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="clearing_time", EmitDefaultValue = false)]
         public string ClearingTime { get; set; }
 
-        /**
-        * REQUIRED
-        * The date and time of the sale, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// REQUIRED
+        /// The date and time of the sale, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The exchange rate for this transaction. Returned only in cross-currency use cases where a merchant bills a buyer in a non-primary currency for that buyer.
-        */
-        [DataMember(Name="exchange_rate")]
+        /// <summary>
+        /// The exchange rate for this transaction. Returned only in cross-currency use cases where a merchant bills a buyer in a non-primary currency for that buyer.
+        /// </summary>
+        [DataMember(Name="exchange_rate", EmitDefaultValue = false)]
         public string ExchangeRate { get; set; }
 
-        /**
-        * The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
-        */
-        [DataMember(Name="fmf_details")]
+        /// <summary>
+        /// The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
+        /// </summary>
+        [DataMember(Name="fmf_details", EmitDefaultValue = false)]
         public FmfDetails FmfDetails { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the sale transaction.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the sale transaction.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * An array of reasons that PayPal holds the recipient fund. Set only if the payment hold status is `HELD`.
-        */
-        [DataMember(Name="payment_hold_reasons")]
+        /// <summary>
+        /// An array of reasons that PayPal holds the recipient fund. Set only if the payment hold status is `HELD`.
+        /// </summary>
+        [DataMember(Name="payment_hold_reasons", EmitDefaultValue = false)]
         public List<string> PaymentHoldReasons { get; set; }
 
-        /**
-        * The recipient fund status. Returned only when the fund status is `held`.
-        */
-        [DataMember(Name="payment_hold_status")]
+        /// <summary>
+        /// The recipient fund status. Returned only when the fund status is `held`.
+        /// </summary>
+        [DataMember(Name="payment_hold_status", EmitDefaultValue = false)]
         public string PaymentHoldStatus { get; set; }
 
-        /**
-        * The transaction payment mode. Supported only when `payment_method` is `paypal`.
-        */
-        [DataMember(Name="payment_mode")]
+        /// <summary>
+        /// The transaction payment mode. Supported only when `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="payment_mode", EmitDefaultValue = false)]
         public string PaymentMode { get; set; }
 
-        /**
-        * A collection of payment response-related fields returned from a payment request.
-        */
-        [DataMember(Name="processor_response")]
+        /// <summary>
+        /// A collection of payment response-related fields returned from a payment request.
+        /// </summary>
+        [DataMember(Name="processor_response", EmitDefaultValue = false)]
         public ProcessorResponse ProcessorResponse { get; set; }
 
-        /**
-        * The seller protection level in effect for the transaction. Supported only when the `payment_method` is `paypal`.
-        */
-        [DataMember(Name="protection_eligibility")]
+        /// <summary>
+        /// The seller protection level in effect for the transaction. Supported only when the `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="protection_eligibility", EmitDefaultValue = false)]
         public string ProtectionEligibility { get; set; }
 
-        /**
-        * The seller protection type in effect for the transaction. Returned only when `protection_eligibility` is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only when the `payment_method` is `paypal`.
-        */
-        [DataMember(Name="protection_eligibility_type")]
+        /// <summary>
+        /// The seller protection type in effect for the transaction. Returned only when `protection_eligibility` is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only when the `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="protection_eligibility_type", EmitDefaultValue = false)]
         public string ProtectionEligibilityType { get; set; }
 
-        /**
-        * The ID of the transaction that corresponds to this sale transaction.
-        */
-        [DataMember(Name="purchase_unit_reference_id")]
+        /// <summary>
+        /// The ID of the transaction that corresponds to this sale transaction.
+        /// </summary>
+        [DataMember(Name="purchase_unit_reference_id", EmitDefaultValue = false)]
         public string PurchaseUnitReferenceId { get; set; }
 
-        /**
-        * A reason code that describes why the transaction state is pending or reversed. Supported only when the `payment_method` is `paypal`.
-        */
-        [DataMember(Name="reason_code")]
+        /// <summary>
+        /// A reason code that describes why the transaction state is pending or reversed. Supported only when the `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="reason_code", EmitDefaultValue = false)]
         public string ReasonCode { get; set; }
 
-        /**
-        * The receipt ID, which is a payment ID number that is returned for guest users to identify the payment.
-        */
-        [DataMember(Name="receipt_id")]
+        /// <summary>
+        /// The receipt ID, which is a payment ID number that is returned for guest users to identify the payment.
+        /// </summary>
+        [DataMember(Name="receipt_id", EmitDefaultValue = false)]
         public string ReceiptId { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="receivable_amount")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="receivable_amount", EmitDefaultValue = false)]
         public Currency ReceivableAmount { get; set; }
 
-        /**
-        * REQUIRED
-        * The sale transaction state.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// REQUIRED
+        /// The sale transaction state.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="transaction_fee")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="transaction_fee", EmitDefaultValue = false)]
         public Currency TransactionFee { get; set; }
 
-        /**
-        * The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

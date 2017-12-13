@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:49 CST by version 0.1 of Braintree SDK Generator
 // DetailedRefund.cs
 // @version 0.1
 // @type object
@@ -9,109 +9,111 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The refund transaction details that are returned by the `POST /refund` call.
-    */
+    /// <summary>
+    /// The refund transaction details that are returned by the `POST /refund` call.
+    /// </summary>
     [DataContract]
     public class DetailedRefund {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public DetailedRefund() {}
 
-        /**
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The ID of the sale transaction being refunded.
-        */
-        [DataMember(Name="capture_id")]
+        /// <summary>
+        /// The ID of the sale transaction being refunded.
+        /// </summary>
+        [DataMember(Name="capture_id", EmitDefaultValue = false)]
         public string CaptureId { get; set; }
 
-        /**
-        * The date and time when the refund was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the refund was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * A free-form field for the clients' use.
-        */
-        [DataMember(Name="custom")]
+        /// <summary>
+        /// A free-form field for the clients' use.
+        /// </summary>
+        [DataMember(Name="custom", EmitDefaultValue = false)]
         public string Custom { get; set; }
 
-        /**
-        * The refund description.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// The refund description.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The ID of the refund transaction.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the refund transaction.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * Your own invoice or tracking ID number. Value is a string of single-byte alphanumeric characters.
-        */
-        [DataMember(Name="invoice_number")]
+        /// <summary>
+        /// Your own invoice or tracking ID number. Value is a string of single-byte alphanumeric characters.
+        /// </summary>
+        [DataMember(Name="invoice_number", EmitDefaultValue = false)]
         public string InvoiceNumber { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * The reason that the transaction is being refunded.
-        */
-        [DataMember(Name="reason")]
+        /// <summary>
+        /// The reason that the transaction is being refunded.
+        /// </summary>
+        [DataMember(Name="reason", EmitDefaultValue = false)]
         public string Reason { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="refund_from_received_amount")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="refund_from_received_amount", EmitDefaultValue = false)]
         public Currency RefundFromReceivedAmount { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="refund_from_transaction_fee")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="refund_from_transaction_fee", EmitDefaultValue = false)]
         public Currency RefundFromTransactionFee { get; set; }
 
-        /**
-        * The ID of the sale transaction being refunded.
-        */
-        [DataMember(Name="sale_id")]
+        /// <summary>
+        /// The ID of the sale transaction being refunded.
+        /// </summary>
+        [DataMember(Name="sale_id", EmitDefaultValue = false)]
         public string SaleId { get; set; }
 
-        /**
-        * The state of the refund.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of the refund.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
-        */
-        [DataMember(Name="total_refunded_amount")]
+        /// <summary>
+        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="total_refunded_amount", EmitDefaultValue = false)]
         public Currency TotalRefundedAmount { get; set; }
 
-        /**
-        * The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:37 CST by version 0.1 of Braintree SDK Generator
 // Payment.cs
 // @version 0.1
 // @type object
@@ -9,87 +9,89 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A payment. Use this object to create, process, and manage payments.
-    */
+    /// <summary>
+    /// A payment. Use this object to create, process, and manage payments.
+    /// </summary>
     [DataContract]
     public class Payment {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Payment() {}
 
-        /**
-        * The date and time when the payment was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the payment was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The PayPal-generated ID for the merchant's payment experience profile. For information, see [create web experience profile](/docs/api/payment-experience/#web-profiles_create).
-        */
-        [DataMember(Name="experience_profile_id")]
+        /// <summary>
+        /// The PayPal-generated ID for the merchant's payment experience profile. For information, see [create web experience profile](/docs/api/payment-experience/#web-profiles_create).
+        /// </summary>
+        [DataMember(Name="experience_profile_id", EmitDefaultValue = false)]
         public string ExperienceProfileId { get; set; }
 
-        /**
-        * The reason code for a payment failure.
-        */
-        [DataMember(Name="failure_reason")]
+        /// <summary>
+        /// The reason code for a payment failure.
+        /// </summary>
+        [DataMember(Name="failure_reason", EmitDefaultValue = false)]
         public string FailureReason { get; set; }
 
-        /**
-        * The ID of the payment.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the payment.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * REQUIRED
-        * The payment intent. Value is:<ul><li><code>sale</code>. Makes an immediate payment.</li><li><code>authorize</code>. [Authorizes a payment for capture later](/docs/integration/direct/payments/capture-payment/).</li><li><code>order</code>. [Creates an order](/docs/integration/direct/payments/orders/).</li></ul>
-        */
-        [DataMember(Name="intent")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment intent. Value is:<ul><li><code>sale</code>. Makes an immediate payment.</li><li><code>authorize</code>. [Authorizes a payment for capture later](/docs/integration/direct/payments/capture-payment/).</li><li><code>order</code>. [Creates an order](/docs/integration/direct/payments/orders/).</li></ul>
+        /// </summary>
+        [DataMember(Name="intent", EmitDefaultValue = false)]
         public string Intent { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * A free-form field that clients can use to send a note to the payer.
-        */
-        [DataMember(Name="note_to_payer")]
+        /// <summary>
+        /// A free-form field that clients can use to send a note to the payer.
+        /// </summary>
+        [DataMember(Name="note_to_payer", EmitDefaultValue = false)]
         public string NoteToPayer { get; set; }
 
-        /**
-        * REQUIRED
-        * A payer who funds a payment.
-        */
-        [DataMember(Name="payer")]
+        /// <summary>
+        /// REQUIRED
+        /// A payer who funds a payment.
+        /// </summary>
+        [DataMember(Name="payer", EmitDefaultValue = false)]
         public Payer Payer { get; set; }
 
-        /**
-        * A set of redirect URLs that you provide for PayPal-based payments.
-        */
-        [DataMember(Name="redirect_urls")]
+        /// <summary>
+        /// A set of redirect URLs that you provide for PayPal-based payments.
+        /// </summary>
+        [DataMember(Name="redirect_urls", EmitDefaultValue = false)]
         public RedirectUrls RedirectUrls { get; set; }
 
-        /**
-        * The state of the payment, authorization, or order transaction. Value is:<ul><li><code>created</code>. The transaction was successfully created.</li><li><code>approved</code>. The buyer approved the transaction.</li><li><code>failed</code>. The transaction request failed.</li></ul>
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of the payment, authorization, or order transaction. Value is:<ul><li><code>created</code>. The transaction was successfully created.</li><li><code>approved</code>. The buyer approved the transaction.</li><li><code>failed</code>. The transaction request failed.</li></ul>
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment. For update and execute payment calls, the **`transactions`** object accepts the **`amount`** object only.
-        */
-        [DataMember(Name="transactions")]
+        /// <summary>
+        /// An array of payment-related transactions. A transaction defines what the payment is for and who fulfills the payment. For update and execute payment calls, the **`transactions`** object accepts the **`amount`** object only.
+        /// </summary>
+        [DataMember(Name="transactions", EmitDefaultValue = false)]
         public List<Transaction> Transactions { get; set; }
 
-        /**
-        * The date and time when the payment was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the payment was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

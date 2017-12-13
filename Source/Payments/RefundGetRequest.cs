@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:35 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:58 CST by version 0.1 of Braintree SDK Generator
 // RefundGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Shows details for a refund, by ID.
-     */
+    /// <summary>
+    /// Shows details for a refund, by ID.
+    /// </summary>
     public class RefundGetRequest : HttpRequest
     {
         public RefundGetRequest(string RefundId) : base("/v1/payments/refund/{refund_id}?", HttpMethod.Get, typeof(Refund))
         {
             try {
                 this.Path = this.Path.Replace("{refund_id}", Uri.EscapeDataString(Convert.ToString(RefundId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

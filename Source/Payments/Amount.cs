@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:16 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:41 CST by version 0.1 of Braintree SDK Generator
 // Amount.cs
 // @version 0.1
 // @type object
@@ -9,33 +9,35 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The payment amount, with break-ups.
-    */
+    /// <summary>
+    /// The payment amount, with break-ups.
+    /// </summary>
     [DataContract]
     public class Amount {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Amount() {}
 
-        /**
-        * REQUIRED
-        * The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/). PayPal does not support all currencies.
-        */
-        [DataMember(Name="currency")]
+        /// <summary>
+        /// REQUIRED
+        /// The [three-character ISO-4217 currency code](/docs/integration/direct/rest/currency-codes/). PayPal does not support all currencies.
+        /// </summary>
+        [DataMember(Name="currency", EmitDefaultValue = false)]
         public string Currency { get; set; }
 
-        /**
-        * The additional details about the payment amount.
-        */
-        [DataMember(Name="details")]
+        /// <summary>
+        /// The additional details about the payment amount.
+        /// </summary>
+        [DataMember(Name="details", EmitDefaultValue = false)]
         public AmountDetails Details { get; set; }
 
-        /**
-        * REQUIRED
-        * The total amount charged to the payee by the payer. For refunds, represents the amount that the payee refunds to the original payer. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
-        */
-        [DataMember(Name="total")]
+        /// <summary>
+        /// REQUIRED
+        /// The total amount charged to the payee by the payer. For refunds, represents the amount that the payee refunds to the original payer. Maximum length is 10 characters, which includes:<ul><li>Seven digits before the decimal point.</li><li>The decimal point.</li><li>Two digits after the decimal point.</li></ul>
+        /// </summary>
+        [DataMember(Name="total", EmitDefaultValue = false)]
         public string Total { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:38 CST by version 0.1 of Braintree SDK Generator
 // CreditCard.cs
 // @version 0.1
 // @type object
@@ -9,71 +9,73 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * [DEPRECATED] A credit card. Can be used to fund a payment. Use a payment card instead.
-    */
+    /// <summary>
+    /// [DEPRECATED] A credit card. Can be used to fund a payment. Use a payment card instead.
+    /// </summary>
     [DataContract]
     public class CreditCard {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CreditCard() {}
 
-        /**
-        * The billing address in a payment. Can be extended for shipping address.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// The billing address in a payment. Can be extended for shipping address.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public Address BillingAddress { get; set; }
 
-        /**
-        * The three- to four-digit card validation code.
-        */
-        [DataMember(Name="cvv2")]
+        /// <summary>
+        /// The three- to four-digit card validation code.
+        /// </summary>
+        [DataMember(Name="cvv2", EmitDefaultValue = false)]
         public string Cvv2 { get; set; }
 
-        /**
-        * REQUIRED
-        * The expiration month with no leading zero. Value is from `1` to `12`.
-        */
-        [DataMember(Name="expire_month")]
+        /// <summary>
+        /// REQUIRED
+        /// The expiration month with no leading zero. Value is from `1` to `12`.
+        /// </summary>
+        [DataMember(Name="expire_month", EmitDefaultValue = false)]
         public int ExpireMonth { get; set; }
 
-        /**
-        * REQUIRED
-        * The four-digit expiration year.
-        */
-        [DataMember(Name="expire_year")]
+        /// <summary>
+        /// REQUIRED
+        /// The four-digit expiration year.
+        /// </summary>
+        [DataMember(Name="expire_year", EmitDefaultValue = false)]
         public int ExpireYear { get; set; }
 
-        /**
-        * The card holder's first name.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The card holder's first name.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The card holder's last name.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The card holder's last name.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * REQUIRED
-        * The credit card number. Value is numeric characters only with no spaces or punctuation. Must conform to the modulo and length required by each credit card type. *Redacted in responses.*
-        */
-        [DataMember(Name="number")]
+        /// <summary>
+        /// REQUIRED
+        /// The credit card number. Value is numeric characters only with no spaces or punctuation. Must conform to the modulo and length required by each credit card type. *Redacted in responses.*
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
-        /**
-        * REQUIRED
-        * The credit card type. Value is `visa`, `mastercard`, `discover`, or `amex`.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The credit card type. Value is `visa`, `mastercard`, `discover`, or `amex`.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

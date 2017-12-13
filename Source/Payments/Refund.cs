@@ -1,93 +1,95 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:27 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:48 CST by version 0.1 of Braintree SDK Generator
 // Refund.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/+xYTW8bNxO+v79isLkkhqR1XrcpqpuBtKgPbYzaCFC4hjAiZ7WsueRmOLQsFPnvBfdDkaV14zSOmgI6LcgZzj7kM1/kn9nlqqZsmjEV0elslL1FNji39AtWaT4bZa8pKDa1GO+yaXYKrSoIowuo0vQkG2WnzLhqjR2Psl8J9RtnV9m0QBsoTbyLhkmvJ87Z18RiKGTTqzUMrHx0sgtjPX8fzGVJUOOqIifQqoxgaaSEORPejGMdng5aEDZusQtNRWZyajUI7kpKJhqrEhmVEMPZxZvxN/9/+R30y0B5TdfPc+1VyI0TWjAmA7k2TEpypiB5rzxOyiF/MYFzXJ2jBe0pgPMCIda1ZwG0tjdt6NN2Lxy3Nu+ite9HW+TMNAkaG3ZP4oNg9yBQa5OGCXOrBjj3UUB2KPzylC1MIbMlYz0INUkhSaEgmsDPeGeqWIElt5ASTICXx7AmNIxgWRpVgnHKRk1h+ns8Pj5R0TZfakfWtKMLuiUH2iyMBJhT4ZmaA9CkTIUWam+cTNo1eb/ovonLT1Rf+v5/WCQHfOTv8n4Dn0nGlgs9xEiJTlvjFrOCaJCUXuHASYLcBjtpKHy7uksHfSBVJKXX4J1dTfZDoHEhMjo1zN5aeqDvHn2JoL/ncE/0hdLUdSvZZa8XHsjbWz7sj3ymTVAPtj6bxECveQivry87hjgXL2iHWeyEXfuzRm2EqjCBs6IZMb2LFGTNGljjOp0RSGkC1C2uVSL86Ig72EdHh5DdC8eCd4P0Ct4dGHgCBq4fw8GDQXYvwtLBL0iD+P76QQTz1XrAE/jRc3fRDSNgqpkCOQmNSmdFSpSN9Z12b9SzWRjXZp1k8OABn3sRfYwDKKwlMs2MHvSCs9fg23Qa0NLmEwbMKRXSlkTaV9ulmFBoJqYa7ps1CgE6DUkDliW5rhY0LzBLDNBa0CMwDq7OnBA7kq11hecK5fp5KVKHaZ6L9zZMDEkx8bzIS6lszoU6OTn5/lmg5jjG305evdjTIeiNbQ8dQrfbDbV93Wk+5kRP/xL26NvWrTeKZi5Wc+IdlL/5yOCXDjo9SB0Fo7pJLn72GtplE3iLNlJKRQjtn9LGgnELS+P5KrmQrUt0sSI2aiNZPfEurXE3sw16Z37+B6mBV8CkuPu8dOoAE5gEvuuSxkw2hQVc/XR6+cOb0wtolvbPbFib3N8S3xpa5s9KFPIYxo3KttO/+kIM1sjkZNa1pB/xs75x9a6rEk2/t5m9TIA5hr3lLSYMD0ZrEn0ojtso/400m5L9f6UkBEEZLgaN5H7q2ROmWOt/VqaCj6yoKVQWg0Br6CuuVtfv//cXAAAA//8=
+// @data H4sIAAAAAAAC/+xYzW4bNxC+9ykGm0tiSFqnbhNUNwNuUR9aG7XRi2sII3JWy5pLboazloUi715wfxRZWjVO42xTQCdhOT/6ON/McMi/kutVSck0Ycoqp5NR8juywbmlX7GI68koOaOg2JRivEumySk0qiCMLqCKy5NklJwy46pxdjxKfiPUF86ukmmGNlBceFcZJr1euGRfEouhkExv1jCw8JWTXRjr9cdgrnOCElcFOYFGZQRLIznMmfBuXJXh+aAFYeMWu9BUxUxOrXrB3UjORGOVI6MSYji/uhh/9+3rt9CZgfKabl+m2quQGie0YIwOUm2YlKRMQdJOeRyVQ/pqApe4ukQL2lMA5wVCVZaeBdDazrWhT9u9cLW1eVdZ+360Rc5Mk6CxYTcSHwS7gUCtTfyMmBs1wLmvBGSHwi9P2cJkMlsylr1QoxSiFDKiCfyCD6aoCrDkFpKDCfD6GNaEhhEsc6NyME7ZSlOY/lEdH5+oyta/1HxZ03xd0T050GZhJMCcMs9UB0CTMgVaKL1xMmls0s7osYvrT1Rf+u7/MIsJ+MS/S7sNfCYZWym0j5EcnbbGLWYZUS8pncKBkwi5KXbSkPnGum0HXSEVJLnX4J1dTYYh0LhQMTrVz95aeqDvEX2RoH/mcCD6Qm7KspHsstcJD+QN1g+7kM+0CWrv6LNJDHSah/L6+rpjqObiBW0/i62wHX/WqI1QESZwntVfTO8qCrJmDaxxrc4IJDcBygbXKhJ+dMQt7KOjQ8kOwrHgQy+9gg8HBp6BgduncLC3yB5VWAz8gjSI764fRDBfrT94Aj95bi+6YQRMJVMgJ6FWab1IjrJh32p3Tj2bhXFN14kODxnwuRfRpySAwlIqppnRvVlwfga+aacBLW0+YcCc4kHakEhDjV2KCYVmYor+uVmjEKDTEDVgmZNrz4L6BWaJARoPegTGwc25E2JHsmWXeS5Qbl/mImWYpql4b8PEkGQTz4s0l8KmnKmTk5MfXgSqwzH+fvLm1UBB0Bvb7gtCu9sNtaHuNB9Lop6XsL46f7tR54Ndx+69UTRzVTEn3nMnq1UgThuM6i6m//kZNBbPDNMadzfbIHDm53+S6nnni4q7D0inDjCCiXFv56Axk42JDzc/n17/eHF6BbVp95CGpUn9PfG9oWX6Ikchj2Fcq2yn9ZsvREGJTE5m7dD5kUzqRlPv2nOgnug2+5MJMMcwWGdiwrC3HqPow/G3jfK/aKSxnf9fmn4QlP52X0seN5eBMFWl/ncHUfAVK6qPIotBoHH0FZ9Ht++/+RsAAP//
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A refund transaction.
-    */
+    /// <summary>
+    /// A refund transaction.
+    /// </summary>
     [DataContract]
     public class Refund {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Refund() {}
 
-        /**
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The ID of the sale transaction being refunded.
-        */
-        [DataMember(Name="capture_id")]
+        /// <summary>
+        /// The ID of the sale transaction being refunded.
+        /// </summary>
+        [DataMember(Name="capture_id", EmitDefaultValue = false)]
         public string CaptureId { get; set; }
 
-        /**
-        * The date and time when the refund was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the refund was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The refund description.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// The refund description.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The ID of the refund transaction.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the refund transaction. Maximum length is 17 characters.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * Your own invoice or tracking ID number. Value is a string of single-byte alphanumeric characters.
-        */
-        [DataMember(Name="invoice_number")]
+        /// <summary>
+        /// The invoice or tracking ID number.
+        /// </summary>
+        [DataMember(Name="invoice_number", EmitDefaultValue = false)]
         public string InvoiceNumber { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * The reason that the transaction is being refunded.
-        */
-        [DataMember(Name="reason")]
+        /// <summary>
+        /// The reason that the transaction is being refunded.
+        /// </summary>
+        [DataMember(Name="reason", EmitDefaultValue = false)]
         public string Reason { get; set; }
 
-        /**
-        * The ID of the sale transaction being refunded.
-        */
-        [DataMember(Name="sale_id")]
+        /// <summary>
+        /// The ID of the sale transaction being refunded.
+        /// </summary>
+        [DataMember(Name="sale_id", EmitDefaultValue = false)]
         public string SaleId { get; set; }
 
-        /**
-        * The state of the refund.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of the refund.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

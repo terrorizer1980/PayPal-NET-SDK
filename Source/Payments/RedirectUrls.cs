@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:40 CST by version 0.1 of Braintree SDK Generator
 // RedirectUrls.cs
 // @version 0.1
 // @type object
@@ -9,25 +9,27 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A set of redirect URLs that you provide for PayPal-based payments.
-    */
+    /// <summary>
+    /// A set of redirect URLs that you provide for PayPal-based payments.
+    /// </summary>
     [DataContract]
     public class RedirectUrls {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public RedirectUrls() {}
 
-        /**
-        * The URL where the payer is redirected after he or she cancels the payment. **Required for PayPal account payments**.
-        */
-        [DataMember(Name="cancel_url")]
+        /// <summary>
+        /// The URL where the payer is redirected after he or she cancels the payment. **Required for PayPal account payments**.
+        /// </summary>
+        [DataMember(Name="cancel_url", EmitDefaultValue = false)]
         public string CancelUrl { get; set; }
 
-        /**
-        * The URL where the payer is redirected after he or she approves the payment. **Required for PayPal account payments**.
-        */
-        [DataMember(Name="return_url")]
+        /// <summary>
+        /// The URL where the payer is redirected after he or she approves the payment. **Required for PayPal account payments**.
+        /// </summary>
+        [DataMember(Name="return_url", EmitDefaultValue = false)]
         public string ReturnUrl { get; set; }
     }
 }

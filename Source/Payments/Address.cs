@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:39 CST by version 0.1 of Braintree SDK Generator
 // Address.cs
 // @version 0.1
 // @type object
@@ -9,75 +9,77 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * The billing address in a payment. Can be extended for shipping address.
-    */
+    /// <summary>
+    /// The billing address in a payment. Can be extended for shipping address.
+    /// </summary>
     [DataContract]
     public class Address {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Address() {}
 
-        /**
-        * The city name.
-        */
-        [DataMember(Name="city")]
+        /// <summary>
+        /// The city name.
+        /// </summary>
+        [DataMember(Name="city", EmitDefaultValue = false)]
         public string City { get; set; }
 
-        /**
-        * REQUIRED
-        * The [two-character ISO 3166-1 code](/docs/integration/direct/rest/country-codes/) that identifies the country or region.<blockquote><strong>Note:</strong> The country code for Great Britain is <code>GB</code> and not <code>UK</code> as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.</blockquote>
-        */
-        [DataMember(Name="country_code")]
+        /// <summary>
+        /// REQUIRED
+        /// The [two-character ISO 3166-1 code](/docs/integration/direct/rest/country-codes/) that identifies the country or region.<blockquote><strong>Note:</strong> The country code for Great Britain is <code>GB</code> and not <code>UK</code> as used in the top-level domain names for that country. Use the `C2` country code for China worldwide for comparable uncontrolled price (CUP) method, bank card, and cross-border transactions.</blockquote>
+        /// </summary>
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
-        /**
-        * REQUIRED
-        * The first line of the address. For example, number, street, and so on.
-        */
-        [DataMember(Name="line1")]
+        /// <summary>
+        /// REQUIRED
+        /// The first line of the address. For example, number, street, and so on.
+        /// </summary>
+        [DataMember(Name="line1", EmitDefaultValue = false)]
         public string Line1 { get; set; }
 
-        /**
-        * Optional. The second line of the address. For example, suite, apartment number, and so on.
-        */
-        [DataMember(Name="line2")]
+        /// <summary>
+        /// Optional. The second line of the address. For example, suite, apartment number, and so on.
+        /// </summary>
+        [DataMember(Name="line2", EmitDefaultValue = false)]
         public string Line2 { get; set; }
 
-        /**
-        * The address normalization status. Returned only for payers from Brazil.
-        */
-        [DataMember(Name="normalization_status")]
+        /// <summary>
+        /// The address normalization status. Returned only for payers from Brazil.
+        /// </summary>
+        [DataMember(Name="normalization_status", EmitDefaultValue = false)]
         public string NormalizationStatus { get; set; }
 
-        /**
-        * The phone number, in [E.123 format](https://www.itu.int/rec/T-REC-E.123-200102-I/en). Maximum length is 50 characters.
-        */
-        [DataMember(Name="phone")]
+        /// <summary>
+        /// The phone number, in [E.123 format](https://www.itu.int/rec/T-REC-E.123-200102-I/en). Maximum length is 50 characters.
+        /// </summary>
+        [DataMember(Name="phone", EmitDefaultValue = false)]
         public string Phone { get; set; }
 
-        /**
-        * The postal code, which is the zip code or equivalent. Typically required for countries with a postal code or an equivalent. See [Postal code](https://en.wikipedia.org/wiki/Postal_code).
-        */
-        [DataMember(Name="postal_code")]
+        /// <summary>
+        /// The postal code, which is the zip code or equivalent. Typically required for countries with a postal code or an equivalent. See [Postal code](https://en.wikipedia.org/wiki/Postal_code).
+        /// </summary>
+        [DataMember(Name="postal_code", EmitDefaultValue = false)]
         public string PostalCode { get; set; }
 
-        /**
-        * The [code](/docs/integration/direct/rest/state-codes/) for a US state or the equivalent for other countries. Required for transactions if the address is in one of these countries: [Argentina](/docs/integration/direct/rest/state-codes/#argentina), [Brazil](/docs/integration/direct/rest/state-codes/#brazil), [Canada](/docs/integration/direct/rest/state-codes/#canada), [India](/docs/integration/direct/rest/state-codes/#india), [Italy](/docs/integration/direct/rest/state-codes/#italy), [Japan](/docs/integration/direct/rest/state-codes/#japan), [Mexico](/docs/integration/direct/rest/state-codes/#mexico), [Thailand](/docs/integration/direct/rest/state-codes/#thailand), or [United States](/docs/integration/direct/rest/state-codes/#usa). Maximum length is 40 single-byte characters.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The [code](/docs/integration/direct/rest/state-codes/) for a US state or the equivalent for other countries. Required for transactions if the address is in one of these countries: [Argentina](/docs/integration/direct/rest/state-codes/#argentina), [Brazil](/docs/integration/direct/rest/state-codes/#brazil), [Canada](/docs/integration/direct/rest/state-codes/#canada), [India](/docs/integration/direct/rest/state-codes/#india), [Italy](/docs/integration/direct/rest/state-codes/#italy), [Japan](/docs/integration/direct/rest/state-codes/#japan), [Mexico](/docs/integration/direct/rest/state-codes/#mexico), [Thailand](/docs/integration/direct/rest/state-codes/#thailand), or [United States](/docs/integration/direct/rest/state-codes/#usa). Maximum length is 40 single-byte characters.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The address status.
-        */
-        [DataMember(Name="status")]
+        /// <summary>
+        /// The address status.
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
 
-        /**
-        * The type of address. For example, `HOME_OR_WORK`, `GIFT`, and so on.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// The type of address. For example, `HOME_OR_WORK`, `GIFT`, and so on.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

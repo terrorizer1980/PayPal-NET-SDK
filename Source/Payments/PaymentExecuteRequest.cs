@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:34 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:57 CST by version 0.1 of Braintree SDK Generator
 // PaymentExecuteRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Executes a PayPal payment that the customer has approved. You can optionally update one or more transactions when you execute the payment.<blockquote><strong>Important:</strong> This call works only after a customer has approved the payment. For more information, learn about [PayPal payments](/docs/integration/direct/payments/paypal-payments/).</blockquote>
-     */
+    /// <summary>
+    /// Executes a PayPal payment that the customer has approved. You can optionally update one or more transactions when you execute the payment.<blockquote><strong>Important:</strong> This call works only after a customer has approved the payment. For more information, learn about [PayPal payments](/docs/integration/direct/payments/paypal-payments/).</blockquote>
+    /// </summary>
     public class PaymentExecuteRequest : HttpRequest
     {
         public PaymentExecuteRequest(string PaymentId) : base("/v1/payments/payment/{payment_id}/execute?", HttpMethod.Post, typeof(Payment))
         {
             try {
                 this.Path = this.Path.Replace("{payment_id}", Uri.EscapeDataString(Convert.ToString(PaymentId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

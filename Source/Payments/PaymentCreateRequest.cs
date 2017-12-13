@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:33 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:56 CST by version 0.1 of Braintree SDK Generator
 // PaymentCreateRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Payments
 {
-    /**
-     * Creates a sale, an authorized payment to be captured later, or an order. To create a sale, authorization, or order, include the payment details in the JSON request body. Set the `intent` to `sale`, `authorize`, or `order`. Include payer, transaction details, and, for PayPal payments only, redirect URLs. The combination of the `payment_method` and `funding_instrument` determines the type of payment that is created. For more information, see [Payments REST API](/docs/integration/direct/payments/).<blockquote><strong>Note:</strong> Authorizations are guaranteed for up to three days, though you can attempt to capture an authorization for up to 29 days. After the three-day honor period authorization expires, you can [reauthorize](#authorization_reauthorize) the payment.</blockquote>
-     */
+    /// <summary>
+    /// Creates a sale, an authorized payment to be captured later, or an order. To create a sale, authorization, or order, include the payment details in the JSON request body. Set the `intent` to `sale`, `authorize`, or `order`. Include payer, transaction details, and, for PayPal payments only, redirect URLs. The combination of the `payment_method` and `funding_instrument` determines the type of payment that is created. For more information, see [Payments REST API](/docs/integration/direct/payments/).<blockquote><strong>Note:</strong> Authorizations are guaranteed for up to three days, though you can attempt to capture an authorization for up to 29 days. After the three-day honor period authorization expires, you can [reauthorize](#authorization_reauthorize) the payment.</blockquote>
+    /// </summary>
     public class PaymentCreateRequest : HttpRequest
     {
         public PaymentCreateRequest() : base("/v1/payments/payment?", HttpMethod.Post, typeof(Payment))

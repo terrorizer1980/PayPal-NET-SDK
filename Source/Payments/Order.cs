@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:47 CST by version 0.1 of Braintree SDK Generator
 // Order.cs
 // @version 0.1
 // @type object
@@ -9,98 +9,100 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * An order transaction.
-    */
+    /// <summary>
+    /// An order transaction.
+    /// </summary>
     [DataContract]
     public class Order {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Order() {}
 
-        /**
-        * REQUIRED
-        * The payment amount, with break-ups.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// The payment amount, with break-ups.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount { get; set; }
 
-        /**
-        * The date and time when the resource was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the resource was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
-        */
-        [DataMember(Name="fmf_details")]
+        /// <summary>
+        /// The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
+        /// </summary>
+        [DataMember(Name="fmf_details", EmitDefaultValue = false)]
         public FmfDetails FmfDetails { get; set; }
 
-        /**
-        * The ID of the order transaction.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the order transaction.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the payment on which this transaction is based.
-        */
-        [DataMember(Name="parent_payment")]
+        /// <summary>
+        /// The ID of the payment on which this transaction is based.
+        /// </summary>
+        [DataMember(Name="parent_payment", EmitDefaultValue = false)]
         public string ParentPayment { get; set; }
 
-        /**
-        * The transaction payment mode.
-        */
-        [DataMember(Name="payment_mode")]
+        /// <summary>
+        /// The transaction payment mode.
+        /// </summary>
+        [DataMember(Name="payment_mode", EmitDefaultValue = false)]
         public string PaymentMode { get; set; }
 
-        /**
-        * [DEPRECATED] The reason code for the pending transaction state. Obsolete. Use `reason_code` instead.
-        */
-        [DataMember(Name="pending_reason")]
+        /// <summary>
+        /// [DEPRECATED] The reason code for the pending transaction state. Obsolete. Use `reason_code` instead.
+        /// </summary>
+        [DataMember(Name="pending_reason", EmitDefaultValue = false)]
         public string PendingReason { get; set; }
 
-        /**
-        * The level of seller protection in effect for the transaction.
-        */
-        [DataMember(Name="protection_eligibility")]
+        /// <summary>
+        /// The level of seller protection in effect for the transaction.
+        /// </summary>
+        [DataMember(Name="protection_eligibility", EmitDefaultValue = false)]
         public string ProtectionEligibility { get; set; }
 
-        /**
-        * The kind of seller protection in effect for the transaction. Returned only when the `protection_eligibility` property is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only when the `payment_method` is `paypal`. One or both of these values can be returned:<ul><li><code>ITEM_NOT_RECEIVED_ELIGIBLE</code>. Sellers are protected against claims for items not received.</li><li><code>UNAUTHORIZED_PAYMENT_ELIGIBLE</code>. Sellers are protected against claims for unauthorized payments.</li></ul>
-        */
-        [DataMember(Name="protection_eligibility_type")]
+        /// <summary>
+        /// The kind of seller protection in effect for the transaction. Returned only when the `protection_eligibility` property is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only when the `payment_method` is `paypal`. One or both of these values can be returned:<ul><li><code>ITEM_NOT_RECEIVED_ELIGIBLE</code>. Sellers are protected against claims for items not received.</li><li><code>UNAUTHORIZED_PAYMENT_ELIGIBLE</code>. Sellers are protected against claims for unauthorized payments.</li></ul>
+        /// </summary>
+        [DataMember(Name="protection_eligibility_type", EmitDefaultValue = false)]
         public string ProtectionEligibilityType { get; set; }
 
-        /**
-        * The reason code that describes why the transaction state is pending or reversed. Eventually, this parameter will replace the `pending_reason` parameter. Supported only when the `payment_method` is `paypal`.
-        */
-        [DataMember(Name="reason_code")]
+        /// <summary>
+        /// The reason code that describes why the transaction state is pending or reversed. Eventually, this parameter will replace the `pending_reason` parameter. Supported only when the `payment_method` is `paypal`.
+        /// </summary>
+        [DataMember(Name="reason_code", EmitDefaultValue = false)]
         public string ReasonCode { get; set; }
 
-        /**
-        * The ID of the purchase unit that is associated with this object. Obsolete. Used only in `cart_base`.
-        */
-        [DataMember(Name="reference_id")]
+        /// <summary>
+        /// The ID of the purchase unit that is associated with this object. Obsolete. Used only in `cart_base`.
+        /// </summary>
+        [DataMember(Name="reference_id", EmitDefaultValue = false)]
         public string ReferenceId { get; set; }
 
-        /**
-        * The order transaction state. Value is:<ul><li><code>pending</code>. The order was created but no authorizations/captures were made against the order.</li><li><code>authorized</code>. The order has only been authorized. No capture was made against the order.</li><li><code>captured</code>. The order has at least one capture initiated.</li><li><code>completed</code>. The order is complete as a capture was made against the order with <code>is_final_capture</code> set to <code>TRUE</code>. No more authorizations/captures can be made against this order.</li><li><code>voided</code>. The order was voided. No more authorizations/captures can be made against this order.</li></ul>
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The order transaction state. Value is:<ul><li><code>pending</code>. The order was created but no authorizations/captures were made against the order.</li><li><code>authorized</code>. The order has only been authorized. No capture was made against the order.</li><li><code>captured</code>. The order has at least one capture initiated.</li><li><code>completed</code>. The order is complete as a capture was made against the order with <code>is_final_capture</code> set to <code>TRUE</code>. No more authorizations/captures can be made against this order.</li><li><code>voided</code>. The order was voided. No more authorizations/captures can be made against this order.</li></ul>
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }

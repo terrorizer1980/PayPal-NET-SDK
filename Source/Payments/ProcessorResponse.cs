@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 13:16:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:31:46 CST by version 0.1 of Braintree SDK Generator
 // ProcessorResponse.cs
 // @version 0.1
 // @type object
@@ -9,50 +9,52 @@ using System.Collections.Generic;
 
 namespace PayPal.Payments
 {
-    /**
-    * A collection of payment response-related fields returned from a payment request.
-    */
+    /// <summary>
+    /// A collection of payment response-related fields returned from a payment request.
+    /// </summary>
     [DataContract]
     public class ProcessorResponse {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ProcessorResponse() {}
 
-        /**
-        * The merchant advice on how to handle declines for recurring payments.
-        */
-        [DataMember(Name="advice_code")]
+        /// <summary>
+        /// The merchant advice on how to handle declines for recurring payments.
+        /// </summary>
+        [DataMember(Name="advice_code", EmitDefaultValue = false)]
         public string AdviceCode { get; set; }
 
-        /**
-        * The [Address Verification System (AVS)](https://developer.paypal.com/webapps/developer/docs/classic/api/AVSResponseCodes/) response code.
-        */
-        [DataMember(Name="avs_code")]
+        /// <summary>
+        /// The [Address Verification System (AVS)](https://developer.paypal.com/webapps/developer/docs/classic/api/AVSResponseCodes/) response code.
+        /// </summary>
+        [DataMember(Name="avs_code", EmitDefaultValue = false)]
         public string AvsCode { get; set; }
 
-        /**
-        * The [CVV](https://developer.paypal.com/webapps/developer/docs/classic/api/AVSResponseCodes/) system response code.
-        */
-        [DataMember(Name="cvv_code")]
+        /// <summary>
+        /// The [CVV](https://developer.paypal.com/webapps/developer/docs/classic/api/AVSResponseCodes/) system response code.
+        /// </summary>
+        [DataMember(Name="cvv_code", EmitDefaultValue = false)]
         public string CvvCode { get; set; }
 
-        /**
-        * The processor-provided authorization response.
-        */
-        [DataMember(Name="eci_submitted")]
+        /// <summary>
+        /// The processor-provided authorization response.
+        /// </summary>
+        [DataMember(Name="eci_submitted", EmitDefaultValue = false)]
         public string EciSubmitted { get; set; }
 
-        /**
-        * REQUIRED
-        * The PayPal normalized response code, which is generated from the processor's specific response code.
-        */
-        [DataMember(Name="response_code")]
+        /// <summary>
+        /// REQUIRED
+        /// The PayPal normalized response code, which is generated from the processor's specific response code.
+        /// </summary>
+        [DataMember(Name="response_code", EmitDefaultValue = false)]
         public string ResponseCode { get; set; }
 
-        /**
-        * The processor-provided Visa Payer Authentication Service status.
-        */
-        [DataMember(Name="vpas")]
+        /// <summary>
+        /// The processor-provided Visa Payer Authentication Service status.
+        /// </summary>
+        [DataMember(Name="vpas", EmitDefaultValue = false)]
         public string Vpas { get; set; }
     }
 }
