@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:16 CST by version 0.1 of Braintree SDK Generator
 // Address.cs
 // @version 0.1
 // @type object
@@ -22,45 +22,45 @@ namespace PayPal.Invoices
         * REQUIRED
         * City name.
         */
-        [DataMember(Name="city")]
+        [DataMember(Name="city", EmitDefaultValue = false)]
         public string City { get; set; }
 
         /**
         * REQUIRED
         * 2 letter country code.
         */
-        [DataMember(Name="country_code")]
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
         /**
         * REQUIRED
         * Line 1 of the Address (eg. number, street, etc).
         */
-        [DataMember(Name="line1")]
+        [DataMember(Name="line1", EmitDefaultValue = false)]
         public string Line1 { get; set; }
 
         /**
         * Optional line 2 of the Address (eg. suite, apt #, etc.).
         */
-        [DataMember(Name="line2")]
+        [DataMember(Name="line2", EmitDefaultValue = false)]
         public string Line2 { get; set; }
 
         /**
         * Phone number in E.123 format.
         */
-        [DataMember(Name="phone")]
+        [DataMember(Name="phone", EmitDefaultValue = false)]
         public string Phone { get; set; }
 
         /**
         * Zip code or equivalent is usually required for countries that have them. For list of countries that do not have postal codes please refer to http://en.wikipedia.org/wiki/Postal_code.
         */
-        [DataMember(Name="postal_code")]
+        [DataMember(Name="postal_code", EmitDefaultValue = false)]
         public string PostalCode { get; set; }
 
         /**
         * 2 letter code for US states, and the equivalent for other countries.
         */
-        [DataMember(Name="state")]
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
     }
 }

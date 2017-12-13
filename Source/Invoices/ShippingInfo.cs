@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:21 CST by version 0.1 of Braintree SDK Generator
 // ShippingInfo.cs
 // @version 0.1
 // @type object
@@ -21,25 +21,25 @@ namespace PayPal.Invoices
         /**
         * Base Address object used as billing address in a payment or extended for Shipping Address.
         */
-        [DataMember(Name="address")]
+        [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
         /**
         * The invoice recipient company business name.
         */
-        [DataMember(Name="business_name")]
+        [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
         /**
         * The invoice recipient first name.
         */
-        [DataMember(Name="first_name")]
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
         /**
         * The invoice recipient last name.
         */
-        [DataMember(Name="last_name")]
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
     }
 }

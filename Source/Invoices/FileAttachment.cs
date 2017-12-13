@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:14 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:15 CST by version 0.1 of Braintree SDK Generator
 // FileAttachment.cs
 // @version 0.1
 // @type object
@@ -21,13 +21,13 @@ namespace PayPal.Invoices
         /**
         * The name of the attached file.
         */
-        [DataMember(Name="name")]
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /**
         * The URL of the attached file, which can be downloaded.
         */
-        [DataMember(Name="url")]
+        [DataMember(Name="url", EmitDefaultValue = false)]
         public string Url { get; set; }
     }
 }

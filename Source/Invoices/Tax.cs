@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:18 CST by version 0.1 of Braintree SDK Generator
 // Tax.cs
 // @version 0.1
 // @type object
@@ -21,27 +21,27 @@ namespace PayPal.Invoices
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="amount")]
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
         /**
         * The resource ID.
         */
-        [DataMember(Name="id")]
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /**
         * REQUIRED
         * The tax name.
         */
-        [DataMember(Name="name")]
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /**
         * REQUIRED
         * The tax rate. Valid value is from 0.001 to 99.999.
         */
-        [DataMember(Name="percent")]
+        [DataMember(Name="percent", EmitDefaultValue = false)]
         public double Percent { get; set; }
     }
 }

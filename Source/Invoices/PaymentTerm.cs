@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
 // PaymentTerm.cs
 // @version 0.1
 // @type object
@@ -21,13 +21,13 @@ namespace PayPal.Invoices
         /**
         * The date when the invoice payment is due. This date must be a future date. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="due_date")]
+        [DataMember(Name="due_date", EmitDefaultValue = false)]
         public string DueDate { get; set; }
 
         /**
         * The term by which the invoice payment is due.
         */
-        [DataMember(Name="term_type")]
+        [DataMember(Name="term_type", EmitDefaultValue = false)]
         public string TermType { get; set; }
     }
 }

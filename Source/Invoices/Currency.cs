@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:16 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:17 CST by version 0.1 of Braintree SDK Generator
 // Currency.cs
 // @version 0.1
 // @type object
@@ -22,14 +22,14 @@ namespace PayPal.Invoices
         * REQUIRED
         * 3 letter currency code as defined by ISO 4217.
         */
-        [DataMember(Name="currency")]
+        [DataMember(Name="currency", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
 
         /**
         * REQUIRED
         * amount up to N digit after the decimals separator as defined in ISO 4217 for the appropriate currency code.
         */
-        [DataMember(Name="value")]
+        [DataMember(Name="value", EmitDefaultValue = false)]
         public string Value { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:16 CST by version 0.1 of Braintree SDK Generator
 // Participant.cs
 // @version 0.1
 // @type object
@@ -21,56 +21,56 @@ namespace PayPal.Invoices
         /**
         * Additional information, such as business hours.
         */
-        [DataMember(Name="additional_info")]
+        [DataMember(Name="additional_info", EmitDefaultValue = false)]
         public string AdditionalInfo { get; set; }
 
         /**
         * Base Address object used as billing address in a payment or extended for Shipping Address.
         */
-        [DataMember(Name="address")]
+        [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
         /**
         * The participant company business name.
         */
-        [DataMember(Name="business_name")]
+        [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
         /**
         * REQUIRED
         * The participant email address.
         */
-        [DataMember(Name="email")]
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
         /**
         * The phone number.
         */
-        [DataMember(Name="fax")]
+        [DataMember(Name="fax", EmitDefaultValue = false)]
         public Phone Fax { get; set; }
 
         /**
         * The participant first name.
         */
-        [DataMember(Name="first_name")]
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
         /**
         * The participant last name.
         */
-        [DataMember(Name="last_name")]
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
         /**
         * The phone number.
         */
-        [DataMember(Name="phone")]
+        [DataMember(Name="phone", EmitDefaultValue = false)]
         public Phone Phone { get; set; }
 
         /**
         * The participant website.
         */
-        [DataMember(Name="website")]
+        [DataMember(Name="website", EmitDefaultValue = false)]
         public string Website { get; set; }
     }
 }

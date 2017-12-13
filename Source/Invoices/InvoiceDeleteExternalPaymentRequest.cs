@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:26 CST by version 0.1 of Braintree SDK Generator
 // InvoiceDeleteExternalPaymentRequest.cs
 // @version 0.1
 // @type request

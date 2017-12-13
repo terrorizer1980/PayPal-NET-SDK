@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
 // PaymentDetail.cs
 // @version 0.1
 // @type object
@@ -21,44 +21,44 @@ namespace PayPal.Invoices
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="amount")]
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
         /**
         * The date when the invoice was paid. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="date")]
+        [DataMember(Name="date", EmitDefaultValue = false)]
         public string Date { get; set; }
 
         /**
         * REQUIRED
         * The payment mode or method. Required with the `EXTERNAL` payment type.
         */
-        [DataMember(Name="method")]
+        [DataMember(Name="method", EmitDefaultValue = false)]
         public string Method { get; set; }
 
         /**
         * Optional. A note associated with the payment.
         */
-        [DataMember(Name="note")]
+        [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
         /**
         * The ID for a PayPal payment transaction. Required with the `PAYPAL` payment type.
         */
-        [DataMember(Name="transaction_id")]
+        [DataMember(Name="transaction_id", EmitDefaultValue = false)]
         public string TransactionId { get; set; }
 
         /**
         * The transaction type.
         */
-        [DataMember(Name="transaction_type")]
+        [DataMember(Name="transaction_type", EmitDefaultValue = false)]
         public string TransactionType { get; set; }
 
         /**
         * The payment type in an invoicing flow. The [record refund](/docs/api/invoicing/#invoices_record-refund) method supports the `EXTERNAL` refund type. The `PAYPAL` refund type is supported for backward compatibility.
         */
-        [DataMember(Name="type")]
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:18 CST by version 0.1 of Braintree SDK Generator
 // InvoiceItem.cs
 // @version 0.1
 // @type object
@@ -21,52 +21,52 @@ namespace PayPal.Invoices
         /**
         * The date when the item or service was provided. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="date")]
+        [DataMember(Name="date", EmitDefaultValue = false)]
         public string Date { get; set; }
 
         /**
         * The item description.
         */
-        [DataMember(Name="description")]
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /**
         * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
         */
-        [DataMember(Name="discount")]
+        [DataMember(Name="discount", EmitDefaultValue = false)]
         public Cost Discount { get; set; }
 
         /**
         * REQUIRED
         * The item name.
         */
-        [DataMember(Name="name")]
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /**
         * REQUIRED
         * The item quantity. Valid value is from -10000 to 10000.
         */
-        [DataMember(Name="quantity")]
+        [DataMember(Name="quantity", EmitDefaultValue = false)]
         public double Quantity { get; set; }
 
         /**
         * Tax information.
         */
-        [DataMember(Name="tax")]
+        [DataMember(Name="tax", EmitDefaultValue = false)]
         public Tax Tax { get; set; }
 
         /**
         * The unit of measure for the invoiced item.
         */
-        [DataMember(Name="unit_of_measure")]
+        [DataMember(Name="unit_of_measure", EmitDefaultValue = false)]
         public string UnitOfMeasure { get; set; }
 
         /**
         * REQUIRED
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="unit_price")]
+        [DataMember(Name="unit_price", EmitDefaultValue = false)]
         public Currency UnitPrice { get; set; }
     }
 }

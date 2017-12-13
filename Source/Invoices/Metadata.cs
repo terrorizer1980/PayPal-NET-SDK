@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:19 CST by version 0.1 of Braintree SDK Generator
 // Metadata.cs
 // @version 0.1
 // @type object
@@ -21,61 +21,61 @@ namespace PayPal.Invoices
         /**
         * The actor who canceled the resource.
         */
-        [DataMember(Name="cancelled_by")]
+        [DataMember(Name="cancelled_by", EmitDefaultValue = false)]
         public string CancelledBy { get; set; }
 
         /**
         * The date and time when the resource was canceled.
         */
-        [DataMember(Name="cancelled_date")]
+        [DataMember(Name="cancelled_date", EmitDefaultValue = false)]
         public string CancelledDate { get; set; }
 
         /**
         * The email address of the account that created the resource.
         */
-        [DataMember(Name="created_by")]
+        [DataMember(Name="created_by", EmitDefaultValue = false)]
         public string CreatedBy { get; set; }
 
         /**
         * The date and time when the resource was created.
         */
-        [DataMember(Name="created_date")]
+        [DataMember(Name="created_date", EmitDefaultValue = false)]
         public string CreatedDate { get; set; }
 
         /**
         * The date and time when the resource was first sent.
         */
-        [DataMember(Name="first_sent_date")]
+        [DataMember(Name="first_sent_date", EmitDefaultValue = false)]
         public string FirstSentDate { get; set; }
 
         /**
         * The email address of the account that last sent the resource.
         */
-        [DataMember(Name="last_sent_by")]
+        [DataMember(Name="last_sent_by", EmitDefaultValue = false)]
         public string LastSentBy { get; set; }
 
         /**
         * The date and time when the resource was last sent.
         */
-        [DataMember(Name="last_sent_date")]
+        [DataMember(Name="last_sent_date", EmitDefaultValue = false)]
         public string LastSentDate { get; set; }
 
         /**
         * The email address of the account that last edited the resource.
         */
-        [DataMember(Name="last_updated_by")]
+        [DataMember(Name="last_updated_by", EmitDefaultValue = false)]
         public string LastUpdatedBy { get; set; }
 
         /**
         * The date and time when the resource was last edited.
         */
-        [DataMember(Name="last_updated_date")]
+        [DataMember(Name="last_updated_date", EmitDefaultValue = false)]
         public string LastUpdatedDate { get; set; }
 
         /**
         * URL representing the payer's view of the invoice.
         */
-        [DataMember(Name="payer_view_url")]
+        [DataMember(Name="payer_view_url", EmitDefaultValue = false)]
         public string PayerViewUrl { get; set; }
     }
 }

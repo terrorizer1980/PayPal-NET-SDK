@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:14 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:22 CST by version 0.1 of Braintree SDK Generator
 // Invoices.cs
 // @version 0.1
 // @type object
@@ -21,19 +21,19 @@ namespace PayPal.Invoices
         /**
         * An array of invoices as search result.
         */
-        [DataMember(Name="invoices")]
+        [DataMember(Name="invoices", EmitDefaultValue = false)]
         public List<Invoice> InvoiceList { get; set; }
 
         /**
         * The HATEOAS links for `next` and `previous` navigation in the result set.
         */
-        [DataMember(Name="links")]
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
         /**
         * The total number of invoices that match the search criteria.
         */
-        [DataMember(Name="total_count")]
+        [DataMember(Name="total_count", EmitDefaultValue = false)]
         public int TotalCount { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:18 CST by version 0.1 of Braintree SDK Generator
 // LinkDescriptionObject.cs
 // @version 0.1
 // @type object
@@ -21,39 +21,39 @@ namespace PayPal.Invoices
         /**
         * The media type in which to submit data in the request.
         */
-        [DataMember(Name="encType")]
+        [DataMember(Name="encType", EmitDefaultValue = false)]
         public string EncType { get; set; }
 
         /**
         * REQUIRED
         * The URL of the related HATEOAS link to use in subsequent calls.
         */
-        [DataMember(Name="href")]
+        [DataMember(Name="href", EmitDefaultValue = false)]
         public string Href { get; set; }
 
         /**
         * The media type, as defined by RFC 2046, that describes the link target.
         */
-        [DataMember(Name="mediaType")]
+        [DataMember(Name="mediaType", EmitDefaultValue = false)]
         public string MediaType { get; set; }
 
         /**
         * The HTTP method required for the related call.
         */
-        [DataMember(Name="method")]
+        [DataMember(Name="method", EmitDefaultValue = false)]
         public string Method { get; set; }
 
         /**
         * REQUIRED
         * The relation to the target resource of the link. Should be one of the extended link relation types defined by PPaaS in https://ppaas/docs/standards/hypermedia
         */
-        [DataMember(Name="rel")]
+        [DataMember(Name="rel", EmitDefaultValue = false)]
         public string Rel { get; set; }
 
         /**
         * The link title.
         */
-        [DataMember(Name="title")]
+        [DataMember(Name="title", EmitDefaultValue = false)]
         public string Title { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:24 CST by version 0.1 of Braintree SDK Generator
 // TemplateData.cs
 // @version 0.1
 // @type object
@@ -21,122 +21,122 @@ namespace PayPal.Invoices
         /**
         * Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
         */
-        [DataMember(Name="allow_partial_payment")]
+        [DataMember(Name="allow_partial_payment", EmitDefaultValue = false)]
         public bool AllowPartialPayment { get; set; }
 
         /**
         * List of files that are attached to the invoice.
         */
-        [DataMember(Name="attachments")]
+        [DataMember(Name="attachments", EmitDefaultValue = false)]
         public List<FileAttachment> Attachments { get; set; }
 
         /**
         * The required invoice recipient email address and any optional billing information. Supports one recipient only.
         */
-        [DataMember(Name="billing_info")]
+        [DataMember(Name="billing_info", EmitDefaultValue = false)]
         public List<BillingInfo> BillingInfo { get; set; }
 
         /**
         * For invoices sent by email, one or more email addresses to which to send a CC: copy of the notification. Supports only email addresses under participant.
         */
-        [DataMember(Name="cc_info")]
+        [DataMember(Name="cc_info", EmitDefaultValue = false)]
         public List<string> CcInfo { get; set; }
 
         /**
         * The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
         */
-        [DataMember(Name="custom")]
+        [DataMember(Name="custom", EmitDefaultValue = false)]
         public CustomAmount Custom { get; set; }
 
         /**
         * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
         */
-        [DataMember(Name="discount")]
+        [DataMember(Name="discount", EmitDefaultValue = false)]
         public Cost Discount { get; set; }
 
         /**
         * The list of items to include in the invoice. Each invoice can contain up to 100 items.
         */
-        [DataMember(Name="items")]
+        [DataMember(Name="items", EmitDefaultValue = false)]
         public List<InvoiceItem> Items { get; set; }
 
         /**
         * The full URL of an external logo image.
         */
-        [DataMember(Name="logo_url")]
+        [DataMember(Name="logo_url", EmitDefaultValue = false)]
         public string LogoUrl { get; set; }
 
         /**
         * REQUIRED
         * Merchant business information that appears on the invoice.
         */
-        [DataMember(Name="merchant_info")]
+        [DataMember(Name="merchant_info", EmitDefaultValue = false)]
         public MerchantInformation MerchantInfo { get; set; }
 
         /**
         * A private bookkeeping memo for the merchant.
         */
-        [DataMember(Name="merchant_memo")]
+        [DataMember(Name="merchant_memo", EmitDefaultValue = false)]
         public string MerchantMemo { get; set; }
 
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="minimum_amount_due")]
+        [DataMember(Name="minimum_amount_due", EmitDefaultValue = false)]
         public Currency MinimumAmountDue { get; set; }
 
         /**
         * A note to the payer.
         */
-        [DataMember(Name="note")]
+        [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
         /**
         * The payment term of the invoice. If you specify `term_type`, you cannot specify `due_date`, and vice versa.
         */
-        [DataMember(Name="payment_term")]
+        [DataMember(Name="payment_term", EmitDefaultValue = false)]
         public PaymentTerm PaymentTerm { get; set; }
 
         /**
         * Reference data, such as PO number, to add to the invoice.
         */
-        [DataMember(Name="reference")]
+        [DataMember(Name="reference", EmitDefaultValue = false)]
         public string Reference { get; set; }
 
         /**
         * The shipping cost, as a percentage or amount value.
         */
-        [DataMember(Name="shipping_cost")]
+        [DataMember(Name="shipping_cost", EmitDefaultValue = false)]
         public ShippingCost ShippingCost { get; set; }
 
         /**
         * The shipping information for the invoice recipient.
         */
-        [DataMember(Name="shipping_info")]
+        [DataMember(Name="shipping_info", EmitDefaultValue = false)]
         public ShippingInfo ShippingInfo { get; set; }
 
         /**
         * Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
         */
-        [DataMember(Name="tax_calculated_after_discount")]
+        [DataMember(Name="tax_calculated_after_discount", EmitDefaultValue = false)]
         public bool TaxCalculatedAfterDiscount { get; set; }
 
         /**
         * Indicates whether the unit price includes tax.
         */
-        [DataMember(Name="tax_inclusive")]
+        [DataMember(Name="tax_inclusive", EmitDefaultValue = false)]
         public bool TaxInclusive { get; set; }
 
         /**
         * The general terms of the invoice.
         */
-        [DataMember(Name="terms")]
+        [DataMember(Name="terms", EmitDefaultValue = false)]
         public string Terms { get; set; }
 
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="total_amount")]
+        [DataMember(Name="total_amount", EmitDefaultValue = false)]
         public Currency TotalAmount { get; set; }
     }
 }

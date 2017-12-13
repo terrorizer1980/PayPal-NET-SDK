@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:23 CST by version 0.1 of Braintree SDK Generator
 // TemplateSettings.cs
 // @version 0.1
 // @type object
@@ -21,13 +21,13 @@ namespace PayPal.Invoices
         /**
         * The template settings metadata.
         */
-        [DataMember(Name="display_preference")]
+        [DataMember(Name="display_preference", EmitDefaultValue = false)]
         public TemplateSettingsMetadata DisplayPreference { get; set; }
 
         /**
         * The field name for any field in `template_data` for which to map corresponding display preferences.
         */
-        [DataMember(Name="field_name")]
+        [DataMember(Name="field_name", EmitDefaultValue = false)]
         public string FieldName { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:23 CST by version 0.1 of Braintree SDK Generator
 // Notification.cs
 // @version 0.1
 // @type object
@@ -21,25 +21,25 @@ namespace PayPal.Invoices
         /**
         * An array of one or more CC: emails. If you omit this parameter from the JSON request body, a notification is sent to all CC: email addresses that are part of the invoice. Otherwise, specify this parameter to limit the email addresses to which notifications are sent.<blockquote><strong>Note:</strong> Additional email addresses are not supported.</blockquote>
         */
-        [DataMember(Name="cc_emails")]
+        [DataMember(Name="cc_emails", EmitDefaultValue = false)]
         public List<string> CcEmails { get; set; }
 
         /**
         * A note to the payer.
         */
-        [DataMember(Name="note")]
+        [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
         /**
         * Indicates whether to send a copy of the email to the merchant.
         */
-        [DataMember(Name="send_to_merchant")]
+        [DataMember(Name="send_to_merchant", EmitDefaultValue = false)]
         public bool SendToMerchant { get; set; }
 
         /**
         * The subject of the notification.
         */
-        [DataMember(Name="subject")]
+        [DataMember(Name="subject", EmitDefaultValue = false)]
         public string Subject { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
 // ShippingCost.cs
 // @version 0.1
 // @type object
@@ -21,13 +21,13 @@ namespace PayPal.Invoices
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="amount")]
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
         /**
         * Tax information.
         */
-        [DataMember(Name="tax")]
+        [DataMember(Name="tax", EmitDefaultValue = false)]
         public Tax Tax { get; set; }
     }
 }

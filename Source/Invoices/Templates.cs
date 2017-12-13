@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:24 CST by version 0.1 of Braintree SDK Generator
 // Templates.cs
 // @version 0.1
 // @type object
@@ -21,31 +21,31 @@ namespace PayPal.Invoices
         /**
         * List of addresses in merchant profile.
         */
-        [DataMember(Name="addresses")]
+        [DataMember(Name="addresses", EmitDefaultValue = false)]
         public List<Address> Addresses { get; set; }
 
         /**
         * List of emails in merchant profile.
         */
-        [DataMember(Name="emails")]
+        [DataMember(Name="emails", EmitDefaultValue = false)]
         public List<string> Emails { get; set; }
 
         /**
         * The HATEOAS links that provide related actions for the templates in the response.
         */
-        [DataMember(Name="links")]
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
         /**
         * List of phone numbers in merchant profile.
         */
-        [DataMember(Name="phones")]
+        [DataMember(Name="phones", EmitDefaultValue = false)]
         public List<Phone> Phones { get; set; }
 
         /**
         * An array of templates.
         */
-        [DataMember(Name="templates")]
+        [DataMember(Name="templates", EmitDefaultValue = false)]
         public List<Template> TemplateList { get; set; }
     }
 }

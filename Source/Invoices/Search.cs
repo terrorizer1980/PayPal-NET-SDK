@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:22 CST by version 0.1 of Braintree SDK Generator
 // Search.cs
 // @version 0.1
 // @type object
@@ -21,121 +21,121 @@ namespace PayPal.Invoices
         /**
         * Indicates whether to list merchant-archived invoices in the response. If `true`, response lists only merchant-archived invoices. If `false`, response lists only unarchived invoices. If `null`, response lists all invoices.
         */
-        [DataMember(Name="archived")]
+        [DataMember(Name="archived", EmitDefaultValue = false)]
         public bool Archived { get; set; }
 
         /**
         * The initial letters of the email address.
         */
-        [DataMember(Name="email")]
+        [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
         /**
         * The end creation date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="end_creation_date")]
+        [DataMember(Name="end_creation_date", EmitDefaultValue = false)]
         public string EndCreationDate { get; set; }
 
         /**
         * The end due date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="end_due_date")]
+        [DataMember(Name="end_due_date", EmitDefaultValue = false)]
         public string EndDueDate { get; set; }
 
         /**
         * The end date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="end_invoice_date")]
+        [DataMember(Name="end_invoice_date", EmitDefaultValue = false)]
         public string EndInvoiceDate { get; set; }
 
         /**
         * The end payment date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="end_payment_date")]
+        [DataMember(Name="end_payment_date", EmitDefaultValue = false)]
         public string EndPaymentDate { get; set; }
 
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="lower_total_amount")]
+        [DataMember(Name="lower_total_amount", EmitDefaultValue = false)]
         public Currency LowerTotalAmount { get; set; }
 
         /**
         * The invoice number.
         */
-        [DataMember(Name="number")]
+        [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
         /**
         * The offset for the search results.
         */
-        [DataMember(Name="page")]
+        [DataMember(Name="page", EmitDefaultValue = false)]
         public double Page { get; set; }
 
         /**
         * The page size for the search results.
         */
-        [DataMember(Name="page_size")]
+        [DataMember(Name="page_size", EmitDefaultValue = false)]
         public double PageSize { get; set; }
 
         /**
         * The initial letters of the recipient business name.
         */
-        [DataMember(Name="recipient_business_name")]
+        [DataMember(Name="recipient_business_name", EmitDefaultValue = false)]
         public string RecipientBusinessName { get; set; }
 
         /**
         * The initial letters of the recipient first name.
         */
-        [DataMember(Name="recipient_first_name")]
+        [DataMember(Name="recipient_first_name", EmitDefaultValue = false)]
         public string RecipientFirstName { get; set; }
 
         /**
         * The initial letters of the recipient last name.
         */
-        [DataMember(Name="recipient_last_name")]
+        [DataMember(Name="recipient_last_name", EmitDefaultValue = false)]
         public string RecipientLastName { get; set; }
 
         /**
         * The start creation date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="start_creation_date")]
+        [DataMember(Name="start_creation_date", EmitDefaultValue = false)]
         public string StartCreationDate { get; set; }
 
         /**
         * The start due date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="start_due_date")]
+        [DataMember(Name="start_due_date", EmitDefaultValue = false)]
         public string StartDueDate { get; set; }
 
         /**
         * The start date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="start_invoice_date")]
+        [DataMember(Name="start_invoice_date", EmitDefaultValue = false)]
         public string StartInvoiceDate { get; set; }
 
         /**
         * The start payment date for the invoice. Date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
         */
-        [DataMember(Name="start_payment_date")]
+        [DataMember(Name="start_payment_date", EmitDefaultValue = false)]
         public string StartPaymentDate { get; set; }
 
         /**
         * The invoice status. To search by status, specify this value as an array. For example, `"status": ["REFUNDED"]`.
         */
-        [DataMember(Name="status")]
+        [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
 
         /**
         * Indicates whether the total count appears in the response.
         */
-        [DataMember(Name="total_count_required")]
+        [DataMember(Name="total_count_required", EmitDefaultValue = false)]
         public bool TotalCountRequired { get; set; }
 
         /**
         * Base object for all financial value related fields (balance, payment due, etc.)
         */
-        [DataMember(Name="upper_total_amount")]
+        [DataMember(Name="upper_total_amount", EmitDefaultValue = false)]
         public Currency UpperTotalAmount { get; set; }
     }
 }

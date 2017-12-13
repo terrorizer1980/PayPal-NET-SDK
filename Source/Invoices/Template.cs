@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:23 CST by version 0.1 of Braintree SDK Generator
 // Template.cs
 // @version 0.1
 // @type object
@@ -21,49 +21,49 @@ namespace PayPal.Invoices
         /**
         * Indicates whether this template is a merchant-created custom template. Non-custom templates are system generated.
         */
-        [DataMember(Name="custom")]
+        [DataMember(Name="custom", EmitDefaultValue = false)]
         public bool Custom { get; set; }
 
         /**
         * Indicates whether this template is the default merchant template. A merchant can have one default template.
         */
-        [DataMember(Name="default")]
+        [DataMember(Name="default", EmitDefaultValue = false)]
         public bool Default { get; set; }
 
         /**
         * The HATEOS links that enable template actions.
         */
-        [DataMember(Name="links")]
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
         /**
         * The template name.
         */
-        [DataMember(Name="name")]
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /**
         * Settings for each template.
         */
-        [DataMember(Name="settings")]
+        [DataMember(Name="settings", EmitDefaultValue = false)]
         public List<TemplateSettings> Settings { get; set; }
 
         /**
         * Template data.
         */
-        [DataMember(Name="template_data")]
+        [DataMember(Name="template_data", EmitDefaultValue = false)]
         public TemplateData TemplateData { get; set; }
 
         /**
         * The ID of the template.
         */
-        [DataMember(Name="template_id")]
+        [DataMember(Name="template_id", EmitDefaultValue = false)]
         public string TemplateId { get; set; }
 
         /**
         * The unit of measure for the template. Value is quantity, hours, or amount.
         */
-        [DataMember(Name="unit_of_measure")]
+        [DataMember(Name="unit_of_measure", EmitDefaultValue = false)]
         public string UnitOfMeasure { get; set; }
     }
 }

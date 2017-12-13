@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:45:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:24:16 CST by version 0.1 of Braintree SDK Generator
 // Phone.cs
 // @version 0.1
 // @type object
@@ -21,13 +21,13 @@ namespace PayPal.Invoices
         /**
         * The country calling code (CC), as defined by E.164. The maximum combined length of CC+national is 15 digits.
         */
-        [DataMember(Name="country_code")]
+        [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
         /**
         * The national number, as defined by E.164. A national number consists of national destination code (NDC) and subscriber number (SN). The maximum combined length of CC+national is 15 digits.
         */
-        [DataMember(Name="national_number")]
+        [DataMember(Name="national_number", EmitDefaultValue = false)]
         public string NationalNumber { get; set; }
     }
 }
