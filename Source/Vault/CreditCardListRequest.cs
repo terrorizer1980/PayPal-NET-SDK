@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 15:04:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:34:04 CST by version 0.1 of Braintree SDK Generator
 // CreditCardListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Vault
 {
-    /**
-     * Lists vaulted credit cards. To filter the cards in the response, specify one or more optional query parameters.
-     */
+    /// <summary>
+    /// Lists vaulted credit cards. To filter the cards in the response, specify one or more optional query parameters.
+    /// </summary>
     public class CreditCardListRequest : HttpRequest
     {
         public CreditCardListRequest() : base("/v1/vault/credit-cards?", HttpMethod.Get, typeof(CreditCardList))
@@ -29,7 +29,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(EndTime);
             try {
                 this.Path = $"{this.Path}end_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -39,7 +39,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(ExternalCardId);
             try {
                 this.Path = $"{this.Path}external_card_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -49,7 +49,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(ExternalCustomerId);
             try {
                 this.Path = $"{this.Path}external_customer_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -59,7 +59,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(MerchantId);
             try {
                 this.Path = $"{this.Path}merchant_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -69,7 +69,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(Page);
             try {
                 this.Path = $"{this.Path}page={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -79,7 +79,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(PageSize);
             try {
                 this.Path = $"{this.Path}page_size={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -89,7 +89,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(SortBy);
             try {
                 this.Path = $"{this.Path}sort_by={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -99,7 +99,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(SortOrder);
             try {
                 this.Path = $"{this.Path}sort_order={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -109,7 +109,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(StartTime);
             try {
                 this.Path = $"{this.Path}start_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -119,7 +119,7 @@ namespace PayPal.Vault
             var strParams = Convert.ToString(TotalRequired);
             try {
                 this.Path = $"{this.Path}total_required={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

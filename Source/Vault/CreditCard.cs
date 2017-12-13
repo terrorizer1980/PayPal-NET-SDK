@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 15:04:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:34:03 CST by version 0.1 of Braintree SDK Generator
 // CreditCard.cs
 // @version 0.1
 // @type object
@@ -9,119 +9,121 @@ using System.Collections.Generic;
 
 namespace PayPal.Vault
 {
-    /**
-    * A vaulted credit card. To fund a payment, use the ID of the vaulted card.
-    */
+    /// <summary>
+    /// A vaulted credit card. To fund a payment, use the ID of the vaulted card.
+    /// </summary>
     [DataContract]
     public class CreditCard {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CreditCard() {}
 
-        /**
-        * A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
-        */
-        [DataMember(Name="billing_address")]
+        /// <summary>
+        /// A simple postal address with coarse-grained fields. Do not use for an international address. Use for backward compatibility only. Does not contain phone.
+        /// </summary>
+        [DataMember(Name="billing_address", EmitDefaultValue = false)]
         public SimplePostalAddress BillingAddress { get; set; }
 
-        /**
-        * The date and time when the vaulted credit card was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-11-05T13:15:30Z`.
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the vaulted credit card was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-11-05T13:15:30Z`.
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * REQUIRED
-        * The one- to two-digit month when the card expires, with no leading zero. For example, `1` or `12`.
-        */
-        [DataMember(Name="expire_month")]
+        /// <summary>
+        /// REQUIRED
+        /// The one- to two-digit month when the card expires, with no leading zero. For example, `1` or `12`.
+        /// </summary>
+        [DataMember(Name="expire_month", EmitDefaultValue = false)]
         public int ExpireMonth { get; set; }
 
-        /**
-        * REQUIRED
-        * The four-digit year when the card expires. For example, `2017`.
-        */
-        [DataMember(Name="expire_year")]
+        /// <summary>
+        /// REQUIRED
+        /// The four-digit year when the card expires. For example, `2017`.
+        /// </summary>
+        [DataMember(Name="expire_year", EmitDefaultValue = false)]
         public int ExpireYear { get; set; }
 
-        /**
-        * The externally-provided ID of the credit card.
-        */
-        [DataMember(Name="external_card_id")]
+        /// <summary>
+        /// The externally-provided ID of the credit card.
+        /// </summary>
+        [DataMember(Name="external_card_id", EmitDefaultValue = false)]
         public string ExternalCardId { get; set; }
 
-        /**
-        * The externally-provided ID of the customer for whom to list credit cards.
-        */
-        [DataMember(Name="external_customer_id")]
+        /// <summary>
+        /// The externally-provided ID of the customer for whom to list credit cards.
+        /// </summary>
+        [DataMember(Name="external_customer_id", EmitDefaultValue = false)]
         public string ExternalCustomerId { get; set; }
 
-        /**
-        * The first name of the credit card holder. Maximum length is 25 characters.
-        */
-        [DataMember(Name="first_name")]
+        /// <summary>
+        /// The first name of the credit card holder. Maximum length is 25 characters.
+        /// </summary>
+        [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The ID of the vaulted credit card, which you can use to fund a payment.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the vaulted credit card, which you can use to fund a payment.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The last name of the credit card holder.
-        */
-        [DataMember(Name="last_name")]
+        /// <summary>
+        /// The last name of the credit card holder.
+        /// </summary>
+        [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The ID of the merchant for whom to list credit cards.
-        */
-        [DataMember(Name="merchant_id")]
+        /// <summary>
+        /// The ID of the merchant for whom to list credit cards.
+        /// </summary>
+        [DataMember(Name="merchant_id", EmitDefaultValue = false)]
         public string MerchantId { get; set; }
 
-        /**
-        * REQUIRED
-        * The credit card number. Valid value is a string of numeric characters with no spaces or punctuation. Must conform to modulo and the length required by its credit card type. *Redacted in responses.*
-        */
-        [DataMember(Name="number")]
+        /// <summary>
+        /// REQUIRED
+        /// The credit card number. Valid value is a string of numeric characters with no spaces or punctuation. Must conform to modulo and the length required by its credit card type. *Redacted in responses.*
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
-        /**
-        * A unique ID that you can assign and track when you vault a credit card or use a vaulted credit card to make a payment. This ID can help to avoid unintentional use or misuse of credit cards. Can be any value, such as a UUID, user name, or email address. **This is being deprecated in favor of the `external_customer_id` property.**
-        */
-        [DataMember(Name="payer_id")]
+        /// <summary>
+        /// A unique ID that you can assign and track when you vault a credit card or use a vaulted credit card to make a payment. This ID can help to avoid unintentional use or misuse of credit cards. Can be any value, such as a UUID, user name, or email address. **This is being deprecated in favor of the `external_customer_id` property.**
+        /// </summary>
+        [DataMember(Name="payer_id", EmitDefaultValue = false)]
         public string PayerId { get; set; }
 
-        /**
-        * The state of the credit card funding instrument.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The state of the credit card funding instrument.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * REQUIRED
-        * The credit card type.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The credit card type.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
-        /**
-        * The date and time when the vaulted credit card was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-11-05T13:15:30Z`.
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the vaulted credit card was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). For example, `2017-11-05T13:15:30Z`.
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
 
-        /**
-        * The date and time when the credit card becomes unusable from the vault, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The `valid_until` parameter is not the same as the expiration month and year. The expiration month and year might be later than the `valid_until` date. For example, the card expires in November 2019 but the `valid_until` date is October 17th, 2019.
-        */
-        [DataMember(Name="valid_until")]
+        /// <summary>
+        /// The date and time when the credit card becomes unusable from the vault, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). The `valid_until` parameter is not the same as the expiration month and year. The expiration month and year might be later than the `valid_until` date. For example, the card expires in November 2019 but the `valid_until` date is October 17th, 2019.
+        /// </summary>
+        [DataMember(Name="valid_until", EmitDefaultValue = false)]
         public string ValidUntil { get; set; }
     }
 }

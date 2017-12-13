@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 15:04:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:34:03 CST by version 0.1 of Braintree SDK Generator
 // CreditCardList.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.Vault
 {
-    /**
-    * A list of credit cards.
-    */
+    /// <summary>
+    /// A list of credit cards.
+    /// </summary>
     [DataContract]
     public class CreditCardList {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CreditCardList() {}
 
-        /**
-        * An array of credit card objects.
-        */
-        [DataMember(Name="items")]
+        /// <summary>
+        /// An array of credit card objects.
+        /// </summary>
+        [DataMember(Name="items", EmitDefaultValue = false)]
         public List<CreditCard> Items { get; set; }
 
-        /**
-        * The credit card-specific [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// The credit card-specific [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The total number of items.
-        */
-        [DataMember(Name="total_items")]
+        /// <summary>
+        /// The total number of items.
+        /// </summary>
+        [DataMember(Name="total_items", EmitDefaultValue = false)]
         public int TotalItems { get; set; }
 
-        /**
-        * The total number of pages.
-        */
-        [DataMember(Name="total_pages")]
+        /// <summary>
+        /// The total number of pages.
+        /// </summary>
+        [DataMember(Name="total_pages", EmitDefaultValue = false)]
         public int TotalPages { get; set; }
     }
 }

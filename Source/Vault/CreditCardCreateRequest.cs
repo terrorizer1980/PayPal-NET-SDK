@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 15:04:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:34:03 CST by version 0.1 of Braintree SDK Generator
 // CreditCardCreateRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Vault
 {
-    /**
-     * Stores credit card details in the PayPal vault. To use the vaulted card to make a payment, specify this ID as the `credit_card_id` in a [`credit_card_token`](/docs/api/payments/#definition-credit_card_token) object. If you include a `payer_id` when you store the credit card, you must also include that ID as the `external_customer_id` in the `credit_card_token` object.<br/>You can also use the ID of the vaulted credit card to show details for, update, or delete the vaulted card.
-     */
+    /// <summary>
+    /// Stores credit card details in the PayPal vault. To use the vaulted card to make a payment, specify this ID as the `credit_card_id` in a [`credit_card_token`](/docs/api/payments/#definition-credit_card_token) object. If you include a `payer_id` when you store the credit card, you must also include that ID as the `external_customer_id` in the `credit_card_token` object.<br/>You can also use the ID of the vaulted credit card to show details for, update, or delete the vaulted card.
+    /// </summary>
     public class CreditCardCreateRequest : HttpRequest
     {
         public CreditCardCreateRequest() : base("/v1/vault/credit-cards?", HttpMethod.Post, typeof(CreditCard))

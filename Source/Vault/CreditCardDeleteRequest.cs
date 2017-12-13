@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 15:04:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:34:03 CST by version 0.1 of Braintree SDK Generator
 // CreditCardDeleteRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Vault
 {
-    /**
-     * Deletes a vaulted credit card, by ID.
-     */
+    /// <summary>
+    /// Deletes a vaulted credit card, by ID.
+    /// </summary>
     public class CreditCardDeleteRequest : HttpRequest
     {
         public CreditCardDeleteRequest(string CreditCardId) : base("/v1/vault/credit-cards/{credit_card_id}?", HttpMethod.Delete, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{credit_card_id}", Uri.EscapeDataString(Convert.ToString(CreditCardId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }
