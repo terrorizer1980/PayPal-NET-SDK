@@ -28,12 +28,12 @@ namespace PayPal.Vault.Test
             HttpResponse response = await getCreditCard(expected.Id);
 
             Assert.Equal(200, (int) response.StatusCode);
-            var CreditCard = response.Result<CreditCard>();
-            Assert.NotNull(CreditCard);
-            Assert.Equal(CreditCard.Id, expected.Id);
-            Assert.Equal(CreditCard.FirstName, expected.FirstName);
-            Assert.Equal(CreditCard.LastName, expected.LastName);
-            Assert.Equal(CreditCard.BillingAddress.City, expected.BillingAddress.City);
+            var creditCard = response.Result<CreditCard>();
+            Assert.NotNull(creditCard);
+            Assert.Equal(expected.Id, creditCard.Id);
+            Assert.Equal(expected.FirstName, creditCard.FirstName);
+            Assert.Equal(expected.LastName, creditCard.LastName);
+            Assert.Equal(expected.BillingAddress.City, creditCard.BillingAddress.City);
         }
     }
 }

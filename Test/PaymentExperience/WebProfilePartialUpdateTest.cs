@@ -37,7 +37,7 @@ namespace PayPal.PaymentExperience.Test
             Assert.Equal(200, (int) getResponse.StatusCode);
             var updated = getResponse.Result<WebProfile>();
             Assert.NotNull(updated);
-            Assert.Equal(updated.Presentation.BrandName, "new_brand_name");
+            Assert.Equal("new_brand_name", updated.Presentation.BrandName);
         }
     }
 }

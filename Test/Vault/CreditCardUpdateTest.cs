@@ -37,7 +37,7 @@ namespace PayPal.Vault.Test
             Assert.Equal(200, (int) getResponse.StatusCode);
             var updated = getResponse.Result<CreditCard>();
             Assert.NotNull(updated);
-            Assert.Equal(updated.BillingAddress.Line1, "53 N Main St.");
+            Assert.Equal("53 N Main St.", updated.BillingAddress.Line1);
         }
     }
 }

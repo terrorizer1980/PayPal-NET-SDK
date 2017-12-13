@@ -30,11 +30,11 @@ namespace PayPal.PaymentExperience.Test
             Assert.Equal(200, (int) response.StatusCode);
             var webProfile = response.Result<WebProfile>();
             Assert.NotNull(webProfile);
-            Assert.Equal(webProfile.Id, expected.Id);
-            Assert.Equal(webProfile.Name, expected.Name);
-            Assert.Equal(webProfile.FlowConfig.LandingPageType, expected.FlowConfig.LandingPageType);
-            Assert.Equal(webProfile.Presentation.LogoImage, expected.Presentation.LogoImage);
-            Assert.Equal(webProfile.InputFields.AllowNote, expected.InputFields.AllowNote);
+            Assert.Equal(expected.Id, webProfile.Id);
+            Assert.Equal(expected.Name, webProfile.Name);
+            Assert.Equal(expected.FlowConfig.LandingPageType, webProfile.FlowConfig.LandingPageType);
+            Assert.Equal(expected.Presentation.LogoImage, webProfile.Presentation.LogoImage);
+            Assert.Equal(expected.InputFields.AllowNote, webProfile.InputFields.AllowNote);
         }
     }
 }

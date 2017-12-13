@@ -33,7 +33,7 @@ namespace PayPal.PaymentExperience.Test
             Assert.Equal(200, (int) getResponse.StatusCode);
             var updated = getResponse.Result<WebProfile>();
             Assert.NotNull(updated);
-            Assert.Equal(updated.FlowConfig.BankTxnPendingUrl, expected.FlowConfig.BankTxnPendingUrl);
+            Assert.Equal(expected.FlowConfig.BankTxnPendingUrl, updated.FlowConfig.BankTxnPendingUrl);
         }
     }
 }
