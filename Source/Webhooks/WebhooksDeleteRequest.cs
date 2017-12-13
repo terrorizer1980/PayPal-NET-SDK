@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // WebhooksDeleteRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Webhooks
 {
-    /**
-     * Deletes a webhook, by ID.
-     */
+    /// <summary>
+    /// Deletes a webhook, by ID.
+    /// </summary>
     public class WebhooksDeleteRequest : HttpRequest
     {
         public WebhooksDeleteRequest(string WebhookId) : base("/v1/notifications/webhooks/{webhook_id}?", HttpMethod.Delete, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{webhook_id}", Uri.EscapeDataString(Convert.ToString(WebhookId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

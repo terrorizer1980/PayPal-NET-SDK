@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // Event.cs
 // @version 0.1
 // @type object
@@ -9,61 +9,63 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * A webhook event notification.
-    */
+    /// <summary>
+    /// A webhook event notification.
+    /// </summary>
     [DataContract]
     public class Event {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Event() {}
 
-        /**
-        * The date and time when the webhook event notification was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the webhook event notification was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * The event that triggered the webhook event notification.
-        */
-        [DataMember(Name="event_type")]
+        /// <summary>
+        /// The event that triggered the webhook event notification.
+        /// </summary>
+        [DataMember(Name="event_type", EmitDefaultValue = false)]
         public string EventType { get; set; }
 
-        /**
-        * The event version in the webhook notification.
-        */
-        [DataMember(Name="event_version")]
+        /// <summary>
+        /// The event version in the webhook notification.
+        /// </summary>
+        [DataMember(Name="event_version", EmitDefaultValue = false)]
         public string EventVersion { get; set; }
 
-        /**
-        * The ID of the webhook event notification.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the webhook event notification.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The resource that triggered the webhook event notification.
-        */
-        [DataMember(Name="resource")]
+        /// <summary>
+        /// The resource that triggered the webhook event notification.
+        /// </summary>
+        [DataMember(Name="resource", EmitDefaultValue = false)]
         public object Resource { get; set; }
 
-        /**
-        * The name of the resource related to the webhook notification event.
-        */
-        [DataMember(Name="resource_type")]
+        /// <summary>
+        /// The name of the resource related to the webhook notification event.
+        /// </summary>
+        [DataMember(Name="resource_type", EmitDefaultValue = false)]
         public string ResourceType { get; set; }
 
-        /**
-        * A summary description for the event notification. For example, `A payment authorization was created.`
-        */
-        [DataMember(Name="summary")]
+        /// <summary>
+        /// A summary description for the event notification. For example, `A payment authorization was created.`
+        /// </summary>
+        [DataMember(Name="summary", EmitDefaultValue = false)]
         public string Summary { get; set; }
     }
 }

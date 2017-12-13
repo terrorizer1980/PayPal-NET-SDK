@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // EventList.cs
 // @version 0.1
 // @type object
@@ -9,30 +9,32 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * List of webhooks events.
-    */
+    /// <summary>
+    /// List of webhooks events.
+    /// </summary>
     [DataContract]
     public class EventList {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public EventList() {}
 
-        /**
-        * The number of items in each range of results. Note that the response might have fewer items than the requested `page_size` value.
-        */
-        [DataMember(Name="count")]
+        /// <summary>
+        /// The number of items in each range of results. Note that the response might have fewer items than the requested `page_size` value.
+        /// </summary>
+        [DataMember(Name="count", EmitDefaultValue = false)]
         public int Count { get; set; }
 
-        /**
-        * An array of webhooks events.
-        */
-        [DataMember(Name="events")]
+        /// <summary>
+        /// An array of webhooks events.
+        /// </summary>
+        [DataMember(Name="events", EmitDefaultValue = false)]
         public List<Event> Events { get; set; }
 
-        /**
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
     }
 }

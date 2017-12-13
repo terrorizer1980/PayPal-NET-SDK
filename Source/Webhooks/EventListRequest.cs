@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // EventListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Webhooks
 {
-    /**
-     * Lists webhook event notifications. Use query parameters to filter the response.
-     */
+    /// <summary>
+    /// Lists webhook event notifications. Use query parameters to filter the response.
+    /// </summary>
     public class EventListRequest : HttpRequest
     {
         public EventListRequest() : base("/v1/notifications/webhooks-events?", HttpMethod.Get, typeof(EventList))
@@ -29,7 +29,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(EndTime);
             try {
                 this.Path = $"{this.Path}end_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -39,7 +39,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(EventType);
             try {
                 this.Path = $"{this.Path}event_type={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -49,7 +49,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(PageSize);
             try {
                 this.Path = $"{this.Path}page_size={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -59,7 +59,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(StartTime);
             try {
                 this.Path = $"{this.Path}start_time={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -69,7 +69,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(TransactionId);
             try {
                 this.Path = $"{this.Path}transaction_id={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

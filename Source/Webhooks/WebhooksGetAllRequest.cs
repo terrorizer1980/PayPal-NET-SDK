@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // WebhooksGetAllRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Webhooks
 {
-    /**
-     * Lists all webhooks for an app.
-     */
+    /// <summary>
+    /// Lists all webhooks for an app.
+    /// </summary>
     public class WebhooksGetAllRequest : HttpRequest
     {
         public WebhooksGetAllRequest() : base("/v1/notifications/webhooks?", HttpMethod.Get, typeof(WebhookList))
@@ -29,7 +29,7 @@ namespace PayPal.Webhooks
             var strParams = Convert.ToString(AnchorType);
             try {
                 this.Path = $"{this.Path}anchor_type={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

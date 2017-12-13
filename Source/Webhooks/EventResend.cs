@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:08 CST by version 0.1 of Braintree SDK Generator
 // EventResend.cs
 // @version 0.1
 // @type object
@@ -9,19 +9,21 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * Resends a webhook event notification, by ID.
-    */
+    /// <summary>
+    /// Resends a webhook event notification, by ID.
+    /// </summary>
     [DataContract]
     public class EventResend {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public EventResend() {}
 
-        /**
-        * An array of webhook account IDs.
-        */
-        [DataMember(Name="webhook_ids")]
+        /// <summary>
+        /// An array of webhook account IDs.
+        /// </summary>
+        [DataMember(Name="webhook_ids", EmitDefaultValue = false)]
         public List<string> WebhookIds { get; set; }
     }
 }

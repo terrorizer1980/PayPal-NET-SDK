@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:08 CST by version 0.1 of Braintree SDK Generator
 // SimulateEvent.cs
 // @version 0.1
 // @type object
@@ -9,32 +9,34 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * Simulates a mock webhook event.
-    */
+    /// <summary>
+    /// Simulates a mock webhook event.
+    /// </summary>
     [DataContract]
     public class SimulateEvent {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public SimulateEvent() {}
 
-        /**
-        * REQUIRED
-        * The event name. Specify one of the subscribed events. For each request, provide only one event.
-        */
-        [DataMember(Name="event_type")]
+        /// <summary>
+        /// REQUIRED
+        /// The event name. Specify one of the subscribed events. For each request, provide only one event.
+        /// </summary>
+        [DataMember(Name="event_type", EmitDefaultValue = false)]
         public string EventType { get; set; }
 
-        /**
-        * The URL for the webhook endpoint. If omitted, the webhook ID is required.
-        */
-        [DataMember(Name="url")]
+        /// <summary>
+        /// The URL for the webhook endpoint. If omitted, the webhook ID is required.
+        /// </summary>
+        [DataMember(Name="url", EmitDefaultValue = false)]
         public string Url { get; set; }
 
-        /**
-        * The ID of the webhook. If omitted, the URL is required.
-        */
-        [DataMember(Name="webhook_id")]
+        /// <summary>
+        /// The ID of the webhook. If omitted, the URL is required.
+        /// </summary>
+        [DataMember(Name="webhook_id", EmitDefaultValue = false)]
         public string WebhookId { get; set; }
     }
 }

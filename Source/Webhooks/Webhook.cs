@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:08 CST by version 0.1 of Braintree SDK Generator
 // Webhook.cs
 // @version 0.1
 // @type object
@@ -9,39 +9,41 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * One or more webhook objects.
-    */
+    /// <summary>
+    /// One or more webhook objects.
+    /// </summary>
     [DataContract]
     public class Webhook {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Webhook() {}
 
-        /**
-        * REQUIRED
-        * An array of up to ten events to which to subscribe your webhook. To subscribe to all events including new events as they are added, specify the asterisk (`*`) wild card. To replace the `event_types` array, specify the `*` wild card. To list all supported events, [list available events](#available-event-type.list).
-        */
-        [DataMember(Name="event_types")]
+        /// <summary>
+        /// REQUIRED
+        /// An array of up to ten events to which to subscribe your webhook. To subscribe to all events including new events as they are added, specify the asterisk (`*`) wild card. To replace the `event_types` array, specify the `*` wild card. To list all supported events, [list available events](#available-event-type.list).
+        /// </summary>
+        [DataMember(Name="event_types", EmitDefaultValue = false)]
         public List<EventType> EventTypes { get; set; }
 
-        /**
-        * The ID of the webhook.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the webhook.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/hateoas-links/).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/hateoas-links/).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * REQUIRED
-        * The URL that is configured to listen on `localhost` for incoming `POST` notification messages that contain event information.
-        */
-        [DataMember(Name="url")]
+        /// <summary>
+        /// REQUIRED
+        /// The URL that is configured to listen on `localhost` for incoming `POST` notification messages that contain event information.
+        /// </summary>
+        [DataMember(Name="url", EmitDefaultValue = false)]
         public string Url { get; set; }
     }
 }

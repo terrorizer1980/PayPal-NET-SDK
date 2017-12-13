@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // VerifyWebhookSignaturePostRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Webhooks
 {
-    /**
-     * Verifies a webhook signature.
-     */
+    /// <summary>
+    /// Verifies a webhook signature.
+    /// </summary>
     public class VerifyWebhookSignaturePostRequest : HttpRequest
     {
         public VerifyWebhookSignaturePostRequest() : base("/v1/notifications/verify-webhook-signature?", HttpMethod.Post, typeof(VerifyWebhookSignatureResponse))

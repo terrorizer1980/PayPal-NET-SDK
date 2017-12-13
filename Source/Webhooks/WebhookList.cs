@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:08 CST by version 0.1 of Braintree SDK Generator
 // WebhookList.cs
 // @version 0.1
 // @type object
@@ -9,19 +9,21 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * List of webhooks.
-    */
+    /// <summary>
+    /// List of webhooks.
+    /// </summary>
     [DataContract]
     public class WebhookList {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public WebhookList() {}
 
-        /**
-        * An array of webhooks.
-        */
-        [DataMember(Name="webhooks")]
+        /// <summary>
+        /// An array of webhooks.
+        /// </summary>
+        [DataMember(Name="webhooks", EmitDefaultValue = false)]
         public List<Webhook> Webhooks { get; set; }
     }
 }

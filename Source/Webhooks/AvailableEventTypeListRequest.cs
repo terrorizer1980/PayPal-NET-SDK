@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // AvailableEventTypeListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Webhooks
 {
-    /**
-     * Lists available events to which any webhook can subscribe. For a list of supported events, see [Webhook event names](/docs/integration/direct/webhooks/event-names/).
-     */
+    /// <summary>
+    /// Lists available events to which any webhook can subscribe. For a list of supported events, see [Webhook event names](/docs/integration/direct/webhooks/event-names/).
+    /// </summary>
     public class AvailableEventTypeListRequest : HttpRequest
     {
         public AvailableEventTypeListRequest() : base("/v1/notifications/webhooks-event-types?", HttpMethod.Get, typeof(EventTypeList))

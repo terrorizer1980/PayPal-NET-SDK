@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 17:22:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
 // VerifyWebhookSignature.cs
 // @version 0.1
 // @type object
@@ -9,62 +9,64 @@ using System.Collections.Generic;
 
 namespace PayPal.Webhooks
 {
-    /**
-    * A verify webhook signature request.
-    */
+    /// <summary>
+    /// A verify webhook signature request.
+    /// </summary>
     [DataContract]
     public class VerifyWebhookSignature {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public VerifyWebhookSignature() {}
 
-        /**
-        * REQUIRED
-        * The algorithm that PayPal uses to generate the signature and that you can use to verify the signature. Extract this value from the `PAYPAL-AUTH-ALGO` response header, which is received with the webhook notification.
-        */
-        [DataMember(Name="auth_algo")]
+        /// <summary>
+        /// REQUIRED
+        /// The algorithm that PayPal uses to generate the signature and that you can use to verify the signature. Extract this value from the `PAYPAL-AUTH-ALGO` response header, which is received with the webhook notification.
+        /// </summary>
+        [DataMember(Name="auth_algo", EmitDefaultValue = false)]
         public string AuthAlgo { get; set; }
 
-        /**
-        * REQUIRED
-        * The X.509 public key certificate. Download the certificate from this URL and use it to verify the signature. Extract this value from the `PAYPAL-CERT-URL` response header, which is received with the webhook notification.
-        */
-        [DataMember(Name="cert_url")]
+        /// <summary>
+        /// REQUIRED
+        /// The X.509 public key certificate. Download the certificate from this URL and use it to verify the signature. Extract this value from the `PAYPAL-CERT-URL` response header, which is received with the webhook notification.
+        /// </summary>
+        [DataMember(Name="cert_url", EmitDefaultValue = false)]
         public string CertUrl { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the HTTP transmission. Contained in the `PAYPAL-TRANSMISSION-ID` header of the notification message.
-        */
-        [DataMember(Name="transmission_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the HTTP transmission. Contained in the `PAYPAL-TRANSMISSION-ID` header of the notification message.
+        /// </summary>
+        [DataMember(Name="transmission_id", EmitDefaultValue = false)]
         public string TransmissionId { get; set; }
 
-        /**
-        * REQUIRED
-        * The PayPal-generated asymmetric signature. Appears in the `PAYPAL-TRANSMISSION-SIG` header of the notification message.
-        */
-        [DataMember(Name="transmission_sig")]
+        /// <summary>
+        /// REQUIRED
+        /// The PayPal-generated asymmetric signature. Appears in the `PAYPAL-TRANSMISSION-SIG` header of the notification message.
+        /// </summary>
+        [DataMember(Name="transmission_sig", EmitDefaultValue = false)]
         public string TransmissionSig { get; set; }
 
-        /**
-        * REQUIRED
-        * The date and time of the HTTP transmission, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Appears in the `PAYPAL-TRANSMISSION-TIME` header of the notification message.
-        */
-        [DataMember(Name="transmission_time")]
+        /// <summary>
+        /// REQUIRED
+        /// The date and time of the HTTP transmission, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Appears in the `PAYPAL-TRANSMISSION-TIME` header of the notification message.
+        /// </summary>
+        [DataMember(Name="transmission_time", EmitDefaultValue = false)]
         public string TransmissionTime { get; set; }
 
-        /**
-        * REQUIRED
-        * A webhook event notification.
-        */
-        [DataMember(Name="webhook_event")]
+        /// <summary>
+        /// REQUIRED
+        /// A webhook event notification.
+        /// </summary>
+        [DataMember(Name="webhook_event", EmitDefaultValue = false)]
         public Event WebhookEvent { get; set; }
 
-        /**
-        * REQUIRED
-        * The ID of the webhook as configured in your Developer Portal account.
-        */
-        [DataMember(Name="webhook_id")]
+        /// <summary>
+        /// REQUIRED
+        /// The ID of the webhook as configured in your Developer Portal account.
+        /// </summary>
+        [DataMember(Name="webhook_id", EmitDefaultValue = false)]
         public string WebhookId { get; set; }
     }
 }
