@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:50:54 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:50 CST by version 0.1 of Braintree SDK Generator
 // PlanListRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.BillingPlans
 {
-    /**
-     * Lists billing plans. To filter the plans that appear in the response, specify one or more optional query and pagination parameters.
-     */
+    /// <summary>
+    /// Lists billing plans. To filter the plans that appear in the response, specify one or more optional query and pagination parameters.
+    /// </summary>
     public class PlanListRequest : HttpRequest
     {
         public PlanListRequest() : base("/v1/payments/billing-plans/?", HttpMethod.Get, typeof(PlanList))
@@ -29,7 +29,7 @@ namespace PayPal.BillingPlans
             var strParams = Convert.ToString(Page);
             try {
                 this.Path = $"{this.Path}page={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -39,7 +39,7 @@ namespace PayPal.BillingPlans
             var strParams = Convert.ToString(PageSize);
             try {
                 this.Path = $"{this.Path}page_size={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -49,7 +49,7 @@ namespace PayPal.BillingPlans
             var strParams = Convert.ToString(Status);
             try {
                 this.Path = $"{this.Path}status={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -59,7 +59,7 @@ namespace PayPal.BillingPlans
             var strParams = Convert.ToString(TotalRequired);
             try {
                 this.Path = $"{this.Path}total_required={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:50:54 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:50 CST by version 0.1 of Braintree SDK Generator
 // PlanGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.BillingPlans
 {
-    /**
-     * Shows details for a billing plan, by ID.
-     */
+    /// <summary>
+    /// Shows details for a billing plan, by ID.
+    /// </summary>
     public class PlanGetRequest : HttpRequest
     {
         public PlanGetRequest(string PlanId) : base("/v1/payments/billing-plans/{plan_id}?", HttpMethod.Get, typeof(Plan))
         {
             try {
                 this.Path = this.Path.Replace("{plan_id}", Uri.EscapeDataString(Convert.ToString(PlanId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

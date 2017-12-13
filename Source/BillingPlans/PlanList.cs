@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:50:54 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:50 CST by version 0.1 of Braintree SDK Generator
 // PlanList.cs
 // @version 0.1
 // @type object
@@ -9,37 +9,39 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingPlans
 {
-    /**
-    * A list of plans. Contains details for each plan and a set of [HATEOAS links](/docs/api/overview/#hateoas-links).
-    */
+    /// <summary>
+    /// A list of plans. Contains details for each plan and a set of [HATEOAS links](/docs/api/overview/#hateoas-links).
+    /// </summary>
     [DataContract]
     public class PlanList {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PlanList() {}
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * An array of plans.
-        */
-        [DataMember(Name="plans")]
+        /// <summary>
+        /// An array of plans.
+        /// </summary>
+        [DataMember(Name="plans", EmitDefaultValue = false)]
         public List<Plan> Plans { get; set; }
 
-        /**
-        * The total number of plans in the list.
-        */
-        [DataMember(Name="total_items")]
+        /// <summary>
+        /// The total number of plans in the list.
+        /// </summary>
+        [DataMember(Name="total_items", EmitDefaultValue = false)]
         public string TotalItems { get; set; }
 
-        /**
-        * The total number of pages in the response. The `page_size` request value determines how many plans appear on each page. The `total_items` and `page_size` request values are used to calculate the total number of pages in the response.
-        */
-        [DataMember(Name="total_pages")]
+        /// <summary>
+        /// The total number of pages in the response. The `page_size` request value determines how many plans appear on each page. The `total_items` and `page_size` request values are used to calculate the total number of pages in the response.
+        /// </summary>
+        [DataMember(Name="total_pages", EmitDefaultValue = false)]
         public string TotalPages { get; set; }
     }
 }

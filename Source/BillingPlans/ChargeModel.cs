@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:50:54 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:50 CST by version 0.1 of Braintree SDK Generator
 // ChargeModel.cs
 // @version 0.1
 // @type object
@@ -9,33 +9,35 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingPlans
 {
-    /**
-    * The shipping fee and tax information.
-    */
+    /// <summary>
+    /// The shipping fee and tax information.
+    /// </summary>
     [DataContract]
     public class ChargeModel {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ChargeModel() {}
 
-        /**
-        * REQUIRED
-        * The base object for all financial value-related fields, such as balance, payment due, and so on.
-        */
-        [DataMember(Name="amount")]
+        /// <summary>
+        /// REQUIRED
+        /// The base object for all financial value-related fields, such as balance, payment due, and so on.
+        /// </summary>
+        [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * The ID of the charge model.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the charge model.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * REQUIRED
-        * The charge model type, which is tax or shipping.
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The charge model type, which is tax or shipping.
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }
 }

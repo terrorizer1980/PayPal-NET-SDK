@@ -1,4 +1,4 @@
-// This class was generated on Mon, 11 Dec 2017 16:50:54 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:50 CST by version 0.1 of Braintree SDK Generator
 // Plan.cs
 // @version 0.1
 // @type object
@@ -9,82 +9,84 @@ using System.Collections.Generic;
 
 namespace PayPal.BillingPlans
 {
-    /**
-    * A billing plan. You can base one or more agreements on an active plan.
-    */
+    /// <summary>
+    /// A billing plan. You can base one or more agreements on an active plan.
+    /// </summary>
     [DataContract]
     public class Plan {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Plan() {}
 
-        /**
-        * The date and time when the plan was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="create_time")]
+        /// <summary>
+        /// The date and time when the plan was created, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan description. Maximum length is 127 single-byte alphanumeric characters.
-        */
-        [DataMember(Name="description")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan description. Maximum length is 127 single-byte alphanumeric characters.
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The ID of the plan.
-        */
-        [DataMember(Name="id")]
+        /// <summary>
+        /// The ID of the plan.
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
-        */
-        [DataMember(Name="links")]
+        /// <summary>
+        /// An array of request-related [HATEOAS links](/docs/api/overview/#hateoas-links).
+        /// </summary>
+        [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
-        */
-        [DataMember(Name="merchant_preferences")]
+        /// <summary>
+        /// The merchant preferences for a plan. Includes how much it costs to set up the agreement, the URLs where the customer can approve or cancel the agreement, the maximum number of allowed failed payment attempts, whether PayPal automatically bills the outstanding balance in the next billing cycle, and the action if the customer's initial payment fails.
+        /// </summary>
+        [DataMember(Name="merchant_preferences", EmitDefaultValue = false)]
         public MerchantPreferences MerchantPreferences { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan name.
-        */
-        [DataMember(Name="name")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan name.
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * A payment definition, which determines how often and for how long the customer is charged. Includes the interval at which the customer is charged, the charge amount, and optional shipping fees and taxes.
-        */
-        [DataMember(Name="payment_definitions")]
+        /// <summary>
+        /// A payment definition, which determines how often and for how long the customer is charged. Includes the interval at which the customer is charged, the charge amount, and optional shipping fees and taxes.
+        /// </summary>
+        [DataMember(Name="payment_definitions", EmitDefaultValue = false)]
         public List<PaymentDefinition> PaymentDefinitions { get; set; }
 
-        /**
-        * The plan status.
-        */
-        [DataMember(Name="state")]
+        /// <summary>
+        /// The plan status.
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue = false)]
         public string State { get; set; }
 
-        /**
-        * An array of terms for this plan. Read-only and reserved for future use.
-        */
-        [DataMember(Name="terms")]
+        /// <summary>
+        /// An array of terms for this plan. Read-only and reserved for future use.
+        /// </summary>
+        [DataMember(Name="terms", EmitDefaultValue = false)]
         public List<Terms> Terms { get; set; }
 
-        /**
-        * REQUIRED
-        * The plan type. Indicates whether the payment definitions in the plan have a fixed number of or infinite payment cycles. Value is:<ul><li><code>FIXED</code>. The plan has a fixed number of payment cycles.</li><li><code>INFINITE</code>. The plan has infinite, or <code>0</code>, payment cycles.</li></ul>
-        */
-        [DataMember(Name="type")]
+        /// <summary>
+        /// REQUIRED
+        /// The plan type. Indicates whether the payment definitions in the plan have a fixed number of or infinite payment cycles. Value is:<ul><li><code>FIXED</code>. The plan has a fixed number of payment cycles.</li><li><code>INFINITE</code>. The plan has infinite, or <code>0</code>, payment cycles.</li></ul>
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
-        /**
-        * The date and time when the plan was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
-        */
-        [DataMember(Name="update_time")]
+        /// <summary>
+        /// The date and time when the plan was updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
+        [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime { get; set; }
     }
 }
