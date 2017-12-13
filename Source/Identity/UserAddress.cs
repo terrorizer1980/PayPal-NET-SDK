@@ -1,4 +1,4 @@
-// This class was generated on Tue, 12 Dec 2017 12:38:03 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:41 CST by version 0.1 of Braintree SDK Generator
 // UserAddress.cs
 // @version 0.1
 // @type object
@@ -9,43 +9,45 @@ using System.Collections.Generic;
 
 namespace PayPal.Identity
 {
-    /**
-    * The end user's preferred address.
-    */
+    /// <summary>
+    /// The end user's preferred address.
+    /// </summary>
     [DataContract]
     public class UserAddress {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public UserAddress() {}
 
-        /**
-        * The country.
-        */
-        [DataMember(Name="country")]
+        /// <summary>
+        /// The country.
+        /// </summary>
+        [DataMember(Name="country", EmitDefaultValue = false)]
         public string Country { get; set; }
 
-        /**
-        * The city or locality.
-        */
-        [DataMember(Name="locality")]
+        /// <summary>
+        /// The city or locality.
+        /// </summary>
+        [DataMember(Name="locality", EmitDefaultValue = false)]
         public string Locality { get; set; }
 
-        /**
-        * The zip code or postal code.
-        */
-        [DataMember(Name="postal_code")]
+        /// <summary>
+        /// The zip code or postal code.
+        /// </summary>
+        [DataMember(Name="postal_code", EmitDefaultValue = false)]
         public string PostalCode { get; set; }
 
-        /**
-        * The state, province, prefecture, or region.
-        */
-        [DataMember(Name="region")]
+        /// <summary>
+        /// The state, province, prefecture, or region.
+        /// </summary>
+        [DataMember(Name="region", EmitDefaultValue = false)]
         public string Region { get; set; }
 
-        /**
-        * The full street address. Can include the house number and street name.
-        */
-        [DataMember(Name="street_address")]
+        /// <summary>
+        /// The full street address. Can include the house number and street name.
+        /// </summary>
+        [DataMember(Name="street_address", EmitDefaultValue = false)]
         public string StreetAddress { get; set; }
     }
 }
