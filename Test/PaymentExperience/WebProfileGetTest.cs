@@ -27,7 +27,7 @@ namespace PayPal.PaymentExperience.Test
 
             HttpResponse response = await getWebProfile(expected.Id);
 
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             var webProfile = response.Result<WebProfile>();
             Assert.NotNull(webProfile);
             Assert.Equal(webProfile.Id, expected.Id);

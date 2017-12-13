@@ -20,7 +20,7 @@ namespace PayPal.PaymentExperience.Test
             WebProfileGetListRequest request = new WebProfileGetListRequest();
 
             HttpResponse response = await client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<List<WebProfile>>());
         }
     }

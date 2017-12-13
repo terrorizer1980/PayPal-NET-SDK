@@ -21,7 +21,7 @@ namespace PayPal.PaymentExperience.Test
             WebProfileDeleteRequest request = new WebProfileDeleteRequest(expected.Id);
 
             HttpResponse response = await client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 204);
+            Assert.Equal(204, (int) response.StatusCode);
         }
     }
 }

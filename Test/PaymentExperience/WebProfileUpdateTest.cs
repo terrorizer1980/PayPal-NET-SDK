@@ -26,11 +26,11 @@ namespace PayPal.PaymentExperience.Test
             request.RequestBody(expected);
 
             HttpResponse response = await client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 204);
+            Assert.Equal(204, (int) response.StatusCode);
             
             // Get
             HttpResponse getResponse = await WebProfileGetTest.getWebProfile(expected.Id);
-            Assert.Equal((int) getResponse.StatusCode, 200);
+            Assert.Equal(200, (int) getResponse.StatusCode);
             var updated = getResponse.Result<WebProfile>();
             Assert.NotNull(updated);
             Assert.Equal(updated.FlowConfig.BankTxnPendingUrl, expected.FlowConfig.BankTxnPendingUrl);

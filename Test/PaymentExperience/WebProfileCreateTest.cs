@@ -31,7 +31,7 @@ namespace PayPal.PaymentExperience.Test
         public async void TestWebProfileCreateRequest()
         {
             HttpResponse response = await createWebProfile();
-            Assert.Equal((int) response.StatusCode, 201);
+            Assert.Equal(201, (int) response.StatusCode);
             Assert.NotNull(response.Result<WebProfile>());
         }
     }
