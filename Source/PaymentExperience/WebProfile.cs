@@ -1,4 +1,4 @@
-// This class was generated on Thu, 07 Dec 2017 14:41:28 PST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
 // WebProfile.cs
 // @version 0.1
 // @type object
@@ -21,38 +21,38 @@ namespace PayPal.PaymentExperience
         /**
         * The flow configuration parameters.
         */
-        [DataMember(Name="flow_config")]
+        [DataMember(Name="flow_config", EmitDefaultValue = false)]
         public FlowConfig FlowConfig { get; set; }
 
         /**
         * The ID of the web experience profile.
         */
-        [DataMember(Name="id")]
+        [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /**
         * The input field customization parameters.
         */
-        [DataMember(Name="input_fields")]
+        [DataMember(Name="input_fields", EmitDefaultValue = false)]
         public InputFields InputFields { get; set; }
 
         /**
         * REQUIRED
         * The web experience profile name. Must be unique for a set of profiles for a merchant.
         */
-        [DataMember(Name="name")]
+        [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /**
         * The style and presentation parameters.
         */
-        [DataMember(Name="presentation")]
+        [DataMember(Name="presentation", EmitDefaultValue = false)]
         public Presentation Presentation { get; set; }
 
         /**
         * Indicates whether the profile persists for three hours or permanently. To persist the profile permanently, set to `false`. To persist the profile for three hours, set to `true`.
         */
-        [DataMember(Name="temporary")]
+        [DataMember(Name="temporary", EmitDefaultValue = false)]
         public bool Temporary { get; set; }
     }
 }

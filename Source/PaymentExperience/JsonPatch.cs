@@ -1,4 +1,4 @@
-// This class was generated on Thu, 07 Dec 2017 14:41:28 PST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 12:10:42 CST by version 0.1 of Braintree SDK Generator
 // JsonPatch.cs
 // @version 0.1
 // @type object
@@ -28,19 +28,19 @@ namespace PayPal.PaymentExperience
         * REQUIRED
         * The operation to complete.
         */
-        [DataMember(Name="op")]
+        [DataMember(Name="op", EmitDefaultValue = false)]
         public string Op { get; set; }
 
         /**
         * A JSON pointer to a location in the target document at which to complete the operation.
         */
-        [DataMember(Name="path")]
+        [DataMember(Name="path", EmitDefaultValue = false)]
         public string Path { get; set; }
 
         /**
         * The value to apply. The `remove` operation does not require a value.
         */
-        [DataMember(Name="value")]
+        [DataMember(Name="value", EmitDefaultValue = false)]
         public object Value { get; set; }
     }
 }
