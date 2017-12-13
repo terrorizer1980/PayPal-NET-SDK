@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:20 CST by version 0.1 of Braintree SDK Generator
 // Currency.cs
 // @version 0.1
 // @type object
@@ -9,26 +9,28 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Base object for all financial value related fields (balance, payment due, etc.)
-    */
+    /// <summary>
+    /// Base object for all financial value related fields (balance, payment due, etc.)
+    /// </summary>
     [DataContract]
     public class Currency {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Currency() {}
 
-        /**
-        * REQUIRED
-        * 3 letter currency code as defined by ISO 4217.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// 3 letter currency code as defined by ISO 4217.
+        /// </summary>
         [DataMember(Name="currency", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
 
-        /**
-        * REQUIRED
-        * amount up to N digit after the decimals separator as defined in ISO 4217 for the appropriate currency code.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// amount up to N digit after the decimals separator as defined in ISO 4217 for the appropriate currency code.
+        /// </summary>
         [DataMember(Name="value", EmitDefaultValue = false)]
         public string Value { get; set; }
     }

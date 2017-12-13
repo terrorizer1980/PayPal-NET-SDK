@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:25 CST by version 0.1 of Braintree SDK Generator
 // InvoiceNumber.cs
 // @version 0.1
 // @type object
@@ -12,12 +12,14 @@ namespace PayPal.Invoices
     [DataContract]
     public class InvoiceNumber {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public InvoiceNumber() {}
 
-        /**
-        * The next invoice number that is available to the merchant. This number is auto-incremented from the most recent invoice number.
-        */
+        /// <summary>
+        /// The next invoice number that is available to the merchant. This number is auto-incremented from the most recent invoice number.
+        /// </summary>
         [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
     }

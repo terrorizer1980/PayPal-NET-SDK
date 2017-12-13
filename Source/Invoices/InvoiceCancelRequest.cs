@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:25 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:28 CST by version 0.1 of Braintree SDK Generator
 // InvoiceCancelRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Cancels a sent invoice, by ID, and, optionally, sends a notification about the cancellation to the payer, merchant, and Cc: emails.
-     */
+    /// <summary>
+    /// Cancels a sent invoice, by ID, and, optionally, sends a notification about the cancellation to the payer, merchant, and Cc: emails.
+    /// </summary>
     public class InvoiceCancelRequest : HttpRequest
     {
         public InvoiceCancelRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}/cancel?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

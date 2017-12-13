@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:31 CST by version 0.1 of Braintree SDK Generator
 // InvoiceSearchRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Lists invoices that match search criteria. In the JSON request body, include a `search` object that specifies the search criteria.
-     */
+    /// <summary>
+    /// Lists invoices that match search criteria. In the JSON request body, include a `search` object that specifies the search criteria.
+    /// </summary>
     public class InvoiceSearchRequest : HttpRequest
     {
         public InvoiceSearchRequest() : base("/v1/invoicing/search?", HttpMethod.Post, typeof(Invoices))

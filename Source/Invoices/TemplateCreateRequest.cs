@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:32 CST by version 0.1 of Braintree SDK Generator
 // TemplateCreateRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Creates a template.
-     */
+    /// <summary>
+    /// Creates a template.
+    /// </summary>
     public class TemplateCreateRequest : HttpRequest
     {
         public TemplateCreateRequest() : base("/v1/invoicing/templates?", HttpMethod.Post, typeof(Template))

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:20 CST by version 0.1 of Braintree SDK Generator
 // Cost.cs
 // @version 0.1
 // @type object
@@ -9,24 +9,26 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
-    */
+    /// <summary>
+    /// The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
+    /// </summary>
     [DataContract]
     public class Cost {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Cost() {}
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * The cost, as a percent value. Valid value is from 0 to 100.
-        */
+        /// <summary>
+        /// The cost, as a percent value. Valid value is from 0 to 100.
+        /// </summary>
         [DataMember(Name="percent", EmitDefaultValue = false)]
         public double Percent { get; set; }
     }

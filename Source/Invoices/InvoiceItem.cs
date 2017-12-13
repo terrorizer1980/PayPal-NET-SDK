@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:20 CST by version 0.1 of Braintree SDK Generator
 // InvoiceItem.cs
 // @version 0.1
 // @type object
@@ -9,63 +9,65 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Invoice line item information.
-    */
+    /// <summary>
+    /// Invoice line item information.
+    /// </summary>
     [DataContract]
     public class InvoiceItem {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public InvoiceItem() {}
 
-        /**
-        * The date when the item or service was provided. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
-        */
+        /// <summary>
+        /// The date when the item or service was provided. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
         [DataMember(Name="date", EmitDefaultValue = false)]
         public string Date { get; set; }
 
-        /**
-        * The item description.
-        */
+        /// <summary>
+        /// The item description.
+        /// </summary>
         [DataMember(Name="description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
-        /**
-        * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
-        */
+        /// <summary>
+        /// The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
+        /// </summary>
         [DataMember(Name="discount", EmitDefaultValue = false)]
         public Cost Discount { get; set; }
 
-        /**
-        * REQUIRED
-        * The item name.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The item name.
+        /// </summary>
         [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * REQUIRED
-        * The item quantity. Valid value is from -10000 to 10000.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The item quantity. Valid value is from -10000 to 10000.
+        /// </summary>
         [DataMember(Name="quantity", EmitDefaultValue = false)]
         public double Quantity { get; set; }
 
-        /**
-        * Tax information.
-        */
+        /// <summary>
+        /// Tax information.
+        /// </summary>
         [DataMember(Name="tax", EmitDefaultValue = false)]
         public Tax Tax { get; set; }
 
-        /**
-        * The unit of measure for the invoiced item.
-        */
+        /// <summary>
+        /// The unit of measure for the invoiced item.
+        /// </summary>
         [DataMember(Name="unit_of_measure", EmitDefaultValue = false)]
         public string UnitOfMeasure { get; set; }
 
-        /**
-        * REQUIRED
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// REQUIRED
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="unit_price", EmitDefaultValue = false)]
         public Currency UnitPrice { get; set; }
     }

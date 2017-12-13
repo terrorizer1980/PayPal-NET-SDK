@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:26 CST by version 0.1 of Braintree SDK Generator
 // Template.cs
 // @version 0.1
 // @type object
@@ -9,60 +9,62 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Invoicing template.
-    */
+    /// <summary>
+    /// Invoicing template.
+    /// </summary>
     [DataContract]
     public class Template {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Template() {}
 
-        /**
-        * Indicates whether this template is a merchant-created custom template. Non-custom templates are system generated.
-        */
+        /// <summary>
+        /// Indicates whether this template is a merchant-created custom template. Non-custom templates are system generated.
+        /// </summary>
         [DataMember(Name="custom", EmitDefaultValue = false)]
         public bool Custom { get; set; }
 
-        /**
-        * Indicates whether this template is the default merchant template. A merchant can have one default template.
-        */
+        /// <summary>
+        /// Indicates whether this template is the default merchant template. A merchant can have one default template.
+        /// </summary>
         [DataMember(Name="default", EmitDefaultValue = false)]
         public bool Default { get; set; }
 
-        /**
-        * The HATEOS links that enable template actions.
-        */
+        /// <summary>
+        /// The HATEOS links that enable template actions.
+        /// </summary>
         [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The template name.
-        */
+        /// <summary>
+        /// The template name.
+        /// </summary>
         [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * Settings for each template.
-        */
+        /// <summary>
+        /// Settings for each template.
+        /// </summary>
         [DataMember(Name="settings", EmitDefaultValue = false)]
         public List<TemplateSettings> Settings { get; set; }
 
-        /**
-        * Template data.
-        */
+        /// <summary>
+        /// Template data.
+        /// </summary>
         [DataMember(Name="template_data", EmitDefaultValue = false)]
         public TemplateData TemplateData { get; set; }
 
-        /**
-        * The ID of the template.
-        */
+        /// <summary>
+        /// The ID of the template.
+        /// </summary>
         [DataMember(Name="template_id", EmitDefaultValue = false)]
         public string TemplateId { get; set; }
 
-        /**
-        * The unit of measure for the template. Value is quantity, hours, or amount.
-        */
+        /// <summary>
+        /// The unit of measure for the template. Value is quantity, hours, or amount.
+        /// </summary>
         [DataMember(Name="unit_of_measure", EmitDefaultValue = false)]
         public string UnitOfMeasure { get; set; }
     }

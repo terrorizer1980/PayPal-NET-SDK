@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:32 CST by version 0.1 of Braintree SDK Generator
 // InvoiceSendRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Sends an invoice, by ID, to a customer.<blockquote><strong>Note:</strong> After you send an invoice, you cannot resend it.</blockquote><br/>Optionally, set the `notify_merchant` query parameter to also send the merchant an invoice update notification. Default is `true`.
-     */
+    /// <summary>
+    /// Sends an invoice, by ID, to a customer.<blockquote><strong>Note:</strong> After you send an invoice, you cannot resend it.</blockquote><br/>Optionally, set the `notify_merchant` query parameter to also send the merchant an invoice update notification. Default is `true`.
+    /// </summary>
     public class InvoiceSendRequest : HttpRequest
     {
         public InvoiceSendRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}/send?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }
@@ -32,7 +32,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(NotifyMerchant);
             try {
                 this.Path = $"{this.Path}notify_merchant={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

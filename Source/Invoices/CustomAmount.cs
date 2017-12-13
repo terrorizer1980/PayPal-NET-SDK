@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:17 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:19 CST by version 0.1 of Braintree SDK Generator
 // CustomAmount.cs
 // @version 0.1
 // @type object
@@ -9,24 +9,26 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
-    */
+    /// <summary>
+    /// The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
+    /// </summary>
     [DataContract]
     public class CustomAmount {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CustomAmount() {}
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * The custom amount label.
-        */
+        /// <summary>
+        /// The custom amount label.
+        /// </summary>
         [DataMember(Name="label", EmitDefaultValue = false)]
         public string Label { get; set; }
     }

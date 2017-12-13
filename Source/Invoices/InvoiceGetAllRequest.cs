@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:26 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:30 CST by version 0.1 of Braintree SDK Generator
 // InvoiceGetAllRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Lists merchant invoices. To filter the invoices that appear in the response, you can specify one or more optional query parameters.
-     */
+    /// <summary>
+    /// Lists merchant invoices. To filter the invoices that appear in the response, you can specify one or more optional query parameters.
+    /// </summary>
     public class InvoiceGetAllRequest : HttpRequest
     {
         public InvoiceGetAllRequest() : base("/v1/invoicing/invoices/?", HttpMethod.Get, typeof(Invoices))
@@ -29,7 +29,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(Page);
             try {
                 this.Path = $"{this.Path}page={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -39,7 +39,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(PageSize);
             try {
                 this.Path = $"{this.Path}page_size={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
@@ -49,7 +49,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(TotalCountRequired);
             try {
                 this.Path = $"{this.Path}total_count_required={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

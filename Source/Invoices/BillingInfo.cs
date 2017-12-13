@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:18 CST by version 0.1 of Braintree SDK Generator
 // BillingInfo.cs
 // @version 0.1
 // @type object
@@ -9,67 +9,69 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Billing information for the invoice recipient.
-    */
+    /// <summary>
+    /// Billing information for the invoice recipient.
+    /// </summary>
     [DataContract]
     public class BillingInfo {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public BillingInfo() {}
 
-        /**
-        * Additional information, such as business hours.
-        */
+        /// <summary>
+        /// Additional information, such as business hours.
+        /// </summary>
         [DataMember(Name="additional_info", EmitDefaultValue = false)]
         public string AdditionalInfo { get; set; }
 
-        /**
-        * Base Address object used as billing address in a payment or extended for Shipping Address.
-        */
+        /// <summary>
+        /// Base Address object used as billing address in a payment or extended for Shipping Address.
+        /// </summary>
         [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
-        /**
-        * The invoice recipient company business name.
-        */
+        /// <summary>
+        /// The invoice recipient company business name.
+        /// </summary>
         [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
-        /**
-        * REQUIRED
-        * The invoice recipient email address.<blockquote><strong>Note:</strong>Before you get a QR code, you must create an invoice that specifies `qrinvoice@paypal.com `as the recipient email address in the `billing_info` object. Use a customer email address only if you want to email the invoice.</blockquote>
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The invoice recipient email address.<blockquote><strong>Note:</strong>Before you get a QR code, you must create an invoice that specifies `qrinvoice@paypal.com `as the recipient email address in the `billing_info` object. Use a customer email address only if you want to email the invoice.</blockquote>
+        /// </summary>
         [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The invoice recipient first name.
-        */
+        /// <summary>
+        /// The invoice recipient first name.
+        /// </summary>
         [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The language in which an email can be sent to the recipient. Used only when the recipient lacks a PayPal account.
-        */
+        /// <summary>
+        /// The language in which an email can be sent to the recipient. Used only when the recipient lacks a PayPal account.
+        /// </summary>
         [DataMember(Name="language", EmitDefaultValue = false)]
         public string Language { get; set; }
 
-        /**
-        * The invoice recipient last name.
-        */
+        /// <summary>
+        /// The invoice recipient last name.
+        /// </summary>
         [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * The preferred notification channel for the recipient. Default is `EMAIL`. For `SMS`, a `phone` value is required.
-        */
+        /// <summary>
+        /// The preferred notification channel for the recipient. Default is `EMAIL`. For `SMS`, a `phone` value is required.
+        /// </summary>
         [DataMember(Name="notification_channel", EmitDefaultValue = false)]
         public string NotificationChannel { get; set; }
 
-        /**
-        * The phone number.
-        */
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [DataMember(Name="phone", EmitDefaultValue = false)]
         public Phone Phone { get; set; }
     }

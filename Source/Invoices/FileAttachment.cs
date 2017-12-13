@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:18 CST by version 0.1 of Braintree SDK Generator
 // FileAttachment.cs
 // @version 0.1
 // @type object
@@ -9,24 +9,26 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The file attached to an invoice or template.
-    */
+    /// <summary>
+    /// The file attached to an invoice or template.
+    /// </summary>
     [DataContract]
     public class FileAttachment {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public FileAttachment() {}
 
-        /**
-        * The name of the attached file.
-        */
+        /// <summary>
+        /// The name of the attached file.
+        /// </summary>
         [DataMember(Name="name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
-        /**
-        * The URL of the attached file, which can be downloaded.
-        */
+        /// <summary>
+        /// The URL of the attached file, which can be downloaded.
+        /// </summary>
         [DataMember(Name="url", EmitDefaultValue = false)]
         public string Url { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:26 CST by version 0.1 of Braintree SDK Generator
 // TemplateSettingsMetadata.cs
 // @version 0.1
 // @type object
@@ -9,18 +9,20 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The template settings metadata.
-    */
+    /// <summary>
+    /// The template settings metadata.
+    /// </summary>
     [DataContract]
     public class TemplateSettingsMetadata {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public TemplateSettingsMetadata() {}
 
-        /**
-        * Indicates whether this field is hidden.
-        */
+        /// <summary>
+        /// Indicates whether this field is hidden.
+        /// </summary>
         [DataMember(Name="hidden", EmitDefaultValue = false)]
         public bool Hidden { get; set; }
     }

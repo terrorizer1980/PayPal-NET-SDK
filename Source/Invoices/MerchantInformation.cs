@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:19 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:21 CST by version 0.1 of Braintree SDK Generator
 // MerchantInformation.cs
 // @version 0.1
 // @type object
@@ -9,79 +9,81 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Merchant business information that appears on the invoice.
-    */
+    /// <summary>
+    /// Merchant business information that appears on the invoice.
+    /// </summary>
     [DataContract]
     public class MerchantInformation {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public MerchantInformation() {}
 
-        /**
-        * Additional information, such as business hours.
-        */
+        /// <summary>
+        /// Additional information, such as business hours.
+        /// </summary>
         [DataMember(Name="additional_info", EmitDefaultValue = false)]
         public string AdditionalInfo { get; set; }
 
-        /**
-        * A label for the `additional_info` field.
-        */
+        /// <summary>
+        /// A label for the `additional_info` field.
+        /// </summary>
         [DataMember(Name="additional_info_label", EmitDefaultValue = false)]
         public string AdditionalInfoLabel { get; set; }
 
-        /**
-        * Base Address object used as billing address in a payment or extended for Shipping Address.
-        */
+        /// <summary>
+        /// Base Address object used as billing address in a payment or extended for Shipping Address.
+        /// </summary>
         [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
-        /**
-        * The merchant company business name.
-        */
+        /// <summary>
+        /// The merchant company business name.
+        /// </summary>
         [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
-        /**
-        * REQUIRED
-        * The merchant email address.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The merchant email address.
+        /// </summary>
         [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The phone number.
-        */
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [DataMember(Name="fax", EmitDefaultValue = false)]
         public Phone Fax { get; set; }
 
-        /**
-        * The merchant first name.
-        */
+        /// <summary>
+        /// The merchant first name.
+        /// </summary>
         [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The merchant last name.
-        */
+        /// <summary>
+        /// The merchant last name.
+        /// </summary>
         [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * The phone number.
-        */
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [DataMember(Name="phone", EmitDefaultValue = false)]
         public Phone Phone { get; set; }
 
-        /**
-        * The merchant tax ID.
-        */
+        /// <summary>
+        /// The merchant tax ID.
+        /// </summary>
         [DataMember(Name="tax_id", EmitDefaultValue = false)]
         public string TaxId { get; set; }
 
-        /**
-        * The merchant website.
-        */
+        /// <summary>
+        /// The merchant website.
+        /// </summary>
         [DataMember(Name="website", EmitDefaultValue = false)]
         public string Website { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:27 CST by version 0.1 of Braintree SDK Generator
 // TemplateData.cs
 // @version 0.1
 // @type object
@@ -9,133 +9,135 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Template data.
-    */
+    /// <summary>
+    /// Template data.
+    /// </summary>
     [DataContract]
     public class TemplateData {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public TemplateData() {}
 
-        /**
-        * Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
-        */
+        /// <summary>
+        /// Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
+        /// </summary>
         [DataMember(Name="allow_partial_payment", EmitDefaultValue = false)]
         public bool AllowPartialPayment { get; set; }
 
-        /**
-        * List of files that are attached to the invoice.
-        */
+        /// <summary>
+        /// List of files that are attached to the invoice.
+        /// </summary>
         [DataMember(Name="attachments", EmitDefaultValue = false)]
         public List<FileAttachment> Attachments { get; set; }
 
-        /**
-        * The required invoice recipient email address and any optional billing information. Supports one recipient only.
-        */
+        /// <summary>
+        /// The required invoice recipient email address and any optional billing information. Supports one recipient only.
+        /// </summary>
         [DataMember(Name="billing_info", EmitDefaultValue = false)]
         public List<BillingInfo> BillingInfo { get; set; }
 
-        /**
-        * For invoices sent by email, one or more email addresses to which to send a CC: copy of the notification. Supports only email addresses under participant.
-        */
+        /// <summary>
+        /// For invoices sent by email, one or more email addresses to which to send a CC: copy of the notification. Supports only email addresses under participant.
+        /// </summary>
         [DataMember(Name="cc_info", EmitDefaultValue = false)]
         public List<string> CcInfo { get; set; }
 
-        /**
-        * The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
-        */
+        /// <summary>
+        /// The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
+        /// </summary>
         [DataMember(Name="custom", EmitDefaultValue = false)]
         public CustomAmount Custom { get; set; }
 
-        /**
-        * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
-        */
+        /// <summary>
+        /// The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
+        /// </summary>
         [DataMember(Name="discount", EmitDefaultValue = false)]
         public Cost Discount { get; set; }
 
-        /**
-        * The list of items to include in the invoice. Each invoice can contain up to 100 items.
-        */
+        /// <summary>
+        /// The list of items to include in the invoice. Each invoice can contain up to 100 items.
+        /// </summary>
         [DataMember(Name="items", EmitDefaultValue = false)]
         public List<InvoiceItem> Items { get; set; }
 
-        /**
-        * The full URL of an external logo image.
-        */
+        /// <summary>
+        /// The full URL of an external logo image.
+        /// </summary>
         [DataMember(Name="logo_url", EmitDefaultValue = false)]
         public string LogoUrl { get; set; }
 
-        /**
-        * REQUIRED
-        * Merchant business information that appears on the invoice.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// Merchant business information that appears on the invoice.
+        /// </summary>
         [DataMember(Name="merchant_info", EmitDefaultValue = false)]
         public MerchantInformation MerchantInfo { get; set; }
 
-        /**
-        * A private bookkeeping memo for the merchant.
-        */
+        /// <summary>
+        /// A private bookkeeping memo for the merchant.
+        /// </summary>
         [DataMember(Name="merchant_memo", EmitDefaultValue = false)]
         public string MerchantMemo { get; set; }
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="minimum_amount_due", EmitDefaultValue = false)]
         public Currency MinimumAmountDue { get; set; }
 
-        /**
-        * A note to the payer.
-        */
+        /// <summary>
+        /// A note to the payer.
+        /// </summary>
         [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
-        /**
-        * The payment term of the invoice. If you specify `term_type`, you cannot specify `due_date`, and vice versa.
-        */
+        /// <summary>
+        /// The payment term of the invoice. If you specify `term_type`, you cannot specify `due_date`, and vice versa.
+        /// </summary>
         [DataMember(Name="payment_term", EmitDefaultValue = false)]
         public PaymentTerm PaymentTerm { get; set; }
 
-        /**
-        * Reference data, such as PO number, to add to the invoice.
-        */
+        /// <summary>
+        /// Reference data, such as PO number, to add to the invoice.
+        /// </summary>
         [DataMember(Name="reference", EmitDefaultValue = false)]
         public string Reference { get; set; }
 
-        /**
-        * The shipping cost, as a percentage or amount value.
-        */
+        /// <summary>
+        /// The shipping cost, as a percentage or amount value.
+        /// </summary>
         [DataMember(Name="shipping_cost", EmitDefaultValue = false)]
         public ShippingCost ShippingCost { get; set; }
 
-        /**
-        * The shipping information for the invoice recipient.
-        */
+        /// <summary>
+        /// The shipping information for the invoice recipient.
+        /// </summary>
         [DataMember(Name="shipping_info", EmitDefaultValue = false)]
         public ShippingInfo ShippingInfo { get; set; }
 
-        /**
-        * Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
-        */
+        /// <summary>
+        /// Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
+        /// </summary>
         [DataMember(Name="tax_calculated_after_discount", EmitDefaultValue = false)]
         public bool TaxCalculatedAfterDiscount { get; set; }
 
-        /**
-        * Indicates whether the unit price includes tax.
-        */
+        /// <summary>
+        /// Indicates whether the unit price includes tax.
+        /// </summary>
         [DataMember(Name="tax_inclusive", EmitDefaultValue = false)]
         public bool TaxInclusive { get; set; }
 
-        /**
-        * The general terms of the invoice.
-        */
+        /// <summary>
+        /// The general terms of the invoice.
+        /// </summary>
         [DataMember(Name="terms", EmitDefaultValue = false)]
         public string Terms { get; set; }
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="total_amount", EmitDefaultValue = false)]
         public Currency TotalAmount { get; set; }
     }

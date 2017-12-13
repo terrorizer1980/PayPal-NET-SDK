@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:24 CST by version 0.1 of Braintree SDK Generator
 // CancelNotification.cs
 // @version 0.1
 // @type object
@@ -9,42 +9,44 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Cancels an email or SMS notification.
-    */
+    /// <summary>
+    /// Cancels an email or SMS notification.
+    /// </summary>
     [DataContract]
     public class CancelNotification {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public CancelNotification() {}
 
-        /**
-        * An array of one or more CC: emails. If you omit this parameter from the JSON request body, a notification is sent to all CC: email addresses that are part of the invoice. Otherwise, specify this parameter to limit the email addresses to which a notification is sent.<blockquote><strong>Note:</strong> Additional email addresses are not supported.</blockquote>
-        */
+        /// <summary>
+        /// An array of one or more CC: emails. If you omit this parameter from the JSON request body, a notification is sent to all CC: email addresses that are part of the invoice. Otherwise, specify this parameter to limit the email addresses to which a notification is sent.<blockquote><strong>Note:</strong> Additional email addresses are not supported.</blockquote>
+        /// </summary>
         [DataMember(Name="cc_emails", EmitDefaultValue = false)]
         public List<string> CcEmails { get; set; }
 
-        /**
-        * A note to the payer.
-        */
+        /// <summary>
+        /// A note to the payer.
+        /// </summary>
         [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
-        /**
-        * Indicates whether to send the notification to the merchant.
-        */
+        /// <summary>
+        /// Indicates whether to send the notification to the merchant.
+        /// </summary>
         [DataMember(Name="send_to_merchant", EmitDefaultValue = false)]
         public bool SendToMerchant { get; set; }
 
-        /**
-        * Indicates whether to send the notification to the payer.
-        */
+        /// <summary>
+        /// Indicates whether to send the notification to the payer.
+        /// </summary>
         [DataMember(Name="send_to_payer", EmitDefaultValue = false)]
         public bool SendToPayer { get; set; }
 
-        /**
-        * The subject of the notification.
-        */
+        /// <summary>
+        /// The subject of the notification.
+        /// </summary>
         [DataMember(Name="subject", EmitDefaultValue = false)]
         public string Subject { get; set; }
     }

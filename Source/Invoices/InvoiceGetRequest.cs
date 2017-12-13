@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:26 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:29 CST by version 0.1 of Braintree SDK Generator
 // InvoiceGetRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Shows details for an invoice, by ID.
-     */
+    /// <summary>
+    /// Shows details for an invoice, by ID.
+    /// </summary>
     public class InvoiceGetRequest : HttpRequest
     {
         public InvoiceGetRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}?", HttpMethod.Get, typeof(Invoice))
         {
             try {
                 this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

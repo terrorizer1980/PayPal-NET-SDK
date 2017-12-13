@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:17 CST by version 0.1 of Braintree SDK Generator
 // Invoices.cs
 // @version 0.1
 // @type object
@@ -9,30 +9,32 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * List of merchant invoices. Can include the total invoices count and HATEOAS links for navigation.
-    */
+    /// <summary>
+    /// List of merchant invoices. Can include the total invoices count and HATEOAS links for navigation.
+    /// </summary>
     [DataContract]
     public class Invoices {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Invoices() {}
 
-        /**
-        * An array of invoices as search result.
-        */
+        /// <summary>
+        /// An array of invoices as search result.
+        /// </summary>
         [DataMember(Name="invoices", EmitDefaultValue = false)]
         public List<Invoice> InvoiceList { get; set; }
 
-        /**
-        * The HATEOAS links for `next` and `previous` navigation in the result set.
-        */
+        /// <summary>
+        /// The HATEOAS links for `next` and `previous` navigation in the result set.
+        /// </summary>
         [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The total number of invoices that match the search criteria.
-        */
+        /// <summary>
+        /// The total number of invoices that match the search criteria.
+        /// </summary>
         [DataMember(Name="total_count", EmitDefaultValue = false)]
         public int TotalCount { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:33 CST by version 0.1 of Braintree SDK Generator
 // TemplateDeleteRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Deletes a template, by ID.
-     */
+    /// <summary>
+    /// Deletes a template, by ID.
+    /// </summary>
     public class TemplateDeleteRequest : HttpRequest
     {
         public TemplateDeleteRequest(string TemplateId) : base("/v1/invoicing/templates/{template_id}?", HttpMethod.Delete, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{template_id}", Uri.EscapeDataString(Convert.ToString(TemplateId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

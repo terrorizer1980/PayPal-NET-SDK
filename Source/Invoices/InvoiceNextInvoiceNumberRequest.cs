@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:27 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:30 CST by version 0.1 of Braintree SDK Generator
 // InvoiceNextInvoiceNumberRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Generates the next invoice number that is available to the merchant.
-     */
+    /// <summary>
+    /// Generates the next invoice number that is available to the merchant.
+    /// </summary>
     public class InvoiceNextInvoiceNumberRequest : HttpRequest
     {
         public InvoiceNextInvoiceNumberRequest() : base("/v1/invoicing/invoices/next-invoice-number?", HttpMethod.Post, typeof(InvoiceNumber))

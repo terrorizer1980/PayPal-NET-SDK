@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:16 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:19 CST by version 0.1 of Braintree SDK Generator
 // Participant.cs
 // @version 0.1
 // @type object
@@ -9,67 +9,69 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Participant information.
-    */
+    /// <summary>
+    /// Participant information.
+    /// </summary>
     [DataContract]
     public class Participant {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Participant() {}
 
-        /**
-        * Additional information, such as business hours.
-        */
+        /// <summary>
+        /// Additional information, such as business hours.
+        /// </summary>
         [DataMember(Name="additional_info", EmitDefaultValue = false)]
         public string AdditionalInfo { get; set; }
 
-        /**
-        * Base Address object used as billing address in a payment or extended for Shipping Address.
-        */
+        /// <summary>
+        /// Base Address object used as billing address in a payment or extended for Shipping Address.
+        /// </summary>
         [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
-        /**
-        * The participant company business name.
-        */
+        /// <summary>
+        /// The participant company business name.
+        /// </summary>
         [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
-        /**
-        * REQUIRED
-        * The participant email address.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The participant email address.
+        /// </summary>
         [DataMember(Name="email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
-        /**
-        * The phone number.
-        */
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [DataMember(Name="fax", EmitDefaultValue = false)]
         public Phone Fax { get; set; }
 
-        /**
-        * The participant first name.
-        */
+        /// <summary>
+        /// The participant first name.
+        /// </summary>
         [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The participant last name.
-        */
+        /// <summary>
+        /// The participant last name.
+        /// </summary>
         [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
 
-        /**
-        * The phone number.
-        */
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [DataMember(Name="phone", EmitDefaultValue = false)]
         public Phone Phone { get; set; }
 
-        /**
-        * The participant website.
-        */
+        /// <summary>
+        /// The participant website.
+        /// </summary>
         [DataMember(Name="website", EmitDefaultValue = false)]
         public string Website { get; set; }
     }

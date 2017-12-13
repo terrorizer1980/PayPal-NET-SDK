@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:28 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:31 CST by version 0.1 of Braintree SDK Generator
 // InvoiceRemindRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Sends a reminder to the payer about an invoice, by ID. In the JSON request body, include a `notification` object that defines the subject of the reminder and other details.
-     */
+    /// <summary>
+    /// Sends a reminder to the payer about an invoice, by ID. In the JSON request body, include a `notification` object that defines the subject of the reminder and other details.
+    /// </summary>
     public class InvoiceRemindRequest : HttpRequest
     {
         public InvoiceRemindRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}/remind?", HttpMethod.Post, typeof(void))
         {
             try {
                 this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

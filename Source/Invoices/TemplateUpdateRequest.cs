@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:31 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:34 CST by version 0.1 of Braintree SDK Generator
 // TemplateUpdateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Updates a template, by ID. In the JSON request body, specify a complete `template` object. The update method does not support partial updates.
-     */
+    /// <summary>
+    /// Updates a template, by ID. In the JSON request body, specify a complete `template` object. The update method does not support partial updates.
+    /// </summary>
     public class TemplateUpdateRequest : HttpRequest
     {
         public TemplateUpdateRequest(string TemplateId) : base("/v1/invoicing/templates/{template_id}?", HttpMethod.Put, typeof(Template))
         {
             try {
                 this.Path = this.Path.Replace("{template_id}", Uri.EscapeDataString(Convert.ToString(TemplateId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:23 CST by version 0.1 of Braintree SDK Generator
 // RefundDetail.cs
 // @version 0.1
 // @type object
@@ -9,42 +9,44 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Invoicing refund details.
-    */
+    /// <summary>
+    /// Invoicing refund details.
+    /// </summary>
     [DataContract]
     public class RefundDetail {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public RefundDetail() {}
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * The date when the invoice was refunded. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6). For example, `2014-02-27 PST`.
-        */
+        /// <summary>
+        /// The date when the invoice was refunded. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6). For example, `2014-02-27 PST`.
+        /// </summary>
         [DataMember(Name="date", EmitDefaultValue = false)]
         public string Date { get; set; }
 
-        /**
-        * A note associated with the refund.
-        */
+        /// <summary>
+        /// A note associated with the refund.
+        /// </summary>
         [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
-        /**
-        * The ID of the PayPal refund transaction. Required with the `PAYPAL` refund type.
-        */
+        /// <summary>
+        /// The ID of the PayPal refund transaction. Required with the `PAYPAL` refund type.
+        /// </summary>
         [DataMember(Name="transaction_id", EmitDefaultValue = false)]
         public string TransactionId { get; set; }
 
-        /**
-        * The PayPal refund type. Indicates whether the refund was paid through PayPal or externally in invoicing flow. The [record refund](/docs/api/invoicing/#invoices_record-refund) method supports the `EXTERNAL` refund type. The `PAYPAL` refund type is supported for backward compatibility.
-        */
+        /// <summary>
+        /// The PayPal refund type. Indicates whether the refund was paid through PayPal or externally in invoicing flow. The [record refund](/docs/api/invoicing/#invoices_record-refund) method supports the `EXTERNAL` refund type. The `PAYPAL` refund type is supported for backward compatibility.
+        /// </summary>
         [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }

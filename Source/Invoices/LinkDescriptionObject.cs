@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:21 CST by version 0.1 of Braintree SDK Generator
 // LinkDescriptionObject.cs
 // @version 0.1
 // @type object
@@ -9,50 +9,52 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The [HATEOAS links](/docs/api/hateoas-links/) related to the request.
-    */
+    /// <summary>
+    /// The [HATEOAS links](/docs/api/hateoas-links/) related to the request.
+    /// </summary>
     [DataContract]
     public class LinkDescriptionObject {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public LinkDescriptionObject() {}
 
-        /**
-        * The media type in which to submit data in the request.
-        */
+        /// <summary>
+        /// The media type in which to submit data in the request.
+        /// </summary>
         [DataMember(Name="encType", EmitDefaultValue = false)]
         public string EncType { get; set; }
 
-        /**
-        * REQUIRED
-        * The URL of the related HATEOAS link to use in subsequent calls.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The URL of the related HATEOAS link to use in subsequent calls.
+        /// </summary>
         [DataMember(Name="href", EmitDefaultValue = false)]
         public string Href { get; set; }
 
-        /**
-        * The media type, as defined by RFC 2046, that describes the link target.
-        */
+        /// <summary>
+        /// The media type, as defined by RFC 2046, that describes the link target.
+        /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue = false)]
         public string MediaType { get; set; }
 
-        /**
-        * The HTTP method required for the related call.
-        */
+        /// <summary>
+        /// The HTTP method required for the related call.
+        /// </summary>
         [DataMember(Name="method", EmitDefaultValue = false)]
         public string Method { get; set; }
 
-        /**
-        * REQUIRED
-        * The relation to the target resource of the link. Should be one of the extended link relation types defined by PPaaS in https://ppaas/docs/standards/hypermedia
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The relation to the target resource of the link. Should be one of the extended link relation types defined by PPaaS in https://ppaas/docs/standards/hypermedia
+        /// </summary>
         [DataMember(Name="rel", EmitDefaultValue = false)]
         public string Rel { get; set; }
 
-        /**
-        * The link title.
-        */
+        /// <summary>
+        /// The link title.
+        /// </summary>
         [DataMember(Name="title", EmitDefaultValue = false)]
         public string Title { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:25 CST by version 0.1 of Braintree SDK Generator
 // QrCode.cs
 // @version 0.1
 // @type object
@@ -9,17 +9,19 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * base64 encoded image of type image/png
-    */
+    /// <summary>
+    /// base64 encoded image of type image/png
+    /// </summary>
     [DataContract]
     public class QrCode {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public QrCode() {}
 
-        /**
-        */
+        /// <summary>
+        /// </summary>
         [DataMember(Name="image", EmitDefaultValue = false)]
         public string Image { get; set; }
     }

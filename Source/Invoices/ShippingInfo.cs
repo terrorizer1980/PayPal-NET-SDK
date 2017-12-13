@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:21 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:24 CST by version 0.1 of Braintree SDK Generator
 // ShippingInfo.cs
 // @version 0.1
 // @type object
@@ -9,36 +9,38 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The shipping information for the invoice recipient.
-    */
+    /// <summary>
+    /// The shipping information for the invoice recipient.
+    /// </summary>
     [DataContract]
     public class ShippingInfo {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ShippingInfo() {}
 
-        /**
-        * Base Address object used as billing address in a payment or extended for Shipping Address.
-        */
+        /// <summary>
+        /// Base Address object used as billing address in a payment or extended for Shipping Address.
+        /// </summary>
         [DataMember(Name="address", EmitDefaultValue = false)]
         public Address Address { get; set; }
 
-        /**
-        * The invoice recipient company business name.
-        */
+        /// <summary>
+        /// The invoice recipient company business name.
+        /// </summary>
         [DataMember(Name="business_name", EmitDefaultValue = false)]
         public string BusinessName { get; set; }
 
-        /**
-        * The invoice recipient first name.
-        */
+        /// <summary>
+        /// The invoice recipient first name.
+        /// </summary>
         [DataMember(Name="first_name", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
-        /**
-        * The invoice recipient last name.
-        */
+        /// <summary>
+        /// The invoice recipient last name.
+        /// </summary>
         [DataMember(Name="last_name", EmitDefaultValue = false)]
         public string LastName { get; set; }
     }

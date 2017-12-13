@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:23 CST by version 0.1 of Braintree SDK Generator
 // ShippingCost.cs
 // @version 0.1
 // @type object
@@ -9,24 +9,26 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The shipping cost, as a percentage or amount value.
-    */
+    /// <summary>
+    /// The shipping cost, as a percentage or amount value.
+    /// </summary>
     [DataContract]
     public class ShippingCost {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public ShippingCost() {}
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * Tax information.
-        */
+        /// <summary>
+        /// Tax information.
+        /// </summary>
         [DataMember(Name="tax", EmitDefaultValue = false)]
         public Tax Tax { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:16 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:19 CST by version 0.1 of Braintree SDK Generator
 // Phone.cs
 // @version 0.1
 // @type object
@@ -9,24 +9,26 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * The phone number.
-    */
+    /// <summary>
+    /// The phone number.
+    /// </summary>
     [DataContract]
     public class Phone {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Phone() {}
 
-        /**
-        * The country calling code (CC), as defined by E.164. The maximum combined length of CC+national is 15 digits.
-        */
+        /// <summary>
+        /// The country calling code (CC), as defined by E.164. The maximum combined length of CC+national is 15 digits.
+        /// </summary>
         [DataMember(Name="country_code", EmitDefaultValue = false)]
         public string CountryCode { get; set; }
 
-        /**
-        * The national number, as defined by E.164. A national number consists of national destination code (NDC) and subscriber number (SN). The maximum combined length of CC+national is 15 digits.
-        */
+        /// <summary>
+        /// The national number, as defined by E.164. A national number consists of national destination code (NDC) and subscriber number (SN). The maximum combined length of CC+national is 15 digits.
+        /// </summary>
         [DataMember(Name="national_number", EmitDefaultValue = false)]
         public string NationalNumber { get; set; }
     }

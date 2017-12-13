@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:27 CST by version 0.1 of Braintree SDK Generator
 // Templates.cs
 // @version 0.1
 // @type object
@@ -9,42 +9,44 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * List of merchant templates.
-    */
+    /// <summary>
+    /// List of merchant templates.
+    /// </summary>
     [DataContract]
     public class Templates {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Templates() {}
 
-        /**
-        * List of addresses in merchant profile.
-        */
+        /// <summary>
+        /// List of addresses in merchant profile.
+        /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue = false)]
         public List<Address> Addresses { get; set; }
 
-        /**
-        * List of emails in merchant profile.
-        */
+        /// <summary>
+        /// List of emails in merchant profile.
+        /// </summary>
         [DataMember(Name="emails", EmitDefaultValue = false)]
         public List<string> Emails { get; set; }
 
-        /**
-        * The HATEOAS links that provide related actions for the templates in the response.
-        */
+        /// <summary>
+        /// The HATEOAS links that provide related actions for the templates in the response.
+        /// </summary>
         [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * List of phone numbers in merchant profile.
-        */
+        /// <summary>
+        /// List of phone numbers in merchant profile.
+        /// </summary>
         [DataMember(Name="phones", EmitDefaultValue = false)]
         public List<Phone> Phones { get; set; }
 
-        /**
-        * An array of templates.
-        */
+        /// <summary>
+        /// An array of templates.
+        /// </summary>
         [DataMember(Name="templates", EmitDefaultValue = false)]
         public List<Template> TemplateList { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:23 CST by version 0.1 of Braintree SDK Generator
 // PaymentDetail.cs
 // @version 0.1
 // @type object
@@ -9,55 +9,57 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Payment details.
-    */
+    /// <summary>
+    /// Payment details.
+    /// </summary>
     [DataContract]
     public class PaymentDetail {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public PaymentDetail() {}
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Currency Amount { get; set; }
 
-        /**
-        * The date when the invoice was paid. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
-        */
+        /// <summary>
+        /// The date when the invoice was paid. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
         [DataMember(Name="date", EmitDefaultValue = false)]
         public string Date { get; set; }
 
-        /**
-        * REQUIRED
-        * The payment mode or method. Required with the `EXTERNAL` payment type.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// The payment mode or method. Required with the `EXTERNAL` payment type.
+        /// </summary>
         [DataMember(Name="method", EmitDefaultValue = false)]
         public string Method { get; set; }
 
-        /**
-        * Optional. A note associated with the payment.
-        */
+        /// <summary>
+        /// Optional. A note associated with the payment.
+        /// </summary>
         [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
-        /**
-        * The ID for a PayPal payment transaction. Required with the `PAYPAL` payment type.
-        */
+        /// <summary>
+        /// The ID for a PayPal payment transaction. Required with the `PAYPAL` payment type.
+        /// </summary>
         [DataMember(Name="transaction_id", EmitDefaultValue = false)]
         public string TransactionId { get; set; }
 
-        /**
-        * The transaction type.
-        */
+        /// <summary>
+        /// The transaction type.
+        /// </summary>
         [DataMember(Name="transaction_type", EmitDefaultValue = false)]
         public string TransactionType { get; set; }
 
-        /**
-        * The payment type in an invoicing flow. The [record refund](/docs/api/invoicing/#invoices_record-refund) method supports the `EXTERNAL` refund type. The `PAYPAL` refund type is supported for backward compatibility.
-        */
+        /// <summary>
+        /// The payment type in an invoicing flow. The [record refund](/docs/api/invoicing/#invoices_record-refund) method supports the `EXTERNAL` refund type. The `PAYPAL` refund type is supported for backward compatibility.
+        /// </summary>
         [DataMember(Name="type", EmitDefaultValue = false)]
         public string Type { get; set; }
     }

@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:15 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:17 CST by version 0.1 of Braintree SDK Generator
 // Invoice.cs
 // @version 0.1
 // @type object
@@ -9,211 +9,213 @@ using System.Collections.Generic;
 
 namespace PayPal.Invoices
 {
-    /**
-    * Invoice details.
-    */
+    /// <summary>
+    /// Invoice details.
+    /// </summary>
     [DataContract]
     public class Invoice {
 
-        // Required default constructor
+        /// <summary>
+	    /// Required default constructor
+		/// </summary>
         public Invoice() {}
 
-        /**
-        * Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
-        */
+        /// <summary>
+        /// Indicates whether the invoice allows a partial payment. If `false`, invoice must be paid in full. If `true`, the invoice allows partial payments.
+        /// </summary>
         [DataMember(Name="allow_partial_payment", EmitDefaultValue = false)]
         public bool AllowPartialPayment { get; set; }
 
-        /**
-        * Indicates whether the invoice enables the customer to enter a tip amount during payment. If `true`, the invoice shows a tip amount field so that the customer can enter a tip amount. If `false`, the invoice does not show a tip amount field.
-        */
+        /// <summary>
+        /// Indicates whether the invoice enables the customer to enter a tip amount during payment. If `true`, the invoice shows a tip amount field so that the customer can enter a tip amount. If `false`, the invoice does not show a tip amount field.
+        /// </summary>
         [DataMember(Name="allow_tip", EmitDefaultValue = false)]
         public bool AllowTip { get; set; }
 
-        /**
-        * List of files that are attached to the invoice.
-        */
+        /// <summary>
+        /// List of files that are attached to the invoice.
+        /// </summary>
         [DataMember(Name="attachments", EmitDefaultValue = false)]
         public List<FileAttachment> Attachments { get; set; }
 
-        /**
-        * The required invoice recipient email address and any optional billing information. Supports only one recipient.
-        */
+        /// <summary>
+        /// The required invoice recipient email address and any optional billing information. Supports only one recipient.
+        /// </summary>
         [DataMember(Name="billing_info", EmitDefaultValue = false)]
         public List<BillingInfo> BillingInfo { get; set; }
 
-        /**
-        * For invoices sent by email, one or more email addresses to which to send a CC: copy of the notification. Supports only email addresses under participant.
-        */
+        /// <summary>
+        /// For invoices sent by email, one or more email addresses to which to send a CC: copy of the notification. Supports only email addresses under participant.
+        /// </summary>
         [DataMember(Name="cc_info", EmitDefaultValue = false)]
         public List<Participant> CcInfo { get; set; }
 
-        /**
-        * The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
-        */
+        /// <summary>
+        /// The custom amount to apply to an invoice. If you include a label, you must include a custom amount.
+        /// </summary>
         [DataMember(Name="custom", EmitDefaultValue = false)]
         public CustomAmount Custom { get; set; }
 
-        /**
-        * The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
-        */
+        /// <summary>
+        /// The cost as a percent or an amount value. For example, to specify 10%, enter `10`. Alternatively, to specify an amount of 5, enter `5`.
+        /// </summary>
         [DataMember(Name="discount", EmitDefaultValue = false)]
         public Cost Discount { get; set; }
 
-        /**
-        * The ID of the invoice.
-        */
+        /// <summary>
+        /// The ID of the invoice.
+        /// </summary>
         [DataMember(Name="id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
-        /**
-        * The date when the invoice was enabled. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
-        */
+        /// <summary>
+        /// The date when the invoice was enabled. The date format is *yyyy*-*MM*-*dd* *z*, as defined in [Internet Date/Time Format](http://tools.ietf.org/html/rfc3339#section-5.6).
+        /// </summary>
         [DataMember(Name="invoice_date", EmitDefaultValue = false)]
         public string InvoiceDate { get; set; }
 
-        /**
-        * The items to include in the invoice. An invoice can contain a maximum of 100 items.
-        */
+        /// <summary>
+        /// The items to include in the invoice. An invoice can contain a maximum of 100 items.
+        /// </summary>
         [DataMember(Name="items", EmitDefaultValue = false)]
         public List<InvoiceItem> Items { get; set; }
 
-        /**
-        * The HATEOAS links that provide related actions for the invoice based on the current invoice status.
-        */
+        /// <summary>
+        /// The HATEOAS links that provide related actions for the invoice based on the current invoice status.
+        /// </summary>
         [DataMember(Name="links", EmitDefaultValue = false)]
         public List<LinkDescriptionObject> Links { get; set; }
 
-        /**
-        * The full URL to an external logo image.
-        */
+        /// <summary>
+        /// The full URL to an external logo image.
+        /// </summary>
         [DataMember(Name="logo_url", EmitDefaultValue = false)]
         public string LogoUrl { get; set; }
 
-        /**
-        * REQUIRED
-        * Merchant business information that appears on the invoice.
-        */
+        /// <summary>
+        /// REQUIRED
+        /// Merchant business information that appears on the invoice.
+        /// </summary>
         [DataMember(Name="merchant_info", EmitDefaultValue = false)]
         public MerchantInformation MerchantInfo { get; set; }
 
-        /**
-        * A private bookkeeping memo for the merchant.
-        */
+        /// <summary>
+        /// A private bookkeeping memo for the merchant.
+        /// </summary>
         [DataMember(Name="merchant_memo", EmitDefaultValue = false)]
         public string MerchantMemo { get; set; }
 
-        /**
-        * Audit information for the resource.
-        */
+        /// <summary>
+        /// Audit information for the resource.
+        /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue = false)]
         public Metadata Metadata { get; set; }
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="minimum_amount_due", EmitDefaultValue = false)]
         public Currency MinimumAmountDue { get; set; }
 
-        /**
-        * A note to the payer.
-        */
+        /// <summary>
+        /// A note to the payer.
+        /// </summary>
         [DataMember(Name="note", EmitDefaultValue = false)]
         public string Note { get; set; }
 
-        /**
-        * The unique invoice number. If you omit this number, it is auto-incremented from the previous invoice number.
-        */
+        /// <summary>
+        /// The unique invoice number. If you omit this number, it is auto-incremented from the previous invoice number.
+        /// </summary>
         [DataMember(Name="number", EmitDefaultValue = false)]
         public string Number { get; set; }
 
-        /**
-        * The payment and refund summary.
-        */
+        /// <summary>
+        /// The payment and refund summary.
+        /// </summary>
         [DataMember(Name="paid_amount", EmitDefaultValue = false)]
         public PaymentSummary PaidAmount { get; set; }
 
-        /**
-        * The payment term of the invoice. If you specify `term_type`, you cannot specify `due_date`, and vice versa.
-        */
+        /// <summary>
+        /// The payment term of the invoice. If you specify `term_type`, you cannot specify `due_date`, and vice versa.
+        /// </summary>
         [DataMember(Name="payment_term", EmitDefaultValue = false)]
         public PaymentTerm PaymentTerm { get; set; }
 
-        /**
-        * List of payment details for the invoice.
-        */
+        /// <summary>
+        /// List of payment details for the invoice.
+        /// </summary>
         [DataMember(Name="payments", EmitDefaultValue = false)]
         public List<PaymentDetail> Payments { get; set; }
 
-        /**
-        * Reference data, such as PO number, to add to the invoice.
-        */
+        /// <summary>
+        /// Reference data, such as PO number, to add to the invoice.
+        /// </summary>
         [DataMember(Name="reference", EmitDefaultValue = false)]
         public string Reference { get; set; }
 
-        /**
-        * The payment and refund summary.
-        */
+        /// <summary>
+        /// The payment and refund summary.
+        /// </summary>
         [DataMember(Name="refunded_amount", EmitDefaultValue = false)]
         public PaymentSummary RefundedAmount { get; set; }
 
-        /**
-        * List of refund details for the invoice.
-        */
+        /// <summary>
+        /// List of refund details for the invoice.
+        /// </summary>
         [DataMember(Name="refunds", EmitDefaultValue = false)]
         public List<RefundDetail> Refunds { get; set; }
 
-        /**
-        * The shipping cost, as a percentage or amount value.
-        */
+        /// <summary>
+        /// The shipping cost, as a percentage or amount value.
+        /// </summary>
         [DataMember(Name="shipping_cost", EmitDefaultValue = false)]
         public ShippingCost ShippingCost { get; set; }
 
-        /**
-        * The shipping information for the invoice recipient.
-        */
+        /// <summary>
+        /// The shipping information for the invoice recipient.
+        /// </summary>
         [DataMember(Name="shipping_info", EmitDefaultValue = false)]
         public ShippingInfo ShippingInfo { get; set; }
 
-        /**
-        * The invoice status. When you [search for invoices](/docs/api/invoicing/#invoices_search), you must specify this value as an array. For example, `"status": ["REFUNDED"]`.
-        */
+        /// <summary>
+        /// The invoice status. When you [search for invoices](/docs/api/invoicing/#invoices_search), you must specify this value as an array. For example, `"status": ["REFUNDED"]`.
+        /// </summary>
         [DataMember(Name="status", EmitDefaultValue = false)]
         public string Status { get; set; }
 
-        /**
-        * Indicates whether the tax is calculated before or after a discount. If `false`, the tax is calculated before a discount. If `true`, the tax is calculated after a discount.
-        */
+        /// <summary>
+        /// Indicates whether the tax is calculated before or after a discount. If `false`, the tax is calculated before a discount. If `true`, the tax is calculated after a discount.
+        /// </summary>
         [DataMember(Name="tax_calculated_after_discount", EmitDefaultValue = false)]
         public bool TaxCalculatedAfterDiscount { get; set; }
 
-        /**
-        * Indicates whether the unit price includes tax.
-        */
+        /// <summary>
+        /// Indicates whether the unit price includes tax.
+        /// </summary>
         [DataMember(Name="tax_inclusive", EmitDefaultValue = false)]
         public bool TaxInclusive { get; set; }
 
-        /**
-        * The ID of the template from which to create the invoice. Useful for copy functionality.
-        */
+        /// <summary>
+        /// The ID of the template from which to create the invoice. Useful for copy functionality.
+        /// </summary>
         [DataMember(Name="template_id", EmitDefaultValue = false)]
         public string TemplateId { get; set; }
 
-        /**
-        * The general terms of the invoice.
-        */
+        /// <summary>
+        /// The general terms of the invoice.
+        /// </summary>
         [DataMember(Name="terms", EmitDefaultValue = false)]
         public string Terms { get; set; }
 
-        /**
-        * Base object for all financial value related fields (balance, payment due, etc.)
-        */
+        /// <summary>
+        /// Base object for all financial value related fields (balance, payment due, etc.)
+        /// </summary>
         [DataMember(Name="total_amount", EmitDefaultValue = false)]
         public Currency TotalAmount { get; set; }
 
-        /**
-        * The URI of the invoice.
-        */
+        /// <summary>
+        /// The URI of the invoice.
+        /// </summary>
         [DataMember(Name="uri", EmitDefaultValue = false)]
         public string Uri { get; set; }
     }

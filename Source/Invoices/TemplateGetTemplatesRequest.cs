@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:33 CST by version 0.1 of Braintree SDK Generator
 // TemplateGetTemplatesRequest.cs
 // @version 0.1
 // @type request
@@ -13,9 +13,9 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Lists all merchant-created templates. The list shows the emails, addresses, and phone numbers from the merchant profile.
-     */
+    /// <summary>
+    /// Lists all merchant-created templates. The list shows the emails, addresses, and phone numbers from the merchant profile.
+    /// </summary>
     public class TemplateGetTemplatesRequest : HttpRequest
     {
         public TemplateGetTemplatesRequest() : base("/v1/invoicing/templates/?", HttpMethod.Get, typeof(Templates))
@@ -29,7 +29,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(Fields);
             try {
                 this.Path = $"{this.Path}fields={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         

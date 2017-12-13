@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 12:24:29 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Wed, 13 Dec 2017 14:32:32 CST by version 0.1 of Braintree SDK Generator
 // InvoiceUpdateRequest.cs
 // @version 0.1
 // @type request
@@ -13,16 +13,16 @@ using BraintreeHttp;
 
 namespace PayPal.Invoices
 {
-    /**
-     * Fully updates an invoice, by ID. In the JSON request body, include a complete `invoice` object. This call does not support partial updates.
-     */
+    /// <summary>
+    /// Fully updates an invoice, by ID. In the JSON request body, include a complete `invoice` object. This call does not support partial updates.
+    /// </summary>
     public class InvoiceUpdateRequest : HttpRequest
     {
         public InvoiceUpdateRequest(string InvoiceId) : base("/v1/invoicing/invoices/{invoice_id}?", HttpMethod.Put, typeof(Invoice))
         {
             try {
                 this.Path = this.Path.Replace("{invoice_id}", Uri.EscapeDataString(Convert.ToString(InvoiceId) ));
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }
@@ -32,7 +32,7 @@ namespace PayPal.Invoices
             var strParams = Convert.ToString(NotifyMerchant);
             try {
                 this.Path = $"{this.Path}notify_merchant={Uri.EscapeDataString(strParams)}&";
-            } catch (IOException ignored) {}
+            } catch (IOException) {}
             return this;
         }
         
