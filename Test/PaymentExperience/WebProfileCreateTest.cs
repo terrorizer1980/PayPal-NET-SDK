@@ -7,11 +7,13 @@ using BraintreeHttp;
 using Xunit;
 using PayPal.Test;
 using System.Threading.Tasks;
+using static PayPal.Test.TestHarness;
 
 namespace PayPal.PaymentExperience.Test
 {
 
-    public class WebProfileCreateTest : TestHarness
+    [Collection("Web Profile")]
+    public class WebProfileCreateTest
     {
         private static WebProfile buildRequestBody()
         {
@@ -23,7 +25,6 @@ namespace PayPal.PaymentExperience.Test
         public static async Task<HttpResponse> createWebProfile() {
             WebProfileCreateRequest request = new WebProfileCreateRequest();
             request.RequestBody(buildRequestBody());
-
             return await TestHarness.client().Execute(request);
         }
 

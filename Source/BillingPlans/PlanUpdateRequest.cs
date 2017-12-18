@@ -16,7 +16,7 @@ namespace PayPal.BillingPlans
     /// <summary>
     /// Updates fields in a billing plan, by ID. In the JSON request body, include a patch object that specifies the operation to perform, one or more fields to update, and a new value for each updated field.
     /// </summary>
-    public class PlanUpdateRequest : HttpRequest
+    public class PlanUpdateRequest<T> : HttpRequest
     {
         public PlanUpdateRequest(string PlanId) : base("/v1/payments/billing-plans/{plan_id}?", new HttpMethod("PATCH"), typeof(void))
         {
@@ -28,7 +28,7 @@ namespace PayPal.BillingPlans
         }
         
 
-        public PlanUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public PlanUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

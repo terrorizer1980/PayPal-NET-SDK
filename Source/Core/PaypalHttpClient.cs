@@ -48,8 +48,8 @@ namespace PayPal.Core
                 {
                     if (this.accessToken == null || this.accessToken.IsExpired())
                     {
-                            var accessTokenResponse = fetchAccessToken();
-                            this.accessToken = accessTokenResponse.Result<AccessToken>();
+                        var accessTokenResponse = fetchAccessToken();
+                        this.accessToken = accessTokenResponse.Result<AccessToken>();
                     }
 					request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
 				}

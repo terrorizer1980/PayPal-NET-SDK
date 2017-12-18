@@ -16,7 +16,7 @@ namespace PayPal.Webhooks
     /// <summary>
     /// Replaces webhook fields with new values. Supports only the `replace` operation. Pass a `json_patch` object with `replace` operation and `path`, which is `/url` for a URL or `/event_types` for events. The `value` is either the URL or a list of events.
     /// </summary>
-    public class WebhooksUpdateRequest : HttpRequest
+    public class WebhooksUpdateRequest<T> : HttpRequest
     {
         public WebhooksUpdateRequest(string WebhookId) : base("/v1/notifications/webhooks/{webhook_id}?", new HttpMethod("PATCH"), typeof(Webhook))
         {
@@ -28,7 +28,7 @@ namespace PayPal.Webhooks
         }
         
 
-        public WebhooksUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public WebhooksUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

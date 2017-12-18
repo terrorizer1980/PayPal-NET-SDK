@@ -16,7 +16,7 @@ namespace PayPal.PaymentExperience
     /// <summary>
     /// Partially-updates a web experience profile, by ID. In the JSON request body, specify a patch object, the path of the profile location to update, and a new value.
     /// </summary>
-    public class WebProfilePartialUpdateRequest : HttpRequest
+    public class WebProfilePartialUpdateRequest<T> : HttpRequest
     {
         public WebProfilePartialUpdateRequest(string ProfileId) : base("/v1/payment-experience/web-profiles/{profile_id}?", new HttpMethod("PATCH"), typeof(void))
         {
@@ -28,7 +28,7 @@ namespace PayPal.PaymentExperience
         }
         
 
-        public WebProfilePartialUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public WebProfilePartialUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

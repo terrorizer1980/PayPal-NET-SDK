@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace PayPal.Vault.Test
 {
-
-    public class CreditCardGetTest : TestHarness
+    [Collection("Credit Card")]
+    public class CreditCardGetTest
     {
 
         public static async Task<HttpResponse> getCreditCard(String id) {

@@ -16,7 +16,7 @@ namespace PayPal.Payments
     /// <summary>
     /// Partially updates a payment, by ID. You can update the amount, shipping address, invoice ID, and custom data. You cannot update a payment after the payment executes.
     /// </summary>
-    public class PaymentUpdateRequest : HttpRequest
+    public class PaymentUpdateRequest<T> : HttpRequest
     {
         public PaymentUpdateRequest(string PaymentId) : base("/v1/payments/payment/{payment_id}?", new HttpMethod("PATCH"), typeof(Payment))
         {
@@ -28,7 +28,7 @@ namespace PayPal.Payments
         }
         
 
-        public PaymentUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public PaymentUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

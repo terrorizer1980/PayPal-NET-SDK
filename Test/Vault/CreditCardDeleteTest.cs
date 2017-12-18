@@ -9,8 +9,8 @@ using PayPal.Test;
 
 namespace PayPal.Vault.Test
 {
-
-    public class CreditCardDeleteTest : TestHarness
+    [Collection("Credit Card")]
+    public class CreditCardDeleteTest
     {
 
         [Fact]
@@ -20,7 +20,7 @@ namespace PayPal.Vault.Test
             var expected = createResponse.Result<CreditCard>();
             CreditCardDeleteRequest request = new CreditCardDeleteRequest(expected.Id);
 
-            HttpResponse response = await client().Execute(request);
+            HttpResponse response = await TestHarness.client().Execute(request);
             Assert.Equal(204, (int) response.StatusCode);
         }
     }

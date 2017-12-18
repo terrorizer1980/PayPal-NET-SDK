@@ -10,8 +10,9 @@ using WireMock.ResponseBuilders;
 using WireMock.Server;
 using Xunit;
 
-namespace Test
+namespace PayPal
 {
+    [Collection("HttpClient")]
     public class PayPalHttpClientTest : IDisposable
     {
         private FluentMockServer server;

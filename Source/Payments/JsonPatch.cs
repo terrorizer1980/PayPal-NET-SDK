@@ -13,7 +13,7 @@ namespace PayPal.Payments
     /// A JSON patch object to apply partial updates to resources.
     /// </summary>
     [DataContract]
-    public class JsonPatch {
+    public class JsonPatch<T> {
 
         /// <summary>
 	    /// Required default constructor
@@ -43,7 +43,7 @@ namespace PayPal.Payments
         /// The value to apply. The `remove` operation does not require a value.
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue = false)]
-        public object Value { get; set; }
+        public T Value { get; set; }
     }
 }
 

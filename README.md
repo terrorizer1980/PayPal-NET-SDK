@@ -71,7 +71,7 @@ Please feel free to create an issue in this repo with any feedback, questions, o
 
 To run integration tests using your client id and secret, clone this repository and run the following command:
 ```sh
-$ dotnet test
+$ dotnet test -v normal
 ```
 
 *NOTE*: This API is still in beta, is subject to change, and should not be used in production.

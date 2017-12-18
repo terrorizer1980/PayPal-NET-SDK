@@ -16,7 +16,7 @@ namespace PayPal.Vault
     /// <summary>
     /// Updates information for a vaulted credit card, by ID. In the JSON request body, specify the values to update.
     /// </summary>
-    public class CreditCardUpdateRequest : HttpRequest
+    public class CreditCardUpdateRequest<T> : HttpRequest
     {
         public CreditCardUpdateRequest(string CreditCardId) : base("/v1/vault/credit-cards/{credit_card_id}?", new HttpMethod("PATCH"), typeof(CreditCard))
         {
@@ -28,7 +28,7 @@ namespace PayPal.Vault
         }
         
 
-        public CreditCardUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public CreditCardUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

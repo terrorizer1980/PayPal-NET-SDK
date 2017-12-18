@@ -6,11 +6,12 @@ using System.Collections.Generic;
 using BraintreeHttp;
 using Xunit;
 using PayPal.Test;
+using static PayPal.Test.TestHarness;
 
 namespace PayPal.PaymentExperience.Test
 {
-
-    public class WebProfileDeleteTest : TestHarness
+    [Collection("Web Profile")]
+    public class WebProfileDeleteTest
     {
 
         [Fact]
@@ -20,7 +21,7 @@ namespace PayPal.PaymentExperience.Test
             var expected = createResponse.Result<WebProfile>();
             WebProfileDeleteRequest request = new WebProfileDeleteRequest(expected.Id);
 
-            HttpResponse response = await client().Execute(request);
+            HttpResponse response = await TestHarness.client().Execute(request);
             Assert.Equal(204, (int) response.StatusCode);
         }
     }

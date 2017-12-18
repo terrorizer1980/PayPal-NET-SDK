@@ -6,16 +6,17 @@ using System.Collections.Generic;
 using BraintreeHttp;
 using Xunit;
 using PayPal.Test;
+using static PayPal.Test.TestHarness;
 
 namespace PayPal.PaymentExperience.Test
 {
-
-    public class WebProfilePartialUpdateTest : TestHarness
+    [Collection("Web Profile")]
+    public class WebProfilePartialUpdateTest
     {
-        private List<JsonPatch> buildRequestBody()
+        private List<JsonPatch<string>> buildRequestBody()
         {
             var jsonContent = new StringContent("[ { \"op\": \"add\", \"path\": \"/presentation/brand_name\", \"value\": \"new_brand_name\" }, { \"op\": \"remove\", \"path\": \"/flow_config/landing_page_type\" } ]", Encoding.UTF8, "application/json");
-            return (List<JsonPatch>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch>));
+            return (List<JsonPatch<string>>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch<string>>));
         }
 
         [Fact]
@@ -26,10 +27,10 @@ namespace PayPal.PaymentExperience.Test
             var expected = createResponse.Result<WebProfile>();
 
             // Partial Update
-            WebProfilePartialUpdateRequest request = new WebProfilePartialUpdateRequest(expected.Id);
+            WebProfilePartialUpdateRequest<string> request = new WebProfilePartialUpdateRequest<string>(expected.Id);
             request.RequestBody(buildRequestBody());
                 
-            HttpResponse response = await client().Execute(request);
+            HttpResponse response = await TestHarness.client().Execute(request);
             Assert.Equal(204, (int) response.StatusCode);
 
             // Get

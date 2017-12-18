@@ -16,7 +16,7 @@ namespace PayPal.BillingAgreements
     /// <summary>
     /// Updates details of a billing agreement, by ID. Details include the description, shipping address, start date, and so on.
     /// </summary>
-    public class AgreementUpdateRequest : HttpRequest
+    public class AgreementUpdateRequest<T> : HttpRequest
     {
         public AgreementUpdateRequest(string AgreementId) : base("/v1/payments/billing-agreements/{agreement_id}?", new HttpMethod("PATCH"), typeof(void))
         {
@@ -28,7 +28,7 @@ namespace PayPal.BillingAgreements
         }
         
 
-        public AgreementUpdateRequest RequestBody(List<JsonPatch> PatchRequest) 
+        public AgreementUpdateRequest<T> RequestBody(List<JsonPatch<T>> PatchRequest) 
         {
             this.Body = PatchRequest;
             return this;

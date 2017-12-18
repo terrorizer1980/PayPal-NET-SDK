@@ -39,3 +39,6 @@ Thumbs.db
 # dotCover
 *.dotCover
 .DS_Store
+
+# vscode
+.vscode
