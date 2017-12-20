@@ -13,9 +13,14 @@ namespace PayPal.Invoices.Test
     [Collection("Invoices")]
     public class InvoiceRemindTest
     {
-
+        private static Notification BuildRequestBody()
+        {
+            var jsonContent = new StringContent("{ \"subject\": \"Past due\", \"note\": \"Please pay soon\", \"send_to_merchant\": true }", Encoding.UTF8, "application/json");
+            return (Notification) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Notification));
+        }
         public static async Task<HttpResponse> RemindInvoice(String id) {
             InvoiceRemindRequest request = new InvoiceRemindRequest(id);
+            request.RequestBody(BuildRequestBody());
             return await TestHarness.client().Execute(request);
         }
 
