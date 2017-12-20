@@ -21,11 +21,10 @@ namespace PayPal.Payments
         public AuthorizationVoidRequest(string AuthorizationId) : base("/v1/payments/authorization/{authorization_id}/void?", HttpMethod.Post, typeof(Authorization))
         {
             try {
-                this.Path = this.Path.Replace("{authorization_id}", Uri.EscapeDataString(Convert.ToString(AuthorizationId) ));
+                this.Path = this.Path.Replace("{authorization_id}", Uri.EscapeDataString(Convert.ToString(AuthorizationId)));
             } catch (IOException) {}
             
             this.ContentType =  "application/json";
         }
-        
     }
 }
