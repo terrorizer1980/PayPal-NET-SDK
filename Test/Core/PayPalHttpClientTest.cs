@@ -22,7 +22,7 @@ namespace PayPal.Core
         public PayPalHttpClientTest()
         {
             server = FluentMockServer.Start();
-            environment = new PayPalEnvironment("clientid", "clientsecret", $"http://localhost:{server.Ports[0]}");
+            environment = new PayPalEnvironment("clientid", "clientsecret", $"http://localhost:{server.Ports[0]}", $"http://www.localhost:{server.Ports[0]}");
             Thread.Sleep(2000);
         }
 
@@ -125,7 +125,7 @@ namespace PayPal.Core
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
-            Assert.Equal("grant_type=client_credentials&refresh_token=refresh-token", accessTokenRequestLog.Body);
+            Assert.Equal("grant_type=refresh_token&refresh_token=refresh-token", accessTokenRequestLog.Body);
         }
 
         [Fact]
