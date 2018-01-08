@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:20 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:07 CST by version 0.1 of Braintree SDK Generator
 // Cost.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/6yT0WsUMRDG3/0rhoCgEI49tQj3VhXBl1a09EWEm01m25FsEieT4iL+75Leeue5iEjvdZhJvt838303V1MmszGvU1FjzTUKYx/oAsdWNda8oeKEs3KKZmOubglcKgpYACGTOIoKSQAj4JhqVLjDUGkFb5MAfcMxB7KgCUomx8ME6+6xBYpKAtt1t13BeVCSiMp3FKaj1sObaYCz/dTZdmWsORfBaSe+s+YDob+MYTKbAUOhVvhaWcjvC+8lZRJlKmbz6YBdRSi6aYm++3lhwCssBKn/Qk5haNwhwMARo2MMO3YQCqjkYWAKvsCTHgNGRxYyTmPzy1eyQOpWT08GUlQ43iwx3AHwGOQ5BNLm568OcMlT26ungSN56Cd49/ESXjxbv/wvw1XqHzJjDeGH/afWe/cWQucTqLmdxgV4vmEFHJp0vSXw5HjEUKBQRkFtOzkwcNwz3K+rTWDOkrIwKh3Dn4Ly82+csY49yZJzjs1fw2WP0zUH6hoD+/nCuMAgaYSuebLuuocGYpb+6CcAAAD//w==
+// @data H4sIAAAAAAAC/6yTUWsUMRDH3/0UQ0BQWI49tQj3ViuCCK1o6YsIN5f8t41kkziZLS7id5f0treuJ4jYx/2TbOb3m5nv5nLMMBtzloqaxlyxeN4FnHNfU9OYdxjnj9coVnxWn6LZmMsbkE1FiQsxZYhFVEpCHIn7NESlWw4DVvQmCeEb9zmgIU1UMqzvRlq3jxtCVAht1+12RadBIZHV3yKMi6PzP1NHJ4dbJ9uVacypCI97krYxH8DuIobRbDoOBTX4OniBOwTvJWWIehSz+TQ7GEQQ7XjsYf/ywsYhWjp5xQWUdl9glbqqIgTqfORoPYe9DhIEVjjqPIIr9GTHgaNFQ5nHvip0AxqC2tXTB2MrKj5eH5PZifksOSz47CxjSficArS6vz9BNjnUGXDofISj3UhvP17Qi2frl//UHJXht/rjEMKP5q8Qd1oX1d8ny9KnARpyHaxzcv7aK3FXYfQG5GB9z6FQQWZhre2bqXw8UN11tt7gnCVl8axY6ngI7s+/kMeh30GOyaelW7DP2Z/XtVnu67SiVxy8mwbUF+ok9dRWT+u2/d8Vm3Ae/QQAAP//
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:18 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:06 CST by version 0.1 of Braintree SDK Generator
 // FileAttachment.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/6zOsUoEQQwG4N6nCKkHsd7uQKxE5ThtxCI3k3UCs5k1m/VY5N5dRuEQXLDwqsCf/OT7wN0yMnZ4I4Vh404xD6yOAZ/IhPaF72hoBxjwmqdoMrpUxQ53maFvLfpqcQKvQAqi71UiQzVwHsZCzpcYcGNGy/ezq4BbpnSvZcGupzJxC95mMU6n4MHqyObCE3bPJ+bkJvr6W6dtrAnbAmoPnn9AG/u/Jp1LOYY/YbOVVdfj9naVFeCQJWaIpLBnSPWgpVLidBbvy/HiEwAA//8=
+// @data H4sIAAAAAAAC/6zPQUs0MQwG4Pv3K0LO5cPz3BbEi6KyrF7EQ3aasYFOOmYyLoPsf5e6sq6M4EFPJW/L2yevuJkHxgYvJDOs3KlNPatjwHsyoW3ma+rrAwx4yfPncM5jazK4FMUGN4mhqxX0XsERvAApiL4UaRmKgXM/ZHL+jwFXZjQffj4LuGaKN5pnbDrKI9fgeRLjeAxurQxsLjxi83A0j26iT0uq1uOU+xEsyfUCSgeeTuR1j98idcp5H36UTpa/QA/z0nm3vvqWGWCXpE3QksKWIZad5kKR45/4H/f/3gAAAP//
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

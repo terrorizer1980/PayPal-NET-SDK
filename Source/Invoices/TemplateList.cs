@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:27 CST by version 0.1 of Braintree SDK Generator
-// Templates.cs
+// This class was generated on Mon, 08 Jan 2018 16:45:03 CST by version 0.1 of Braintree SDK Generator
+// TemplateList.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/7zTsU7DQAwG4J2nsDxHiIkhWySQGCpaQcSCGNzEIaaXu8N3RapQ3x1dqqaFNAMIdfXvRJ/j+BPLjWfMseTOG4ocMMMnUqGl4XvqUoQZ3nCoVHwUZzHHmYQIroGOtWrJRoj7hy8xw0KVNru3XmX4wFTPrdlg3pAJnArva1Guh8JCnWeNwgHz58FT1LVyOKGhXdBDT7OGDhB7MHp1jRj+Ibz+rdCujdlmAzNEFfs6VnJHYqaJu/gMvpnYFRwZYL584yqOwUbsauwtW4a7orydF4/Qd0Bsqbd+SM2gnLZeA1WpP0DjFGLLh/8hTZgKysE7G/57ukXrLI9n8ak8/fH7GOy6W7KeYwf70xpD49HRfbcWFigJknfquv7metlefAEAAP//
+// @data H4sIAAAAAAAC/7yTQUvzQBCG79+vGOacTzx5yC2gIFhs0eBFPGyTiRm72ayzWyFI/7tsa7ddEw+K9JjnHZLn3Z28YzlYwhw9dVYrT/81O48ZPihhtdR0q7oQY4Y3NBweLslVwtZzbzDHGTsPfQMdSdUq42H/NneGGRYiath95jzDO1L13OgB80ZpRwG8rlmojmAhvSXxTA7zxyhY1LWQc2M1tQvIJY7HdFo2TgCbg7mVvmFNX7wvfupt1lpvsijvvLB5HrtTp1in4hFNW+/iEyjP2KzgyAHmyxeqJlZDs1mlFfYkbVC2BNdFeTUv7mE7Ab5VW/s3rgmEwsLUoKow76DpBXxLh1UKnQMQcrY37q/7Ltre0LidDTitF9H0DW1jMOtuSXKKiyo/D2jsHo8u0T+maYPCgApeocV3f/DvbJ82/z4AAAD//w==
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -13,12 +13,12 @@ namespace PayPal.Invoices
     /// List of merchant templates.
     /// </summary>
     [DataContract]
-    public class Templates {
+    public class TemplateList {
 
         /// <summary>
 	    /// Required default constructor
 		/// </summary>
-        public Templates() {}
+        public TemplateList() {}
 
         /// <summary>
         /// List of addresses in merchant profile.
@@ -48,7 +48,7 @@ namespace PayPal.Invoices
         /// An array of templates.
         /// </summary>
         [DataMember(Name="templates", EmitDefaultValue = false)]
-        public List<Template> TemplateList { get; set; }
+        public List<Template> Templates { get; set; }
     }
 }
 

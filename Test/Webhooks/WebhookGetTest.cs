@@ -11,21 +11,21 @@ using System.Threading.Tasks;
 namespace PayPal.Webhooks.Test
 {
     [Collection("Webhooks")]
-    public class WebhooksGetTest
+    public class WebhookGetTest
     {
 
-        public static async Task<HttpResponse> getWebhooks(String id) {
-            WebhooksGetRequest request = new WebhooksGetRequest(id);
+        public static async Task<HttpResponse> getWebhook(String id) {
+            WebhookGetRequest request = new WebhookGetRequest(id);
             return await TestHarness.client().Execute(request);
         }
 
         [Fact]
-        public async void TestWebhooksGetRequest()
+        public async void TestWebhookGetRequest()
         {
-            HttpResponse createResponse = await WebhooksCreateTest.createWebhook();
+            HttpResponse createResponse = await WebhookCreateTest.createWebhook();
             var expected = createResponse.Result<Webhook>();
 
-            HttpResponse response = await getWebhooks(expected.Id);
+            HttpResponse response = await getWebhook(expected.Id);
 
             Assert.Equal(200, (int) response.StatusCode);
             var webhook = response.Result<Webhook>();

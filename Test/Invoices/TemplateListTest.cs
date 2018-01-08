@@ -15,7 +15,7 @@ namespace PayPal.Invoices.Test
     {
         public static async Task<HttpResponse> GetAllTemplates() 
         {
-            TemplateGetTemplatesRequest request = new TemplateGetTemplatesRequest();
+            TemplateListRequest request = new TemplateListRequest();
             return await TestHarness.client().Execute(request);
         }
 
@@ -24,12 +24,12 @@ namespace PayPal.Invoices.Test
         {
             HttpResponse createResponse = await TemplateCreateTest.CreateTemplate();
 
-            TemplateGetTemplatesRequest request = new TemplateGetTemplatesRequest();
+            TemplateListRequest request = new TemplateListRequest();
             HttpResponse listResponse = await TestHarness.client().Execute(request);
             Assert.Equal(200, (int) listResponse.StatusCode);
-            Assert.NotNull(listResponse.Result<Templates>());
-            var templates = listResponse.Result<Templates>();
-            Assert.NotNull(templates.TemplateList);
+            Assert.NotNull(listResponse.Result<TemplateList>());
+            var templates = listResponse.Result<TemplateList>();
+            Assert.NotNull(templates.Templates);
         }
     }
 }

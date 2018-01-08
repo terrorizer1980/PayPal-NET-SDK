@@ -24,8 +24,8 @@ namespace PayPal.Invoices.Test
         {
             HttpResponse getAllResponse = await TemplateListTest.GetAllTemplates();
             Assert.Equal(200, (int) getAllResponse.StatusCode);
-            var templates = getAllResponse.Result<Templates>();
-            foreach (Template template in templates.TemplateList)
+            var templates = getAllResponse.Result<TemplateList>();
+            foreach (Template template in templates.Templates)
             {
                 try 
                 {

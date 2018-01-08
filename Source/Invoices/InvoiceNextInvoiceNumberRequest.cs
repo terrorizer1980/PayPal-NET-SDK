@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:30 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:15 CST by version 0.1 of Braintree SDK Generator
 // InvoiceNextInvoiceNumberRequest.cs
 // @version 0.1
 // @type request
-// @data H4sIAAAAAAAC/6RRy27UQBC88xWjPnsfcJwbCo9wgCxkxQVFUceuxIPsnqGnvcoq2n9Hw5iVcMQFTnaXuqaqq57oE48gT0EOMbRYCx7tdh5uZRrvoNTQG+RWQ7IQhTy9h0DZkJ31cIXhZoarDGc9mwvZ8YHDwHcDnMVfyyO07VlsTQ19nqDHHSuPMGgm/+2moUtwB12i76KOS2zH1i+xL/gxIdv+mEBepmEoUE5RMir2RPVLH/4wTA19ZQ3F6ZzHs6OpodeqfKz8bXmYuysZjuTvecio4kHRnYGdxgS1gOLurJxNgzw8V/xL2Pt/jtjt+5B/r5fNyeIqSKsYIYbO3WscKyVmc4oWspRZ/+fZpYPTzamhiygGmZshTmkILZcTN99zFGro0ix9hPWxI0+7q+s91YrJ0+bwclNtBXmY/5A3JZXVPK3O6b19TGgN3bWxTfkidiD/ars9vfgJAAD//w==
+// @data H4sIAAAAAAAC/6SST2/UMBDF73wKa87ZP3DMDZU/RQi60BUXVFXT5LUxSsZmPFk1qva7I+OwVYO40FMyTzOen9/zA33mAVSTl0PwDdaCe7uei2sZhxsoVfQGqVEfzQehmt5DoGxIzjq4POHmCVcmnHVszifHB/Y93/RwFn43D9CmY7E1VfRlhE47Vh5g0ET196uKzsEtdKm+CzostR1bt9S+4ueIZPspgmoZ+z5LKQZJKNoDlS99eAJMFX1j9Zl09oMq+ojpsXjqAFX0WpWnctg2b+H2QvqJ6lvuEwqJV7QnYachQs0jo54wkqmXu7/Xn7AeIf4Rxv6/I3D7zqc/7blztLDy0igGiKF1txqGMhKSOUUDWa5ZP9OJnNHx6ljRWRCDzMkRx9j7hvMVNz9SEKro3Cx+gnWhpZp2F5d7Kk+AatocXm4Klpe7+Q9pk11ZzdXq5N7b+4jG0F4a25jOQguqX223xxe/AAAA//8=
 // DO NOT EDIT
 using System;
 using System.IO;

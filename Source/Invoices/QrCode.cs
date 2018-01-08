@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:25 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:11 CST by version 0.1 of Braintree SDK Generator
 // QrCode.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/6SOP4vDMAxH9/sURrPhbjg6eCvt3D+hdCkdlFgJAsd2ZWcwJd+9JIEM7dhRP8F77wmXEgkMnCu1C5ZAwxWFsXZ0wH56gIY9pUY4Zg4eDNSYaPOvyDfBklXcY0cqtCqXSMv1G30HGrYiWBb8n4aK0B69K2BadImm4TGwkF2Hk4RIkpkSmNsalrLwjHvrmk0fcV9q/eDceB9/XgAAAP//
+// @data H4sIAAAAAAAC/6TOP6vCMBQF8P19inDnwHvDwyGb6Cb4p4iLONw2tyWQJvEmHYL0u0tbrNTV8ZwL9/wecM6BQMGpEBuvCSRckA2WlvbYDgeQsKP8DluKFZuQjHegoMRIq39BrvKatDAtNiR8LVIONKXf4BqQsGbGPG39SSgI9cHZDKpGG2ko7p1h0nNxZB+Ik6EI6jorY2IzvvtAjksL6atZcr+EuM7a/tb/PAEAAP//
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

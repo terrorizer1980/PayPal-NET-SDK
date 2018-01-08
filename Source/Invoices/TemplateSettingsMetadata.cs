@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:26 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:05 CST by version 0.1 of Braintree SDK Generator
 // TemplateSettingsMetadata.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/6SOvUoEUQxGe58ipB7EejrBxsIfdLERi+zeb72BzJ0xySKD7LvLsO42U9p+5JycH97ME7jnDYbJJEGvyNT2GfSAlCIp3PGbuMrW8CjDcssd3yF2rlPq2Ba4gvIsiLNg+BNcc8e37jKfXt10/AIpT81m7vdigWX4OqijXIZnHyd4KoL790vkdhwN0tZFVUtBW3Xdt6I7SQR9V2SFU1YN2iuskAadsP/2tYPZ8eN49QsAAP//
+// @data H4sIAAAAAAAC/6SOT0sDQQxH736KIedFPO9N8CLiH7R4EQ9p51cnkJ1dkxQZpN9dltqV4rHHPJKX902rNoF6WmGYlAPpBRFSPzzdIzhzMHX0yia8VjzwMO9SR3dof8MNfGMyhYx1NhWkONr8aBt+bZfU0bUZt8Pfq46ewfmxaqN+y+qYwedODHkBTzZOsBA49W9L8XocFVz/5xXJGfUkckGnqbc1y4YDnr4KosBSFPG0FWhO4ulwdm5y3anu3/cXPwAAAP//
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

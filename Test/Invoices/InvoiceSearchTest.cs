@@ -30,9 +30,9 @@ namespace PayPal.Invoices.Test
             HttpResponse searchResponse = await TestHarness.client().Execute(invoiceSearchRequest);
 
             Assert.Equal(200, (int) searchResponse.StatusCode);
-            Assert.NotNull(searchResponse.Result<Invoices>());
-            var invoices = searchResponse.Result<Invoices>();
-            Assert.NotNull(invoices.InvoiceList);
+            Assert.NotNull(searchResponse.Result<InvoiceList>());
+            var invoices = searchResponse.Result<InvoiceList>();
+            Assert.NotNull(invoices.Invoices);
             Assert.NotNull(invoices.TotalCount);
         }
     }

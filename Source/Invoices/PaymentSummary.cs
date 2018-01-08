@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:22 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:11 CST by version 0.1 of Braintree SDK Generator
 // PaymentSummary.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/+ySTUszQQzH78+nCHN6hKX4BsLefLl4aYstXqSH7Ey2HZmdGTMZYZF+d9lWt9YqUuix15CE3y/5v6lpG0mVaoxtQ15gkpsGuVWFekS2WDkaYtM1qELdUdJso9jgVammC4L4MYXeAFOdvYG0XjBQhbpmxna9/7RQD4Rm5F2ryhpdoq7wki2T6QtjDpFYLCVVPvVkt5mZvP4BKciCeIfrBhNBqJ5JC9SBAZ2D2nr02qKDV3SZgMmhkIHakjMJ/lfo0GsqeiGTqQASPTg5mEcStn6+a6E3ftsiF+BIhBg+O0AHQ4AJDNXWk4GqhfvJCC7Pz672urdw/obps3PL4k/W1fV2QLEJ2QvkCBJgCMbOrQDWHbosCAxp26BLkCgio3Q/2ThY3zus3tVNYIwcIlsU2pY/hOXsi+fv2YrYRnTHcB3DtWe4Zst/7wAAAP//
+// @data H4sIAAAAAAAC/+ySTWsVMRSG9/6KQ1YKQ/ELhNlp3YjQFlvcSBdnknd6I5kknpwIQfrfZdreucYPRKi7LuclkzzPOe83c9EyzGjOuC2ISud1WViaGcxHFs9TwAkv6wEzmPdoh4+3KFZ8Vp+iGc3FDpTvruDoSDDX6Kjc3nZkBvNahNvtY08H8wHsTmNoZpw5FKzBl+oFbgvOJGWIehQzftowj6sIov0NX9IdpIPcJz3pGy6gNH2GVZqTEIdAs48credAXzlUkCCwwtHsEVyhxxMHjhbDpugqBoLaoyf3ZlZUfLz61cveGR8nh07PHkbRG76gAFUI7U+QTQ7EhRxmH+FoavTu/JRePn/26p9Wo1J/4o81hOvhrxI3Y+3o90mPzkuqUalm0kQn5PyVV+J5ldEdyMH6hUOhgszCuq7vYOXjZnWz2fUPzllSFs+Kfhz34X35g/mfi5m5ZQ6d/BY9VPOhmv+pmpfXj74DAAD//w==
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

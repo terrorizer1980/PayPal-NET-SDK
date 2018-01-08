@@ -10,7 +10,7 @@ using PayPal.Test;
 namespace PayPal.Webhooks.Test
 {
     [Collection("Webhooks")]
-    public class WebhooksUpdateTest
+    public class WebhookUpdateTest
     {
         private List<JsonPatch<string>> buildRequestBody(string url)
         {
@@ -19,22 +19,22 @@ namespace PayPal.Webhooks.Test
         }
 
         [Fact]
-        public async void TestWebhooksUpdateRequest()
+        public async void TestWebhookUpdateRequest()
         {
             // Create
-            HttpResponse createResponse = await WebhooksCreateTest.createWebhook();
+            HttpResponse createResponse = await WebhookCreateTest.createWebhook();
             var expected = createResponse.Result<Webhook>();
 
             //  Update
             var url = "https://example.com/" + new Random().Next( int.MinValue, int.MaxValue );
-            WebhooksUpdateRequest<string> request = new WebhooksUpdateRequest<string>(expected.Id);
+            WebhookUpdateRequest<string> request = new WebhookUpdateRequest<string>(expected.Id);
             request.RequestBody(buildRequestBody(url));
                 
             HttpResponse response = await TestHarness.client().Execute(request);
             Assert.Equal(200, (int) response.StatusCode);
 
             // Get
-            HttpResponse getResponse = await WebhooksGetTest.getWebhooks(expected.Id);
+            HttpResponse getResponse = await WebhookGetTest.getWebhook(expected.Id);
             Assert.Equal(200, (int) getResponse.StatusCode);
             var updated = getResponse.Result<Webhook>();
             Assert.NotNull(updated);

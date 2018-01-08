@@ -1,4 +1,4 @@
-// This class was generated on Wed, 13 Dec 2017 14:33:09 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:11:33 CST by version 0.1 of Braintree SDK Generator
 // EventTypeList.cs
 // @version 0.1
 // @type object

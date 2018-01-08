@@ -18,7 +18,7 @@ namespace PayPal.PaymentExperience.Test
         public async void TestWebProfileGetListRequest()
         {
             HttpResponse createResponse = await WebProfileCreateTest.createWebProfile();
-            WebProfileGetListRequest request = new WebProfileGetListRequest();
+            WebProfileListRequest request = new WebProfileListRequest();
 
             HttpResponse response = await TestHarness.client().Execute(request);
             Assert.Equal(200, (int) response.StatusCode);

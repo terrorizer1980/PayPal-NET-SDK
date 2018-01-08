@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace PayPal.Webhooks.Test
 {
     [Collection("Webhooks")]
-    public class WebhooksCreateTest
+    public class WebhookCreateTest
     {
         private static Webhook buildRequestBody()
         {
@@ -22,21 +22,21 @@ namespace PayPal.Webhooks.Test
 
         public async static void DeleteAllWebhooks()
         {
-            HttpResponse getAllResponse = await WebhooksGetAllTest.GetAllWebhooks();
+            HttpResponse getAllResponse = await WebhookListTest.GetAllWebhooks();
             Assert.Equal(200, (int) getAllResponse.StatusCode);
             var webhooks = getAllResponse.Result<WebhookList>();
             foreach (Webhook template in webhooks.Webhooks)
             {
                 try 
                 {
-                    await WebhooksDeleteTest.DeleteWebhook(template.Id);
+                    await WebhookDeleteTest.DeleteWebhook(template.Id);
                 } 
                 catch (HttpException) {}
             }
         }
 
         public static async Task<HttpResponse> createWebhook() {
-            WebhooksCreateRequest request = new WebhooksCreateRequest();
+            WebhookCreateRequest request = new WebhookCreateRequest();
             request.RequestBody(buildRequestBody());
             try {
                 return await TestHarness.client().Execute(request);
@@ -55,7 +55,7 @@ namespace PayPal.Webhooks.Test
         }
 
         [Fact]
-        public async void TestWebhooksCreateRequest()
+        public async void TestWebhookCreateRequest()
         {
             HttpResponse response = await createWebhook();
             Assert.Equal(201, (int) response.StatusCode);

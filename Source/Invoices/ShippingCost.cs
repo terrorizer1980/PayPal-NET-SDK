@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:23 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:08 CST by version 0.1 of Braintree SDK Generator
 // ShippingCost.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/+yVQWsbPRCG79+vGHT6Cotx2kJZ39rkkktSGpNLyWFWmrWnaCV1NCpeSv57ke04TTahLfWlkNPCaIWeZ+bV7nezHBOZhblac0ocVnAas5rGXKMwdp4ucKjLpjFnlK1wUo7BLMxyTZDv9tiYtQHMgJBILAXFFUEUwCGWoPANfaGZacx7ERx3J84b84nQXQY/mkWPPlMtfC0s5A6FjxITiTJls/h8YD0tIhTsOMXcnTeB/YCZIHZfyCr0Fct76DlgsIx+RwdCHpUc9EzeZfi/Q4/BUgMJx4GCgivUAKmdvTqaSFbhsJpq2HvBhyJvwJMqCdy9ATY6qp131HMgB90I51eX8Pb1ybs/arhKeYQZive3zS9Zt92bgO4HXxJohAtwvGIF7Cu6rgkcWR7QZ8iUUFDrTO4dOBwctuOqOzAliUkYlR7KH8Py5ifPJW6mkrotProBuAEOfZQBa+Ul3i/x/gfi/Zwnuyc/8UI5FrEE52d/G/DfbHioj6dQFDdQF48791CGjmSKsf+PPUsiqDSDa/Ts9jeMM/QSB5jP5vOTmou2nbVte5wB3tz+9wMAAP//
+// @data H4sIAAAAAAAC/+yVT2sbPRCH7++nGHR6C4tx2kKxb61zCYWkNCaXksNYmrWnaCV1NFu8lHz3Iv/bbLalLfWp5LTop93V82g06JtZdonM3NxuOCUOa1jErKYydyiMK0/X2JRpU5n31PWDS8pWOCnHYOZmuSHIxx/YmLUCzICQSCwFxTVBFMAmtkHhK/qWJqYyb0Ww2y8/rcxHQncTfGfmNfpMJfjSspA7BR8kJhJlymb+6QS+aEUo2G7MvF9vQH6KhvzvMBPE1WeyCnUh9R5qDhgso98Dg5BHJQc1k3cZ/l+hx2CpgoRdQ0HBtVQBqZ28OJtbVuGwHpvZg/MiOhr42X4zhoavwJMqCRzfABsdlSo5qjmQg1UHV7c38PrlxZs/Ko5K+4Q/tN4/VL+U2G3rgP6YDNEPx6ZNoBGuwfGaFbAuMrohcGS5QZ8hU0JBLeXrrTicrHaVLV9gShKTMCoNt+Mc3vePzJe4HWvrLuyl9+Mn/YRb4FBHabAkz83y3Cz/fLP8zJzdQHs3HN8+Qjm2YgmuLv+2W36zIqE8HpMdgjGb4hbK5HlPSmibFcmY63DnDtD67Md0gkoTuEPP7tDAnKGW2MB0Mp1elLM0m01ms9l5in7/8N93AAAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

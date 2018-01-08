@@ -11,17 +11,17 @@ using System.Threading.Tasks;
 namespace PayPal.Webhooks.Test
 {
     [Collection("Webhooks")]
-    public class WebhooksDeleteTest
+    public class WebhookDeleteTest
     {
         public static async Task<HttpResponse> DeleteWebhook(String id) {
-            WebhooksDeleteRequest request = new WebhooksDeleteRequest(id);
+            WebhookDeleteRequest request = new WebhookDeleteRequest(id);
             return await TestHarness.client().Execute(request);
         }
 
         [Fact]
-        public async void TestWebhooksDeleteRequest()
+        public async void TestWebhookDeleteRequest()
         {
-            HttpResponse createResponse = await WebhooksCreateTest.createWebhook();
+            HttpResponse createResponse = await WebhookCreateTest.createWebhook();
             var expected = createResponse.Result<Webhook>();
 
             HttpResponse response = await DeleteWebhook(expected.Id);

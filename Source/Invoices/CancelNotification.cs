@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:24 CST by version 0.1 of Braintree SDK Generator
+// This class was generated on Mon, 08 Jan 2018 16:45:12 CST by version 0.1 of Braintree SDK Generator
 // CancelNotification.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/7yUQW/TQBCF7/yK0Z6ttBISh9yicCkSCSIVF0DRZD2uF9Y7zsyYyEL972jtpDQxFUIULpY86533zdu3/u5u+5bc3C0xeYqwYgtV8GiBkyvcB5SAu0grbPJHrnCvSb2Edlg/7VLABNRgiMACm7cbSI/azFzhFiLYj0rXhXtPWK5T7N28wqiUC/suCJUPhXfCLYkFUjf/+MCoJiHdTbG83w7qOuFbJMAsDVwBJ8p4DQvBcjkfgXUGNxX03AE3wcDqoNCiYENGApVwA1YTvNmsVyC070gNdlz2BeDZkBAUlJKBMWCMPwUAy1JIlRSsRgMUygKWiXLnkL5x8DSDtdUkh6BUgLbkQ9Vf0hhDDCMlTZszHOrg6ye4Zp+66+uXfhfZf913bDS8j0+vJpzuxsqKjeZj+epxHRZlGXJHjBPtPFNiA+3alsWoPKpdXcqdJ+HVnyYhdTHeF7+NQ2KjaRIyIWWbsnst9iR/G8wLnB1zJPzFrVFK5dZ425D4GpNN2G5SmY+LFA415RhkzLxrYD07ziP/qdX/HmHw7Rn4/4X/T8VBu90X8lPXb2uC49rpMj7nb2ug+3z/4gcAAAD//w==
+// @data H4sIAAAAAAAC/7yUQY/TMBCF7/yKkc9RtxISh96qclkQLaIrLoCqqTPZGBxP6plQRWj/O3LSdpu0K4QW9lLJz+7M9zzP+WXu2prMzCwwWPKwZHWFs6iOg8nMZ4wOt56WWKVDJjPvqX1cvCWx0dXd4WMJAQxAFToPHGH9YQ3hrObEZGYeI7Z922lmPhHmq+BbMyvQCyVh17hI+Un4GLmmqI7EzL6cgEWjC/eXjNZuuu4ygD1Xh9TzAJiAgAvgQAm64kiwWMx6GzKB2wJaboArp6ClE6gxYkVKEYrIFWhJ8G69WkKkXUOisOW8zQAH1sEJCAUFZUDvHxsA5nkkERLQEhUwUmqgiShVduEnO0sTWGlJce+EMpCarCvaMY0yeNdT0mVxhn3pbPkE1+RrM52+tlvP9seuYaVu3f9a0cjhvleWrDTr5ZtzHeZ57lJF9Be9k6fACtLUNUel/NDtZtxumI83f5uP0Hj/kP0xJIGVBvk4CKNoJGRK95aus8aW4nPzO+LbMnvCKy9NKOQb5U1F0ZYYdAB7ZXMIfhvyNFwS2JeUQpM8pH91RgbDP5g7lnppf92lXjV33Hmus/8xtqdiJc32O9nRsE7a0MldSXDYOz70f/mh7Ii/Pbz6DQAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;

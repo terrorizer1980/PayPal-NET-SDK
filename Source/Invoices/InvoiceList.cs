@@ -1,8 +1,8 @@
-// This class was generated on Wed, 13 Dec 2017 14:32:17 CST by version 0.1 of Braintree SDK Generator
-// Invoices.cs
+// This class was generated on Mon, 08 Jan 2018 16:45:10 CST by version 0.1 of Braintree SDK Generator
+// InvoiceList.cs
 // @version 0.1
 // @type object
-// @data H4sIAAAAAAAC/6ySwWrbQBCG732KYc/C9NSDbqIttGDq0ppeSojGq7E18WpWmR2ZmOB3D5KNYlu+hOS6wzLf98//7Jb7llzufsousqfkMvcPlXEV6Bc2/cRl7hslr9waR3G5m3MyiGtoSH2NYsCnvzP4igIsPnQVgdUEFg3DOAcfOzFAqeBHsfy+KP5CYNkmWEcFwR1vsF8xc5krVHF/RPucuT+E1ULC3uVrDIn6h8eOlarx4bfGltSYksv/X0tNnfjV9tKtEMB+de83YmOCRKi+BqXUBbsC/PJWQOlCOGQj5ZxlC2cYsFg9kLcp9RDWBHlZ0404S6EnK4esy1Zpx7FL5VnIwDJc6GgEiT7aisVoQzq1GDpxP1ThpsuxM9I1K9KLM1iNBg2arwfy00m8spEyvrc1A/7d4dMLAAAA//8=
+// @data H4sIAAAAAAAC/6ySQevTQBDF736KYc/hjycPuQUVFIsVLV5Emulm2ozdzMbZSTFIv7skaWNjexE97hvYeb9576fb9C253LGcInvaBk7mMvcZlXEX6D02w9Rl7h31vx+vKHnl1jiKy92Kk0HcQ0PqaxSDy2fpCV6iAIsPXUVgNYFFwzDPwcdODFAqeFNsXq+LTxBYjgn2UUHwxAccVjy5zBWq2E9en2fuI2G1ltC7fI8h0SB871ipmoUPGltSY0ou/zJTvp0W3wNeHS1Ab8QlcCGAg58BembBBIlQfQ1KqQv2h+sXf+tauhDO2Wx9xXKEGxuw3n0j/yCr8YILjquyhNjU9ODqpdAPK8dIylbpxLFL5U0WwDIGOTFCov/NyWJ0IL3nGquzHRuzoFvq94xT5aRrdqSLwKxGgwbN1yPRJTyvbKSM/1q6Eevr+dkvAAAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -13,18 +13,18 @@ namespace PayPal.Invoices
     /// List of merchant invoices. Can include the total invoices count and HATEOAS links for navigation.
     /// </summary>
     [DataContract]
-    public class Invoices {
+    public class InvoiceList {
 
         /// <summary>
 	    /// Required default constructor
 		/// </summary>
-        public Invoices() {}
+        public InvoiceList() {}
 
         /// <summary>
         /// An array of invoices as search result.
         /// </summary>
         [DataMember(Name="invoices", EmitDefaultValue = false)]
-        public List<Invoice> InvoiceList { get; set; }
+        public List<Invoice> Invoices { get; set; }
 
         /// <summary>
         /// The HATEOAS links for `next` and `previous` navigation in the result set.
