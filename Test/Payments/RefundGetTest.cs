@@ -1,0 +1,36 @@
+using System;
+using System.IO;
+using System.Text;
+using System.Net.Http;
+using System.Collections.Generic;
+using BraintreeHttp;
+using Xunit;
+using PayPal.Test;
+using static PayPal.Test.TestHarness;
+
+namespace PayPal.Payments.Test
+{
+    [Collection("Payments")]
+    public class RefundGetTest
+    {
+
+        [Fact]
+        public async void TestRefundGetRequest()
+        {
+            var paymentCreateResponse = await PaymentCreateTest.CreatePayment("sale");
+            var saleId = paymentCreateResponse.Result<Payment>()
+                .Transactions[0]
+                .RelatedResources[0]
+                .Sale
+                .Id;
+
+            var refundResponse = await SaleRefundTest.RefundSale(saleId);
+
+            RefundGetRequest request = new RefundGetRequest(refundResponse.Result<DetailedRefund>().Id);
+
+            HttpResponse response = await TestHarness.client().Execute(request);
+            Assert.Equal((int) response.StatusCode, 200);
+            Assert.NotNull(response.Result<Refund>());
+        }
+    }
+}
