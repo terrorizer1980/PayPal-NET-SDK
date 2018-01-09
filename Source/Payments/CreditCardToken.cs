@@ -31,13 +31,13 @@ namespace PayPal.Payments
         /// The expiration month with no leading zero. Value is from `1` to `12`.
         /// </summary>
         [DataMember(Name="expire_month", EmitDefaultValue = false)]
-        public int ExpireMonth { get; set; }
+        public int? ExpireMonth { get; set; }
 
         /// <summary>
         /// The four-digit expiration year.
         /// </summary>
         [DataMember(Name="expire_year", EmitDefaultValue = false)]
-        public int ExpireYear { get; set; }
+        public int? ExpireYear { get; set; }
 
         /// <summary>
         /// The last four digits of the stored credit card number.

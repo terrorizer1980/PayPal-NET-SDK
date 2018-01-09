@@ -90,10 +90,6 @@ namespace PayPal.Payments.Test
             var request = new PaymentCreateRequest();
 
             request.RequestBody(buildRequestBody(intent, paymentMethod, invoiceNumber));
-
-            var str = await new JsonSerializer().SerializeRequest(request).ReadAsStringAsync();
-            Console.Out.WriteLine(str);
-
             return await TestHarness.client().Execute(request);
         }
 

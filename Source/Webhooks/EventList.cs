@@ -24,7 +24,7 @@ namespace PayPal.Webhooks
         /// The number of items in each range of results. Note that the response might have fewer items than the requested `page_size` value.
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue = false)]
-        public int Count { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
         /// An array of webhooks events.

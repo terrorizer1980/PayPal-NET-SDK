@@ -36,13 +36,13 @@ namespace PayPal.Vault
         /// The total number of items.
         /// </summary>
         [DataMember(Name="total_items", EmitDefaultValue = false)]
-        public int TotalItems { get; set; }
+        public int? TotalItems { get; set; }
 
         /// <summary>
         /// The total number of pages.
         /// </summary>
         [DataMember(Name="total_pages", EmitDefaultValue = false)]
-        public int TotalPages { get; set; }
+        public int? TotalPages { get; set; }
     }
 }
 

@@ -24,7 +24,7 @@ namespace PayPal.Payments
         /// The number of items returned in each range of results. Note that the last results range might have fewer items than the requested number of items. The maximum value is `20`.
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue = false)]
-        public int Count { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
         /// The ID of the next element. Use to get the next range of results.

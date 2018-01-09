@@ -36,7 +36,7 @@ namespace PayPal.Invoices
         /// The total number of invoices that match the search criteria.
         /// </summary>
         [DataMember(Name="total_count", EmitDefaultValue = false)]
-        public int TotalCount { get; set; }
+        public int? TotalCount { get; set; }
     }
 }
 

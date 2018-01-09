@@ -30,21 +30,21 @@ namespace PayPal.BillingAgreements
         /// The card validation code. Supported only when making a payment but not when saving a payment card for future use.
         /// </summary>
         [DataMember(Name="cvv2", EmitDefaultValue = false)]
-        public int Cvv2 { get; set; }
+        public int? Cvv2 { get; set; }
 
         /// <summary>
         /// REQUIRED
         /// The two-digit card expiry month.
         /// </summary>
         [DataMember(Name="expire_month", EmitDefaultValue = false)]
-        public int ExpireMonth { get; set; }
+        public int? ExpireMonth { get; set; }
 
         /// <summary>
         /// REQUIRED
         /// The four-digit card expiry year.
         /// </summary>
         [DataMember(Name="expire_year", EmitDefaultValue = false)]
-        public int ExpireYear { get; set; }
+        public int? ExpireYear { get; set; }
 
         /// <summary>
         /// The facilitator-provided ID of the card holder. Required when storing a funding instrument or using a stored funding instrument in the PayPal vault.
@@ -87,13 +87,13 @@ namespace PayPal.BillingAgreements
         /// The two-digit card start month.
         /// </summary>
         [DataMember(Name="start_month", EmitDefaultValue = false)]
-        public int StartMonth { get; set; }
+        public int? StartMonth { get; set; }
 
         /// <summary>
         /// The four-digit card start year.
         /// </summary>
         [DataMember(Name="start_year", EmitDefaultValue = false)]
-        public int StartYear { get; set; }
+        public int? StartYear { get; set; }
 
         /// <summary>
         /// The status of the funding instrument.

@@ -37,14 +37,14 @@ namespace PayPal.Vault
         /// The one- to two-digit month when the card expires, with no leading zero. For example, `1` or `12`.
         /// </summary>
         [DataMember(Name="expire_month", EmitDefaultValue = false)]
-        public int ExpireMonth { get; set; }
+        public int? ExpireMonth { get; set; }
 
         /// <summary>
         /// REQUIRED
         /// The four-digit year when the card expires. For example, `2017`.
         /// </summary>
         [DataMember(Name="expire_year", EmitDefaultValue = false)]
-        public int ExpireYear { get; set; }
+        public int? ExpireYear { get; set; }
 
         /// <summary>
         /// The externally-provided ID of the credit card.
