@@ -10,9 +10,9 @@ using WireMock.ResponseBuilders;
 using WireMock.Server;
 using Xunit;
 
-namespace PayPal
+namespace PayPal.Core
 {
-    [Collection("HttpClient")]
+    [CollectionDefinition("HttpClient", DisableParallelization = true)]
     public class PayPalHttpClientTest : IDisposable
     {
         private FluentMockServer server;
@@ -47,7 +47,7 @@ namespace PayPal
             await getClient().Execute(request);
 
             var requestLog = getLogForRequest(request);
-            Assert.Equal("gzip", requestLog.Headers["Accept-Encoding"]);
+            Assert.Equal("gzip", requestLog.Headers["Accept-Encoding"][0]);
         }
 
         [Fact]
@@ -64,13 +64,13 @@ namespace PayPal
             await getClient().Execute(request);
 
             var requestLog = getLogForRequest(request);
-            Assert.Equal("Bearer sample-access-token", requestLog.Headers["Authorization"]);
+            Assert.Equal("Bearer sample-access-token", requestLog.Headers["Authorization"][0]);
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
 
             string authHeaderValue = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("clientid:clientsecret"));
-            Assert.Equal($"Basic {authHeaderValue}", accessTokenRequestLog.Headers["Authorization"]);
+            Assert.Equal($"Basic {authHeaderValue}", accessTokenRequestLog.Headers["Authorization"][0]);
             Assert.Equal("grant_type=client_credentials", accessTokenRequestLog.Body);
         }
 
@@ -98,7 +98,7 @@ namespace PayPal
             await client.Execute(request);
 
             var requestLog = getLogForRequest(request);
-            Assert.Equal("Bearer sample-access-token", requestLog.Headers["Authorization"]);
+            Assert.Equal("Bearer sample-access-token", requestLog.Headers["Authorization"][0]);
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
@@ -119,7 +119,7 @@ namespace PayPal
             await client.Execute(request);
 
             var requestLog = getLogForRequest(request);
-            Assert.Equal("Bearer refreshed-access-token", requestLog.Headers["Authorization"]);
+            Assert.Equal("Bearer refreshed-access-token", requestLog.Headers["Authorization"][0]);
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
@@ -143,7 +143,7 @@ namespace PayPal
 
             var requestLog = getLogForRequest(request);
             var userAgentHeader = requestLog.Headers["User-Agent"];
-            Assert.Matches($"^PayPalSDK/PayPal-NET-SDK {PayPal.Core.Version.VERSION} (.*)$", requestLog.Headers["User-Agent"]);
+            Assert.Matches($"^PayPalSDK/PayPal-NET-SDK {PayPal.Core.Version.VERSION} (.*)$", requestLog.Headers["User-Agent"][0]);
             Assert.Contains("lang=DOTNET", userAgentHeader);
             Assert.Contains(";v=", userAgentHeader);
             Assert.Contains(";clr=", userAgentHeader);

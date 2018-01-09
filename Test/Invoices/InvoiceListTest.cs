@@ -24,7 +24,6 @@ namespace PayPal.Invoices.Test
             Assert.NotNull(listResponse.Result<InvoiceList>());
             var invoices = listResponse.Result<InvoiceList>();
             Assert.NotNull(invoices.Invoices);
-            Assert.NotNull(invoices.TotalCount);
         }
     }
 }

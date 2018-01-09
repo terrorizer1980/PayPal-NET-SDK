@@ -15,7 +15,7 @@ namespace PayPal.Payments.Test
     public class AuthorizationVoidTest
     {
 
-        [Fact]
+        [Fact(Skip="Tests that use this class must be ignored when run in an automated environment because executing an authorization will require approval via the executed payment\'s approval_url")] 
         public async void TestAuthorizationVoidRequest()
         {
             var paymentCreateResponse = await PaymentCreateTest.CreatePayment("authorize");
