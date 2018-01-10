@@ -20,7 +20,7 @@ namespace PayPal.Webhooks.Test
             return (Webhook) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Webhook));
         }
 
-        public async static void DeleteAllWebhooks()
+        protected async static void DeleteAllWebhooks()
         {
             HttpResponse getAllResponse = await WebhookListTest.GetAllWebhooks();
             Assert.Equal(200, (int) getAllResponse.StatusCode);

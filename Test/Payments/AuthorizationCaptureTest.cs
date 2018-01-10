@@ -48,7 +48,7 @@ namespace PayPal.Payments.Test
         {
             var response = await CreateAuthCapture();
 
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<Capture>());
         }
     }

@@ -40,7 +40,7 @@ namespace PayPal.Payments.Test
             request.RequestBody(buildRequestBody());
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<Payment>());
 
             Assert.Equal("11.00", response.Result<Payment>().Transactions[0].Amount.Total);

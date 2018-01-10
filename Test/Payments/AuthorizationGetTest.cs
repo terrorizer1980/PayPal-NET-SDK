@@ -28,7 +28,7 @@ namespace PayPal.Payments.Test
             AuthorizationGetRequest request = new AuthorizationGetRequest(authId);
 
             HttpResponse response = await client.Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<Authorization>());
         }
     }

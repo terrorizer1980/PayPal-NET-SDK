@@ -35,7 +35,7 @@ namespace PayPal.Payments.Test
             request.RequestBody(buildRequestBody());
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 201);
+            Assert.Equal(201, (int) response.StatusCode);
             Assert.NotNull(response.Result<DetailedRefund>());
         }
     }

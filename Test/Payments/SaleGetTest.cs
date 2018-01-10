@@ -27,7 +27,7 @@ namespace PayPal.Payments.Test
             SaleGetRequest request = new SaleGetRequest(saleId);
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<Sale>());
         }
     }

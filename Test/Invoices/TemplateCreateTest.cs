@@ -20,7 +20,7 @@ namespace PayPal.Invoices.Test
             return (Template) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Template));
         }
 
-        public async static void DeleteAllTemplates()
+        protected async static void DeleteAllTemplates()
         {
             HttpResponse getAllResponse = await TemplateListTest.GetAllTemplates();
             Assert.Equal(200, (int) getAllResponse.StatusCode);

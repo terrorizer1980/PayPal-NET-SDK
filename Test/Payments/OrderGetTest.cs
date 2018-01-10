@@ -23,7 +23,7 @@ namespace PayPal.Payments.Test
             OrderGetRequest request = new OrderGetRequest(FAKE_ID);
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<Order>());
         }
     }

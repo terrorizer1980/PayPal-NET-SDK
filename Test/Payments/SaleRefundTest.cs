@@ -38,7 +38,7 @@ namespace PayPal.Payments.Test
                 .Id;
 
             HttpResponse response = await RefundSale(saleId);
-            Assert.Equal((int) response.StatusCode, 201);
+            Assert.Equal(201, (int) response.StatusCode);
             Assert.NotNull(response.Result<DetailedRefund>());
         }
     }

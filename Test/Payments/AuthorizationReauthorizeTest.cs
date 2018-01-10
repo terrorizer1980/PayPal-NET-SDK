@@ -46,7 +46,7 @@ namespace PayPal.Payments.Test
             }
             catch (HttpException e)
             {
-                Assert.True(e.Message.Contains("DCC_REAUTHORIZATION_NOT_ALLOWED"));
+                Assert.Contains("DCC_REAUTHORIZATION_NOT_ALLOWED", e.Message);
             }
         }
     }
