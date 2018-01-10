@@ -9,6 +9,7 @@ using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 using Xunit;
+using System.Threading;
 
 namespace PayPal.Core
 {
@@ -22,6 +23,7 @@ namespace PayPal.Core
         {
             server = FluentMockServer.Start();
             environment = new PayPalEnvironment("clientid", "clientsecret", $"http://localhost:{server.Ports[0]}");
+            Thread.Sleep(2000);
         }
 
         private PayPalHttpClient getClient(string refreshToken = null) 
@@ -142,8 +144,8 @@ namespace PayPal.Core
             await getClient().Execute(request);
 
             var requestLog = getLogForRequest(request);
-            var userAgentHeader = requestLog.Headers["User-Agent"];
-            Assert.Matches($"^PayPalSDK/PayPal-NET-SDK {PayPal.Core.Version.VERSION} (.*)$", requestLog.Headers["User-Agent"][0]);
+            var userAgentHeader = requestLog.Headers["User-Agent"][0];
+            Assert.Matches($"^PayPalSDK/PayPal-NET-SDK {PayPal.Core.Version.VERSION} (.*)$", userAgentHeader);
             Assert.Contains("lang=DOTNET", userAgentHeader);
             Assert.Contains(";v=", userAgentHeader);
             Assert.Contains(";clr=", userAgentHeader);

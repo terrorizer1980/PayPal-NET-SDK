@@ -1,6 +1,8 @@
 using System;
 using PayPal.Core;
 using BraintreeHttp;
+using Xunit;
+[assembly: CollectionBehavior(MaxParallelThreads = -1)]
 
 namespace PayPal.Test
 {
