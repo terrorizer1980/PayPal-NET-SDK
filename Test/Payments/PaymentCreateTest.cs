@@ -98,7 +98,7 @@ namespace PayPal.Payments.Test
         {
             var response = await CreatePayment("sale");
 
-            Assert.Equal(200, (int) response.StatusCode);
+            Assert.Equal(201, (int) response.StatusCode);
             Assert.NotNull(response.Result<Payment>());
         }
     }
