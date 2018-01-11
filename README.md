@@ -1,4 +1,4 @@
-# PayPal SDK 2.0.0-beta
+# PayPal SDK 2.0.0-beta [![Integratio Build Status](https://travis-ci.org/paypal/PayPal-NET-SDK.svg?branch=2.0-travis)](https://travis-ci.org/paypal/PayPal-NET-SDK)
 
 This is a preview of how PayPal SDKs will look in the next major version. We've simplified the interface to only provide HTTPRequest that can easily be called via our HttpClient. This SDK is fully dotnet core 2.0 compatible. 
 
