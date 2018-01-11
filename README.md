@@ -1,6 +1,6 @@
-# PayPal SDK 2.0.0-beta [![Integratio Build Status](https://travis-ci.org/paypal/PayPal-NET-SDK.svg?branch=2.0-travis)](https://travis-ci.org/paypal/PayPal-NET-SDK)
+# PayPal SDK 2.0.0-beta [![Integration Build Status](https://travis-ci.org/paypal/PayPal-NET-SDK.svg?branch=2.0-travis)](https://travis-ci.org/paypal/PayPal-NET-SDK)
 
-This is a preview of how PayPal SDKs will look in the next major version. We've simplified the interface to only provide HTTPRequest that can easily be called via our HttpClient. This SDK is fully dotnet core 2.0 compatible. 
+This is a preview of the next major version of the PayPal .NET SDK. We've simplified the interface to only provide HTTPRequest that can easily be called via our HttpClient. This SDK is fully .NET Core 2.0 compatible. 
 
 ### Creating a Payment
 
@@ -53,8 +53,7 @@ catch(HttpException httpException)
 }
 ```
 
-If you're migrating from v1, check out our [Migration Guide](./docs/Migrating.md).
-We have tried to answer few obvious questions at [FAQs](./docs/FAQ.md).
+If you're migrating from v1, check out our [Migration Guide](./docs/Migrating.md) or our [Frequently Asked Questions](./docs/FAQ.md).
 
 ## Building
 
