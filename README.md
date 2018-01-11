@@ -12,41 +12,39 @@ using PayPal.PaymentExperience;
 var environment = new SandboxEnvironment("AdV4d6nLHabWLyemrw4BKdO9LjcnioNIOgoz7vD611ObbDUL0kJQfzrdhXEBwnH8QmV-7XZjvjRWn0kg", "EPKoPC_haZMTq5uM9WXuzoxUVdgzVqHyD5avCyVC1NCIUJeVaNNUZMnzduYIqrdw-carG9LBAizFGMyK");
 var client = new PayPalHttpClient(environment);
 
-WebProfileCreateRequest request = new WebProfileCreateRequest();
-var profile = new WebProfile()
+var payment = new Payment()
             {
-                Name = "some_name",
-                Presentation = new Presentation()
+                Intent = intent,
+                Transactions = new List<Transaction>() 
                 {
-                    BrandName = "Sample brand",
-                    LocaleCode = "US",
-                    LogoImage = "https://www.paypal.com/",
-                    NoteToSellerLabel = "Thx",
-                    ReturnUrlLabel = "Retreat!"
+                    new Transaction()
+                    {
+                        Amount = new Amount()
+                        {
+                            Total = "10",
+                            Currency = "USD"
+                        }
+                    }
                 },
-                InputFields = new InputFields()
+                RedirectUrls = new RedirectUrls() 
                 {
-                    AddressOverride = 1,
-                    AllowNote = true,
-                    NoShipping = 0
-                },
-                FlowConfig = new FlowConfig()
+                    CancelUrl = "http://paypal.com/cancel",
+                    ReturnUrl = "http://paypal.com/return"
+                }
+                Payer = new Payer() 
                 {
-                    BankTxnPendingUrl = "https://www.paypal.com/",
-                    LandingPageType = "billing",
-                    UserAction = "commit",
-                    ReturnUriHttpMethod = "GET"
-                },
-                Temporary = true
+                    PaymentMethod = "paypal"
+                }
             };
 
-request.RequestBody(profile);
+PaymentCreateRequest request = new PaymentCreateRequest();
+request.RequestBody(payment);
 
 try 
 {
   HttpResponse response = await client().Execute(request);
   var statusCode = response.StatusCode;
-  WebProfile result = response.Result<WebProfile>();
+  Payment result = response.Result<Payment>();
 } 
 catch(HttpException httpException) 
 {
@@ -69,7 +67,7 @@ Please feel free to create an issue in this repo with any feedback, questions, o
 
 ## Running tests
 
-To run integration tests using your client id and secret, clone this repository and run the following command:
+To run integration tests, clone this repository and run the following command:
 ```sh
 $ dotnet test -v normal
 ```
