@@ -17,7 +17,7 @@ namespace PayPal.Webhooks.Test
         {
             var url = "https://example.com/" + new Random().Next( int.MinValue, int.MaxValue );
             var jsonContent = new StringContent("{ \"url\": \"" + url + "\", \"event_types\": [{ \"name\": \"PAYMENT.AUTHORIZATION.CREATED\" }, { \"name\": \"PAYMENT.AUTHORIZATION.VOIDED\" } ] }", Encoding.UTF8, "application/json");
-            return (Webhook) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Webhook));
+            return (Webhook) new JsonSerializer().Decode(jsonContent, typeof(Webhook));
         }
 
         protected async static void DeleteAllWebhooks()

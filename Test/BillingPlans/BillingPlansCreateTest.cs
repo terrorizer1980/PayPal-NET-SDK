@@ -16,7 +16,7 @@ namespace PayPal.BillingPlans.Test
         private static Plan buildRequestBody()
         {
             var jsonContent = new StringContent("{ \"payment_definitions\": [ { \"amount\": { \"value\": \"100\", \"currency\": \"USD\" }, \"frequency\": \"MONTH\", \"cycles\": \"12\", \"frequency_interval\": \"2\", \"type\": \"REGULAR\", \"name\": \"Regular Payments\", \"charge_models\": [ { \"type\": \"SHIPPING\", \"amount\": { \"value\": \"10\", \"currency\": \"USD\" } }, { \"type\": \"TAX\", \"amount\": { \"value\": \"12\", \"currency\": \"USD\" } } ] } ], \"merchant_preferences\": { \"return_url\": \"http://localhost:3000/subscription/success\", \"cancel_url\": \"http://localhost:3000/subscription/cancel\" }, \"name\": \"T-Shirt of the Month Club Plan\", \"description\": \"Template creation.\", \"type\": \"fixed\" }", Encoding.UTF8, "application/json");
-            return (Plan) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Plan));
+            return (Plan) new JsonSerializer().Decode(jsonContent, typeof(Plan));
         }
 
         public static async Task<HttpResponse> createPlan() {

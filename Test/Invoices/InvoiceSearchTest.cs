@@ -16,7 +16,7 @@ namespace PayPal.Invoices.Test
         private static Search BuildRequestBody()
         {
             var jsonContent = new StringContent("{ \"start_invoice_date\": \"2014-01-01 PST\", \"end_invoice_date\": \"2014-03-26 PST\", \"page\": 0, \"page_size\": 3, \"total_count_required\": true }", Encoding.UTF8, "application/json");
-            return (Search) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Search));
+            return (Search) new JsonSerializer().Decode(jsonContent, typeof(Search));
         }
 
         [Fact]

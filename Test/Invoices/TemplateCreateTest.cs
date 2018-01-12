@@ -17,7 +17,7 @@ namespace PayPal.Invoices.Test
         {
             var templateName = "Test Template " + new Random().Next( int.MinValue, int.MaxValue );
             var jsonContent = new StringContent("{ \"name\": \"" + templateName + "\", \"unit_of_measure\": \"Hours\", \"template_data\": { \"items\": [{ \"name\": \"Nutri Bullet\", \"quantity\": 1, \"unit_price\": { \"currency\": \"USD\", \"value\": \"50.00\" } }], \"merchant_info\": { \"email\": \"team-dx-clients-facilitator@getbraintree.com\" }, \"tax_calculated_after_discount\": false, \"tax_inclusive\": false, \"note\": \"Thank you for your business.\", \"logo_url\": \"https://pics.paypal.com/v1/images/redDot.jpeg\", \"allow_tip\": true }, \"settings\": [{ \"field_name\": \"items.date\", \"display_preference\": { \"hidden\": true } }, { \"field_name\": \"custom\", \"display_preference\": { \"hidden\": true } } ] }", Encoding.UTF8, "application/json");
-            return (Template) new JsonSerializer().DeserializeResponse(jsonContent, typeof(Template));
+            return (Template) new JsonSerializer().Decode(jsonContent, typeof(Template));
         }
 
         protected async static void DeleteAllTemplates()

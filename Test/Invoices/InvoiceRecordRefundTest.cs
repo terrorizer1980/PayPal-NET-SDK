@@ -16,7 +16,7 @@ namespace PayPal.Invoices.Test
         private static RefundDetail BuildRequestBody()
         {
             var jsonContent = new StringContent("{ \"date\": \"2019-11-06 03:30:00 PST\", \"note\": \"I refunded by cash!\", \"amount\": { \"currency\": \"USD\", \"value\": \"20.00\" } }", Encoding.UTF8, "application/json");
-            return (RefundDetail) new JsonSerializer().DeserializeResponse(jsonContent, typeof(RefundDetail));
+            return (RefundDetail) new JsonSerializer().Decode(jsonContent, typeof(RefundDetail));
         }
 
         public static async Task<HttpResponse> RefundPayment(string id) {

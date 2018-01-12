@@ -16,7 +16,7 @@ namespace PayPal.PaymentExperience.Test
         private List<JsonPatch<string>> buildRequestBody()
         {
             var jsonContent = new StringContent("[ { \"op\": \"add\", \"path\": \"/presentation/brand_name\", \"value\": \"new_brand_name\" }, { \"op\": \"remove\", \"path\": \"/flow_config/landing_page_type\" } ]", Encoding.UTF8, "application/json");
-            return (List<JsonPatch<string>>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch<string>>));
+            return (List<JsonPatch<string>>) new JsonSerializer().Decode(jsonContent, typeof(List<JsonPatch<string>>));
         }
 
         [Fact]

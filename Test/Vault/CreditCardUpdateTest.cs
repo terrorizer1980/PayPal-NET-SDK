@@ -15,7 +15,7 @@ namespace PayPal.Vault.Test
         private List<JsonPatch<string>> buildRequestBody()
         {
             var jsonContent = new StringContent("[ { \"op\": \"replace\", \"path\": \"/billing_address/line1\", \"value\": \"53 N Main St.\" }]", Encoding.UTF8, "application/json");
-            return (List<JsonPatch<string>>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch<string>>));
+            return (List<JsonPatch<string>>) new JsonSerializer().Decode(jsonContent, typeof(List<JsonPatch<string>>));
         }
 
         [Fact]

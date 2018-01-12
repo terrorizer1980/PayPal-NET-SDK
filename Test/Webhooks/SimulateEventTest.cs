@@ -16,7 +16,7 @@ namespace PayPal.Webhooks.Test
         private static SimulateEvent buildRequestBody()
         {
             var jsonContent = new StringContent("{ \"url\": \"https://www.ebay.com/paypal_webhook\", \"event_type\": \"PAYMENT.AUTHORIZATION.CREATED\" }", Encoding.UTF8, "application/json");
-            return (SimulateEvent) new JsonSerializer().DeserializeResponse(jsonContent, typeof(SimulateEvent));
+            return (SimulateEvent) new JsonSerializer().Decode(jsonContent, typeof(SimulateEvent));
         }
 
         public static async Task<HttpResponse> simulateEvent() {

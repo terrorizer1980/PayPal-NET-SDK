@@ -57,9 +57,7 @@ namespace PayPal.Core
 
 			private HttpResponse fetchAccessToken()
 			{
-				AccessTokenRequest request;
-                request = new AccessTokenRequest(environment, refreshToken);
-
+                AccessTokenRequest request = new AccessTokenRequest(environment, refreshToken);
                 var executeTask = this.client.Execute(request);
                 return executeTask.Result;
 			}

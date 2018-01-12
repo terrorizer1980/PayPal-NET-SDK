@@ -15,7 +15,7 @@ namespace PayPal.BillingPlans.Test
         private List<JsonPatch<MerchantPreferences>> buildRequestBody()
         {
             var jsonContent = new StringContent("[ { \"op\": \"replace\", \"path\": \"/merchant-preferences\", \"value\": { \"cancel_url\": \"http://www.cancel.com\", \"setup_fee\": { \"value\": \"5\", \"currency\": \"USD\" } } } ]", Encoding.UTF8, "application/json");
-            return (List<JsonPatch<MerchantPreferences>>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch<MerchantPreferences>>));
+            return (List<JsonPatch<MerchantPreferences>>) new JsonSerializer().Decode(jsonContent, typeof(List<JsonPatch<MerchantPreferences>>));
         }
 
         [Fact]

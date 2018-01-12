@@ -15,7 +15,7 @@ namespace PayPal.Webhooks.Test
         private List<JsonPatch<string>> buildRequestBody(string url)
         {
             var jsonContent = new StringContent("[ { \"op\": \"replace\", \"path\": \"/url\", \"value\": \"" + url + "\" } ]", Encoding.UTF8, "application/json");
-            return (List<JsonPatch<string>>) new JsonSerializer().DeserializeResponse(jsonContent, typeof(List<JsonPatch<string>>));
+            return (List<JsonPatch<string>>) new JsonSerializer().Decode(jsonContent, typeof(List<JsonPatch<string>>));
         }
 
         [Fact]

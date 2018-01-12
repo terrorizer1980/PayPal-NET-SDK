@@ -16,7 +16,7 @@ namespace PayPal.Invoices.Test
         private static PaymentDetail BuildRequestBody()
         {
             var jsonContent = new StringContent("{ \"method\": \"CASH\", \"date\": \"2019-11-06 03:30:00 PST\", \"note\": \"I got the payment by cash!\", \"amount\": { \"currency\": \"USD\", \"value\": \"20.00\" } }", Encoding.UTF8, "application/json");
-            return (PaymentDetail) new JsonSerializer().DeserializeResponse(jsonContent, typeof(PaymentDetail));
+            return (PaymentDetail) new JsonSerializer().Decode(jsonContent, typeof(PaymentDetail));
         }
 
         public static async Task<HttpResponse> RecordPayment(string id) {

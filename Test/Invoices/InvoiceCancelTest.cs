@@ -16,7 +16,7 @@ namespace PayPal.Invoices.Test
         private static CancelNotification BuildRequestBody()
         {
             var jsonContent = new StringContent("{ \"subject\": \"Invoice canceled\", \"note\": \"Canceling this invoice per your request.\"}", Encoding.UTF8, "application/json");
-            return (CancelNotification) new JsonSerializer().DeserializeResponse(jsonContent, typeof(CancelNotification));
+            return (CancelNotification) new JsonSerializer().Decode(jsonContent, typeof(CancelNotification));
         }
 
         public static async Task<HttpResponse> CancelInvoice(string id) {

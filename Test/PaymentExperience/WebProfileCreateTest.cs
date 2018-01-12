@@ -19,7 +19,7 @@ namespace PayPal.PaymentExperience.Test
         {
             var profileName = "Template " + Guid.NewGuid();
             var jsonContent = new StringContent("{ \"name\": \"" + profileName + "\", \"flow_config\": { \"landing_page_type\": \"Billing\", \"bank_txn_pending_url\": \"http://www.yeowza.com/\", \"user_action\": \"commit\", \"return_uri_http_method\": \"GET\" }, \"presentation\": { \"logo_image\": \"http://www.yeowza.com/favico.ico\", \"brand_name\": \"YeowZa! Paypal\", \"locale_code\": \"US\", \"return_url_label\": \"Return\", \"note_to_seller_label\": \"Thanks!\" }, \"input_fields\": { \"allow_note\": true, \"no_shipping\": 1, \"address_override\": 0 }, \"temporary\": true }", Encoding.UTF8, "application/json");
-            return (WebProfile) new JsonSerializer().DeserializeResponse(jsonContent, typeof(WebProfile));
+            return (WebProfile) new JsonSerializer().Decode(jsonContent, typeof(WebProfile));
         }
 
         public static async Task<HttpResponse> createWebProfile() {
