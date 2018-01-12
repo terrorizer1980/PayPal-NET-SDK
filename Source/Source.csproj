@@ -1,6 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>PayPal</Title>
+    <Version>2.0.0-beta.0</Version>
+    <Copyright>Copyright (c) 2013-2018 PAYPAL, INC.</Copyright>
+    <Description>PayPal-NET-SDK for PayPal REST APIs.</Description>
+    <Authors>PayPal</Authors>
+    <PackageReleaseNotes>* 2.0.0 beta release</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BraintreeHttp-Dotnet" Version="0.2.1" />
