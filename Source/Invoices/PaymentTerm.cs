@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class PaymentTerm {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PaymentTerm() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class CreditCardToken {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public CreditCardToken() {}
 
         /// <summary>

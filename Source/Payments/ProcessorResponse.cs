@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class ProcessorResponse {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public ProcessorResponse() {}
 
         /// <summary>

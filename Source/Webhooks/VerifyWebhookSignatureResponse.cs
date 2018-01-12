@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class VerifyWebhookSignatureResponse {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public VerifyWebhookSignatureResponse() {}
 
         /// <summary>

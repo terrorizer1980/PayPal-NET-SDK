@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class RedirectUrls {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public RedirectUrls() {}
 
         /// <summary>

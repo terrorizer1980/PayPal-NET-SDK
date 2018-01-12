@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class PaymentDetail {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PaymentDetail() {}
 
         /// <summary>

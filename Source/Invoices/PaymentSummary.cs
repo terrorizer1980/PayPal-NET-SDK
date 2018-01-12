@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class PaymentSummary {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PaymentSummary() {}
 
         /// <summary>

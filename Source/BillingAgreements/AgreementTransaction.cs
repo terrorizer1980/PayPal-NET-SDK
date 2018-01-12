@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class AgreementTransaction {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public AgreementTransaction() {}
 
         /// <summary>

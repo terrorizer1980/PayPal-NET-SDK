@@ -16,8 +16,8 @@ namespace PayPal.Vault
     public class CreditCard {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public CreditCard() {}
 
         /// <summary>

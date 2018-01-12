@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class PayeeDisplayMetadata {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PayeeDisplayMetadata() {}
 
         /// <summary>

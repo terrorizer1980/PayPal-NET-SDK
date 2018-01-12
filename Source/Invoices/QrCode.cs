@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class QrCode {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public QrCode() {}
 
         /// <summary>

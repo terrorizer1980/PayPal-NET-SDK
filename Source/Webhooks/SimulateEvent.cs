@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class SimulateEvent {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public SimulateEvent() {}
 
         /// <summary>

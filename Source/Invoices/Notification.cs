@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Notification {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Notification() {}
 
         /// <summary>

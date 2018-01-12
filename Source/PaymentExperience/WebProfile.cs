@@ -16,8 +16,8 @@ namespace PayPal.PaymentExperience
     public class WebProfile {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public WebProfile() {}
 
         /// <summary>

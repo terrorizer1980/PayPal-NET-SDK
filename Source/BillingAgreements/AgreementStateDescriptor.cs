@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class AgreementStateDescriptor {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public AgreementStateDescriptor() {}
 
         /// <summary>

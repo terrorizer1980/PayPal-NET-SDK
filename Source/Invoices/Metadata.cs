@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Metadata {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Metadata() {}
 
         /// <summary>

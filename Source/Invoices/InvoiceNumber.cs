@@ -13,8 +13,8 @@ namespace PayPal.Invoices
     public class InvoiceNumber {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public InvoiceNumber() {}
 
         /// <summary>

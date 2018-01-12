@@ -21,7 +21,7 @@ namespace PayPal.Core
 
             AddInjector(this.gzipInjector);
             AddInjector(this.authorizationInjector);
-		}
+        }
 
         protected override string GetUserAgent()
         {
@@ -32,17 +32,17 @@ namespace PayPal.Core
         {
             private HttpClient client;
             private PayPalEnvironment environment;
-			private AccessToken accessToken;
-			private string refreshToken;
+            private AccessToken accessToken;
+            private string refreshToken;
 
-			public AuthorizationInjector(HttpClient client, PayPalEnvironment environment, string refreshToken)
+            public AuthorizationInjector(HttpClient client, PayPalEnvironment environment, string refreshToken)
             {
                 this.environment = environment;
                 this.client = client;
                 this.refreshToken = refreshToken;
             }
 
-			public void Inject(HttpRequest request)
+            public void Inject(HttpRequest request)
             {
                 if (!(request is AccessTokenRequest || request is RefreshTokenRequest))
                 {
@@ -51,17 +51,17 @@ namespace PayPal.Core
                         var accessTokenResponse = fetchAccessToken();
                         this.accessToken = accessTokenResponse.Result<AccessToken>();
                     }
-					request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
-				}
-			}
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
+                }
+            }
 
-			private HttpResponse fetchAccessToken()
-			{
+            private HttpResponse fetchAccessToken()
+            {
                 AccessTokenRequest request = new AccessTokenRequest(environment, refreshToken);
                 var executeTask = this.client.Execute(request);
                 return executeTask.Result;
-			}
-		}
+            }
+        }
 
         private class GzipInjector : IInjector
         {

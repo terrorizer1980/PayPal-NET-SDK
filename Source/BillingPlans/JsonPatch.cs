@@ -16,8 +16,8 @@ namespace PayPal.BillingPlans
     public class JsonPatch<T> {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public JsonPatch() {}
 
         /// <summary>

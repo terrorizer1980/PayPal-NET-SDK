@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class RelatedResources {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public RelatedResources() {}
 
         /// <summary>

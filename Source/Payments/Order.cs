@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Order {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Order() {}
 
         /// <summary>

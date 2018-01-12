@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class EventResend {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public EventResend() {}
 
         /// <summary>

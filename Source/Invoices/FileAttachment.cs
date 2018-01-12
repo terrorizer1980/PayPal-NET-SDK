@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class FileAttachment {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public FileAttachment() {}
 
         /// <summary>

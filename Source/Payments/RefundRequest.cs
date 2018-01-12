@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class RefundRequest {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public RefundRequest() {}
 
         /// <summary>

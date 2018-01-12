@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class ShippingInfo {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public ShippingInfo() {}
 
         /// <summary>

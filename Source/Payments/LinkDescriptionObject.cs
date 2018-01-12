@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class LinkDescriptionObject {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public LinkDescriptionObject() {}
 
         /// <summary>

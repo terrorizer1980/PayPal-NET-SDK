@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Invoice {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Invoice() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class CartBase {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public CartBase() {}
 
         /// <summary>

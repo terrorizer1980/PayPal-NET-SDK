@@ -16,8 +16,8 @@ namespace PayPal.PaymentExperience
     public class Presentation {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Presentation() {}
 
         /// <summary>

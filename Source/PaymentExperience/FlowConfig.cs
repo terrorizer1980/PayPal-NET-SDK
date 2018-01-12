@@ -16,8 +16,8 @@ namespace PayPal.PaymentExperience
     public class FlowConfig {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public FlowConfig() {}
 
         /// <summary>

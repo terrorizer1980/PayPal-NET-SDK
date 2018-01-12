@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class PayerInformation {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PayerInformation() {}
 
         /// <summary>

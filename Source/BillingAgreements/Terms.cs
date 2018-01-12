@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class Terms {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Terms() {}
 
         /// <summary>

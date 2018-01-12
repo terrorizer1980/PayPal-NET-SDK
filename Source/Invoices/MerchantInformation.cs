@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class MerchantInformation {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public MerchantInformation() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Refund {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Refund() {}
 
         /// <summary>

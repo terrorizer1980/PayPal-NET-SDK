@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Cost {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Cost() {}
 
         /// <summary>

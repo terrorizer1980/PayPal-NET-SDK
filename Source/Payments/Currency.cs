@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Currency {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Currency() {}
 
         /// <summary>

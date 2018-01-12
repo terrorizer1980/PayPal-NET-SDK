@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class MoneyTypeWithCurrencyCodeQualifiedValue {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public MoneyTypeWithCurrencyCodeQualifiedValue() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Phone {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Phone() {}
 
         /// <summary>

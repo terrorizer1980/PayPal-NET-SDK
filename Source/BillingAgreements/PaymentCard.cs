@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class PaymentCard {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PaymentCard() {}
 
         /// <summary>

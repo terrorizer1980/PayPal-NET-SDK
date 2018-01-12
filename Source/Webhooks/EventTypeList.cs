@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class EventTypeList {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public EventTypeList() {}
 
         /// <summary>

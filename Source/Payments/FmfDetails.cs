@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class FmfDetails {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public FmfDetails() {}
 
         /// <summary>

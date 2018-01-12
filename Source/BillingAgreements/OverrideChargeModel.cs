@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class OverrideChargeModel {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public OverrideChargeModel() {}
 
         /// <summary>

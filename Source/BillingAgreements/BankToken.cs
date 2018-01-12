@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class BankToken {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public BankToken() {}
 
         /// <summary>

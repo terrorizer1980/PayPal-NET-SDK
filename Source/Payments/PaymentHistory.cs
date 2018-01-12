@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class PaymentHistory {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PaymentHistory() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Search {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Search() {}
 
         /// <summary>

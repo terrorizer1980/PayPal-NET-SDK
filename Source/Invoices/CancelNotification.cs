@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class CancelNotification {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public CancelNotification() {}
 
         /// <summary>

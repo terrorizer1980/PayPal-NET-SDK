@@ -16,8 +16,8 @@ namespace PayPal.BillingPlans
     public class PlanList {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public PlanList() {}
 
         /// <summary>

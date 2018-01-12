@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class ExtendedBankAccount {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public ExtendedBankAccount() {}
 
         /// <summary>

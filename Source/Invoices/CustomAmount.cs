@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class CustomAmount {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public CustomAmount() {}
 
         /// <summary>

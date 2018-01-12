@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class FundingInstrument {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public FundingInstrument() {}
 
         /// <summary>

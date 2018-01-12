@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class Webhook {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Webhook() {}
 
         /// <summary>

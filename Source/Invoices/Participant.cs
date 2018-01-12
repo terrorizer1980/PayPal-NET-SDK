@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Participant {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Participant() {}
 
         /// <summary>

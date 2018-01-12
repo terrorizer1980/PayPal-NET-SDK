@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Capture {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Capture() {}
 
         /// <summary>

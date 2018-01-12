@@ -16,8 +16,8 @@ namespace PayPal.Webhooks
     public class LinkDescriptionObject {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public LinkDescriptionObject() {}
 
         /// <summary>

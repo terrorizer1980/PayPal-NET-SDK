@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Payer {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Payer() {}
 
         /// <summary>

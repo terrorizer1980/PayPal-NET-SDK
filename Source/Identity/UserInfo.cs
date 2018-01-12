@@ -16,8 +16,8 @@ namespace PayPal.Identity
     public class UserInfo {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public UserInfo() {}
 
         /// <summary>

@@ -16,8 +16,8 @@ namespace PayPal.Identity
     public class UserAddress {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public UserAddress() {}
 
         /// <summary>

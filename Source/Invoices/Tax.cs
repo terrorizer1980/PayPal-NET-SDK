@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Tax {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Tax() {}
 
         /// <summary>

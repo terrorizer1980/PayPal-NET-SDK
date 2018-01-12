@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class Plan {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Plan() {}
 
         /// <summary>

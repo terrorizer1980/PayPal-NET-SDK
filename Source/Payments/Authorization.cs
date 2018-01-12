@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Authorization {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Authorization() {}
 
         /// <summary>

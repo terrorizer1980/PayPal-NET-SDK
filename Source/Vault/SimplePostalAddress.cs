@@ -16,8 +16,8 @@ namespace PayPal.Vault
     public class SimplePostalAddress {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public SimplePostalAddress() {}
 
         /// <summary>

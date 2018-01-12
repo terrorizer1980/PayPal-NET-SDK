@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class Address {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Address() {}
 
         /// <summary>

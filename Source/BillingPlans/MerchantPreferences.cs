@@ -16,8 +16,8 @@ namespace PayPal.BillingPlans
     public class MerchantPreferences {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public MerchantPreferences() {}
 
         /// <summary>

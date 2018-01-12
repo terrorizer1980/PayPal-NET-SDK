@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class Payment {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public Payment() {}
 
         /// <summary>

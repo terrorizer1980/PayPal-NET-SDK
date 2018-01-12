@@ -16,8 +16,8 @@ namespace PayPal.Invoices
     public class RefundDetail {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public RefundDetail() {}
 
         /// <summary>

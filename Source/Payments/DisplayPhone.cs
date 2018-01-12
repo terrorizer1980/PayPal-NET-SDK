@@ -16,8 +16,8 @@ namespace PayPal.Payments
     public class DisplayPhone {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public DisplayPhone() {}
 
         /// <summary>

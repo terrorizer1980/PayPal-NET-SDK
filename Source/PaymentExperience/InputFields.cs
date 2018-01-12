@@ -16,8 +16,8 @@ namespace PayPal.PaymentExperience
     public class InputFields {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public InputFields() {}
 
         /// <summary>

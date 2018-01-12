@@ -16,8 +16,8 @@ namespace PayPal.BillingPlans
     public class ChargeModel {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public ChargeModel() {}
 
         /// <summary>

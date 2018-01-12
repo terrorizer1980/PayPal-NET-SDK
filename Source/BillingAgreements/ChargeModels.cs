@@ -16,8 +16,8 @@ namespace PayPal.BillingAgreements
     public class ChargeModels {
 
         /// <summary>
-	    /// Required default constructor
-		/// </summary>
+        /// Required default constructor
+        /// </summary>
         public ChargeModels() {}
 
         /// <summary>
