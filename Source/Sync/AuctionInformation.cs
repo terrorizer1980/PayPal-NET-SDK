@@ -1,13 +1,13 @@
-// This class was generated on Thu, 25 Jan 2018 15:50:03 CST by version 0.1.0-dev+27d306 of Braintree SDK Generator
+// This class was generated on Fri, 26 Jan 2018 14:35:32 CST by version 0.1.0-dev+47ed6e of Braintree SDK Generator
 // AuctionInformation.cs
-// @version 0.1.0-dev+27d306
+// @version 0.1.0-dev+47ed6e
 // @type object
 // @data H4sIAAAAAAAC/7yTT4vUQBDF736Kor0oxIwwKJjbwlwGRWUZvSxL6ElXpwv7T6yuuATZ7y6dmf07GxCUvaWr3nv945H+rXbTgKpRZ2MnlCJso00cdPlWlfqumfTe42cdikhV6iNOd4cN5o5pmMWN2jkEfYyhu5haVeqMWU+Hm95W6hy1+RL9pBqrfcYy+DkSo7kdfOU0IAthVs3FLWMWptifYh0vbffjhNySeYD5xPIUe7uBZEEcwiyDK5cg6B+Y59kwcud0RqA4n4+RNewc5eIN1DuBPYIha5ExClhO4WDWJXC7gYHTLzJowCa+2QSM8q/9xNH76+qvS+p8yhT71mjBJ4t6JDgtqyxARwNCAeHK4YNWoPgxV6Wsi20U5IjyyHP4Ny5fOZEhN6uVpORzTSi2TtyvnAS/Ytut1+sPLzPOsW/e1e9fP3NVJBjaTAs93d8uP4QigG/nn54ZfZF6ETjqgDeP4D78fwG/vH7xBwAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
-namespace PayPal.PayPalSync
+namespace PayPal.Sync
 {
     /// <summary>
     /// The auction information.

@@ -8,7 +8,7 @@ using Xunit;
 using PayPal.Test;
 using static PayPal.Test.TestHarness;
 
-namespace PayPal.PayPalSync.Test
+namespace PayPal.Sync.Test
 {
     [Collection("PayPal Sync")]
     public class SearchGetTest
@@ -43,7 +43,7 @@ namespace PayPal.PayPalSync.Test
 
             SearchResponse searchResponse = response.Result<SearchResponse>();
             Assert.NotNull(searchResponse.TransactionDetails);
-            Assert.Equal(1, searchResponse.TransactionDetails.Count);
+            Assert.Single(searchResponse.TransactionDetails);
             TransactionDetails transactionDetails = searchResponse.TransactionDetails[0];
             Assert.NotNull(transactionDetails);
             TransactionInformation transactionInformation = transactionDetails.TransactionInfo;

@@ -1,13 +1,13 @@
-// This class was generated on Thu, 25 Jan 2018 15:50:03 CST by version 0.1.0-dev+27d306 of Braintree SDK Generator
+// This class was generated on Fri, 26 Jan 2018 14:35:32 CST by version 0.1.0-dev+47ed6e of Braintree SDK Generator
 // Name.cs
-// @version 0.1.0-dev+27d306
+// @version 0.1.0-dev+47ed6e
 // @type object
 // @data H4sIAAAAAAAC/7xUwY7TMBC98xUjX/YSrTjntoIbEiC0cEFoNU0m7WidcfBMgAjtv6PY2aRpWjiw6q1+fh2/9/yc3+5+6MiV7j225Ar3BSPjzlNals4V7h0Ny+ItaRW5Mw7iSnd/IBBsCUIDdiDoMNpw6wp3FyMOefDrwn0irD+IH1zZoFcage89R6pn4GMMHUVjUld+nSWpRZb9VhR6oyho9ND03j9IVr7oPL+/lZ7k3ijM/GTmFt6gwI4AYdcrC6kmvADh6jH/ChFQBgh2oJgTsAMaVCgSbPyvdp4NWCxAw1GtAI9q0/xn+9CMc5ZTkp7M+c8Mpff+qfhnkHv+QbLNbwVfji3RUhaTxRN3fFQKYAWEjqIGuZK5luva09bdGr9sL/MmU5+VAL0GsABqIRK0vTfuPB3zFFgq39cs+8m6xSBDy1WOCce+3Gixmn2dNLpIDf9aBTFDZzJIW0m0sXkqRt/LZV5Rt/bNqe4Z2urOW+ld2dFVXlVv3DRuwS63beLkmrTsp5Dhbizdo4SfAqjJ1LkPycWn9rfiTkeelrZdl7YNz6Wd+C8S5LenV38AAAD//w==
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
-namespace PayPal.PayPalSync
+namespace PayPal.Sync
 {
     /// <summary>
     /// The name of the party.

@@ -1,13 +1,13 @@
-// This class was generated on Thu, 25 Jan 2018 15:50:03 CST by version 0.1.0-dev+27d306 of Braintree SDK Generator
+// This class was generated on Fri, 26 Jan 2018 14:35:32 CST by version 0.1.0-dev+47ed6e of Braintree SDK Generator
 // Phone.cs
-// @version 0.1.0-dev+27d306
+// @version 0.1.0-dev+47ed6e
 // @type object
 // @data H4sIAAAAAAAC/9xTwWrbQBC99yuGPdmgWA20PehWlJwKbkhNLyGEkTS2Blaz6u4srij597KW6hDLpS2FUnLT7szb9+a90TezGXoyhblpnZDJzGf0jJWlNXbp2mTmAw1PhysKtede2YkpzKYl6BMQJHYV+QxYgDVAjeKEa7TAouQFEwAt3F2vLt+9mbpZdtBbFNg636HeL1rVPhR5vt/vV6xxxaK5pzrfXNxelxcHaE6yXJnMvPceh1H668zcEjYfxQ6m2KINlC6+RPbUHC9uvOvJK1Mwxd1x6KBJxHzq2kVRPzzUrqFnDpwU5m5MDVCjtWm+1AiLslz+I2tgFNFVLNSAJdlpC24L2hKUJaA0h88j60gHXQwK4hQqgp0nVPKgLQpcvoWGd6xhfPkUVzsJHDQkCnyqNhSUx9PkwPqqXB7YQ6ySZwk8vbH4tP6zSNXHk0QlWvuY/TJW+qokgZ08jNTPoj1TnMd7bJrE/+0q/qbwH8ae0z2vzWWfxPYf7OJP/5MXvaL3j6++AwAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
-namespace PayPal.PayPalSync
+namespace PayPal.Sync
 {
     /// <summary>
     /// The phone number, in its canonical international [E.164 numbering plan format](https://www.itu.int/rec/T-REC-E.164/en).

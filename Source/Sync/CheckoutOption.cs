@@ -1,13 +1,13 @@
-// This class was generated on Thu, 25 Jan 2018 15:50:03 CST by version 0.1.0-dev+27d306 of Braintree SDK Generator
+// This class was generated on Fri, 26 Jan 2018 14:35:32 CST by version 0.1.0-dev+47ed6e of Braintree SDK Generator
 // CheckoutOption.cs
-// @version 0.1.0-dev+27d306
+// @version 0.1.0-dev+47ed6e
 // @type object
 // @data H4sIAAAAAAAC/6yRwU7jMBCG7/sUI5/das+5Vbvay0oUoYoLQs3UmdYjnNiMbWiE+u7IDSlULSAER4++sf//85Na9IFUpf5YMnc+J5iHxL5TWl2jMK4cXWBbAKXVf+pfD38pGuEBrtQMzHiB388AIyB02NIEu2bygC4TBGSZKq1mItgPD//W6oqwmXeuV9UaXaQyuM8s1BwGl+IDSWKKqro5RI5JuNucJh2TLIckyxLiKP07wHGjhaWTTgXU8GjZWODSz1gUNImEY2IDfg3YASdqNcRsbJFQG++81OAF6kTblIXq7zrosnM7/WUR+0/40MRIfK5iT07hnxegLbbBkYZ0hhvrt7yxCVYE9cplGnQINXWx6ej86qjrzXJsvU/2ZZ1DcNT8jM3b3a9nAAAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
-namespace PayPal.PayPalSync
+namespace PayPal.Sync
 {
     /// <summary>
     /// A checkout option as a name-and-value pair.
