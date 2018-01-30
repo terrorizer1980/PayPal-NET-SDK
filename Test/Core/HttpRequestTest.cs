@@ -8,7 +8,7 @@ using BraintreeHttp;
 using Xunit;
 using System.Linq;
 using PayPal.Test;
-using PayPal.Payments.Test;
+using PayPal.v1.Payments.Test;
 
 namespace PayPal.Core.Test
 {

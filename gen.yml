@@ -1,5 +1,6 @@
 ---
 projectName: PayPal
-language: dotnet 
+language: dotnet
 sourcePath: Source
 testPath: Test
+apiVersioning: true
