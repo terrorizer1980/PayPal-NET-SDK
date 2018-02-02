@@ -21,7 +21,7 @@ namespace PayPal.v1.PaymentExperience.Test
             WebProfileListRequest request = new WebProfileListRequest();
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<List<WebProfile>>());
 
             // Add your own checks here

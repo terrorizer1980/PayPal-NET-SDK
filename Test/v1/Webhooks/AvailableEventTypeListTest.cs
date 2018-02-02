@@ -21,7 +21,7 @@ namespace PayPal.v1.Webhooks.Test
             AvailableEventTypeListRequest request = new AvailableEventTypeListRequest();
 
             HttpResponse response = await TestHarness.client().Execute(request);
-            Assert.Equal((int) response.StatusCode, 200);
+            Assert.Equal(200, (int) response.StatusCode);
             Assert.NotNull(response.Result<EventTypeList>());
 
             // Add your own checks here
