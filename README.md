@@ -28,8 +28,8 @@ var payment = new Payment()
                 },
                 RedirectUrls = new RedirectUrls() 
                 {
-                    CancelUrl = "http://paypal.com/cancel",
-                    ReturnUrl = "http://paypal.com/return"
+                    CancelUrl = "https://example.com/cancel",
+                    ReturnUrl = "https://example.com/return"
                 }
                 Payer = new Payer() 
                 {
