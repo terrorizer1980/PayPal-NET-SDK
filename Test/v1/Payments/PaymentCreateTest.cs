@@ -32,8 +32,8 @@ namespace PayPal.v1.Payments.Test
                 },
                 RedirectUrls = new RedirectUrls() 
                 {
-                    CancelUrl = "http://paypal.com/cancel",
-                    ReturnUrl = "http://paypal.com/return"
+                    CancelUrl = "https://example.com/cancel",
+                    ReturnUrl = "https://example.com/return"
                 }
             };
 
@@ -96,10 +96,27 @@ namespace PayPal.v1.Payments.Test
         [Fact]
         public async void TestPaymentCreateRequest()
         {
-            var response = await CreatePayment("sale");
+            var response = await CreatePayment("sale", "paypal");
 
             Assert.Equal(201, (int) response.StatusCode);
+
             Assert.NotNull(response.Result<Payment>());
+
+            Payment createdPayment = response.Result<Payment>();
+            LinkDescriptionObject approvalLink = findApprovalLink(createdPayment.Links);
+
+            // Redirect the customer to the approval URL for a PayPal payment
+            Assert.NotNull(approvalLink);
+            Assert.NotEmpty(approvalLink.Href);
+        }
+
+        private static LinkDescriptionObject findApprovalLink(List<LinkDescriptionObject> links) {
+            foreach (var link in links) {
+                if (link.Rel.Equals("approval_url")) {
+                    return link;
+                }
+            }
+            return null;
         }
     }
 }
