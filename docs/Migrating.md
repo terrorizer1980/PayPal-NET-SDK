@@ -41,7 +41,11 @@ using System.Linq;
 using PayPal.Core;
 using PayPal.PaymentExperience;
 
+// Sandbox Environment
 var environment = new SandboxEnvironment("AdV4d6nLHabWLyemrw4BKdO9LjcnioNIOgoz7vD611ObbDUL0kJQfzrdhXEBwnH8QmV-7XZjvjRWn0kg", "EPKoPC_haZMTq5uM9WXuzoxUVdgzVqHyD5avCyVC1NCIUJeVaNNUZMnzduYIqrdw-carG9LBAizFGMyK");
+// Live Environment
+// var environment = new LiveEnvironment("<client-id>", "<client-secret>");
+
 var client = new PayPalHttpClient(environment);
 ```
 
