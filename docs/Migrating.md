@@ -122,7 +122,7 @@ try
   var statusCode = response.StatusCode;
   WebProfile result = response.Result<WebProfile>();
 } 
-catch(HttpException httpException) 
+catch(BraintreeHttp.HttpException httpException) 
 {
   var statusCode = httpException.StatusCode;
   var debugId = httpException.Headers.GetValues("PayPal-Debug-Id").FirstOrDefault();
