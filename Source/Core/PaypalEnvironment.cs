@@ -44,7 +44,7 @@ namespace PayPal.Core
     }
 
     /// <summary>
-    /// Use this environment for testing
+    /// Environment used for sandbox testing.
     /// </summary>
     public class SandboxEnvironment : PayPalEnvironment
     {
@@ -53,7 +53,7 @@ namespace PayPal.Core
     }
 
     /// <summary>
-    /// This is the production environment
+    /// Environment used for production.
     /// </summary>
     public class LiveEnvironment : PayPalEnvironment
     {
