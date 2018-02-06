@@ -39,7 +39,7 @@ namespace PayPal.v1.Identity.Test
             Console.WriteLine(actual.Token);
         }
 
-        [Fact]
+        [Fact(Skip="Tests that use this class must be ignored when run in an automated environment because refresh token used here will depend on the code, and is bound to change")]
         public async void TestUserinfoGetRequest()
         {
             var refreshToken = "R23AAGugHBGsj7Y-yWS-XtgY8MtL1ovx4S86SRWLgiZgRjug85nO0egYreBn-4oSV321IwuLuGt0MQ2c2COzq5pJQzHWwvnb14IW6VspQIuJd9rpsegIKuQYfEjgcfhyey3CIGjK7DWdmHdaQAgXw";
