@@ -23,10 +23,10 @@ namespace PayPal.Core
         {
             server = FluentMockServer.Start();
             environment = new PayPalEnvironment("clientid", "clientsecret", $"http://localhost:{server.Ports[0]}", $"http://www.localhost:{server.Ports[0]}");
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
         }
 
-        private PayPalHttpClient getClient(string refreshToken = null) 
+        private PayPalHttpClient getClient(string refreshToken = null)
         {
             return new PayPalHttpClient(environment, refreshToken);
         }
@@ -42,7 +42,8 @@ namespace PayPal.Core
             server.Given(accessTokenRequest())
                   .RespondWith(accessTokenReponse());
 
-            HttpRequest request = new HttpRequest("/some", HttpMethod.Get);
+            var request = new HttpRequest("/some", HttpMethod.Get);
+
             server.Given(builderForRequest(request))
                 .RespondWith(defaultResponse());
 
