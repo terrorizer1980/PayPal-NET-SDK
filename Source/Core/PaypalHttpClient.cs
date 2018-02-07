@@ -11,7 +11,7 @@ namespace PayPal.Core
         private IInjector authorizationInjector;
 
         public PayPalHttpClient(PayPalEnvironment environment) : this(environment, null)
-        {}
+        { }
 
         public PayPalHttpClient(PayPalEnvironment environment, string refreshToken) : base(environment)
         {
@@ -44,7 +44,7 @@ namespace PayPal.Core
 
             public void Inject(HttpRequest request)
             {
-                if (!(request is AccessTokenRequest || request is RefreshTokenRequest))
+                if (!request.Headers.Contains("Authorization") && !(request is AccessTokenRequest || request is RefreshTokenRequest))
                 {
                     if (this.accessToken == null || this.accessToken.IsExpired())
                     {

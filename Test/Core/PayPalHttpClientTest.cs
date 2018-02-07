@@ -23,10 +23,10 @@ namespace PayPal.Core
         {
             server = FluentMockServer.Start();
             environment = new PayPalEnvironment("clientid", "clientsecret", $"http://localhost:{server.Ports[0]}", $"http://www.localhost:{server.Ports[0]}");
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
         }
 
-        private PayPalHttpClient getClient(string refreshToken = null) 
+        private PayPalHttpClient getClient(string refreshToken = null)
         {
             return new PayPalHttpClient(environment, refreshToken);
         }
@@ -104,6 +104,23 @@ namespace PayPal.Core
 
             var accessTokenRequestLog = getLogForRequest(accessTokenRequest());
             Assert.NotNull(accessTokenRequestLog);
+        }
+
+        [Fact]
+        public async void Execute_DoesNotFetchAccessTokenIfAuthorizationHeaderAlreadyPresent()
+        {
+            var client = getClient();
+
+            var request = new HttpRequest("/", HttpMethod.Get);
+            request.Headers.Add("Authorization", "custom-header-value");
+
+            server.Given(builderForRequest(request))
+                .RespondWith(defaultResponse());
+
+            await client.Execute(request);
+
+            var requestLog = getLogForRequest(request);
+            Assert.Equal("custom-header-value", requestLog.Headers["Authorization"][0]);
         }
 
         [Fact]
