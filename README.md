@@ -59,7 +59,7 @@ If you're migrating from v1, check out our [Migration Guide](./docs/Migrating.md
 
 To try this out, update the version of `paypal-rest-sdk` by running:
 ```sh
-$ dotnet add package PayPal -v 2.0.0.beta.0
+$ dotnet add package PayPal -v 2.0.0-rc1
 ```
 
 Please feel free to create an issue in this repo with any feedback, questions, or concerns you have.
