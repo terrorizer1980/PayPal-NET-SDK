@@ -1,8 +1,8 @@
-// This class was generated on Tue, 30 Jan 2018 11:15:39 PST by version 0.1.0-dev+6beb51-dirty of Braintree SDK Generator
+// This class was generated on Mon, 09 Apr 2018 18:07:49 UTC by version 0.1.0-dev+291f3f of Braintree SDK Generator
 // Sale.cs
-// @version 0.1.0-dev+6beb51-dirty
+// @version 0.1.0-dev+291f3f
 // @type object
-// @data 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
+// @data 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
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace PayPal.v1.Payments
 
         /// <summary>
         /// REQUIRED
-        /// The payment amount, with break-ups.
+        /// The payment amount, with details.
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount;
@@ -35,7 +35,7 @@ namespace PayPal.v1.Payments
         public string BillingAgreementId;
 
         /// <summary>
-        /// The date and time when the eCheck transaction is expected to clear, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6). Returned for eCheck payments. Supported only when the `payment_method` is `paypal`.
+        /// The date and time when the PayPal eCheck transaction is expected to clear, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
         /// </summary>
         [DataMember(Name="clearing_time", EmitDefaultValue = false)]
         public string ClearingTime;
@@ -54,7 +54,7 @@ namespace PayPal.v1.Payments
         public string ExchangeRate;
 
         /// <summary>
-        /// The [Fraud Management Filter (FMF)](/docs/classic/fmf/integration-guide/FMFSummary/) details.
+        /// The Fraud Management Filter (FMF) details that are applied to the payment that result in an accept, deny, or pending action. Returned in a payment response only if the merchant has enabled FMF in the profile settings and one of the fraud filters was triggered based on those settings. For more information, see [Fraud Management Filters Summary](/docs/classic/fmf/integration-guide/FMFSummary/).
         /// </summary>
         [DataMember(Name="fmf_details", EmitDefaultValue = false)]
         public FmfDetails FmfDetails;
@@ -83,7 +83,7 @@ namespace PayPal.v1.Payments
         /// An array of reasons that PayPal holds the recipient fund. Set only if the payment hold status is `HELD`.
         /// </summary>
         [DataMember(Name="payment_hold_reasons", EmitDefaultValue = false)]
-        public List<string> PaymentHoldReasons;
+        public List<PaymentHoldReason> PaymentHoldReasons;
 
         /// <summary>
         /// The recipient fund status. Returned only when the fund status is `held`.
@@ -92,25 +92,25 @@ namespace PayPal.v1.Payments
         public string PaymentHoldStatus;
 
         /// <summary>
-        /// The transaction payment mode. Supported only when `payment_method` is `paypal`.
+        /// The transaction payment mode. Supported only for PayPal payments.
         /// </summary>
         [DataMember(Name="payment_mode", EmitDefaultValue = false)]
         public string PaymentMode;
 
         /// <summary>
-        /// A collection of payment response-related fields returned from a payment request.
+        /// The processor-provided response codes that describe the submitted payment. Supported only when the `payment_method` is `credit_card`.
         /// </summary>
         [DataMember(Name="processor_response", EmitDefaultValue = false)]
         public ProcessorResponse ProcessorResponse;
 
         /// <summary>
-        /// The seller protection level in effect for the transaction. Supported only when the `payment_method` is `paypal`.
+        /// The merchant protection level in effect for the transaction. Supported only for PayPal payments.
         /// </summary>
         [DataMember(Name="protection_eligibility", EmitDefaultValue = false)]
         public string ProtectionEligibility;
 
         /// <summary>
-        /// The seller protection type in effect for the transaction. Returned only when `protection_eligibility` is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only when the `payment_method` is `paypal`.
+        /// The merchant protection type in effect for the transaction. Returned only when `protection_eligibility` is `ELIGIBLE` or `PARTIALLY_ELIGIBLE`. Supported only for PayPal payments.
         /// </summary>
         [DataMember(Name="protection_eligibility_type", EmitDefaultValue = false)]
         public string ProtectionEligibilityType;
@@ -122,7 +122,7 @@ namespace PayPal.v1.Payments
         public string PurchaseUnitReferenceId;
 
         /// <summary>
-        /// A reason code that describes why the transaction state is pending or reversed. Supported only when the `payment_method` is `paypal`.
+        /// A reason code that describes why the transaction state is pending or reversed. Supported only for PayPal payments.
         /// </summary>
         [DataMember(Name="reason_code", EmitDefaultValue = false)]
         public string ReasonCode;
@@ -134,7 +134,7 @@ namespace PayPal.v1.Payments
         public string ReceiptId;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="receivable_amount", EmitDefaultValue = false)]
         public Currency ReceivableAmount;
@@ -147,7 +147,7 @@ namespace PayPal.v1.Payments
         public string State;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="transaction_fee", EmitDefaultValue = false)]
         public Currency TransactionFee;
