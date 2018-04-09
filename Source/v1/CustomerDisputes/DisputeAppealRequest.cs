@@ -25,14 +25,8 @@ namespace PayPal.v1.CustomerDisputes
                 this.Path = this.Path.Replace("{dispute_id}", Uri.EscapeDataString(Convert.ToString(DisputeId) ));
             } catch (IOException) {}
             
-            this.ContentType =  "multipart/related";
+            this.ContentType =  "multipart/form-data";
             this.Body = new Dictionary<string, object>();
-        }
-        
-        public DisputeAppealRequest RequestBody(ProvideEvidenceRequest Evidence)
-        {
-            this.Body = Evidence;
-            return this;
         }
     }
 }
