@@ -10,6 +10,6 @@
     <PackageReleaseNotes>* 2.0.0 release candidate release</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BraintreeHttp-Dotnet" Version="0.2.1" />
+    <PackageReference Include="BraintreeHttp-Dotnet" Version="0.3.0" />
   </ItemGroup>
 </Project>
