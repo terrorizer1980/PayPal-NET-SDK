@@ -1,8 +1,8 @@
-// This class was generated on Tue, 30 Jan 2018 11:15:39 PST by version 0.1.0-dev+6beb51-dirty of Braintree SDK Generator
+// This class was generated on Mon, 09 Apr 2018 18:07:49 UTC by version 0.1.0-dev+291f3f of Braintree SDK Generator
 // Refund.cs
-// @version 0.1.0-dev+6beb51-dirty
+// @version 0.1.0-dev+291f3f
 // @type object
-// @data H4sIAAAAAAAC/+xY32/bthN///4VB/X70AS2lC79mbcA3dBg3RokboEhC+yTdLa4UKRKnuIIQ//3gaJkS5bbpmjm9cFPhu6O9N19jscP7+9gUhUUnASG5qVKg1HwAY3AWNLvmDt5MAp+pWr98ZpsYkTBQqvgJDgFvw7YoLKYOHEYjIJTY7DyOx+NggvC9J2SVXAyR2nJCT6WwlC6EpwbXZBhQTY4uVr5hLkuFQ99WsnXnq1Eff8mGUGBVU6KwZuMYCk4g9gQ3ozLwj6ct5aNUIuht0lpDKmk6vnbEQ49vuLMEI2TDA0mTAbOLt+Nn/705AW0yyDRKV0/jlKd2EgopoVBt0GUCkMJR4YsR63x2Bnb6CCEc6zOUUKqyYLSDLYsCm0YUMp2a0HflhI25UZGVCnlp9EGiNOUGIW0w/SsFevsrGXD5GCaCvfp4vBmgLEuGXiA9b+P7ULMebo0WPTc70qHATgtOC3MiUL4De9EXuYgSS04A2HhyRGsoLcjWGYiyUCoRJYp2ZM/y6Oj46SU9S/5Lyn81yXdkoJULARbiGmuDdVpSSkROUootFAc+jVRu6i/xeQbzZe6/T+cu1K9599FbQDfCdFGsX0OpwxVKoVaTOdEPag2FEO0WoM9WM5l3y8ohbn2q5uO0p67nDjTKWglq3A3yAplS4Mq6cPalQ4xXWn3oPZAdbB9GdkdgWozURRes8a0IxxC2ir3iO6sp7Ypn6bCJgNCtk37ZdigtdyfyB+vzdoyZs0o+xivhVugbZQNF1uFIphyG8LZvP4y9LEkyysoQQrV2IyAM2Gh8M5WrgoOD00Ty+Hh/pTvBHjGux7m/nsIN+PdHpEHQOT6PpgMTuLnj2HvDDooFpQC6/a1RARxtfowIfyiTfOmtyMwVBiypNjWJs0unCF31jfW7abaiIVQvlm5Dfc18b1v6fuURIIFl4amIu2PGbriYXGcvQbt+7BFSd0hDsTkrmWPLe2K9yWGkGnKIu/T+b58GEeKTIAqBWcBy4xUc7nUs6klWvA7pCMQCq7OFJNRxBvr5trkyNePM+bCnkQRay1tKIjnoTaLKONcRmaeHB8fv3pkqU7T+Fn4/GBHyUk7YfeHJV35MDlNFjpmu3qa9WvxqzX48KPEe78hb7VIaKrKPCaz8ZDcUPUD+EOXBvRSQWMHjuQYTG7c4Tl7DX5ZCB9QluR6H4J3wsVshVpIGseVK0JZZKjKnIxIOt3xgRMghbqZdgphquO/KNkyYXWG/ZFcK9mY/ypA554Lp6FyY0PSHTW4enM6+fnd6SXUS9thJRYi0rdkbgUto0cZMmm049pk8yA9f/h5XWZo3p//eMGwLBOdF5LYERuzIIb3F29DmGjI8YaaavVhJijlyJnHjrk6TcPO6zlzTWFddL7zvL84A6a8cEvv22+eP3txdBDCmb8g63+Y/X82gtnj2ahuXrODWadkaqJdGBoXRidkXZGF4CKauVhnrgjdFjdUQQuQi1Uraq/2GgzAVQp8jD4edLzeOqQdnUApd3REfU570K1EQ/DeTCbnLQzti8Hxk63g7SgCQ33K5r+3DP9d+r2D7h7mqqCvlsizVy9frq6kpwctp7JkbskCWkDlupGrDKzh9UCXCvNYLEpdWlk1F0RMvj4s5ahYJLbtzm5ZCJdEcPXW7XDReGjX3i2Xy1Cgwto3tFYslHuu2sitHbchbX6Gdy6Mh7lF70OVCjSkeNq8pXuYDFRfuq7ax7hWTbrrs97lUMJCjHZn7MkQ2g1usBJtowVOtSbzm47/F/zPsdBNCruW/fj81TJyn7m2ki3zEafpU58deVkW6VaW3Zd/A8u2ujQJ1TxbomXwG/3AZPv60//+AQAA//8=
+// @data H4sIAAAAAAAC/+xZ32/bthN///4VB/X70ASylC79mbcA3dBg3RokboEhC+yzdLa4UKRKnuIIQ//3gaJkS5bbpmjm9cFPBo9H6u4+x+OH57+DcVVQcBIYmpcqDcLgAxqBM0m/Y+7kQRj8StV68JpsYkTBQqvgJBhnBCkxCmlhrg0g+H2ADSqLiVOLgjA4NQYr/6WjMLggTN8pWQUnc5SWnOBjKQylK8G50QUZFmSDk6uVjZjrUvHQxpV8belKNLS3wConxeBVQlgKzlonHs5Wy0aoxdDWpDSGVFL1rO0Ih/ZecWaIRkmGBhMmA2eX70ZPf3ryAtplkOiUrh/HqU5sLBTTwqDbIE6FoYRjQ5bjVnnklG18EME5VucoIdVkQWkGWxaFNgwoZbu1oG8LCZtyIyKqlPJTuAHhpAn3MDzriXV01rJhcDBNhRs6P5o8xJkuGXiA9L+P7ULMebI0WPTM70qHDrhZcLMwJ4rgN7wTeZmDJLXgDISFJ0ewgt6GsMxEkoFQiSxTsid/lkdHx0kp61/yIyn86JJuSUEqFoItzGiuDdVhSSkROUootFAc+TVxu6i/xfgb1Ze6/R7OXare83Nx68B3QrSRbJ/DKUOVSqEWkzlRD6qNiSFarcIeLGeyrxeU1qXfrW4qSnvucuJMp6CVrKLdICuULQ2qpA9rVzrEdDW7B7UHqoPty8juCFSbiaLwM2tMO8IhpO3kHtGd1dQ25JNU2GRAx7bNfhk2aDX3J/LHK7O2nLFmlH2M18It0DaTDRdbuSKYchvB2bweGfpYkuUVlCCFanRC4ExYKLyxlcuCw0PT+HJ4uD/lOwGe8a6HuR8P4Wa82yPyAIhc3weTwUn8/DHsnUEHxYJSYN2+lohgVq0GJoJftGle9DYEQ4UhS4ptrdLswhlyZ32j3W6qjVgI5YuV23CfE9/7lr5PSiRYcGloItJ+m6ErHibH2WvQvg5blNRt4cCM3LXssaVd8b7EEDJNWOR9Ot+Xb2lIIROgSsFpwDIj1VwudWdqiRb8DmkIQsHVmWIyinhj3VybHPn6ccZc2JM4Zq2ljQTxPNJmEWecy9jMk+Pj41ePLNVhGj2Lnh/sKDhpx+1+s6QrHwaniUJHbVdPs34ufjUHH76ReO835K0WCU1Umc/IbDwkN6b6DvyhSwN6qaDRA0dyDCY37vCcvQa/LIIPKEtytQ/BG+F8tkItJI1mlUtCWWSoypyMSDrV8YEDIIW6mXQSYaJnf1Gypb/qFPstuVbS9/9UATrznDsNlRsZku6owdWb0/HP704voV7aNiuxELG+JXMraBk/ypBJox3VKpsH6fnD9+syQ/N+/8cLhmmZ6LyQxI7YmAUxvL94G8FYQ4431GSrdzNBKUOnPnPM1c007LzuMtcU9ur9xRmMKS/cipEvM0zpVyvN82cvjg7q8Pl7uTA0KoxOyLrUCds7s/7o9P/TEKaPp2Fdz6YH024WgfNo6nyduiR0+jdUQQuQ81Uraq/2GgzAVQi8j94fdLzeOqQdnUApd3REfUx70K1EQ/DejMfnLQzti8Hxk63g7cgDQ33K5sdbmv8u/N5Adw9zVdBXE+XZq5cvV1fS04OWU1kyt2QBLaBy1cj/X1PvXwNdKsxnYlHq0sqquSBm5PPDUo6KRWLb6uzT8JIIrt66HS4aC+3auuVyGQlUWNuG1oqFcs9VG7u1o9alzWF059x4mFv0PlSpQEOKJ81buofJYOpL11X7GNeqCXd91rscSliYod0ZezKEdoMbrETbaIGbWpP5TcP/C/7nWOgmhV3Lfnz+ahm5z1xbyZb+iJvpU58dWVkW6VaW3Zd/A8u2ujQJ1TxbomXwG/3AZPv60//+AQAA//8=
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace PayPal.v1.Payments
 {
     /// <summary>
-    /// A refund transaction.
+    /// The details for a refund transaction.
     /// </summary>
     [DataContract]
     public class Refund
@@ -22,7 +22,7 @@ namespace PayPal.v1.Payments
         public Refund() {}
 
         /// <summary>
-        /// The payment amount, with break-ups.
+        /// The payment amount, with details.
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount;
