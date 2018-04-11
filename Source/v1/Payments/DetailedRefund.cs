@@ -1,8 +1,8 @@
-// This class was generated on Tue, 30 Jan 2018 11:15:39 PST by version 0.1.0-dev+6beb51-dirty of Braintree SDK Generator
+// This class was generated on Mon, 09 Apr 2018 18:07:49 UTC by version 0.1.0-dev+291f3f of Braintree SDK Generator
 // DetailedRefund.cs
-// @version 0.1.0-dev+6beb51-dirty
+// @version 0.1.0-dev+291f3f
 // @type object
-// @data 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
+// @data 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
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace PayPal.v1.Payments
 {
     /// <summary>
-    /// The refund transaction details that are returned by the `POST /refund` call.
+    /// The refund transaction details.
     /// </summary>
     [DataContract]
     public class DetailedRefund
@@ -22,7 +22,7 @@ namespace PayPal.v1.Payments
         public DetailedRefund() {}
 
         /// <summary>
-        /// The payment amount, with break-ups.
+        /// The payment amount, with details.
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount;
@@ -40,7 +40,7 @@ namespace PayPal.v1.Payments
         public string CreateTime;
 
         /// <summary>
-        /// A free-form field for the clients' use.
+        /// The note to the payer in this transaction.
         /// </summary>
         [DataMember(Name="custom", EmitDefaultValue = false)]
         public string Custom;
@@ -82,13 +82,13 @@ namespace PayPal.v1.Payments
         public string Reason;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="refund_from_received_amount", EmitDefaultValue = false)]
         public Currency RefundFromReceivedAmount;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="refund_from_transaction_fee", EmitDefaultValue = false)]
         public Currency RefundFromTransactionFee;
@@ -106,7 +106,7 @@ namespace PayPal.v1.Payments
         public string State;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="total_refunded_amount", EmitDefaultValue = false)]
         public Currency TotalRefundedAmount;

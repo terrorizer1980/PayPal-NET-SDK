@@ -1,8 +1,8 @@
-// This class was generated on Tue, 30 Jan 2018 11:15:39 PST by version 0.1.0-dev+6beb51-dirty of Braintree SDK Generator
+// This class was generated on Mon, 09 Apr 2018 18:07:49 UTC by version 0.1.0-dev+291f3f of Braintree SDK Generator
 // Capture.cs
-// @version 0.1.0-dev+6beb51-dirty
+// @version 0.1.0-dev+291f3f
 // @type object
-// @data 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
+// @data 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
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace PayPal.v1.Payments
 {
     /// <summary>
-    /// A capture transaction.
+    /// The capture transaction details.
     /// </summary>
     [DataContract]
     public class Capture
@@ -22,13 +22,13 @@ namespace PayPal.v1.Payments
         public Capture() {}
 
         /// <summary>
-        /// The payment amount, with break-ups.
+        /// The payment amount, with details.
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue = false)]
         public Amount Amount;
 
         /// <summary>
-        /// The date and time when the capture occurred, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// The date and time of the capture, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
         /// </summary>
         [DataMember(Name="create_time", EmitDefaultValue = false)]
         public string CreateTime;
@@ -46,7 +46,7 @@ namespace PayPal.v1.Payments
         public string InvoiceNumber;
 
         /// <summary>
-        /// Indicates whether to release all remaining funds that the authorization holds in the funding instrument (FI). Default is `false`.
+        /// Indicates whether to release all remaining held funds.
         /// </summary>
         [DataMember(Name="is_final_capture", EmitDefaultValue = false)]
         public bool? IsFinalCapture;
@@ -70,19 +70,19 @@ namespace PayPal.v1.Payments
         public string ReasonCode;
 
         /// <summary>
-        /// The capture state. Value is:<ul><li><code>pending</code>. The capture is pending.</li><li><code>completed</code>. The capture has successfully completed.</li><li><code>refunded</code>. The capture was fully refunded.</li><li><code>partially_refunded</code>. The capture was partially refunded.</li></ul>
+        /// The capture state. Value is:<ul><li><code>pending</code>. The capture is pending.</li><li><code>completed</code>. The capture has successfully completed.</li><li><code>refunded</code>. The capture was fully refunded.</li><li><code>partially_refunded</code>. The capture was partially refunded.</li><li><code>denied</code>. PayPal has declined to process this transaction.</li></ul>
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue = false)]
         public string State;
 
         /// <summary>
-        /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+        /// The currency and amount for a transaction.
         /// </summary>
         [DataMember(Name="transaction_fee", EmitDefaultValue = false)]
         public Currency TransactionFee;
 
         /// <summary>
-        /// The date and time when the resource was last updated, in Internet date and time format as defined in [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
+        /// The date and time when the resource was last updated, in [Internet date and time format](https://tools.ietf.org/html/rfc3339#section-5.6).
         /// </summary>
         [DataMember(Name="update_time", EmitDefaultValue = false)]
         public string UpdateTime;

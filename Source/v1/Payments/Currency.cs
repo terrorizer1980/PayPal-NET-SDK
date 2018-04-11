@@ -1,8 +1,8 @@
-// This class was generated on Tue, 30 Jan 2018 11:15:39 PST by version 0.1.0-dev+6beb51-dirty of Braintree SDK Generator
+// This class was generated on Mon, 09 Apr 2018 18:07:49 UTC by version 0.1.0-dev+291f3f of Braintree SDK Generator
 // Currency.cs
-// @version 0.1.0-dev+6beb51-dirty
+// @version 0.1.0-dev+291f3f
 // @type object
-// @data H4sIAAAAAAAC/6TSUYsTMRAH8Hc/xZAnPdKuiiD0TRBBhLuihy/lkGny33YkTeJkVlzkvrtsde8sFeS4x50dJvn/Jj/d9VjhVi4MqshhdN59ZhXeJlzyYfrjvPuA8f7jLVpQqSYlu5W73oO23EDzACrbrwhGfVHilKiXzDkIJ/rOacBCkdgQqRek2Jb0rijhBx9qgqctJ84BniqPB2SjOMAT50itUMlL590bVR5/X/q5dx/B8Sqn0a16Tg1T4dsginhXWGupUBM0t9rcxW2mknfnYecUX0KJOEn+F9C5wMb2CizCnpWDQen9p6vFq5cvXt+zTANvnnaxhNZJNuyUpwFdFEWwTtGsm5sXU3Prni1pzeOaE8WCRrkYtaHWonaU/dMtaI91yUNKt/6/OMcFnqDMlXMRPpQhm6ehkhW6uLygKDuxRtxPPrYHRQQ5cKKGyspW1BM3iuglI5Jk2syKD3U7Pr7pCK5VS1Vhw+kmHiRmOvwL7Ob2yS8AAAD//w==
+// @data H4sIAAAAAAAC/6SS0WsUMRDG3/0rhvhiYW+jIgj7VvDlELzDFl+OUqbJ7O1gNomTSWWR/u+Slm0tp4j4OLPzffvNb/LDXC6ZzGBcFaHoFtOZLyiMN4E+4dy+mM58pOWp+EDFCWflFM1gLieCVQsYPeCcalQYkwCCCsaCrs32pjPnIrg8/PB1Zz4T+l0MixlGDIVa41tlIf/Y2EvKJMpUzHB4jFpUOB5Pg64xrl3y9Cz1L8udpj/oJEQbN6GgUxLYXuw2796+ef+0VzO8emV9csVyVDoKNgPrWcipFSpq1+FNGy72rIc9LnsM4BMViEmh1JyTKGAIqzVT+V8usYZw1/0Vzi2G+hzK2jkl8nDCHrbRheqpgE4EJZPjkclDrPMNCaQRPB9ZC+DYsHlyPGOAQhkFNcn9G2jSw5+ITqq5DNZS7L/zV87kGfskR9squ73YXTfVy3OnfEv3Zy1n/8RLpf4O19Xdi58AAAD//w==
 // DO NOT EDIT
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace PayPal.v1.Payments
 {
     /// <summary>
-    /// The base currency object for all financial value-related fields. For example, balance, payment due, and so on.
+    /// The currency and amount for a transaction.
     /// </summary>
     [DataContract]
     public class Currency
@@ -29,7 +29,7 @@ namespace PayPal.v1.Payments
 
         /// <summary>
         /// REQUIRED
-        /// The amount, up to *N* digits after the decimal separator, as defined in [ISO-4217](/docs/integration/direct/rest/currency-codes/) for the appropriate currency code.
+        /// The amount. Includes the specified number of digits after decimal separator for the [ISO-4217 currency code](https://en.wikipedia.org/wiki/ISO_4217#Active_codes).
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue = false)]
         public string Value;
