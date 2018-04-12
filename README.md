@@ -2,6 +2,10 @@
 
 This is a preview of the next major version of the PayPal .NET SDK. We've simplified the interface to only provide HTTPRequest that can easily be called via our HttpClient. This SDK is fully .NET Core 2.0 compatible. 
 
+## What's New
+
+Please see the [CHANGELOG.md](./CHANGELOG.md) for the latest changes.
+
 ### Creating a Payment
 
 ```cs
@@ -59,7 +63,7 @@ If you're migrating from v1, check out our [Migration Guide](./docs/Migrating.md
 
 To try this out, update the version of `paypal-rest-sdk` by running:
 ```sh
-$ dotnet add package PayPal -v 2.0.0-rc1
+$ dotnet add package PayPal -v 2.0.0-rc2
 ```
 
 Please feel free to create an issue in this repo with any feedback, questions, or concerns you have.

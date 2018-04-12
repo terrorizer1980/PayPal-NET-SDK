@@ -1,6 +1,10 @@
 PayPal .NET SDK release notes
 =============================
 
+## 2.0.0-rc2
+* Update to latest Payments code.
+* Support for Customer Disputes in Limited Release (API subject to change).
+
 ## 2.0.0-rc1
 * Promote beta.0 to release candidate.
 
